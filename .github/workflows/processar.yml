@@ -1,0 +1,57 @@
+name: Processar emails e gerar dados.json
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'emails-*.json'
+      - 'apontamentos.xlsx'
+      - 'overrides.json'
+      - 'parser/**'
+      - 'requirements.txt'
+  # Backup diário: roda 7:30 BRT (10:30 UTC), 30min depois do Power Automate
+  schedule:
+    - cron: '30 10 * * *'
+  workflow_dispatch:
+
+jobs:
+  processar:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout do repositório
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Instalar dependências
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Rodar parser
+        run: |
+          if [ -f "apontamentos.xlsx" ]; then
+            python -m parser.main "emails-*.json" dados.json apontamentos.xlsx auditoria.json overrides.json
+          else
+            python -m parser.main "emails-*.json" dados.json
+          fi
+
+      - name: Commitar dados.json e auditoria.json
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add dados.json auditoria.json 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "Nenhuma mudança em dados.json — pulando commit."
+          else
+            git commit -m "🤖 Atualizar dados.json automaticamente"
+            git push
+          fi
