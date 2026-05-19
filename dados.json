@@ -489,6 +489,77 @@
     "tem_cronograma": true
   },
   {
+    "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAIdnd_ZA3WpLqHgN0hlWC5o=",
+    "subject": "REEDICAO PEDIDO FECHADO VAREJO - RENNER ",
+    "projeto": "RENNER",
+    "cliente": "RENNER",
+    "comercial": "wesley.matheus@antilhas.com.br",
+    "skus": [
+      {
+        "codigo": "11053659-0001",
+        "tipo": "FERT",
+        "descricao": "930640776 SACL PAP MAN FSC®P BLUEY REN"
+      },
+      {
+        "codigo": "11053668-0001",
+        "tipo": "FERT",
+        "descricao": "930640792 SACL PAP MAN FSC®M BLUEY REN"
+      }
+    ],
+    "marcos": {
+      "pedido_fechado": {
+        "previsto": null,
+        "real": "2026-05-14",
+        "por": "wesley.matheus@antilhas.com.br"
+      },
+      "fert_criado": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      },
+      "op_liberada": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      },
+      "producao": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      },
+      "data_vitrine": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      }
+    },
+    "lead_times": {
+      "pedido_para_fert": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      },
+      "fert_para_op": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      },
+      "op_para_producao": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      },
+      "producao_para_vit": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      }
+    },
+    "status": "aguardando_fert",
+    "responsavel_atual": "Engenharia",
+    "tem_cronograma": false
+  },
+  {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAB9mQSJNHK5Go9nQ1Mb9clI=",
     "subject": "RES: PEDIDO FECHADO VAREJO - SACOLA M CAU CHOCOLATES",
     "projeto": "SACOLA M CAU CHOCOLATES",
@@ -581,6 +652,3323 @@
       }
     },
     "status": "aguardando_op",
+    "responsavel_atual": "Engenharia",
+    "tem_cronograma": false
+  },
+  {
+    "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAG1PIdDZ3fhGlBsKXkMg0PE=",
+    "subject": "RES: PEDIDO FECHADO VAREJO - BOTICÁRIO -  KIT PINS",
+    "projeto": "BOTICÁRIO -  KIT PINS",
+    "cliente": "BOTICÁRIO -  KIT PINS",
+    "comercial": "GLEICY MAIA DOS SANTOS",
+    "skus": [
+      {
+        "codigo": "5200004996",
+        "tipo": "HALB",
+        "descricao": "(PIN JARDIM AERO BOT"
+      },
+      {
+        "codigo": "5200004997",
+        "tipo": "HALB",
+        "descricao": "(PIN CAPIVARA AERO BOT)"
+      }
+    ],
+    "marcos": {
+      "pedido_fechado": {
+        "previsto": null,
+        "real": "2026-05-12",
+        "por": "GLEICY MAIA DOS SANTOS"
+      },
+      "fert_criado": {
+        "previsto": null,
+        "real": "2026-05-13",
+        "por": "GIOVANNA FREITAS ALVES"
+      },
+      "op_liberada": {
+        "previsto": null,
+        "real": "2026-05-19",
+        "por": "leticia.santos@antilhas.com.br"
+      },
+      "producao": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      },
+      "data_vitrine": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      }
+    },
+    "lead_times": {
+      "pedido_para_fert": {
+        "previsto": null,
+        "real": 1,
+        "desvio": null
+      },
+      "fert_para_op": {
+        "previsto": null,
+        "real": 6,
+        "desvio": null
+      },
+      "op_para_producao": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      },
+      "producao_para_vit": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      }
+    },
+    "status": "em_producao",
+    "responsavel_atual": "PCP/Fábrica",
+    "tem_cronograma": false
+  },
+  {
+    "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQACZ-QvwKK5dIiMdJF87xZM4=",
+    "subject": "RE: PEDIDO FECHADO VAREJO - BELEZA NA WEB -  PHEASE IN / PHEASE OUT - PAPEL DE SEDA",
+    "projeto": "BELEZA NA WEB -  PHEASE IN / PHEASE OUT - PAPEL DE SEDA",
+    "cliente": "BELEZA NA WEB -  PHEASE IN / PHEASE OUT - PAPEL DE SEDA",
+    "comercial": "GLEICY MAIA DOS SANTOS",
+    "skus": [
+      {
+        "codigo": "15005431-0001",
+        "tipo": "FERT",
+        "descricao": "- 20068580 PAP SEDA INST24 BLZ WEB"
+      }
+    ],
+    "marcos": {
+      "pedido_fechado": {
+        "previsto": "2026-05-12",
+        "real": "2026-05-11",
+        "por": "GLEICY MAIA DOS SANTOS"
+      },
+      "fert_criado": {
+        "previsto": "2026-05-12",
+        "real": "2026-05-12",
+        "por": "GIOVANNA FREITAS ALVES"
+      },
+      "op_liberada": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      },
+      "producao": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      },
+      "data_vitrine": {
+        "previsto": "2026-11-01",
+        "real": null,
+        "por": null
+      }
+    },
+    "lead_times": {
+      "pedido_para_fert": {
+        "previsto": 0,
+        "real": 1,
+        "desvio": 1
+      },
+      "fert_para_op": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      },
+      "op_para_producao": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      },
+      "producao_para_vit": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      }
+    },
+    "status": "aguardando_op",
+    "responsavel_atual": "Engenharia",
+    "tem_cronograma": true
+  },
+  {
+    "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAPtq6L2-4BVPo798kV1ZZXw=",
+    "subject": "RES: PEDIDO FECHADO VAREJO - SEDA DENGO ",
+    "projeto": "SEDA DENGO",
+    "cliente": "SEDA DENGO",
+    "comercial": "LUCINEIA DAIANE RODRIGUES",
+    "skus": [
+      {
+        "codigo": "15005823-0001",
+        "tipo": "FERT",
+        "descricao": "PAP SEDA PCT/100 DENGO"
+      }
+    ],
+    "marcos": {
+      "pedido_fechado": {
+        "previsto": null,
+        "real": "2026-05-11",
+        "por": "LUCINEIA DAIANE RODRIGUES"
+      },
+      "fert_criado": {
+        "previsto": null,
+        "real": "2026-05-11",
+        "por": "GIOVANNA FREITAS ALVES"
+      },
+      "op_liberada": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      },
+      "producao": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      },
+      "data_vitrine": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      }
+    },
+    "lead_times": {
+      "pedido_para_fert": {
+        "previsto": null,
+        "real": 0,
+        "desvio": null
+      },
+      "fert_para_op": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      },
+      "op_para_producao": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      },
+      "producao_para_vit": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      }
+    },
+    "status": "aguardando_op",
+    "responsavel_atual": "Engenharia",
+    "tem_cronograma": false
+  },
+  {
+    "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQALTrcgAtfMtCuKVsL83dbAg=",
+    "subject": "RES: REEDIÇÃO PEDIDO FECHADO VAREJO - MAHOGANY PRESENTEÁVEL",
+    "projeto": "MAHOGANY PRESENTEÁVEL",
+    "cliente": "MAHOGANY PRESENTEÁVEL",
+    "comercial": "EDUARDA FERREIRA DOS SANTOS",
+    "skus": [
+      {
+        "codigo": "11054986-0001",
+        "tipo": "FERT",
+        "descricao": "CX LUV GAV FSC®M AFETO V2 PRES26 MAHOGANY"
+      },
+      {
+        "codigo": "11054976-0001",
+        "tipo": "FERT",
+        "descricao": "CX LUV GAV FSC®M STATUS V2 PRE26 MAHOGAN"
+      }
+    ],
+    "marcos": {
+      "pedido_fechado": {
+        "previsto": null,
+        "real": "2026-05-08",
+        "por": "EDUARDA FERREIRA DOS SANTOS"
+      },
+      "fert_criado": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      },
+      "op_liberada": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      },
+      "producao": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      },
+      "data_vitrine": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      }
+    },
+    "lead_times": {
+      "pedido_para_fert": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      },
+      "fert_para_op": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      },
+      "op_para_producao": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      },
+      "producao_para_vit": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      }
+    },
+    "status": "aguardando_fert",
+    "responsavel_atual": "Engenharia",
+    "tem_cronograma": false
+  },
+  {
+    "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQANIi5aRiZlxNmCecQacu5Sc=",
+    "subject": "RES: PEDIDO FECHADO VAREJO - CRONOGRAMA — PEDIDO FECHADO VAREJO\t\t\t",
+    "projeto": "CRONOGRAMA — PEDIDO FECHADO VAREJO",
+    "cliente": "CRONOGRAMA — PEDIDO FECHADO VAREJO",
+    "comercial": "JULIO CESAR DELLA PASCOA MACHADO",
+    "skus": [
+      {
+        "codigo": "13021811-0001",
+        "tipo": "FERT",
+        "descricao": "SACL PAP AUT FSC® FF SHOP IBIRAPUERA"
+      }
+    ],
+    "marcos": {
+      "pedido_fechado": {
+        "previsto": "2026-05-07",
+        "real": "2026-05-07",
+        "por": "JULIO CESAR DELLA PASCOA MACHADO"
+      },
+      "fert_criado": {
+        "previsto": "2026-05-08",
+        "real": "2026-05-07",
+        "por": "GIOVANNA FREITAS ALVES"
+      },
+      "op_liberada": {
+        "previsto": "2026-05-13",
+        "real": "2026-05-13",
+        "por": "leticia.santos@antilhas.com.br"
+      },
+      "producao": {
+        "previsto": "2026-05-14",
+        "real": null,
+        "por": null
+      },
+      "data_vitrine": {
+        "previsto": "2026-05-25",
+        "real": null,
+        "por": null
+      }
+    },
+    "lead_times": {
+      "pedido_para_fert": {
+        "previsto": 1,
+        "real": 0,
+        "desvio": -1
+      },
+      "fert_para_op": {
+        "previsto": 5,
+        "real": 6,
+        "desvio": 1
+      },
+      "op_para_producao": {
+        "previsto": 1,
+        "real": null,
+        "desvio": null
+      },
+      "producao_para_vit": {
+        "previsto": 11,
+        "real": null,
+        "desvio": null
+      }
+    },
+    "status": "em_producao",
+    "responsavel_atual": "PCP/Fábrica",
+    "tem_cronograma": true
+  },
+  {
+    "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAFPoDadlAmFDodm5jJRmoQo=",
+    "subject": "RES: PEDIDO FECHADO VAREJO - SHOPPING IBIRAPUERA ",
+    "projeto": "SHOPPING IBIRAPUERA",
+    "cliente": "SHOPPING IBIRAPUERA",
+    "comercial": "JULIO CESAR DELLA PASCOA MACHADO",
+    "skus": [
+      {
+        "codigo": "13021811-0001",
+        "tipo": "FERT",
+        "descricao": "SACL PAP AUT FSC® FF SHOP IBIRAPUERA"
+      }
+    ],
+    "marcos": {
+      "pedido_fechado": {
+        "previsto": null,
+        "real": "2026-05-07",
+        "por": "JULIO CESAR DELLA PASCOA MACHADO"
+      },
+      "fert_criado": {
+        "previsto": null,
+        "real": "2026-05-07",
+        "por": "GIOVANNA FREITAS ALVES"
+      },
+      "op_liberada": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      },
+      "producao": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      },
+      "data_vitrine": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      }
+    },
+    "lead_times": {
+      "pedido_para_fert": {
+        "previsto": null,
+        "real": 0,
+        "desvio": null
+      },
+      "fert_para_op": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      },
+      "op_para_producao": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      },
+      "producao_para_vit": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      }
+    },
+    "status": "aguardando_op",
+    "responsavel_atual": "Engenharia",
+    "tem_cronograma": false
+  },
+  {
+    "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAME4HJRfnnBLslq09-9hvZs=",
+    "subject": "REEDIÇÃO PEDIDO FECHADO VAREJO - SEPHORA -  INSTITUCIONAL",
+    "projeto": "SEPHORA -  INSTITUCIONAL",
+    "cliente": "SEPHORA -  INSTITUCIONAL",
+    "comercial": "neila.duarte@antilhas.com.br",
+    "skus": [
+      {
+        "codigo": "11053798-0001",
+        "tipo": "FERT",
+        "descricao": "ENV CARTA GIFT CARD SEPHORA"
+      },
+      {
+        "codigo": "11053797-0001",
+        "tipo": "FERT",
+        "descricao": "CX TPA FDO GIFT CARD SEPHORA"
+      }
+    ],
+    "marcos": {
+      "pedido_fechado": {
+        "previsto": null,
+        "real": "2026-05-07",
+        "por": "neila.duarte@antilhas.com.br"
+      },
+      "fert_criado": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      },
+      "op_liberada": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      },
+      "producao": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      },
+      "data_vitrine": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      }
+    },
+    "lead_times": {
+      "pedido_para_fert": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      },
+      "fert_para_op": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      },
+      "op_para_producao": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      },
+      "producao_para_vit": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      }
+    },
+    "status": "aguardando_fert",
+    "responsavel_atual": "Engenharia",
+    "tem_cronograma": false
+  },
+  {
+    "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAG2TRZTwZ99FpeC0u78scfw=",
+    "subject": "RES: PEDIDO FECHADO VAREJO - SACOLA P SCHUTZ",
+    "projeto": "SACOLA P SCHUTZ",
+    "cliente": "SACOLA P SCHUTZ",
+    "comercial": "WESLEY MATHEUS DA SILVA",
+    "skus": [
+      {
+        "codigo": "11051759-0001",
+        "tipo": "FERT",
+        "descricao": "SACL PAP MAN FSC®P INST25 SCHUTZ"
+      },
+      {
+        "codigo": "2100082254",
+        "tipo": "HALB",
+        "descricao": "SACL PAP MAN FSC®P INST25 SCHUTZ"
+      },
+      {
+        "codigo": "2100082255",
+        "tipo": "HALB",
+        "descricao": "REF ALCA FSC® INST25 SCHUTZ"
+      },
+      {
+        "codigo": "5200004658",
+        "tipo": "HALB",
+        "descricao": "FITA GORG ESC 400X25MM PRETO"
+      },
+      {
+        "codigo": "8600005976",
+        "tipo": "HALB",
+        "descricao": "SACL PAP MAN FSC®P INST25 SCHUTZ ME"
+      }
+    ],
+    "marcos": {
+      "pedido_fechado": {
+        "previsto": null,
+        "real": "2026-05-06",
+        "por": "WESLEY MATHEUS DA SILVA"
+      },
+      "fert_criado": {
+        "previsto": null,
+        "real": "2026-05-06",
+        "por": "GIOVANNA FREITAS ALVES"
+      },
+      "op_liberada": {
+        "previsto": null,
+        "real": "2026-05-14",
+        "por": "LETICIA JACQUELINE SANTOS"
+      },
+      "producao": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      },
+      "data_vitrine": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      }
+    },
+    "lead_times": {
+      "pedido_para_fert": {
+        "previsto": null,
+        "real": 0,
+        "desvio": null
+      },
+      "fert_para_op": {
+        "previsto": null,
+        "real": 8,
+        "desvio": null
+      },
+      "op_para_producao": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      },
+      "producao_para_vit": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      }
+    },
+    "status": "em_producao",
+    "responsavel_atual": "PCP/Fábrica",
+    "tem_cronograma": false
+  },
+  {
+    "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAKKCyKKuXwlAm3DfK7x0ESk=",
+    "subject": "RES: PEDIDO FECHADO VAREJO - SACOLA M ANACAPRI",
+    "projeto": "SACOLA M ANACAPRI",
+    "cliente": "SACOLA M ANACAPRI",
+    "comercial": "WESLEY MATHEUS DA SILVA",
+    "skus": [
+      {
+        "codigo": "11052296-0002",
+        "tipo": "FERT",
+        "descricao": "SACL PAP MAN FSC®M INST25 V2 ANACAPRI"
+      },
+      {
+        "codigo": "2100082270",
+        "tipo": "HALB",
+        "descricao": "SACL PAP MAN FSC®M INST25 V2 ANACAPRI"
+      },
+      {
+        "codigo": "5200004753",
+        "tipo": "HALB",
+        "descricao": "FITA GORG ESC BRANCA 25X0500MM 2PTP"
+      },
+      {
+        "codigo": "8600006127",
+        "tipo": "HALB",
+        "descricao": "SACL PAP MAN FSC®M INST25 ANACAPRI ME"
+      }
+    ],
+    "marcos": {
+      "pedido_fechado": {
+        "previsto": null,
+        "real": "2026-05-06",
+        "por": "WESLEY MATHEUS DA SILVA"
+      },
+      "fert_criado": {
+        "previsto": null,
+        "real": "2026-05-06",
+        "por": "GIOVANNA FREITAS ALVES"
+      },
+      "op_liberada": {
+        "previsto": null,
+        "real": "2026-05-13",
+        "por": "ariane.luz@antilhas.com.br"
+      },
+      "producao": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      },
+      "data_vitrine": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      }
+    },
+    "lead_times": {
+      "pedido_para_fert": {
+        "previsto": null,
+        "real": 0,
+        "desvio": null
+      },
+      "fert_para_op": {
+        "previsto": null,
+        "real": 7,
+        "desvio": null
+      },
+      "op_para_producao": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      },
+      "producao_para_vit": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      }
+    },
+    "status": "em_producao",
+    "responsavel_atual": "PCP/Fábrica",
+    "tem_cronograma": false
+  },
+  {
+    "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAH1_B5c_RDhOoUvc4sdA9A8=",
+    "subject": "RES: PEDIDO FECHADO VAREJO - RENNER Junho/ 2026",
+    "projeto": "RENNER Junho/ 2026",
+    "cliente": "RENNER Junho/ 2026",
+    "comercial": "WESLEY MATHEUS DA SILVA",
+    "skus": [
+      {
+        "codigo": "11055312-0001",
+        "tipo": "FERT",
+        "descricao": "931535599 SACL PAP MAN FSC®M PRETA REN"
+      },
+      {
+        "codigo": "2100082665",
+        "tipo": "HALB",
+        "descricao": "931535599 SACL PAP MAN FSC®M PRETA REN"
+      },
+      {
+        "codigo": "5200005270",
+        "tipo": "HALB",
+        "descricao": "ETIQ ADES 40X20MM 931535599 RENNER"
+      },
+      {
+        "codigo": "5200001612",
+        "tipo": "HALB",
+        "descricao": "FITA PET PRETO 9X380MM 2PTP"
+      },
+      {
+        "codigo": "8600006902",
+        "tipo": "HALB",
+        "descricao": "931535599 SACL PAP MAN FSC®M PRETA RE ME"
+      },
+      {
+        "codigo": "11055306-0001",
+        "tipo": "FERT",
+        "descricao": "931566643 SACL PAP MAN FSC®P PATRU REN"
+      },
+      {
+        "codigo": "2100082648",
+        "tipo": "HALB",
+        "descricao": "931566643 SACL PAP MAN FSC®P PATRU REN"
+      },
+      {
+        "codigo": "5200005271",
+        "tipo": "HALB",
+        "descricao": "ETIQ ADES 40X20MM 931566643 RENNER"
+      },
+      {
+        "codigo": "5200004387",
+        "tipo": "HALB",
+        "descricao": "FITA PET 09X380MM 2PTP 0095 BOUTSEN"
+      },
+      {
+        "codigo": "8600006903",
+        "tipo": "HALB",
+        "descricao": "931566643 SACL PAP MAN FSC®P PATRU RE ME"
+      },
+      {
+        "codigo": "11055307-0001",
+        "tipo": "FERT",
+        "descricao": "931602333 SACL PAP MAN FSC®P LINES REN"
+      },
+      {
+        "codigo": "2100082649",
+        "tipo": "HALB",
+        "descricao": "931602333 SACL PAP MAN FSC®P LINES REN"
+      },
+      {
+        "codigo": "5200005272",
+        "tipo": "HALB",
+        "descricao": "ETIQ ADES 40X20MM 931602333 RENNER"
+      },
+      {
+        "codigo": "5200003051",
+        "tipo": "HALB",
+        "descricao": "FITA PET 09X380MM 2PTP 117 ANIL"
+      },
+      {
+        "codigo": "8600006904",
+        "tipo": "HALB",
+        "descricao": "931602333 SACL PAP MAN FSC®P LINES RE ME"
+      },
+      {
+        "codigo": "11055308-0001",
+        "tipo": "FERT",
+        "descricao": "931564146 SACL PAP MAN FSC®P ENCANTO REN"
+      },
+      {
+        "codigo": "2100082650",
+        "tipo": "HALB",
+        "descricao": "931564146 SACL PAP MAN FSC®P ENCANTO REN"
+      },
+      {
+        "codigo": "5200005273",
+        "tipo": "HALB",
+        "descricao": "ETIQ ADES 40X20MM 931564146 RENNER"
+      },
+      {
+        "codigo": "5200004295",
+        "tipo": "HALB",
+        "descricao": "FITA PET 09X380MM 2PTP 154 ATLANTICO"
+      },
+      {
+        "codigo": "8600006905",
+        "tipo": "HALB",
+        "descricao": "931564146 SACL PAP MAN FSC®P ENCAN RE ME"
+      },
+      {
+        "codigo": "11055309-0001",
+        "tipo": "FERT",
+        "descricao": "931564277 SACL PAP MAN FSC®P MAGIA REN"
+      },
+      {
+        "codigo": "2100082651",
+        "tipo": "HALB",
+        "descricao": "931564277 SACL PAP MAN FSC®P MAGIA REN"
+      },
+      {
+        "codigo": "5200005274",
+        "tipo": "HALB",
+        "descricao": "ETIQ ADES 40X20MM 931564277 RENNER"
+      },
+      {
+        "codigo": "5200003049",
+        "tipo": "HALB",
+        "descricao": "FITA PET 09X380MM 2PTP 112 BRASIL"
+      },
+      {
+        "codigo": "8600006906",
+        "tipo": "HALB",
+        "descricao": "931564277 SACL PAP MAN FSC®P MAGIA RE ME"
+      }
+    ],
+    "marcos": {
+      "pedido_fechado": {
+        "previsto": null,
+        "real": "2026-05-06",
+        "por": "WESLEY MATHEUS DA SILVA"
+      },
+      "fert_criado": {
+        "previsto": null,
+        "real": "2026-05-07",
+        "por": "GIOVANNA FREITAS ALVES"
+      },
+      "op_liberada": {
+        "previsto": null,
+        "real": "2026-05-08",
+        "por": "leticia.santos@antilhas.com.br"
+      },
+      "producao": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      },
+      "data_vitrine": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      }
+    },
+    "lead_times": {
+      "pedido_para_fert": {
+        "previsto": null,
+        "real": 1,
+        "desvio": null
+      },
+      "fert_para_op": {
+        "previsto": null,
+        "real": 1,
+        "desvio": null
+      },
+      "op_para_producao": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      },
+      "producao_para_vit": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      }
+    },
+    "status": "em_producao",
+    "responsavel_atual": "PCP/Fábrica",
+    "tem_cronograma": false
+  },
+  {
+    "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQABSrbbqRngNNgFcabgLQkrc=",
+    "subject": "Resposta automática: PEDIDO FECHADO VAREJO - SACOLAS INST DESCATHON",
+    "projeto": "SACOLAS INST DESCATHON",
+    "cliente": "SACOLAS INST DESCATHON",
+    "comercial": "NEILA DUARTE DA SILVA",
+    "skus": [
+      {
+        "codigo": "13021764-0001",
+        "tipo": "FERT",
+        "descricao": "SACL PAP AUT FSC®P INST26 DECATHLON"
+      },
+      {
+        "codigo": "13021765-0001",
+        "tipo": "FERT",
+        "descricao": "SACL PAP AUT FSC®M INST26 DECATHLON"
+      },
+      {
+        "codigo": "13021767-0001",
+        "tipo": "FERT",
+        "descricao": "SACL PAP AUT FSC®G INST26 DECATHLON"
+      }
+    ],
+    "marcos": {
+      "pedido_fechado": {
+        "previsto": null,
+        "real": "2026-05-05",
+        "por": "NEILA DUARTE DA SILVA"
+      },
+      "fert_criado": {
+        "previsto": null,
+        "real": "2026-05-05",
+        "por": "GIOVANNA FREITAS ALVES"
+      },
+      "op_liberada": {
+        "previsto": null,
+        "real": "2026-05-08",
+        "por": "LETICIA JACQUELINE SANTOS"
+      },
+      "producao": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      },
+      "data_vitrine": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      }
+    },
+    "lead_times": {
+      "pedido_para_fert": {
+        "previsto": null,
+        "real": 0,
+        "desvio": null
+      },
+      "fert_para_op": {
+        "previsto": null,
+        "real": 3,
+        "desvio": null
+      },
+      "op_para_producao": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      },
+      "producao_para_vit": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      }
+    },
+    "status": "em_producao",
+    "responsavel_atual": "PCP/Fábrica",
+    "tem_cronograma": false
+  },
+  {
+    "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQANYaA1Hw1dtDmEhqS4WEHnc=",
+    "subject": "RE:  PEDIDO FECHADO VAREJO - BOTICÁRIO - SÃO JOÃO",
+    "projeto": "BOTICÁRIO - SÃO JOÃO",
+    "cliente": "BOTICÁRIO - SÃO JOÃO",
+    "comercial": "GLEICY MAIA DOS SANTOS",
+    "skus": [
+      {
+        "codigo": "15005820-0001",
+        "tipo": "FERT",
+        "descricao": "98134 CARTELA ADES SAO JOAO26 BOT"
+      }
+    ],
+    "marcos": {
+      "pedido_fechado": {
+        "previsto": "2026-05-04",
+        "real": "2026-05-04",
+        "por": "GLEICY MAIA DOS SANTOS"
+      },
+      "fert_criado": {
+        "previsto": "2026-05-04",
+        "real": "2026-05-04",
+        "por": "giovanna.alves@antilhas.com.br"
+      },
+      "op_liberada": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      },
+      "producao": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      },
+      "data_vitrine": {
+        "previsto": "2026-06-13",
+        "real": null,
+        "por": null
+      }
+    },
+    "lead_times": {
+      "pedido_para_fert": {
+        "previsto": 0,
+        "real": 0,
+        "desvio": 0
+      },
+      "fert_para_op": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      },
+      "op_para_producao": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      },
+      "producao_para_vit": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      }
+    },
+    "status": "aguardando_op",
+    "responsavel_atual": "Engenharia",
+    "tem_cronograma": true
+  },
+  {
+    "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAL4v_tbsCE4Ao0XQGW2cedY=",
+    "subject": "RES: PEDIDO FECHADO VAREJO - KOP PAIS 26",
+    "projeto": "KOP PAIS 26",
+    "cliente": "KOP PAIS 26",
+    "comercial": "WESLEY MATHEUS DA SILVA",
+    "skus": [
+      {
+        "codigo": "11055267-0001",
+        "tipo": "FERT",
+        "descricao": "TAG PAIS26 KOP"
+      },
+      {
+        "codigo": "5200005267",
+        "tipo": "HALB",
+        "descricao": "FITA GORG TELA AZUL MARINHO 215 22X900MM"
+      }
+    ],
+    "marcos": {
+      "pedido_fechado": {
+        "previsto": null,
+        "real": "2026-05-04",
+        "por": "WESLEY MATHEUS DA SILVA"
+      },
+      "fert_criado": {
+        "previsto": null,
+        "real": "2026-05-04",
+        "por": "GIOVANNA FREITAS ALVES"
+      },
+      "op_liberada": {
+        "previsto": null,
+        "real": "2026-05-13",
+        "por": "ariane.luz@antilhas.com.br"
+      },
+      "producao": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      },
+      "data_vitrine": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      }
+    },
+    "lead_times": {
+      "pedido_para_fert": {
+        "previsto": null,
+        "real": 0,
+        "desvio": null
+      },
+      "fert_para_op": {
+        "previsto": null,
+        "real": 9,
+        "desvio": null
+      },
+      "op_para_producao": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      },
+      "producao_para_vit": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      }
+    },
+    "status": "em_producao",
+    "responsavel_atual": "PCP/Fábrica",
+    "tem_cronograma": false
+  },
+  {
+    "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAPF2ZdlHkohOmB-MEE3z19M=",
+    "subject": "RES: REEDIÇÃO PEDIDO FECHADO VAREJO - HOPE -  INSTITUCIONAL",
+    "projeto": "HOPE -  INSTITUCIONAL",
+    "cliente": "HOPE -  INSTITUCIONAL",
+    "comercial": "NEILA DUARTE DA SILVA",
+    "skus": [
+      {
+        "codigo": "11054747-0001",
+        "tipo": "FERT",
+        "descricao": "ENV PAP MAN FSC®PP E-COM INST26 HOPE"
+      },
+      {
+        "codigo": "11054748-0001",
+        "tipo": "FERT",
+        "descricao": "ENV PAP MAN FSC®P E-COM INST26 HOPE"
+      },
+      {
+        "codigo": "11054745-0001",
+        "tipo": "FERT",
+        "descricao": "ENV PAP MAN FSC®M E-COM INST26 HOPE"
+      },
+      {
+        "codigo": "11054746-0001",
+        "tipo": "FERT",
+        "descricao": "ENV PAP MAN FSC®G E-COM INST26 HOPE"
+      }
+    ],
+    "marcos": {
+      "pedido_fechado": {
+        "previsto": null,
+        "real": "2026-04-30",
+        "por": "NEILA DUARTE DA SILVA"
+      },
+      "fert_criado": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      },
+      "op_liberada": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      },
+      "producao": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      },
+      "data_vitrine": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      }
+    },
+    "lead_times": {
+      "pedido_para_fert": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      },
+      "fert_para_op": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      },
+      "op_para_producao": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      },
+      "producao_para_vit": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      }
+    },
+    "status": "aguardando_fert",
+    "responsavel_atual": "Engenharia",
+    "tem_cronograma": false
+  },
+  {
+    "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAD4AbasFU_ZCr8s09g9PPMs=",
+    "subject": "RES: PEDIDO FECHADO VAREJO - KOP TAG KEEP KOPA",
+    "projeto": "KOP TAG KEEP KOPA",
+    "cliente": "KOP TAG KEEP KOPA",
+    "comercial": "WESLEY MATHEUS DA SILVA",
+    "skus": [
+      {
+        "codigo": "11055242-0001",
+        "tipo": "FERT",
+        "descricao": "TAG BOLA KEEP KOPA 26 KOP"
+      }
+    ],
+    "marcos": {
+      "pedido_fechado": {
+        "previsto": null,
+        "real": "2026-04-28",
+        "por": "WESLEY MATHEUS DA SILVA"
+      },
+      "fert_criado": {
+        "previsto": null,
+        "real": "2026-04-28",
+        "por": "LETICIA JACQUELINE SANTOS"
+      },
+      "op_liberada": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      },
+      "producao": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      },
+      "data_vitrine": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      }
+    },
+    "lead_times": {
+      "pedido_para_fert": {
+        "previsto": null,
+        "real": 0,
+        "desvio": null
+      },
+      "fert_para_op": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      },
+      "op_para_producao": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      },
+      "producao_para_vit": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      }
+    },
+    "status": "aguardando_op",
+    "responsavel_atual": "Engenharia",
+    "tem_cronograma": false
+  },
+  {
+    "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAJ3KlOfJZMdFoVs8Nir9Sc4=",
+    "subject": "RE: REEDIÇÃO PEDIDO FECHADO VAREJO - CAIXA P - TRACK & FIELD COFFE ",
+    "projeto": "CAIXA P - TRACK & FIELD COFFE",
+    "cliente": "CAIXA P - TRACK & FIELD COFFE",
+    "comercial": "EDUARDA FERREIRA DOS SANTOS",
+    "skus": [
+      {
+        "codigo": "11049226-0001",
+        "tipo": "FERT",
+        "descricao": "CX TIPO E P ECOM INST24 T&F"
+      }
+    ],
+    "marcos": {
+      "pedido_fechado": {
+        "previsto": null,
+        "real": "2026-04-27",
+        "por": "EDUARDA FERREIRA DOS SANTOS"
+      },
+      "fert_criado": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      },
+      "op_liberada": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      },
+      "producao": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      },
+      "data_vitrine": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      }
+    },
+    "lead_times": {
+      "pedido_para_fert": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      },
+      "fert_para_op": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      },
+      "op_para_producao": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      },
+      "producao_para_vit": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      }
+    },
+    "status": "aguardando_fert",
+    "responsavel_atual": "Engenharia",
+    "tem_cronograma": false
+  },
+  {
+    "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQADLwmNeFjztBrWfiS3QxSAw=",
+    "subject": "RES: REEDICAO PEDIDO FECHADO VAREJO - NESTLE",
+    "projeto": "NESTLE",
+    "cliente": "NESTLE",
+    "comercial": "WESLEY MATHEUS DA SILVA",
+    "skus": [
+      {
+        "codigo": "13021484-0001",
+        "tipo": "FERT",
+        "descricao": "SACL PAP AUT FSC®M INST25 NESTLE"
+      },
+      {
+        "codigo": "13021485-0001",
+        "tipo": "FERT",
+        "descricao": "SACL PAP AUT FSC®P INST25 NESTLE"
+      }
+    ],
+    "marcos": {
+      "pedido_fechado": {
+        "previsto": null,
+        "real": "2026-04-27",
+        "por": "WESLEY MATHEUS DA SILVA"
+      },
+      "fert_criado": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      },
+      "op_liberada": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      },
+      "producao": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      },
+      "data_vitrine": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      }
+    },
+    "lead_times": {
+      "pedido_para_fert": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      },
+      "fert_para_op": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      },
+      "op_para_producao": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      },
+      "producao_para_vit": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      }
+    },
+    "status": "aguardando_fert",
+    "responsavel_atual": "Engenharia",
+    "tem_cronograma": false
+  },
+  {
+    "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAE4MZxY1ZXNJoZYy3QV2cOE=",
+    "subject": "RES: PEDIDO FECHADO VAREJO - BOTICÁRIO - PAIS",
+    "projeto": "BOTICÁRIO - PAIS",
+    "cliente": "BOTICÁRIO - PAIS",
+    "comercial": "GLEICY MAIA DOS SANTOS",
+    "skus": [
+      {
+        "codigo": "13021787-0001",
+        "tipo": "FERT",
+        "descricao": "97438 SACL PAP NLF FSC®M PDVG PAIS26 BOT"
+      },
+      {
+        "codigo": "2400010021",
+        "tipo": "HALB",
+        "descricao": "FIO CHATA FSCM - VERDE 0000 ANT/02.02915"
+      },
+      {
+        "codigo": "2400010022",
+        "tipo": "HALB",
+        "descricao": "FUNDO FSCM 235X92MM BCEA PCT/50"
+      },
+      {
+        "codigo": "11055235-0001",
+        "tipo": "FERT",
+        "descricao": "97436 CX TPA FDO FSC®M PDVG PAIS26 BOT"
+      },
+      {
+        "codigo": "2100082602",
+        "tipo": "HALB",
+        "descricao": "97436 CX TPA FSC®M PDVG PAIS26 BOT"
+      },
+      {
+        "codigo": "2100082603",
+        "tipo": "HALB",
+        "descricao": "97436 CX FDO FSC®M PDVG PAIS26 BOT"
+      },
+      {
+        "codigo": "5200005251",
+        "tipo": "HALB",
+        "descricao": "FITA LACO GRAVATA 20X280MM VERDE"
+      },
+      {
+        "codigo": "11055236-0001",
+        "tipo": "FERT",
+        "descricao": "97437 CTCHO ENV C VISOR FSC®M PAIS26 BOT"
+      },
+      {
+        "codigo": "15005816-0001",
+        "tipo": "FERT",
+        "descricao": "PAP SEDA PDVG PAIS26 BOT"
+      },
+      {
+        "codigo": "15005817-0001",
+        "tipo": "FERT",
+        "descricao": "KIT PAP SEDA VD PAIS26 BOT"
+      },
+      {
+        "codigo": "15005818-0001",
+        "tipo": "FERT",
+        "descricao": "KIT ETIQ ADES VD PAIS26 BOT"
+      },
+      {
+        "codigo": "5200005254",
+        "tipo": "HALB",
+        "descricao": "ETIQ ADES 45X85MM VD PAIS26 BOT"
+      },
+      {
+        "codigo": "5200005252",
+        "tipo": "HALB",
+        "descricao": "ETIQ ADES 40X40MM VD PAIS26 BOT"
+      },
+      {
+        "codigo": "15005819-0001",
+        "tipo": "FERT",
+        "descricao": "ETIQ ADES PDVG PAIS26 BOT"
+      },
+      {
+        "codigo": "11055237-0001",
+        "tipo": "FERT",
+        "descricao": "CARTAO PRES PDVG PAIS26 BOT"
+      }
+    ],
+    "marcos": {
+      "pedido_fechado": {
+        "previsto": null,
+        "real": "2026-04-24",
+        "por": "GLEICY MAIA DOS SANTOS"
+      },
+      "fert_criado": {
+        "previsto": null,
+        "real": "2026-04-27",
+        "por": "LETICIA JACQUELINE SANTOS"
+      },
+      "op_liberada": {
+        "previsto": null,
+        "real": "2026-04-29",
+        "por": "Gabriel Alcantara"
+      },
+      "producao": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      },
+      "data_vitrine": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      }
+    },
+    "lead_times": {
+      "pedido_para_fert": {
+        "previsto": null,
+        "real": 3,
+        "desvio": null
+      },
+      "fert_para_op": {
+        "previsto": null,
+        "real": 2,
+        "desvio": null
+      },
+      "op_para_producao": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      },
+      "producao_para_vit": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      }
+    },
+    "status": "em_producao",
+    "responsavel_atual": "PCP/Fábrica",
+    "tem_cronograma": false
+  },
+  {
+    "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAFYKO17s-ghLh-CGnS8h4go=",
+    "subject": "RE: REEDIÇÃO PEDIDO FECHADO VAREJO - SACOLA CONSULT GG  - NATURA ",
+    "projeto": "SACOLA CONSULT GG  - NATURA",
+    "cliente": "SACOLA CONSULT GG  - NATURA",
+    "comercial": "EDUARDA FERREIRA DOS SANTOS",
+    "skus": [
+      {
+        "codigo": "11051013-0001",
+        "tipo": "FERT",
+        "descricao": "SACL PAP MAN GG CONSULT INST24 NAT"
+      }
+    ],
+    "marcos": {
+      "pedido_fechado": {
+        "previsto": null,
+        "real": "2026-04-22",
+        "por": "EDUARDA FERREIRA DOS SANTOS"
+      },
+      "fert_criado": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      },
+      "op_liberada": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      },
+      "producao": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      },
+      "data_vitrine": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      }
+    },
+    "lead_times": {
+      "pedido_para_fert": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      },
+      "fert_para_op": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      },
+      "op_para_producao": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      },
+      "producao_para_vit": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      }
+    },
+    "status": "aguardando_fert",
+    "responsavel_atual": "Engenharia",
+    "tem_cronograma": false
+  },
+  {
+    "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAGeODOnN891EkQndtxKeTqw=",
+    "subject": "RE:  REEDIÇÃO PEDIDO FECHADO VAREJO - YOUCOM JULHO/ 2026",
+    "projeto": "YOUCOM JULHO/ 2026",
+    "cliente": "YOUCOM JULHO/ 2026",
+    "comercial": "WESLEY MATHEUS DA SILVA",
+    "skus": [
+      {
+        "codigo": "11053295-0001",
+        "tipo": "FERT",
+        "descricao": "CAIXA PRESENTE COM CARTRELA ADESIVA"
+      }
+    ],
+    "marcos": {
+      "pedido_fechado": {
+        "previsto": null,
+        "real": "2026-04-20",
+        "por": "WESLEY MATHEUS DA SILVA"
+      },
+      "fert_criado": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      },
+      "op_liberada": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      },
+      "producao": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      },
+      "data_vitrine": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      }
+    },
+    "lead_times": {
+      "pedido_para_fert": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      },
+      "fert_para_op": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      },
+      "op_para_producao": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      },
+      "producao_para_vit": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      }
+    },
+    "status": "aguardando_fert",
+    "responsavel_atual": "Engenharia",
+    "tem_cronograma": false
+  },
+  {
+    "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAO82y6VnFUxAgeBs1u7A8QA=",
+    "subject": "RES: PEDIDO FECHADO VAREJO - KOP - INST 26 ",
+    "projeto": "KOP - INST 26",
+    "cliente": "KOP - INST 26",
+    "comercial": "WESLEY MATHEUS DA SILVA wesley.matheus@antilhas.com.br",
+    "skus": [
+      {
+        "codigo": "11052815-0001",
+        "tipo": "FERT",
+        "descricao": "CX TPA FDO FSC®P PRES25 KOP"
+      }
+    ],
+    "marcos": {
+      "pedido_fechado": {
+        "previsto": null,
+        "real": "2026-04-17",
+        "por": "WESLEY MATHEUS DA SILVA wesley.matheus@antilhas.com.br"
+      },
+      "fert_criado": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      },
+      "op_liberada": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      },
+      "producao": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      },
+      "data_vitrine": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      }
+    },
+    "lead_times": {
+      "pedido_para_fert": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      },
+      "fert_para_op": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      },
+      "op_para_producao": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      },
+      "producao_para_vit": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      }
+    },
+    "status": "aguardando_fert",
+    "responsavel_atual": "Engenharia",
+    "tem_cronograma": false
+  },
+  {
+    "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQABGxo51lWOdNuBpMTdI4mnY=",
+    "subject": "RES: PEDIDO FECHADO VAREJO - NATURA - LAMINA OLFATIVA 2026",
+    "projeto": "NATURA - LAMINA OLFATIVA 2026",
+    "cliente": "NATURA - LAMINA OLFATIVA 2026",
+    "comercial": "EDUARDA FERREIRA DOS SANTOS",
+    "skus": [
+      {
+        "codigo": "11055171-0001",
+        "tipo": "FERT",
+        "descricao": "LAMINA OLF MORUMBI NAT"
+      },
+      {
+        "codigo": "2100082539",
+        "tipo": "HALB",
+        "descricao": "LAMINA OLF MORUMBI NAT"
+      }
+    ],
+    "marcos": {
+      "pedido_fechado": {
+        "previsto": null,
+        "real": "2026-04-16",
+        "por": "EDUARDA FERREIRA DOS SANTOS"
+      },
+      "fert_criado": {
+        "previsto": null,
+        "real": "2026-04-17",
+        "por": "GIOVANNA FREITAS ALVES"
+      },
+      "op_liberada": {
+        "previsto": null,
+        "real": "2026-04-28",
+        "por": "ARIANE DO CARMO LUZ"
+      },
+      "producao": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      },
+      "data_vitrine": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      }
+    },
+    "lead_times": {
+      "pedido_para_fert": {
+        "previsto": null,
+        "real": 1,
+        "desvio": null
+      },
+      "fert_para_op": {
+        "previsto": null,
+        "real": 11,
+        "desvio": null
+      },
+      "op_para_producao": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      },
+      "producao_para_vit": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      }
+    },
+    "status": "em_producao",
+    "responsavel_atual": "PCP/Fábrica",
+    "tem_cronograma": false
+  },
+  {
+    "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQACs6mj0k-gREkTHCzpZaCuM=",
+    "subject": "RES: PEDIDO FECHADO VAREJO - BC -PAIS 2026 ",
+    "projeto": "BC -PAIS 2026",
+    "cliente": "BC -PAIS 2026",
+    "comercial": "WESLEY MATHEUS DA SILVA",
+    "skus": [
+      {
+        "codigo": "11055211-0001",
+        "tipo": "FERT",
+        "descricao": "CX PP DIA DOS PAIS26 BC"
+      },
+      {
+        "codigo": "11055210-0001",
+        "tipo": "FERT",
+        "descricao": "TAG TRUFA PAIS26 BC"
+      }
+    ],
+    "marcos": {
+      "pedido_fechado": {
+        "previsto": null,
+        "real": "2026-04-16",
+        "por": "WESLEY MATHEUS DA SILVA"
+      },
+      "fert_criado": {
+        "previsto": null,
+        "real": "2026-04-17",
+        "por": "GIOVANNA FREITAS ALVES"
+      },
+      "op_liberada": {
+        "previsto": null,
+        "real": "2026-05-12",
+        "por": "leticia.santos@antilhas.com.br"
+      },
+      "producao": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      },
+      "data_vitrine": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      }
+    },
+    "lead_times": {
+      "pedido_para_fert": {
+        "previsto": null,
+        "real": 1,
+        "desvio": null
+      },
+      "fert_para_op": {
+        "previsto": null,
+        "real": 25,
+        "desvio": null
+      },
+      "op_para_producao": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      },
+      "producao_para_vit": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      }
+    },
+    "status": "em_producao",
+    "responsavel_atual": "PCP/Fábrica",
+    "tem_cronograma": false
+  },
+  {
+    "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAMU7lBCBozRJqcSrVLXMouA=",
+    "subject": "RES: PEDIDO FECHADO VAREJO - NESTLE - SACOLAS NESPRESSO ",
+    "projeto": "NESTLE - SACOLAS NESPRESSO",
+    "cliente": "NESTLE - SACOLAS NESPRESSO",
+    "comercial": "WESLEY MATHEUS DA SILVA",
+    "skus": [
+      {
+        "codigo": "13021782-0001",
+        "tipo": "FERT",
+        "descricao": "SACL PAP NLF FSC®P NESPRESSO"
+      },
+      {
+        "codigo": "13021784-0001",
+        "tipo": "FERT",
+        "descricao": "SACL PAP NLF FSC®M NESPRESSO"
+      },
+      {
+        "codigo": "11055207-0001",
+        "tipo": "FERT",
+        "descricao": "SACL PAP MAN FSC®G NESPRESSO"
+      },
+      {
+        "codigo": "2100082574",
+        "tipo": "HALB",
+        "descricao": "SACL PAP MAN FSC®G NESPRESSO PT1"
+      },
+      {
+        "codigo": "2100082575",
+        "tipo": "HALB",
+        "descricao": "SACL PAP MAN FSC®G NESPRESSO PT2"
+      },
+      {
+        "codigo": "8600006885",
+        "tipo": "HALB",
+        "descricao": "SACL PAP MAN FSC®G NESPRESSO ME"
+      }
+    ],
+    "marcos": {
+      "pedido_fechado": {
+        "previsto": null,
+        "real": "2026-04-16",
+        "por": "WESLEY MATHEUS DA SILVA"
+      },
+      "fert_criado": {
+        "previsto": null,
+        "real": "2026-04-16",
+        "por": "GIOVANNA FREITAS ALVES"
+      },
+      "op_liberada": {
+        "previsto": null,
+        "real": "2026-04-28",
+        "por": "gabriel.alcantara@antilhas.com.br"
+      },
+      "producao": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      },
+      "data_vitrine": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      }
+    },
+    "lead_times": {
+      "pedido_para_fert": {
+        "previsto": null,
+        "real": 0,
+        "desvio": null
+      },
+      "fert_para_op": {
+        "previsto": null,
+        "real": 12,
+        "desvio": null
+      },
+      "op_para_producao": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      },
+      "producao_para_vit": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      }
+    },
+    "status": "em_producao",
+    "responsavel_atual": "PCP/Fábrica",
+    "tem_cronograma": false
+  },
+  {
+    "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAFBViFEJA2hNuklxKUE1FUQ=",
+    "subject": "RES: PEDIDO FECHADO VAREJO - SACL PAP MAN FSC GG INST SCHUTZ",
+    "projeto": "SACL PAP MAN FSC GG INST SCHUTZ",
+    "cliente": "SACL PAP MAN FSC GG INST SCHUTZ",
+    "comercial": "GLEICY MAIA DOS SANTOS",
+    "skus": [
+      {
+        "codigo": "11055198-0001",
+        "tipo": "FERT",
+        "descricao": "SACL PAP MAN FSC®GG INST26 SCHUTZ"
+      },
+      {
+        "codigo": "2100082568",
+        "tipo": "HALB",
+        "descricao": "SACL PAP MAN FSC®GG INST26 SCHUTZ P1"
+      },
+      {
+        "codigo": "2100082569",
+        "tipo": "HALB",
+        "descricao": "SACL PAP MAN FSC®GG INST26 SCHUTZ P2"
+      },
+      {
+        "codigo": "5200004658",
+        "tipo": "HALB",
+        "descricao": "FITA GORG ESC 400X25MM PRETO"
+      },
+      {
+        "codigo": "2400002567",
+        "tipo": "HALB",
+        "descricao": "FUNDO FSCM 765X115MM BRANCO"
+      },
+      {
+        "codigo": "8600006889",
+        "tipo": "HALB",
+        "descricao": "SACL PAP MAN FSC®GG INST26 SCHUTZ ME"
+      }
+    ],
+    "marcos": {
+      "pedido_fechado": {
+        "previsto": null,
+        "real": "2026-04-16",
+        "por": "GLEICY MAIA DOS SANTOS"
+      },
+      "fert_criado": {
+        "previsto": null,
+        "real": "2026-04-22",
+        "por": "LETICIA JACQUELINE SANTOS"
+      },
+      "op_liberada": {
+        "previsto": null,
+        "real": "2026-04-27",
+        "por": "ariane.luz@antilhas.com.br"
+      },
+      "producao": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      },
+      "data_vitrine": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      }
+    },
+    "lead_times": {
+      "pedido_para_fert": {
+        "previsto": null,
+        "real": 6,
+        "desvio": null
+      },
+      "fert_para_op": {
+        "previsto": null,
+        "real": 5,
+        "desvio": null
+      },
+      "op_para_producao": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      },
+      "producao_para_vit": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      }
+    },
+    "status": "em_producao",
+    "responsavel_atual": "PCP/Fábrica",
+    "tem_cronograma": false
+  },
+  {
+    "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAO8WARQpDOxKm47OX9qnAiQ=",
+    "subject": "RE:  REEDIÇÃO PEDIDO FECHADO VAREJO - RENNER MAIO/ 2026",
+    "projeto": "RENNER MAIO/ 2026",
+    "cliente": "RENNER MAIO/ 2026",
+    "comercial": "WESLEY MATHEUS DA SILVA",
+    "skus": [
+      {
+        "codigo": "11053653-0001",
+        "tipo": "FERT",
+        "descricao": "928780585 SACL PAP MAN FSC®P CORFEST REN"
+      }
+    ],
+    "marcos": {
+      "pedido_fechado": {
+        "previsto": null,
+        "real": "2026-04-16",
+        "por": "WESLEY MATHEUS DA SILVA"
+      },
+      "fert_criado": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      },
+      "op_liberada": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      },
+      "producao": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      },
+      "data_vitrine": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      }
+    },
+    "lead_times": {
+      "pedido_para_fert": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      },
+      "fert_para_op": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      },
+      "op_para_producao": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      },
+      "producao_para_vit": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      }
+    },
+    "status": "aguardando_fert",
+    "responsavel_atual": "Engenharia",
+    "tem_cronograma": false
+  },
+  {
+    "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAB4cW7Pb0RBMqA0hlGW4ZBE=",
+    "subject": "RES: PEDIDO FECHADO VAREJO - HOPE - CARTÃO DELIVERY 2026",
+    "projeto": "HOPE - CARTÃO DELIVERY 2026",
+    "cliente": "HOPE - CARTÃO DELIVERY 2026",
+    "comercial": "NEILA DUARTE DA SILVA",
+    "skus": [
+      {
+        "codigo": "15005815-0001",
+        "tipo": "FERT",
+        "descricao": "CARTAO DELLIVERY HOPE"
+      }
+    ],
+    "marcos": {
+      "pedido_fechado": {
+        "previsto": null,
+        "real": "2026-04-16",
+        "por": "NEILA DUARTE DA SILVA"
+      },
+      "fert_criado": {
+        "previsto": null,
+        "real": "2026-04-17",
+        "por": "GIOVANNA FREITAS ALVES"
+      },
+      "op_liberada": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      },
+      "producao": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      },
+      "data_vitrine": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      }
+    },
+    "lead_times": {
+      "pedido_para_fert": {
+        "previsto": null,
+        "real": 1,
+        "desvio": null
+      },
+      "fert_para_op": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      },
+      "op_para_producao": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      },
+      "producao_para_vit": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      }
+    },
+    "status": "aguardando_op",
+    "responsavel_atual": "Engenharia",
+    "tem_cronograma": false
+  },
+  {
+    "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAL-TDBkhz9BChrjvd9fHW78=",
+    "subject": "RES: REEDIÇÃO PEDIDO FECHADO VAREJO - MAHOGANY INSTITUCIONAL",
+    "projeto": "MAHOGANY INSTITUCIONAL",
+    "cliente": "MAHOGANY INSTITUCIONAL",
+    "comercial": "EDUARDA FERREIRA DOS SANTOS",
+    "skus": [
+      {
+        "codigo": "15005762-0001",
+        "tipo": "FERT",
+        "descricao": "PAP SEDA PRES26 MAHOGANY"
+      },
+      {
+        "codigo": "15002405-0001",
+        "tipo": "FERT",
+        "descricao": "- PAP SEDA PCT/500 OURO MAHOGANY - iniciar Phase Out"
+      }
+    ],
+    "marcos": {
+      "pedido_fechado": {
+        "previsto": null,
+        "real": "2026-04-13",
+        "por": "EDUARDA FERREIRA DOS SANTOS"
+      },
+      "fert_criado": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      },
+      "op_liberada": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      },
+      "producao": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      },
+      "data_vitrine": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      }
+    },
+    "lead_times": {
+      "pedido_para_fert": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      },
+      "fert_para_op": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      },
+      "op_para_producao": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      },
+      "producao_para_vit": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      }
+    },
+    "status": "aguardando_fert",
+    "responsavel_atual": "Engenharia",
+    "tem_cronograma": false
+  },
+  {
+    "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAN-AXOJTbztBmUGnjGG82sI=",
+    "subject": "RES:  REEDIÇÃO PEDIDO FECHADO VAREJO - RENNER JUNHO A AGOSTO/ 2026",
+    "projeto": "RENNER JUNHO A AGOSTO/ 2026",
+    "cliente": "RENNER JUNHO A AGOSTO/ 2026",
+    "comercial": "WESLEY MATHEUS DA SILVA",
+    "skus": [
+      {
+        "codigo": "11052728-0001",
+        "tipo": "FERT",
+        "descricao": "929905167 SACL PAP MAN PP FSC®MIMO REN"
+      },
+      {
+        "codigo": "11052645-0001",
+        "tipo": "FERT",
+        "descricao": "929787391 SACL PAP MAN FSC®P PT REN"
+      },
+      {
+        "codigo": "11053118-0001",
+        "tipo": "FERT",
+        "descricao": "930146663 SACL PAP MAN FSC®P MIMO REN"
+      },
+      {
+        "codigo": "11052150-0001",
+        "tipo": "FERT",
+        "descricao": "929285404 SACL PAP MAN FSC P MAORI REN"
+      },
+      {
+        "codigo": "11053098-0001",
+        "tipo": "FERT",
+        "descricao": "930110661 SACL PAP MAN FSC®P BEGE REN"
+      },
+      {
+        "codigo": "11053110-0001",
+        "tipo": "FERT",
+        "descricao": "930109889 SACL PAP MAN FSC®P LEMBR REN"
+      },
+      {
+        "codigo": "11053655-0001",
+        "tipo": "FERT",
+        "descricao": "930632661 SACL PAP MAN FSC®P HELLO P REN"
+      },
+      {
+        "codigo": "11053666-0001",
+        "tipo": "FERT",
+        "descricao": "930633120 SACL PAP MAN FSC®M HELLO P REN"
+      }
+    ],
+    "marcos": {
+      "pedido_fechado": {
+        "previsto": null,
+        "real": "2026-04-08",
+        "por": "WESLEY MATHEUS DA SILVA"
+      },
+      "fert_criado": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      },
+      "op_liberada": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      },
+      "producao": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      },
+      "data_vitrine": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      }
+    },
+    "lead_times": {
+      "pedido_para_fert": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      },
+      "fert_para_op": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      },
+      "op_para_producao": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      },
+      "producao_para_vit": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      }
+    },
+    "status": "aguardando_fert",
+    "responsavel_atual": "Engenharia",
+    "tem_cronograma": false
+  },
+  {
+    "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAEl6VrsKg0NLsHHYC0Sjxcs=",
+    "subject": "RES: PEDIDO FECHADO VAREJO - SACOLA M HOPE",
+    "projeto": "SACOLA M HOPE",
+    "cliente": "SACOLA M HOPE",
+    "comercial": "NEILA DUARTE DA SILVA",
+    "skus": [
+      {
+        "codigo": "11049370-0001",
+        "tipo": "FERT",
+        "descricao": "SACL PAP MAN FSC®M INST24 RESORT HOPE"
+      },
+      {
+        "codigo": "2100082268",
+        "tipo": "HALB",
+        "descricao": "SACL PAP SAUT FSC®M INST24 RESORT HOPE"
+      },
+      {
+        "codigo": "2100082269",
+        "tipo": "HALB",
+        "descricao": "REF FDO FSC®M INST24 RESORT HOPE ZB"
+      },
+      {
+        "codigo": "2100082582",
+        "tipo": "HALB",
+        "descricao": "REF ALC SACL SAUT FSC®M INST24 RESORT ZB"
+      }
+    ],
+    "marcos": {
+      "pedido_fechado": {
+        "previsto": null,
+        "real": "2026-04-07",
+        "por": "NEILA DUARTE DA SILVA"
+      },
+      "fert_criado": {
+        "previsto": null,
+        "real": "2026-04-17",
+        "por": "ARIANE DO CARMO LUZ"
+      },
+      "op_liberada": {
+        "previsto": null,
+        "real": "2026-04-23",
+        "por": "gabriel.alcantara@antilhas.com.br"
+      },
+      "producao": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      },
+      "data_vitrine": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      }
+    },
+    "lead_times": {
+      "pedido_para_fert": {
+        "previsto": null,
+        "real": 10,
+        "desvio": null
+      },
+      "fert_para_op": {
+        "previsto": null,
+        "real": 6,
+        "desvio": null
+      },
+      "op_para_producao": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      },
+      "producao_para_vit": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      }
+    },
+    "status": "em_producao",
+    "responsavel_atual": "PCP/Fábrica",
+    "tem_cronograma": false
+  },
+  {
+    "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAMRI8Rd4xVZGv60GHhN8sKk=",
+    "subject": "RES: PEDIDO FECHADO VAREJO - NATURA - PAIS 2026",
+    "projeto": "NATURA - PAIS 2026",
+    "cliente": "NATURA - PAIS 2026",
+    "comercial": "EDUARDA FERREIRA DOS SANTOS",
+    "skus": [
+      {
+        "codigo": "11055061-0001",
+        "tipo": "FERT",
+        "descricao": "CX TPA FDO FSC®M PAIS26 NATURA"
+      },
+      {
+        "codigo": "2100082283",
+        "tipo": "HALB",
+        "descricao": "CX TPA FSC®M PAIS26 NATURA"
+      },
+      {
+        "codigo": "2100082284",
+        "tipo": "HALB",
+        "descricao": "CX FDO FSC®M PAIS26 NATURA"
+      }
+    ],
+    "marcos": {
+      "pedido_fechado": {
+        "previsto": null,
+        "real": "2026-04-07",
+        "por": "EDUARDA FERREIRA DOS SANTOS"
+      },
+      "fert_criado": {
+        "previsto": null,
+        "real": "2026-04-07",
+        "por": "ARIANE DO CARMO LUZ"
+      },
+      "op_liberada": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      },
+      "producao": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      },
+      "data_vitrine": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      }
+    },
+    "lead_times": {
+      "pedido_para_fert": {
+        "previsto": null,
+        "real": 0,
+        "desvio": null
+      },
+      "fert_para_op": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      },
+      "op_para_producao": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      },
+      "producao_para_vit": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      }
+    },
+    "status": "aguardando_op",
+    "responsavel_atual": "Engenharia",
+    "tem_cronograma": false
+  },
+  {
+    "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAOkho0qp2MNMn1I3e2yHcdY=",
+    "subject": "RES: PEDIDO FECHADO VAREJO - BC - INST 26",
+    "projeto": "BC - INST 26",
+    "cliente": "BC - INST 26",
+    "comercial": "WESLEY MATHEUS DA SILVA",
+    "skus": [
+      {
+        "codigo": "11046344-0001",
+        "tipo": "FERT",
+        "descricao": "FERT ANTIGO COLOCAR EM PH"
+      }
+    ],
+    "marcos": {
+      "pedido_fechado": {
+        "previsto": null,
+        "real": "2026-04-07",
+        "por": "WESLEY MATHEUS DA SILVA"
+      },
+      "fert_criado": {
+        "previsto": null,
+        "real": "2026-04-08",
+        "por": "ARIANE DO CARMO LUZ"
+      },
+      "op_liberada": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      },
+      "producao": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      },
+      "data_vitrine": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      }
+    },
+    "lead_times": {
+      "pedido_para_fert": {
+        "previsto": null,
+        "real": 1,
+        "desvio": null
+      },
+      "fert_para_op": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      },
+      "op_para_producao": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      },
+      "producao_para_vit": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      }
+    },
+    "status": "aguardando_op",
+    "responsavel_atual": "Engenharia",
+    "tem_cronograma": false
+  },
+  {
+    "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAM2bg8rNVadEl69YiZrPOuw=",
+    "subject": "RES: PEDIDO FECHADO VAREJO - INSTITUCIONAL - LUPO",
+    "projeto": "INSTITUCIONAL - LUPO",
+    "cliente": "INSTITUCIONAL - LUPO",
+    "comercial": "EDUARDA FERREIRA DOS SANTOS",
+    "skus": [
+      {
+        "codigo": "11055077-0001",
+        "tipo": "FERT",
+        "descricao": "SACL PAP MAN FSC®M SOROCABA26 LUPO"
+      },
+      {
+        "codigo": "2100082309",
+        "tipo": "HALB",
+        "descricao": "SACL PAP MAN FSC®M SOROCABA26 LUPO"
+      },
+      {
+        "codigo": "2400003865",
+        "tipo": "HALB",
+        "descricao": "ALCA CHATA FSCM PARDO REF PARDO G ME"
+      },
+      {
+        "codigo": "8600006872",
+        "tipo": "HALB",
+        "descricao": "SACL PAP MAN FSC®M SOROCABA26 LUPO ME"
+      }
+    ],
+    "marcos": {
+      "pedido_fechado": {
+        "previsto": null,
+        "real": "2026-04-02",
+        "por": "EDUARDA FERREIRA DOS SANTOS"
+      },
+      "fert_criado": {
+        "previsto": null,
+        "real": "2026-04-02",
+        "por": "leticia.santos@antilhas.com.br"
+      },
+      "op_liberada": {
+        "previsto": null,
+        "real": "2026-04-23",
+        "por": "gabriel.alcantara@antilhas.com.br"
+      },
+      "producao": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      },
+      "data_vitrine": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      }
+    },
+    "lead_times": {
+      "pedido_para_fert": {
+        "previsto": null,
+        "real": 0,
+        "desvio": null
+      },
+      "fert_para_op": {
+        "previsto": null,
+        "real": 21,
+        "desvio": null
+      },
+      "op_para_producao": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      },
+      "producao_para_vit": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      }
+    },
+    "status": "em_producao",
+    "responsavel_atual": "PCP/Fábrica",
+    "tem_cronograma": false
+  },
+  {
+    "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAP4TDtgEGrtDpD3QQq_RwJw=",
+    "subject": "RE: REEDIÇÃO PEDIDO FECHADO VAREJO - BOTICÁRIO - LAMINA OLF INST26 OUI BOT",
+    "projeto": "BOTICÁRIO - LAMINA OLF INST26 OUI BOT",
+    "cliente": "BOTICÁRIO - LAMINA OLF INST26 OUI BOT",
+    "comercial": "GLEICY MAIA DOS SANTOS",
+    "skus": [
+      {
+        "codigo": "11054220-0001",
+        "tipo": "FERT",
+        "descricao": "LAMINA OLF INST26 OUI BOT"
+      }
+    ],
+    "marcos": {
+      "pedido_fechado": {
+        "previsto": null,
+        "real": "2026-04-02",
+        "por": "GLEICY MAIA DOS SANTOS"
+      },
+      "fert_criado": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      },
+      "op_liberada": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      },
+      "producao": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      },
+      "data_vitrine": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      }
+    },
+    "lead_times": {
+      "pedido_para_fert": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      },
+      "fert_para_op": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      },
+      "op_para_producao": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      },
+      "producao_para_vit": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      }
+    },
+    "status": "aguardando_fert",
+    "responsavel_atual": "Engenharia",
+    "tem_cronograma": false
+  },
+  {
+    "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAPsEUKiRKftDow8YfFm4jdo=",
+    "subject": "RES: PEDIDO FECHADO VAREJO - INSTITUCIONAL - ISA BAHIA",
+    "projeto": "INSTITUCIONAL - ISA BAHIA",
+    "cliente": "INSTITUCIONAL - ISA BAHIA",
+    "comercial": "NEILA DUARTE DA SILVA",
+    "skus": [
+      {
+        "codigo": "11055122-0001",
+        "tipo": "FERT",
+        "descricao": "SACL PAP MAN FSC®P INST26 ISA BAHIA"
+      },
+      {
+        "codigo": "2100082450",
+        "tipo": "HALB",
+        "descricao": "SACL PAP MAN FSC®P INST26 ISA BAHIA"
+      },
+      {
+        "codigo": "2400006722",
+        "tipo": "HALB",
+        "descricao": "FUNDO FSCM 155X075MM BCEA 230G"
+      },
+      {
+        "codigo": "5200005227",
+        "tipo": "HALB",
+        "descricao": "CORDAO ALG BRANCA 520X08MM"
+      },
+      {
+        "codigo": "5200005229",
+        "tipo": "HALB",
+        "descricao": "FITA GORG TELA AZUL 350X25MM"
+      },
+      {
+        "codigo": "8600006871",
+        "tipo": "HALB",
+        "descricao": "SACL PAP MAN FSC®P INST26 ISA BAHIA ME"
+      }
+    ],
+    "marcos": {
+      "pedido_fechado": {
+        "previsto": null,
+        "real": "2026-04-01",
+        "por": "NEILA DUARTE DA SILVA"
+      },
+      "fert_criado": {
+        "previsto": null,
+        "real": "2026-04-02",
+        "por": "LETICIA JACQUELINE SANTOS"
+      },
+      "op_liberada": {
+        "previsto": null,
+        "real": "2026-04-08",
+        "por": "gabriel.alcantara@antilhas.com.br"
+      },
+      "producao": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      },
+      "data_vitrine": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      }
+    },
+    "lead_times": {
+      "pedido_para_fert": {
+        "previsto": null,
+        "real": 1,
+        "desvio": null
+      },
+      "fert_para_op": {
+        "previsto": null,
+        "real": 6,
+        "desvio": null
+      },
+      "op_para_producao": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      },
+      "producao_para_vit": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      }
+    },
+    "status": "em_producao",
+    "responsavel_atual": "PCP/Fábrica",
+    "tem_cronograma": false
+  },
+  {
+    "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAGmV6oGAFBhNvvlDVlmylIU=",
+    "subject": "RES:  PEDIDO FECHADO VAREJO INST - SACL PAP AUT PRES DPSP - DROGARIA SÃO PAULO ",
+    "projeto": "RES:  PEDIDO FECHADO VAREJO INST - SACL PAP AUT PRES DPSP - DROGARIA SÃO PAULO ",
+    "cliente": null,
+    "comercial": "LUCINEIA DAIANE RODRIGUES",
+    "skus": [
+      {
+        "codigo": "11055104-0001",
+        "tipo": "FERT",
+        "descricao": "SACL PAP SAUT FSC®P PRES DPSP"
+      },
+      {
+        "codigo": "2100082371",
+        "tipo": "HALB",
+        "descricao": "SACL PAP SAUT FSC®P PRES DPSP"
+      },
+      {
+        "codigo": "2100082373",
+        "tipo": "HALB",
+        "descricao": "TAG SACL PAP SAUT FSC®P PRES DPSP"
+      },
+      {
+        "codigo": "2400009977",
+        "tipo": "HALB",
+        "descricao": "FUNDO FSCM 148X68MM 225G VITALINER ZB"
+      },
+      {
+        "codigo": "2400009978",
+        "tipo": "HALB",
+        "descricao": "REF ALCA FSCM 120X30MM BCO ZB"
+      },
+      {
+        "codigo": "8600006870",
+        "tipo": "HALB",
+        "descricao": "SACL PAP SAUT FSC®P PRES DPSP ME"
+      }
+    ],
+    "marcos": {
+      "pedido_fechado": {
+        "previsto": null,
+        "real": "2026-04-01",
+        "por": "LUCINEIA DAIANE RODRIGUES"
+      },
+      "fert_criado": {
+        "previsto": null,
+        "real": "2026-04-02",
+        "por": "LETICIA JACQUELINE SANTOS"
+      },
+      "op_liberada": {
+        "previsto": null,
+        "real": "2026-04-06",
+        "por": "gabriel.alcantara@antilhas.com.br"
+      },
+      "producao": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      },
+      "data_vitrine": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      }
+    },
+    "lead_times": {
+      "pedido_para_fert": {
+        "previsto": null,
+        "real": 1,
+        "desvio": null
+      },
+      "fert_para_op": {
+        "previsto": null,
+        "real": 4,
+        "desvio": null
+      },
+      "op_para_producao": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      },
+      "producao_para_vit": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      }
+    },
+    "status": "em_producao",
+    "responsavel_atual": "PCP/Fábrica",
+    "tem_cronograma": false
+  },
+  {
+    "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQACeaKZZPp45Hk75zMOcZRKs=",
+    "subject": "RES: PEDIDO FECHADO VAREJO - NATURA - NAMORADOS",
+    "projeto": "NATURA - NAMORADOS",
+    "cliente": "NATURA - NAMORADOS",
+    "comercial": "EDUARDA FERREIRA DOS SANTOS",
+    "skus": [
+      {
+        "codigo": "11055060-0001",
+        "tipo": "FERT",
+        "descricao": "CX TPA FDO FSC®G NAM26 NAT"
+      },
+      {
+        "codigo": "2100082281",
+        "tipo": "HALB",
+        "descricao": "CX TPA FSC®G NAM26 NAT"
+      },
+      {
+        "codigo": "2100082282",
+        "tipo": "HALB",
+        "descricao": "CX FDO FSC®G NAM26 NAT"
+      }
+    ],
+    "marcos": {
+      "pedido_fechado": {
+        "previsto": null,
+        "real": "2026-03-30",
+        "por": "EDUARDA FERREIRA DOS SANTOS"
+      },
+      "fert_criado": {
+        "previsto": null,
+        "real": "2026-03-31",
+        "por": "LETICIA JACQUELINE SANTOS"
+      },
+      "op_liberada": {
+        "previsto": null,
+        "real": "2026-04-08",
+        "por": "gabriel.alcantara@antilhas.com.br"
+      },
+      "producao": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      },
+      "data_vitrine": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      }
+    },
+    "lead_times": {
+      "pedido_para_fert": {
+        "previsto": null,
+        "real": 1,
+        "desvio": null
+      },
+      "fert_para_op": {
+        "previsto": null,
+        "real": 8,
+        "desvio": null
+      },
+      "op_para_producao": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      },
+      "producao_para_vit": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      }
+    },
+    "status": "em_producao",
+    "responsavel_atual": "PCP/Fábrica",
+    "tem_cronograma": false
+  },
+  {
+    "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAB9TdF-BAk-ZvUubcLTOvJI=",
+    "subject": "RES: PEDIDO FECHADO VAREJO - PAGSEGURO P2-P2A11 | Q60",
+    "projeto": "PAGSEGURO P2-P2A11 | Q60",
+    "cliente": "PAGSEGURO P2-P2A11 | Q60",
+    "comercial": "LUCINEIA DAIANE RODRIGUES",
+    "skus": [
+      {
+        "codigo": "11054733-0001",
+        "tipo": "FERT",
+        "descricao": "CX ECOMM FSC®P2 P2A11 PAGSEGURO"
+      },
+      {
+        "codigo": "2100081633",
+        "tipo": "HALB",
+        "descricao": "CAP EXT CX ECOMM FSC®P2 P2A11 PAGSEGURO"
+      },
+      {
+        "codigo": "2100081634",
+        "tipo": "HALB",
+        "descricao": "CAP INT CX ECOMM FSC®P2 P2A11 PAGSEGURO"
+      },
+      {
+        "codigo": "2100081635",
+        "tipo": "HALB",
+        "descricao": "BERCO CX ECOMM FSC®P2 P2A11 PAGSEGURO"
+      },
+      {
+        "codigo": "8600006858",
+        "tipo": "HALB",
+        "descricao": "FL EMP CX ECOMM FSC®P2 P2A11 PAGSEGURO"
+      },
+      {
+        "codigo": "11054754-0001",
+        "tipo": "FERT",
+        "descricao": "CX ECOMM FSC®Q60 PAGSEGURO"
+      },
+      {
+        "codigo": "2100081659",
+        "tipo": "HALB",
+        "descricao": "CAP EXT CX ECOMM FSC®Q60 PAGSEGURO"
+      },
+      {
+        "codigo": "2100081660",
+        "tipo": "HALB",
+        "descricao": "CAP INT CX ECOMM FSC®Q60 PAGSEGURO"
+      },
+      {
+        "codigo": "2100081661",
+        "tipo": "HALB",
+        "descricao": "BERCO CX ECOMM FSC®Q60 PAGSEGURO"
+      },
+      {
+        "codigo": "8600006859",
+        "tipo": "HALB",
+        "descricao": "FL EMP CX ECOMM FSC®Q60 PAGSEGURO"
+      }
+    ],
+    "marcos": {
+      "pedido_fechado": {
+        "previsto": null,
+        "real": "2026-03-23",
+        "por": "LUCINEIA DAIANE RODRIGUES"
+      },
+      "fert_criado": {
+        "previsto": null,
+        "real": "2026-03-24",
+        "por": "LETICIA JACQUELINE SANTOS"
+      },
+      "op_liberada": {
+        "previsto": null,
+        "real": "2026-04-06",
+        "por": "gabriel.alcantara@antilhas.com.br"
+      },
+      "producao": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      },
+      "data_vitrine": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      }
+    },
+    "lead_times": {
+      "pedido_para_fert": {
+        "previsto": null,
+        "real": 1,
+        "desvio": null
+      },
+      "fert_para_op": {
+        "previsto": null,
+        "real": 13,
+        "desvio": null
+      },
+      "op_para_producao": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      },
+      "producao_para_vit": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      }
+    },
+    "status": "em_producao",
+    "responsavel_atual": "PCP/Fábrica",
+    "tem_cronograma": false
+  },
+  {
+    "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQABeWvVk9MuNMqCNXLYbUREU=",
+    "subject": "RES: REEDIÇÃO PEDIDO FECHADO VAREJO - TRACK & FIELD - INSTITUCIONAL",
+    "projeto": "TRACK & FIELD - INSTITUCIONAL",
+    "cliente": "TRACK & FIELD - INSTITUCIONAL",
+    "comercial": "EDUARDA FERREIRA DOS SANTOS",
+    "skus": [
+      {
+        "codigo": "13020199-0001",
+        "tipo": "FERT",
+        "descricao": "SACL PAP AUT FSC® G INST23 T&F"
+      }
+    ],
+    "marcos": {
+      "pedido_fechado": {
+        "previsto": null,
+        "real": "2026-03-13",
+        "por": "EDUARDA FERREIRA DOS SANTOS"
+      },
+      "fert_criado": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      },
+      "op_liberada": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      },
+      "producao": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      },
+      "data_vitrine": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      }
+    },
+    "lead_times": {
+      "pedido_para_fert": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      },
+      "fert_para_op": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      },
+      "op_para_producao": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      },
+      "producao_para_vit": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      }
+    },
+    "status": "aguardando_fert",
+    "responsavel_atual": "Engenharia",
+    "tem_cronograma": false
+  },
+  {
+    "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAMWAFI2R4S9JuzIHLBPYgwg=",
+    "subject": "RE: REEDIÇÃO - PEDIDO FECHADO VAREJO INST - SEPHORA",
+    "projeto": "RE: REEDIÇÃO - PEDIDO FECHADO VAREJO INST - SEPHORA",
+    "cliente": null,
+    "comercial": "NEILA DUARTE DA SILVA",
+    "skus": [
+      {
+        "codigo": "11050946-0001",
+        "tipo": "FERT",
+        "descricao": "CX RIG HIB M PRES24 SEPHORA"
+      },
+      {
+        "codigo": "11050979-0001",
+        "tipo": "FERT",
+        "descricao": "CTCHO FSC® P C VISOR PRES24 SEPHORA"
+      },
+      {
+        "codigo": "11050980-0001",
+        "tipo": "FERT",
+        "descricao": "CTCHO FSC® M C VISOR PRES24 SEPHORA"
+      }
+    ],
+    "marcos": {
+      "pedido_fechado": {
+        "previsto": null,
+        "real": "2026-03-12",
+        "por": "NEILA DUARTE DA SILVA"
+      },
+      "fert_criado": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      },
+      "op_liberada": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      },
+      "producao": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      },
+      "data_vitrine": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      }
+    },
+    "lead_times": {
+      "pedido_para_fert": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      },
+      "fert_para_op": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      },
+      "op_para_producao": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      },
+      "producao_para_vit": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      }
+    },
+    "status": "aguardando_fert",
+    "responsavel_atual": "Engenharia",
+    "tem_cronograma": false
+  },
+  {
+    "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAMNnAAPZ8PNDqMfyxr2UYR0=",
+    "subject": "RES: PEDIDO FECHADO VAREJO - INSTITUCIONAL - MORANA       ",
+    "projeto": "INSTITUCIONAL - MORANA",
+    "cliente": "INSTITUCIONAL - MORANA",
+    "comercial": "NEILA DUARTE DA SILVA",
+    "skus": [
+      {
+        "codigo": "11054685-0001",
+        "tipo": "FERT",
+        "descricao": "SACL PAP MAN FSC®M SALM 2026 MORANA"
+      },
+      {
+        "codigo": "2100081598",
+        "tipo": "HALB",
+        "descricao": "SACL PAP MAN FSC®M SALM 2026 MORANA"
+      },
+      {
+        "codigo": "8600006817",
+        "tipo": "HALB",
+        "descricao": "SACL PAP MAN FSC®M SALM 2026 MORANA ME"
+      },
+      {
+        "codigo": "5200005205",
+        "tipo": "HALB",
+        "descricao": "CORDAO POLY S FRAN CHOCO 064 400MM 2PTP"
+      }
+    ],
+    "marcos": {
+      "pedido_fechado": {
+        "previsto": null,
+        "real": "2026-03-03",
+        "por": "NEILA DUARTE DA SILVA"
+      },
+      "fert_criado": {
+        "previsto": null,
+        "real": "2026-03-03",
+        "por": "ARIANE DO CARMO LUZ"
+      },
+      "op_liberada": {
+        "previsto": null,
+        "real": "2026-03-09",
+        "por": "Gabriel Alcantara"
+      },
+      "producao": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      },
+      "data_vitrine": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      }
+    },
+    "lead_times": {
+      "pedido_para_fert": {
+        "previsto": null,
+        "real": 0,
+        "desvio": null
+      },
+      "fert_para_op": {
+        "previsto": null,
+        "real": 6,
+        "desvio": null
+      },
+      "op_para_producao": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      },
+      "producao_para_vit": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      }
+    },
+    "status": "em_producao",
+    "responsavel_atual": "PCP/Fábrica",
+    "tem_cronograma": false
+  },
+  {
+    "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAAn1RdE7VoNLokmF1rURiXA=",
+    "subject": "RE: REEDIÇÃO PEDIDO FECHADO VAREJO - CAIXA INSTITUCIONAL  - C&A",
+    "projeto": "CAIXA INSTITUCIONAL  - C&A",
+    "cliente": "CAIXA INSTITUCIONAL  - C&A",
+    "comercial": "NEILA DUARTE DA SILVA",
+    "skus": [
+      {
+        "codigo": "11053613-0001",
+        "tipo": "FERT",
+        "descricao": "CX TPA FDO FSC®M PRESENTE BORDO C&A"
+      }
+    ],
+    "marcos": {
+      "pedido_fechado": {
+        "previsto": null,
+        "real": "2026-02-04",
+        "por": "NEILA DUARTE DA SILVA"
+      },
+      "fert_criado": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      },
+      "op_liberada": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      },
+      "producao": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      },
+      "data_vitrine": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      }
+    },
+    "lead_times": {
+      "pedido_para_fert": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      },
+      "fert_para_op": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      },
+      "op_para_producao": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      },
+      "producao_para_vit": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      }
+    },
+    "status": "aguardando_fert",
     "responsavel_atual": "Engenharia",
     "tem_cronograma": false
   }
