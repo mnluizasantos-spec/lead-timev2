@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lead Time · Antilhas</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+  <!-- ============================================================
+       TOPBAR
+       ============================================================ -->
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <img class="brand-logo" src="logo-antilhas.png" alt="Antilhas" />
+        <div>
+          <h1>Lead Time</h1>
+          <p class="brand-sub">Antilhas · PCP</p>
+        </div>
+      </div>
+      <div class="topbar-actions">
+        <button class="btn-icon" id="btn-apontamentos" title="Upload de apontamentos">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+          Apontamentos
+        </button>
+        <button class="btn-icon" id="btn-refresh" title="Atualizar dados">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <!-- ============================================================
+         3 CARDS DE RESUMO
+         ============================================================ -->
+    <section class="cards-grid">
+      <!-- Card 1: Atrasados -->
+      <article class="card card-atrasados" data-target="atrasados">
+        <div class="card-header">
+          <div class="card-icon card-icon-danger">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          </div>
+          <div>
+            <h3>Atrasados hoje</h3>
+            <p class="card-sub">Pedidos que estouraram a data prevista</p>
+          </div>
+        </div>
+        <div class="card-numero" id="card-atrasados-total">—</div>
+        <div class="card-breakdown" id="card-atrasados-breakdown">
+          <span>—</span>
+        </div>
+      </article>
+
+      <!-- Card 2: Produz essa semana -->
+      <article class="card card-semana" data-target="semana">
+        <div class="card-header">
+          <div class="card-icon card-icon-info">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          </div>
+          <div>
+            <h3>Produz essa semana</h3>
+            <p class="card-sub">Próximos 5 dias úteis</p>
+          </div>
+        </div>
+        <div class="card-numero" id="card-semana-total">—</div>
+        <div class="card-breakdown" id="card-semana-breakdown">
+          <span>—</span>
+        </div>
+      </article>
+
+      <!-- Card 3: Fechamento do mês -->
+      <article class="card card-mes" data-target="mes">
+        <div class="card-header">
+          <div class="card-icon card-icon-success">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+          </div>
+          <div>
+            <h3>Fechamento do mês</h3>
+            <p class="card-sub">Maio · resumo gerencial</p>
+          </div>
+        </div>
+        <div class="card-mini-stats">
+          <div class="mini-stat">
+            <span class="mini-stat-label">Lead time médio</span>
+            <span class="mini-stat-valor" id="card-mes-leadtime">—</span>
+          </div>
+          <div class="mini-stat">
+            <span class="mini-stat-label">Aderência</span>
+            <span class="mini-stat-valor" id="card-mes-aderencia">—</span>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- ============================================================
+         LEAD TIME POR ETAPA (média do mês)
+         ============================================================ -->
+    <section class="etapas-section">
+      <div class="etapas-header">
+        <h2>Lead time médio por etapa</h2>
+        <p class="etapas-sub">Maio · média entre pedidos do mês</p>
+      </div>
+      <div class="etapas-grid" id="etapas-grid">
+        <!-- preenchido por JS -->
+      </div>
+    </section>
+
+    <!-- ============================================================
+         FILTROS
+         ============================================================ -->
+    <section class="filtros">
+      <div class="filtros-grupo">
+        <label class="filtro-label">Busca</label>
+        <input
+          type="text"
+          id="filtro-busca"
+          class="filtro-input"
+          placeholder="Cliente, projeto, FERT…"
+        />
+      </div>
+      <div class="filtros-grupo">
+        <label class="filtro-label">Status</label>
+        <select id="filtro-status" class="filtro-select">
+          <option value="">Todos</option>
+          <option value="aguardando_fert">Aguardando FERT</option>
+          <option value="aguardando_op">Aguardando OP</option>
+          <option value="em_producao">Em produção</option>
+          <option value="concluido">Concluído</option>
+          <option value="cancelado">Cancelado</option>
+        </select>
+      </div>
+      <div class="filtros-grupo">
+        <label class="filtro-label">Responsável</label>
+        <select id="filtro-responsavel" class="filtro-select">
+          <option value="">Todos</option>
+          <option value="Comercial">Comercial</option>
+          <option value="Engenharia">Engenharia</option>
+          <option value="PCP/Fábrica">PCP/Fábrica</option>
+        </select>
+      </div>
+      <div class="filtros-grupo">
+        <label class="filtro-label">Cliente</label>
+        <select id="filtro-cliente" class="filtro-select">
+          <option value="">Todos</option>
+        </select>
+      </div>
+      <div class="filtros-grupo filtros-grupo-end">
+        <button class="btn-ghost" id="btn-limpar-filtros">Limpar</button>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         LISTA DE PEDIDOS
+         ============================================================ -->
+    <section class="lista-section">
+      <div class="lista-header">
+        <h2>Pedidos <span class="lista-count" id="lista-count">0</span></h2>
+        <div class="lista-meta" id="lista-meta">Carregando…</div>
+      </div>
+
+      <div class="tabela-wrapper">
+        <table class="tabela-pedidos" id="tabela-pedidos">
+          <thead>
+            <tr>
+              <th>Cliente</th>
+              <th>Projeto</th>
+              <th>Status</th>
+              <th>Pedido fechado</th>
+              <th>OP prevista</th>
+              <th>Produção prevista</th>
+              <th>Aderência</th>
+            </tr>
+          </thead>
+          <tbody id="tabela-pedidos-body">
+            <!-- preenchido por JS -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================================================
+       DRAWER DE DETALHE (lateral)
+       ============================================================ -->
+  <aside class="drawer" id="drawer" aria-hidden="true">
+    <div class="drawer-backdrop" id="drawer-backdrop"></div>
+    <div class="drawer-panel">
+      <div class="drawer-header">
+        <button class="btn-close" id="drawer-close" aria-label="Fechar">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <div class="drawer-body" id="drawer-body">
+        <!-- preenchido por JS -->
+      </div>
+    </div>
+  </aside>
+
+  <script src="app.js"></script>
+</body>
+</html>
