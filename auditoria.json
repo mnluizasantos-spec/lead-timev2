@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-05-19T12:11:08",
+  "gerado_em": "2026-05-19T12:22:50",
   "total_emails": 230,
   "total_threads": 52,
   "marcos_rejeitados": [
@@ -214,18 +214,6 @@
       "motivo": "papel_remetente=excluido, esperava=engenharia"
     },
     {
-      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQADIkxFFmExJPm3QaqmgwX1M=",
-      "tipo_detectado": "pedido_fechado",
-      "remetente": "ana.imperio@antilhas.com.br",
-      "motivo": "papel_remetente=desconhecido, esperava=comercial"
-    },
-    {
-      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQADIkxFFmExJPm3QaqmgwX1M=",
-      "tipo_detectado": "pedido_fechado",
-      "remetente": "suelen.silva@antilhas.com.br",
-      "motivo": "papel_remetente=desconhecido, esperava=comercial"
-    },
-    {
       "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAPsEUKiRKftDow8YfFm4jdo=",
       "tipo_detectado": "ferts_criados",
       "remetente": "Laborat",
@@ -283,12 +271,73 @@
         "ferts_criados",
         "ops_liberadas"
       ]
+    }
+  ],
+  "remetentes_desconhecidos": [],
+  "reedicoes_ignoradas": [
+    {
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAIdnd_ZA3WpLqHgN0hlWC5o=",
+      "subject": "REEDICAO PEDIDO FECHADO VAREJO - RENNER "
+    },
+    {
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQALTrcgAtfMtCuKVsL83dbAg=",
+      "subject": "RES: REEDIÇÃO PEDIDO FECHADO VAREJO - MAHOGANY PRESENTEÁVEL"
+    },
+    {
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAME4HJRfnnBLslq09-9hvZs=",
+      "subject": "REEDIÇÃO PEDIDO FECHADO VAREJO - SEPHORA -  INSTITUCIONAL"
+    },
+    {
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAJ3KlOfJZMdFoVs8Nir9Sc4=",
+      "subject": "RE: REEDIÇÃO PEDIDO FECHADO VAREJO - CAIXA P - TRACK & FIELD COFFE "
+    },
+    {
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAAn1RdE7VoNLokmF1rURiXA=",
+      "subject": "RE: REEDIÇÃO PEDIDO FECHADO VAREJO - CAIXA INSTITUCIONAL  - C&A"
+    },
+    {
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAN-AXOJTbztBmUGnjGG82sI=",
+      "subject": "RES:  REEDIÇÃO PEDIDO FECHADO VAREJO - RENNER JUNHO A AGOSTO/ 2026"
+    },
+    {
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAPF2ZdlHkohOmB-MEE3z19M=",
+      "subject": "RES: REEDIÇÃO PEDIDO FECHADO VAREJO - HOPE -  INSTITUCIONAL"
+    },
+    {
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQADLwmNeFjztBrWfiS3QxSAw=",
+      "subject": "RES: REEDICAO PEDIDO FECHADO VAREJO - NESTLE"
+    },
+    {
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAFYKO17s-ghLh-CGnS8h4go=",
+      "subject": "RE: REEDIÇÃO PEDIDO FECHADO VAREJO - SACOLA CONSULT GG  - NATURA "
+    },
+    {
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAL-TDBkhz9BChrjvd9fHW78=",
+      "subject": "RES: REEDIÇÃO PEDIDO FECHADO VAREJO - MAHOGANY INSTITUCIONAL"
+    },
+    {
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAO8WARQpDOxKm47OX9qnAiQ=",
+      "subject": "RE:  REEDIÇÃO PEDIDO FECHADO VAREJO - RENNER MAIO/ 2026"
+    },
+    {
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAGeODOnN891EkQndtxKeTqw=",
+      "subject": "RE:  REEDIÇÃO PEDIDO FECHADO VAREJO - YOUCOM JULHO/ 2026"
     },
     {
       "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQADIkxFFmExJPm3QaqmgwX1M=",
-      "subject": "RE: REEDIÇÃO PEDIDO FECHADO VAREJO - BROOKSFIELD DONNA - INSTITUCIONAL",
-      "marcos_que_tem": []
+      "subject": "RE: REEDIÇÃO PEDIDO FECHADO VAREJO - BROOKSFIELD DONNA - INSTITUCIONAL"
+    },
+    {
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAMWAFI2R4S9JuzIHLBPYgwg=",
+      "subject": "RE: REEDIÇÃO - PEDIDO FECHADO VAREJO INST - SEPHORA"
+    },
+    {
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAP4TDtgEGrtDpD3QQq_RwJw=",
+      "subject": "RE: REEDIÇÃO PEDIDO FECHADO VAREJO - BOTICÁRIO - LAMINA OLF INST26 OUI BOT"
+    },
+    {
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQABeWvVk9MuNMqCNXLYbUREU=",
+      "subject": "RES: REEDIÇÃO PEDIDO FECHADO VAREJO - TRACK & FIELD - INSTITUCIONAL"
     }
-  ],
-  "remetentes_desconhecidos": []
+  ]
 }
