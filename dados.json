@@ -8,7 +8,7 @@
     "skus": [],
     "marcos": {
       "pedido_fechado": {
-        "previsto": "2026-05-08",
+        "previsto": "2026-05-18",
         "real": "2026-05-18",
         "por": "wesley.matheus@antilhas.com.br"
       },
@@ -35,7 +35,7 @@
     },
     "lead_times": {
       "pedido_para_fert": {
-        "previsto": 11,
+        "previsto": 1,
         "real": null,
         "desvio": null
       },
@@ -302,7 +302,28 @@
     "projeto": "QUEM DISSE BERENISSE - CAIXA PRESS KIT FRIENDS",
     "cliente": "QUEM DISSE BERENISSE - CAIXA PRESS KIT FRIENDS",
     "comercial": "GLEICY MAIA DOS SANTOS",
-    "skus": [],
+    "skus": [
+      {
+        "codigo": "11055271-0001",
+        "tipo": "FERT",
+        "descricao": "KIT CX TPA FDO FSC® PRESS FRIENDS QDB"
+      },
+      {
+        "codigo": "2100082620",
+        "tipo": "HALB",
+        "descricao": "KIT CX TPA FSC® PRESS FRIENDS QDB"
+      },
+      {
+        "codigo": "2100082621",
+        "tipo": "HALB",
+        "descricao": "KIT CX FDO FSC® PRESS FRIENDS QDB"
+      },
+      {
+        "codigo": "5200005287",
+        "tipo": "HALB",
+        "descricao": "FITA GORG TELA ROSA DENGO 150 35X700MM"
+      }
+    ],
     "marcos": {
       "pedido_fechado": {
         "previsto": "2026-05-14",
@@ -311,8 +332,8 @@
       },
       "fert_criado": {
         "previsto": "2026-05-15",
-        "real": null,
-        "por": null
+        "real": "2026-05-15",
+        "por": "GIOVANNA FREITAS ALVES"
       },
       "op_liberada": {
         "previsto": "2026-05-26",
@@ -333,8 +354,8 @@
     "lead_times": {
       "pedido_para_fert": {
         "previsto": 1,
-        "real": null,
-        "desvio": null
+        "real": 1,
+        "desvio": 0
       },
       "fert_para_op": {
         "previsto": 11,
@@ -352,7 +373,7 @@
         "desvio": null
       }
     },
-    "status": "aguardando_fert",
+    "status": "aguardando_op",
     "responsavel_atual": "Engenharia",
     "tem_cronograma": true
   },
@@ -362,7 +383,58 @@
     "projeto": "QUEM DISSE BERENISSE -  FRIENDS",
     "cliente": "QUEM DISSE BERENISSE -  FRIENDS",
     "comercial": "GLEICY MAIA DOS SANTOS",
-    "skus": [],
+    "skus": [
+      {
+        "codigo": "11055289-0001",
+        "tipo": "FERT",
+        "descricao": "CARTAO PRESENTE ROSA FRIENDS QDB"
+      },
+      {
+        "codigo": "11055286-0001",
+        "tipo": "FERT",
+        "descricao": "TAG FRIENDS QDB"
+      },
+      {
+        "codigo": "2100082636",
+        "tipo": "HALB",
+        "descricao": "TAG FRIENDS QDB"
+      },
+      {
+        "codigo": "2100082637",
+        "tipo": "HALB",
+        "descricao": "APLIQUE FRIENDS QDB"
+      },
+      {
+        "codigo": "8600006921",
+        "tipo": "HALB",
+        "descricao": "TAG FRIENDS QDB ME"
+      },
+      {
+        "codigo": "13021810-0001",
+        "tipo": "FERT",
+        "descricao": "SACL PAP NLF FSC®G FRIENDS26 QDB"
+      },
+      {
+        "codigo": "2400008287",
+        "tipo": "HALB",
+        "descricao": "FUNDO FSCM 235X087.5MM BCEA PCT/50"
+      },
+      {
+        "codigo": "2400009489",
+        "tipo": "HALB",
+        "descricao": "FIO CHATA FSCM - C47 - RS P239C"
+      },
+      {
+        "codigo": "11055292-0001",
+        "tipo": "FERT",
+        "descricao": "CX LUVA FSC®G FRIENDS QDB"
+      },
+      {
+        "codigo": "15005822-0001",
+        "tipo": "FERT",
+        "descricao": "CARTELA ADESIVA FRIENDS QDB"
+      }
+    ],
     "marcos": {
       "pedido_fechado": {
         "previsto": "2026-05-14",
@@ -371,8 +443,8 @@
       },
       "fert_criado": {
         "previsto": "2026-05-15",
-        "real": null,
-        "por": null
+        "real": "2026-05-15",
+        "por": "GIOVANNA FREITAS ALVES"
       },
       "op_liberada": {
         "previsto": "2026-05-27",
@@ -393,8 +465,8 @@
     "lead_times": {
       "pedido_para_fert": {
         "previsto": 1,
-        "real": null,
-        "desvio": null
+        "real": 1,
+        "desvio": 0
       },
       "fert_para_op": {
         "previsto": 12,
@@ -412,7 +484,7 @@
         "desvio": null
       }
     },
-    "status": "aguardando_fert",
+    "status": "aguardando_op",
     "responsavel_atual": "Engenharia",
     "tem_cronograma": true
   },
@@ -424,9 +496,39 @@
     "comercial": "JULIO CESAR DELLA PASCOA MACHADO",
     "skus": [
       {
+        "codigo": "11055327-0001",
+        "tipo": "FERT",
+        "descricao": "SACL PAP MAN FSC®M 21 ANOS CAU CHOC"
+      },
+      {
         "codigo": "2100082683",
         "tipo": "HALB",
-        "descricao": "SACL PAP MAN FSC®M 21AN CAU CHOC PT1"
+        "descricao": "SACL PAP MAN FSC®M 21AN CAU CHOC P1 E P2"
+      },
+      {
+        "codigo": "5200003024",
+        "tipo": "HALB",
+        "descricao": "FITA GORG TELA BERINJELA 043 22X480MM"
+      },
+      {
+        "codigo": "5200003025",
+        "tipo": "HALB",
+        "descricao": "FITA GORG TELA BERINJELA 043 10X320MM"
+      },
+      {
+        "codigo": "2400010059",
+        "tipo": "HALB",
+        "descricao": "FUNDO FSCM 308X233MM KLALINER"
+      },
+      {
+        "codigo": "2400010060",
+        "tipo": "HALB",
+        "descricao": "REF ALCA FSCM 310X030MM PARDO"
+      },
+      {
+        "codigo": "8600006911",
+        "tipo": "HALB",
+        "descricao": "SACL PAP MAN FSC®M 21 ANOS CAU CHOC ME"
       }
     ],
     "marcos": {
@@ -437,8 +539,8 @@
       },
       "fert_criado": {
         "previsto": null,
-        "real": "2026-05-15",
-        "por": "LETICIA JACQUELINE SANTOS"
+        "real": "2026-05-14",
+        "por": "GIOVANNA FREITAS ALVES"
       },
       "op_liberada": {
         "previsto": null,
@@ -459,7 +561,7 @@
     "lead_times": {
       "pedido_para_fert": {
         "previsto": null,
-        "real": 2,
+        "real": 1,
         "desvio": null
       },
       "fert_para_op": {
