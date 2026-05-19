@@ -297,7 +297,6 @@ const ETAPAS = [
   { key: 'pedido_para_fert',  label: 'Pedido → FERT',    cor: 'var(--azul-700)' },
   { key: 'fert_para_op',      label: 'FERT → OP',        cor: 'var(--azul-500)' },
   { key: 'op_para_producao',  label: 'OP → Produção',    cor: 'var(--laranja-500)' },
-  { key: 'producao_para_vit', label: 'Produção → Vitrine', cor: 'var(--verde-500)' },
 ];
 
 function calcularMediasEtapas() {
@@ -703,7 +702,8 @@ function renderLeadTimeCelula(p) {
 }
 
 function renderAderenciaBadge(p) {
-  // Aderência = pior desvio entre os lead times realizados
+  // Aderência = SOMA dos desvios das etapas realizadas
+  // (compensação: ganho em uma etapa pode anular atraso em outra)
   const lt = p.lead_times || {};
   const desvios = Object.values(lt)
     .map(x => x?.desvio)
@@ -713,15 +713,15 @@ function renderAderenciaBadge(p) {
     return '<span class="aderencia ader-vazio">—</span>';
   }
 
-  const pior = Math.max(...desvios);
+  const soma = desvios.reduce((a, b) => a + b, 0);
   // Verde: no prazo ou adiantado
-  if (pior <= 0) {
-    if (pior < 0) return `<span class="aderencia ader-ok">${pior}d</span>`;
+  if (soma <= 0) {
+    if (soma < 0) return `<span class="aderencia ader-ok">${soma}d</span>`;
     return '<span class="aderencia ader-ok">No prazo</span>';
   }
   // Atraso leve (1 a 3 dias) → amarelo. Forte (4+) → vermelho.
-  if (pior <= 3) return `<span class="aderencia ader-atraso-leve">+${pior}d</span>`;
-  return `<span class="aderencia ader-atraso">+${pior}d</span>`;
+  if (soma <= 3) return `<span class="aderencia ader-atraso-leve">+${soma}d</span>`;
+  return `<span class="aderencia ader-atraso">+${soma}d</span>`;
 }
 
 // ============================================================
@@ -810,14 +810,14 @@ function renderMetricasResumo(p) {
   const prevFim = marcos.producao?.previsto;
   const ltPrevistoTotal = (prevInicio && prevFim) ? diasEntre(prevInicio, prevFim) : null;
 
-  // Aderência: pior desvio
+  // Aderência = SOMA dos desvios das etapas realizadas
   const lt = p.lead_times || {};
   const desvios = Object.values(lt).map(x => x?.desvio).filter(d => d != null);
-  const pior = desvios.length ? Math.max(...desvios) : null;
+  const soma = desvios.length ? desvios.reduce((a, b) => a + b, 0) : null;
   let aderTexto, aderClasse;
-  if (pior === null) { aderTexto = '—'; aderClasse = ''; }
-  else if (pior > 0) { aderTexto = `+${pior}d atrasado`; aderClasse = 'cor-atrasado'; }
-  else if (pior < 0) { aderTexto = `${pior}d adiantado`; aderClasse = 'cor-ok'; }
+  if (soma === null) { aderTexto = '—'; aderClasse = ''; }
+  else if (soma > 0) { aderTexto = `+${soma}d atrasado`; aderClasse = 'cor-atrasado'; }
+  else if (soma < 0) { aderTexto = `${soma}d adiantado`; aderClasse = 'cor-ok'; }
   else { aderTexto = 'No prazo'; aderClasse = 'cor-ok'; }
 
   return `
@@ -835,7 +835,7 @@ function renderMetricasResumo(p) {
       <div class="metrica">
         <div class="metrica-label">Aderência</div>
         <div class="metrica-valor ${aderClasse}">${aderTexto}</div>
-        <div class="metrica-sub">pior desvio entre etapas</div>
+        <div class="metrica-sub">soma dos desvios entre etapas</div>
       </div>
     </div>
   `;
@@ -1393,13 +1393,6 @@ function ligarEventos() {
 
   // Refresh
   $('#btn-refresh').addEventListener('click', carregarDados);
-
-  // Cards (clicáveis pra filtrar)
-  $('.card-atrasados').addEventListener('click', () => {
-    state.filtros = { busca: '', status: '', responsavel: '', cliente: '' };
-    // Filtra direto pelos atrasados via busca rápida (TODO: melhorar)
-    alert('Em breve: clique nos cards filtrará a lista automaticamente.');
-  });
 
   // Apontamentos
   $('#btn-apontamentos').addEventListener('click', abrirModalApontamentos);
