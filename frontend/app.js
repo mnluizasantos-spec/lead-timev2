@@ -660,7 +660,8 @@ function renderTimelineHorizontal(p) {
     const datasHtml = `
       <div class="marco-datas">
         ${prev ? `prev ${fmtData(prev)}` : 'sem previsto'}
-        ${real ? `<span class="data-real">real ${fmtData(real)}</span>` : ''}
+        ${real ? `<span class="data-real">início ${fmtData(real)}</span>` : ''}
+        ${m.key === 'producao' && dadosMarco.fim ? `<span class="data-real">fim ${fmtData(dadosMarco.fim)}</span>` : ''}
       </div>
     `;
 
@@ -886,6 +887,113 @@ async function enviarOverrideBackend(pedidoId, override) {
 }
 
 // ============================================================
+// MODAL DE UPLOAD DE APONTAMENTOS
+// ============================================================
+function abrirModalApontamentos() {
+  $('#modal-arquivo').value = '';
+  $('#modal-arquivo-info').style.display = 'none';
+  $('#modal-senha-apont').value = '';
+  $('#modal-erro-apont').style.display = 'none';
+  $('#modal-progresso-secao').style.display = 'none';
+  $('#btn-confirmar-apont').disabled = false;
+  $('#btn-confirmar-apont').textContent = 'Enviar';
+  $('#modal-apontamentos').setAttribute('aria-hidden', 'false');
+}
+
+function fecharModalApontamentos() {
+  $('#modal-apontamentos').setAttribute('aria-hidden', 'true');
+}
+
+async function confirmarUploadApontamentos() {
+  const arquivo = $('#modal-arquivo').files?.[0];
+  const senha = $('#modal-senha-apont').value;
+  const erro = $('#modal-erro-apont');
+  const progresso = $('#modal-progresso');
+  const progressoSecao = $('#modal-progresso-secao');
+  const btn = $('#btn-confirmar-apont');
+
+  erro.style.display = 'none';
+
+  // Validações
+  if (!arquivo) {
+    erro.textContent = 'Selecione um arquivo xlsx.';
+    erro.style.display = 'block';
+    return;
+  }
+  if (!/\.xlsx?$/i.test(arquivo.name)) {
+    erro.textContent = 'Arquivo deve ser .xlsx ou .xls.';
+    erro.style.display = 'block';
+    return;
+  }
+  if (senha !== SENHA_OPERACAO) {
+    erro.textContent = 'Senha incorreta.';
+    erro.style.display = 'block';
+    return;
+  }
+  if (arquivo.size > 25 * 1048576) {
+    erro.textContent = 'Arquivo > 25MB. Tente compactar/exportar com menos colunas.';
+    erro.style.display = 'block';
+    return;
+  }
+
+  // Lê arquivo como base64
+  btn.disabled = true;
+  btn.textContent = 'Enviando...';
+  progressoSecao.style.display = 'block';
+  progresso.textContent = 'Lendo arquivo...';
+
+  try {
+    const base64 = await arquivoParaBase64(arquivo);
+    progresso.textContent = `Enviando ${(arquivo.size / 1048576).toFixed(2)} MB pro GitHub...`;
+
+    const resp = await fetch('/.netlify/functions/upload-apontamentos', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        senha: SENHA_OPERACAO,
+        filename: 'apontamentos.xlsx',
+        content_base64: base64,
+      }),
+    });
+
+    if (!resp.ok) {
+      const txt = await resp.text();
+      throw new Error(`HTTP ${resp.status}: ${txt}`);
+    }
+
+    const json = await resp.json();
+    progresso.innerHTML = `
+      ✓ Enviado! Commit <code style="font-family:var(--font-mono)">${(json.sha || '').slice(0,7)}</code><br>
+      O parser vai rodar agora (~30s). Atualize em 1 minuto pra ver os dados.
+    `;
+    progresso.style.background = 'var(--verde-100)';
+    progresso.style.borderColor = 'var(--verde-500)';
+    progresso.style.color = 'var(--verde-700)';
+    btn.textContent = 'Concluído';
+  } catch (e) {
+    console.error(e);
+    erro.textContent = 'Erro: ' + e.message;
+    erro.style.display = 'block';
+    btn.disabled = false;
+    btn.textContent = 'Tentar de novo';
+  }
+}
+
+function arquivoParaBase64(arquivo) {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = () => {
+      // Remove o prefixo 'data:...;base64,'
+      const r = reader.result;
+      const i = r.indexOf(',');
+      resolve(i >= 0 ? r.slice(i + 1) : r);
+    };
+    reader.onerror = () => reject(new Error('Falha lendo arquivo'));
+    reader.readAsDataURL(arquivo);
+  });
+}
+
+// ============================================================
 // RENDERIZAÇÃO — ORQUESTRADOR
 // ============================================================
 function renderizarTudo() {
@@ -956,8 +1064,21 @@ function ligarEventos() {
   });
 
   // Apontamentos
-  $('#btn-apontamentos').addEventListener('click', () => {
-    alert('Em breve: modal de upload de apontamentos.');
+  $('#btn-apontamentos').addEventListener('click', abrirModalApontamentos);
+  document.querySelectorAll('[data-close-modal-apontamentos]').forEach(el => {
+    el.addEventListener('click', fecharModalApontamentos);
+  });
+  $('#btn-confirmar-apont').addEventListener('click', confirmarUploadApontamentos);
+  $('#modal-arquivo').addEventListener('change', e => {
+    const arq = e.target.files?.[0];
+    const info = $('#modal-arquivo-info');
+    if (arq) {
+      const tamMB = (arq.size / 1048576).toFixed(2);
+      info.textContent = `${arq.name} · ${tamMB} MB`;
+      info.style.display = 'block';
+    } else {
+      info.style.display = 'none';
+    }
   });
 }
 

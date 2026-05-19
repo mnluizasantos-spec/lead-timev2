@@ -1,48 +1,74 @@
 """
 Enriquecimento de pedidos com dados de apontamentos de produção.
 
-O arquivo `apontamentos.xlsx` é exportado do shop floor com colunas:
-  - codproduto: código do produto (FERT 8-4 ou HALB de 10 dígitos)
-  - dataini, datafim: datas de início e fim da operação
-  - numdaop: número da OP / operação
-  - ... (outros campos)
+O arquivo `apontamentos.xlsx` é exportado do shop floor com as colunas:
 
-Pra cada pedido, a gente cruza os SKUs com o apontamentos:
-  - Tenta primeiro pelo FERT (código comercial)
-  - Se não achar, tenta pelo HALB (semi-acabado, fallback)
-  - O marco 'producao.real' = data do PRIMEIRO apontamento encontrado
-  - Status pode virar 'em_producao' (tem apontamento ativo) ou 'concluido'
+  descmaq            descrição da máquina
+  colaborador        operador
+  numapont           ID único do apontamento (NÃO usado pra cruzar)
+  data               YYYY-MM-DD (data da produção naquela máquina)
+  maq                código da máquina
+  qtdprodconfirmada  quantidade produzida
+  numdaop            'OP/operação' ex: '1171338/0060' (etapa 60 da OP 1171338)
+  codproduto         FERT 8-4 ou HALB 10 dígitos
+  descricaodeproduto descrição
+  nomedocliente, coddepto, descdepto (FLEXOGRAFICA, OFFSET, SALTO, CAJAMAR)
+  codcliente
+  horainical, horatermino  horários dentro do dia
+
+Cruzamento com pedidos:
+  Pra cada pedido, varre os FERTs/HALBs e pega os apontamentos correspondentes.
+  - producao.real     = data do PRIMEIRO apontamento (1ª produção)
+  - producao.fim      = data do ÚLTIMO apontamento (última produção)
+  - producao.deptos   = departamentos onde produziu (FLEXO, OFFSET, SALTO, ...)
+  - producao.qtd      = quantidade total apontada
+
+Regra de status:
+  Se a última produção foi há > 15 dias  → 'concluido'
+  Se a última produção foi há <= 15 dias → 'em_producao'
+  Se não tem nenhum apontamento          → status atual (não toca)
 """
 import re
 from collections import defaultdict
+from datetime import date, timedelta
 from .papeis import (
-    STATUS_AGUARDANDO_FERT, STATUS_AGUARDANDO_OP,
-    STATUS_EM_PRODUCAO, STATUS_CONCLUIDO, STATUS_CANCELADO,
+    STATUS_EM_PRODUCAO, STATUS_CONCLUIDO,
     RESPONSAVEL_POR_STATUS,
 )
 
+# Dias sem apontamento pra considerar produção concluída
+DIAS_PRA_CONCLUIR = 15
+
 
 def _normalizar_codigo(c) -> str:
-    """
-    Normaliza código do Excel (pode vir como float "2100082620.0").
-    Retorna string limpa pronta pra comparação.
-    """
+    """Normaliza código do Excel. Strings com '.0' do Excel viram limpas."""
     if c is None:
         return ''
     s = str(c).strip()
-    # Remove '.0' do final (Excel converte int em float às vezes)
     if s.endswith('.0'):
         s = s[:-2]
     return s
 
 
+def _data_to_str(v):
+    """Converte timestamp/datetime/string em 'YYYY-MM-DD'. None se inválido."""
+    if v is None:
+        return None
+    if hasattr(v, 'strftime'):
+        return v.strftime('%Y-%m-%d')
+    s = str(v).strip()
+    if not s or s.lower() == 'nat':
+        return None
+    return s[:10]
+
+
 def indexar_apontamentos(apontamentos_path: str) -> dict:
     """
-    Lê o xlsx e indexa apontamentos por codproduto.
+    Lê o xlsx e indexa por codproduto. Carrega só as colunas que importam.
 
     Returns:
         {codproduto_normalizado: [lista de apontamentos]}
-        Cada apontamento é um dict com chaves: codproduto, dataini, datafim, numdaop, ...
+        Cada apontamento: {data, descdepto, descmaq, qtdprodconfirmada, numdaop}
     """
     try:
         import pandas as pd
@@ -54,16 +80,20 @@ def indexar_apontamentos(apontamentos_path: str) -> dict:
         return {}
 
     try:
-        df = pd.read_excel(apontamentos_path)
+        df = pd.read_excel(
+            apontamentos_path,
+            usecols=['data', 'codproduto', 'qtdprodconfirmada',
+                     'descdepto', 'descmaq', 'numdaop']
+        )
     except Exception as e:
         print(f'  ⚠️  Erro ao ler {apontamentos_path}: {e}')
         return {}
 
-    # Normaliza colunas pra lowercase sem espaços
+    # Normaliza colunas pra lowercase (caso o usuário mude case)
     df.columns = [str(c).lower().strip() for c in df.columns]
 
-    if 'codproduto' not in df.columns:
-        print(f'  ⚠️  Coluna codproduto não achada. Colunas: {list(df.columns)}')
+    if 'codproduto' not in df.columns or 'data' not in df.columns:
+        print(f'  ⚠️  Colunas obrigatórias não achadas. Tem: {list(df.columns)}')
         return {}
 
     indice = defaultdict(list)
@@ -71,16 +101,18 @@ def indexar_apontamentos(apontamentos_path: str) -> dict:
         cod = _normalizar_codigo(row.get('codproduto'))
         if not cod:
             continue
-        registro = {k: row.get(k) for k in df.columns}
-        # Converte timestamps em string ISO pra serializar depois
-        for k in ('dataini', 'datafim'):
-            if k in registro and registro[k] is not None:
-                try:
-                    registro[k] = registro[k].isoformat() if hasattr(registro[k], 'isoformat') else str(registro[k])
-                except Exception:
-                    pass
-        indice[cod].append(registro)
+        data_str = _data_to_str(row.get('data'))
+        if not data_str:
+            continue
+        indice[cod].append({
+            'data': data_str,
+            'descdepto': str(row.get('descdepto', '')).strip(),
+            'descmaq': str(row.get('descmaq', '')).strip(),
+            'qtd': int(row.get('qtdprodconfirmada', 0) or 0),
+            'numdaop': str(row.get('numdaop', '')).strip(),
+        })
 
+    print(f'   {len(indice)} código(s) indexados (de {len(df)} apontamentos)')
     return dict(indice)
 
 
@@ -89,88 +121,184 @@ def enriquecer_com_apontamentos(pedido: dict, indice_apontamentos: dict) -> dict
     Adiciona dados de produção ao pedido.
 
     Estratégia:
-    1. Pra cada SKU FERT do pedido, tenta achar apontamentos
-    2. Se não achar pelo FERT, tenta pelos HALBs
-    3. Marco 'producao.real' = data do PRIMEIRO apontamento (1ª produção)
-    4. Adiciona 'producao_detalhe' com lista de apontamentos agrupados
+    1. Pra cada SKU (FERT primeiro, depois HALB), tenta achar apontamentos
+    2. Marco 'producao.real' = data do PRIMEIRO apontamento
+    3. Novo campo 'producao.fim' = data do ÚLTIMO apontamento
+    4. Status: 'em_producao' se última < 15 dias atrás, senão 'concluido'
 
     Não modifica o pedido in-place — retorna cópia.
     """
-    p = dict(pedido)  # cópia rasa
+    p = dict(pedido)
     p['marcos'] = {k: dict(v) for k, v in pedido['marcos'].items()}
 
     if not indice_apontamentos:
         return p
 
     skus = p.get('skus', [])
-    ferts = [s['codigo'] for s in skus if s['tipo'] == 'FERT']
-    halbs = [s['codigo'] for s in skus if s['tipo'] == 'HALB']
+    ferts = [s['codigo'] for s in skus if s.get('tipo') == 'FERT']
+    halbs = [s['codigo'] for s in skus if s.get('tipo') == 'HALB']
 
-    # Coleta apontamentos achados (tenta FERT primeiro, depois HALB)
+    # Coleta apontamentos (FERTs primeiro, HALBs como fallback)
     apontamentos_pedido = []
     busca_por = None
+    codigos_encontrados = []
 
     for fert in ferts:
         if fert in indice_apontamentos:
             apontamentos_pedido.extend(indice_apontamentos[fert])
+            codigos_encontrados.append(fert)
             busca_por = 'fert'
 
-    # Se não achou nada pelos FERTs, busca pelos HALBs
+    # Se nenhum FERT teve apontamento, tenta HALBs
     if not apontamentos_pedido:
         for halb in halbs:
             if halb in indice_apontamentos:
                 apontamentos_pedido.extend(indice_apontamentos[halb])
+                codigos_encontrados.append(halb)
                 busca_por = 'halb'
 
     if not apontamentos_pedido:
-        return p  # nenhum apontamento — pedido fica sem produção
+        return p  # nenhum apontamento — não toca no pedido
 
-    # Acha a data mais antiga de início (1ª produção)
-    datas_inicio = [a.get('dataini') for a in apontamentos_pedido if a.get('dataini')]
-    datas_fim    = [a.get('datafim') for a in apontamentos_pedido if a.get('datafim')]
+    # ============================================================
+    # FILTRO: só apontamentos >= op_liberada.real
+    # ----
+    # Importante: FERTs/HALBs são REUTILIZADOS em vários pedidos (mesmo
+    # código pode rodar várias vezes ao longo do ano). Pra não pegar
+    # apontamentos de pedidos passados, filtramos só os feitos APÓS a
+    # OP ter sido liberada pra esse pedido específico.
+    # Se não tem op_liberada.real, usamos pedido_fechado.real como base.
+    # ============================================================
+    data_minima_str = (
+        p['marcos']['op_liberada'].get('real')
+        or p['marcos']['pedido_fechado'].get('real')
+    )
+    if data_minima_str:
+        apontamentos_pedido = [
+            a for a in apontamentos_pedido
+            if a['data'] >= data_minima_str
+        ]
 
-    if datas_inicio:
-        data_min = min(str(d) for d in datas_inicio)
-        # Converte pra date YYYY-MM-DD
-        primeira = data_min[:10] if len(data_min) >= 10 else data_min
-        p['marcos']['producao']['real'] = primeira
+    if not apontamentos_pedido:
+        return p  # nenhum apontamento APÓS op_liberada — produção ainda não começou
 
-    # Verifica se ainda tem produção em andamento
-    # (algum apontamento sem datafim = produção em curso)
-    tem_em_curso = any(not a.get('datafim') for a in apontamentos_pedido)
-    tem_concluido = all(a.get('datafim') for a in apontamentos_pedido)
+    # ============================================================
+    # 1ª e ÚLTIMA produção
+    # ============================================================
+    datas = sorted(set(a['data'] for a in apontamentos_pedido if a['data']))
+    if not datas:
+        return p
 
-    # Atualiza status
-    if p['marcos']['producao']['real'] is not None:
-        if tem_em_curso:
-            p['status'] = STATUS_EM_PRODUCAO
-        elif tem_concluido and datas_fim:
+    primeira = datas[0]
+    ultima = datas[-1]
+
+    p['marcos']['producao']['real'] = primeira
+    p['marcos']['producao']['fim'] = ultima
+
+    # ============================================================
+    # STATUS: concluído se última produção foi há > 15 dias
+    # ============================================================
+    try:
+        d_ultima = date.fromisoformat(ultima)
+        if (date.today() - d_ultima).days > DIAS_PRA_CONCLUIR:
             p['status'] = STATUS_CONCLUIDO
+        else:
+            p['status'] = STATUS_EM_PRODUCAO
         p['responsavel_atual'] = RESPONSAVEL_POR_STATUS[p['status']]
+    except (ValueError, TypeError):
+        pass
 
-    # Recalcula lead time op→producao com dados reais
-    from datetime import date
+    # ============================================================
+    # RECALCULA LEAD TIME OP → PRODUÇÃO COM DADOS REAIS
+    # ============================================================
     try:
         op_real = p['marcos']['op_liberada']['real']
-        prod_real = p['marcos']['producao']['real']
-        if op_real and prod_real:
+        if op_real and primeira:
             d_op = date.fromisoformat(op_real)
-            d_prod = date.fromisoformat(prod_real)
+            d_prod = date.fromisoformat(primeira)
             real_dias = (d_prod - d_op).days
             p['lead_times']['op_para_producao']['real'] = real_dias
-            previsto = p['lead_times']['op_para_producao']['previsto']
+            previsto = p['lead_times']['op_para_producao'].get('previsto')
             if previsto is not None:
                 p['lead_times']['op_para_producao']['desvio'] = real_dias - previsto
     except (ValueError, TypeError):
         pass
 
-    # Detalhe da produção
+    # ============================================================
+    # DETALHE DA PRODUÇÃO (pra debug e dashboard)
+    # ============================================================
+    deptos = sorted(set(a['descdepto'] for a in apontamentos_pedido if a['descdepto']))
+    qtd_total = sum(a.get('qtd', 0) for a in apontamentos_pedido)
+
     p['producao_detalhe'] = {
         'busca_por': busca_por,
+        'codigos_encontrados': codigos_encontrados,
         'total_apontamentos': len(apontamentos_pedido),
-        'data_inicio_min': min(str(d)[:10] for d in datas_inicio) if datas_inicio else None,
-        'data_fim_max': max(str(d)[:10] for d in datas_fim) if datas_fim else None,
-        'em_curso': tem_em_curso,
+        'primeira_data': primeira,
+        'ultima_data': ultima,
+        'deptos': deptos,
+        'qtd_total': qtd_total,
+        'dias_desde_ultima': (date.today() - date.fromisoformat(ultima)).days,
     }
 
     return p
+
+
+# ============================================================
+# TESTES
+# ============================================================
+def _teste():
+    # Cria pedido falso
+    pedido = {
+        'pedido_id': 'test',
+        'projeto': 'TESTE',
+        'cliente': 'CLIENTE TESTE',
+        'skus': [
+            {'codigo': '11055331-0001', 'tipo': 'FERT'},
+        ],
+        'marcos': {
+            'pedido_fechado': {'previsto': '2026-04-01', 'real': '2026-04-01', 'por': 'X'},
+            'fert_criado':    {'previsto': '2026-04-02', 'real': '2026-04-02', 'por': 'Y'},
+            'op_liberada':    {'previsto': '2026-04-10', 'real': '2026-04-12', 'por': 'Z'},
+            'producao':       {'previsto': '2026-04-20', 'real': None, 'por': None},
+            'data_vitrine':   {'previsto': '2026-05-15', 'real': None, 'por': None},
+        },
+        'lead_times': {
+            'op_para_producao': {'previsto': 10, 'real': None, 'desvio': None},
+        },
+        'status': 'em_producao',
+    }
+
+    # Indice falso
+    indice = {
+        '11055331-0001': [
+            {'data': '2026-04-15', 'descdepto': 'SALTO', 'descmaq': 'M1', 'qtd': 1000, 'numdaop': '1/10'},
+            {'data': '2026-04-18', 'descdepto': 'SALTO', 'descmaq': 'M1', 'qtd': 2000, 'numdaop': '1/20'},
+            {'data': '2026-04-20', 'descdepto': 'OFFSET', 'descmaq': 'M2', 'qtd': 500,  'numdaop': '1/30'},
+        ],
+    }
+
+    resultado = enriquecer_com_apontamentos(pedido, indice)
+    assert resultado['marcos']['producao']['real'] == '2026-04-15'
+    assert resultado['marcos']['producao']['fim'] == '2026-04-20'
+    assert resultado['producao_detalhe']['qtd_total'] == 3500
+    assert set(resultado['producao_detalhe']['deptos']) == {'SALTO', 'OFFSET'}
+    print('Caso 1 (1ª e última data) OK ✓')
+
+    # Lead time op→produção foi recalculado: 12/04 → 15/04 = 3 dias
+    assert resultado['lead_times']['op_para_producao']['real'] == 3, resultado['lead_times']
+    assert resultado['lead_times']['op_para_producao']['desvio'] == -7
+    print('Caso 2 (lead time recalculado) OK ✓')
+
+    # Pedido sem apontamento — não toca no status
+    pedido_sem = dict(pedido)
+    pedido_sem['marcos'] = {k: dict(v) for k, v in pedido['marcos'].items()}
+    resultado2 = enriquecer_com_apontamentos(pedido_sem, {})
+    assert resultado2['marcos']['producao']['real'] is None
+    print('Caso 3 (sem apontamento) OK ✓')
+
+    print('\nTodos os testes de apontamentos passaram ✓')
+
+
+if __name__ == '__main__':
+    _teste()

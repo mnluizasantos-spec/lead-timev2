@@ -1,0 +1,14 @@
+[build]
+  publish = "."
+  functions = "netlify/functions"
+
+[functions]
+  # Aumenta o limite do body pras functions de upload
+  # (Netlify padrão: 6 MB; vamos pedir o máximo possível)
+  node_bundler = "esbuild"
+
+# Cabeçalhos pra evitar cache do dados.json (queremos sempre fresh)
+[[headers]]
+  for = "/*.json"
+  [headers.values]
+    Cache-Control = "no-cache, no-store, must-revalidate"

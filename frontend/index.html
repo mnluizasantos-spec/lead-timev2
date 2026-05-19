@@ -246,6 +246,48 @@
   </div>
 
   <!-- ============================================================
+       MODAL DE UPLOAD DE APONTAMENTOS
+       ============================================================ -->
+  <div class="modal" id="modal-apontamentos" aria-hidden="true">
+    <div class="modal-backdrop" data-close-modal-apontamentos></div>
+    <div class="modal-panel">
+      <div class="modal-header">
+        <h3>Upload de apontamentos</h3>
+        <button class="btn-close" data-close-modal-apontamentos aria-label="Fechar">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p class="modal-desc" style="background:var(--azul-50);border-color:var(--azul-300);color:var(--cinza-700)">
+          O arquivo <strong>substitui</strong> o apontamentos.xlsx atual no GitHub.
+          O parser vai rodar automaticamente em ~30s.
+        </p>
+
+        <div class="modal-secao">
+          <label class="modal-label" for="modal-arquivo">Arquivo xlsx</label>
+          <input type="file" id="modal-arquivo" class="modal-input" accept=".xlsx,.xls" />
+          <div id="modal-arquivo-info" class="modal-info" style="display:none"></div>
+        </div>
+
+        <div class="modal-secao">
+          <label class="modal-label" for="modal-senha-apont">Senha</label>
+          <input type="password" id="modal-senha-apont" class="modal-input" placeholder="Senha de operação" />
+          <div class="modal-erro" id="modal-erro-apont" style="display:none"></div>
+        </div>
+
+        <div class="modal-secao" id="modal-progresso-secao" style="display:none">
+          <label class="modal-label">Progresso</label>
+          <div id="modal-progresso" class="modal-info">Enviando...</div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-ghost" data-close-modal-apontamentos>Cancelar</button>
+        <button class="btn-confirm" id="btn-confirmar-apont">Enviar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
        DRAWER DE DETALHE (lateral)
        ============================================================ -->
   <aside class="drawer" id="drawer" aria-hidden="true">

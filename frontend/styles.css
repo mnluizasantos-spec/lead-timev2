@@ -906,6 +906,38 @@ h3 { font-size: 14px; }
   cursor: not-allowed;
 }
 
+.btn-confirm {
+  height: 36px;
+  padding: 0 var(--space-4);
+  background: var(--azul-700);
+  color: white;
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.btn-confirm:hover {
+  background: var(--azul-900);
+}
+
+.btn-confirm:disabled {
+  background: var(--cinza-300);
+  cursor: not-allowed;
+}
+
+.modal-info {
+  margin-top: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  background: var(--azul-50);
+  border: 1px solid var(--azul-300);
+  color: var(--azul-700);
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+}
+
 /* ============================================================
    DRAWER (detalhe do pedido)
    ============================================================ */
