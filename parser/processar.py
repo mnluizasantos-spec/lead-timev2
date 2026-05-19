@@ -173,11 +173,17 @@ def processar_thread(emails_da_thread: list, auditoria: dict = None) -> dict:
     op_liberada_ev    = mais_antigo(marcos_encontrados['ops_liberadas']) if 'ops_liberadas' in marcos_encontrados else None
 
     # ============================================================
-    # 5. EXTRAI SKUs (do email do pedido_fechado primeiro, fallback ferts_criados)
+    # 5. EXTRAI SKUs SÓ DO EMAIL DO FERTS_CRIADOS
+    # ----
+    # Regra: SKUs são extraídos APENAS da mensagem onde a Engenharia
+    # respondeu o cadastro ("@cadastrar / transferir plano"). Se ainda
+    # não tem ferts_criados, lista vazia — Maria/Comercial pode ter
+    # mencionado códigos antigos no pedido_fechado, mas isso não conta.
     # ============================================================
-    skus = extrair_skus(pedido_fechado_ev['corpo'])
-    if not skus and fert_criado_ev:
+    if fert_criado_ev:
         skus = extrair_skus(fert_criado_ev['corpo'])
+    else:
+        skus = []
 
     # ============================================================
     # 6. MONTA MARCOS NO SCHEMA FINAL

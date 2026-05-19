@@ -179,6 +179,7 @@
               <th>OP prevista</th>
               <th>Produção prevista</th>
               <th>Aderência</th>
+              <th class="th-acoes">Ações</th>
             </tr>
           </thead>
           <tbody id="tabela-pedidos-body">
@@ -188,6 +189,61 @@
       </div>
     </section>
   </main>
+
+  <!-- ============================================================
+       MODAL DE EXCLUSÃO (ocultar / cancelar)
+       ============================================================ -->
+  <div class="modal" id="modal-excluir" aria-hidden="true">
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-panel">
+      <div class="modal-header">
+        <h3 id="modal-titulo">Excluir pedido</h3>
+        <button class="btn-close" data-close-modal aria-label="Fechar">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p class="modal-desc">
+          <strong id="modal-pedido-nome">—</strong>
+        </p>
+
+        <div class="modal-secao">
+          <label class="modal-label">O que deseja fazer?</label>
+          <div class="modal-opcoes">
+            <label class="modal-radio">
+              <input type="radio" name="acao-excluir" value="ocultar" checked />
+              <div>
+                <div class="modal-radio-titulo">Ocultar</div>
+                <div class="modal-radio-sub">Some do dashboard, mas pode ser restaurado depois.</div>
+              </div>
+            </label>
+            <label class="modal-radio">
+              <input type="radio" name="acao-excluir" value="cancelar" />
+              <div>
+                <div class="modal-radio-titulo">Cancelar</div>
+                <div class="modal-radio-sub">Marca como cancelado (aparece riscado).</div>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <div class="modal-secao">
+          <label class="modal-label" for="modal-motivo">Motivo (opcional)</label>
+          <input type="text" id="modal-motivo" class="modal-input" placeholder="Ex: cliente desistiu, pedido duplicado..." />
+        </div>
+
+        <div class="modal-secao">
+          <label class="modal-label" for="modal-senha">Senha</label>
+          <input type="password" id="modal-senha" class="modal-input" placeholder="Senha de operação" />
+          <div class="modal-erro" id="modal-erro" style="display:none"></div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-ghost" data-close-modal>Cancelar</button>
+        <button class="btn-primary" id="btn-confirmar-excluir">Confirmar</button>
+      </div>
+    </div>
+  </div>
 
   <!-- ============================================================
        DRAWER DE DETALHE (lateral)

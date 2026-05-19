@@ -19,7 +19,7 @@ from .papeis import papel_do_remetente, PAPEL_EXIGIDO
 # REGEX DE DETECÇÃO
 # ============================================================
 RE_OPS_LIBERADAS = re.compile(
-    r'(OPs?\s+liberadas?|Segue\s+OPs?\s+liberadas?)',
+    r'(OPs?\s+liberad[ao]s?|Segue\s+OPs?\s+liberad[ao]s?)',
     re.IGNORECASE
 )
 RE_FERTS_CRIADOS = re.compile(
@@ -42,7 +42,7 @@ RE_PEDIDO_FECHADO_INICIAL = re.compile(
 # "FERT criado", "Pedido Fechado", "Data Vitrine" ou "Produção" seguida
 # de uma data DD/MM/AAAA — esses são os rótulos da tabela CRONOGRAMA.
 RE_LINHA_CRONOGRAMA = re.compile(
-    r'(Data\s+Vitrine|Pedido\s+Fechado|FERT\s+criado|OP\s+liberada|Produ[çc][ãa]o)'
+    r'(Data\s+Vitrine|Pedido\s+Fechado|FERT\s+criado|OP\s+liberad[ao]|Produ[çc][ãa]o)'
     r'\s*\n?\s*\d{1,2}\s*/\s*\d{1,2}\s*/\s*\d{4}',
     re.IGNORECASE
 )

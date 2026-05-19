@@ -84,7 +84,7 @@ function daquiNDias(n) {
 async function carregarDados() {
   // Tela de loading
   $('#tabela-pedidos-body').innerHTML = `
-    <tr><td colspan="7" class="vazio">
+    <tr><td colspan="8" class="vazio">
       Carregando dados...
     </td></tr>`;
   $('#lista-meta').textContent = 'Carregando...';
@@ -100,7 +100,7 @@ async function carregarDados() {
   } catch (e) {
     console.error('Erro ao carregar dados:', e);
     $('#tabela-pedidos-body').innerHTML = `
-      <tr><td colspan="7" class="vazio">
+      <tr><td colspan="8" class="vazio">
         Erro ao carregar dados.<br>
         <small>${e.message}</small><br>
         <button class="btn-ghost" onclick="carregarDados()" style="margin-top:12px">Tentar de novo</button>
@@ -450,7 +450,7 @@ function renderizarTabela() {
 
   const tbody = $('#tabela-pedidos-body');
   if (pedidosFiltrados.length === 0) {
-    tbody.innerHTML = '<tr><td colspan="7" class="vazio">Nenhum pedido com esses filtros.</td></tr>';
+    tbody.innerHTML = '<tr><td colspan="8" class="vazio">Nenhum pedido com esses filtros.</td></tr>';
     return;
   }
 
@@ -472,15 +472,30 @@ function renderizarTabela() {
           ${p.marcos?.producao?.real ? `<br><span class="data-prevista">real ${fmtData(p.marcos.producao.real)}</span>` : ''}
         </td>
         <td>${aderenciaHtml}</td>
+        <td class="td-acoes">
+          <button class="btn-acao" data-acao="excluir" data-pedido-id="${p.pedido_id}" title="Ocultar ou cancelar este pedido">⋮</button>
+        </td>
       </tr>
     `;
   }).join('');
 
   tbody.querySelectorAll('tr').forEach(tr => {
-    tr.addEventListener('click', () => {
+    tr.addEventListener('click', (e) => {
+      // Se o clique foi no botão de ação, não abre o drawer
+      if (e.target.closest('.btn-acao')) return;
       const id = tr.dataset.pedidoId;
       const p = state.pedidos.find(x => x.pedido_id === id);
       if (p) abrirDrawer(p);
+    });
+  });
+
+  // Botões de ação (⋮)
+  tbody.querySelectorAll('.btn-acao').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const id = btn.dataset.pedidoId;
+      const p = state.pedidos.find(x => x.pedido_id === id);
+      if (p) abrirModalExcluir(p);
     });
   });
 }
@@ -546,11 +561,20 @@ function renderCabecalho(p) {
 }
 
 function renderMetricasResumo(p) {
-  // 3 métricas: lead time real até agora · previsto total · aderência
+  // 3 métricas: lead time real até último marco · previsto total · aderência
   const marcos = p.marcos || {};
   const realInicio = marcos.pedido_fechado?.real;
-  const hoje_ = hoje();
-  const ltRealAteAgora = realInicio ? diasEntre(realInicio, hoje_) : null;
+
+  // Lead time real = início do pedido até o último marco que ACONTECEU
+  // (não usa "hoje" — usa só dados que efetivamente aconteceram)
+  const ORDEM_MARCOS_LT = ['pedido_fechado', 'fert_criado', 'op_liberada', 'producao'];
+  let ultimoMarcoReal = null;
+  for (const k of ORDEM_MARCOS_LT) {
+    if (marcos[k]?.real) ultimoMarcoReal = marcos[k].real;
+  }
+  const ltRealAteAgora = (realInicio && ultimoMarcoReal)
+    ? diasEntre(realInicio, ultimoMarcoReal)
+    : null;
 
   const prevInicio = marcos.pedido_fechado?.previsto;
   const prevFim = marcos.producao?.previsto;
@@ -571,7 +595,7 @@ function renderMetricasResumo(p) {
       <div class="metrica">
         <div class="metrica-label">Lead time real</div>
         <div class="metrica-valor">${ltRealAteAgora !== null ? ltRealAteAgora + 'd' : '—'}</div>
-        <div class="metrica-sub">desde pedido fechado</div>
+        <div class="metrica-sub">pedido → último marco</div>
       </div>
       <div class="metrica">
         <div class="metrica-label">Previsto total</div>
@@ -744,9 +768,128 @@ function renderSkus(p) {
 }
 
 // ============================================================
+// MODAL DE EXCLUSÃO (ocultar / cancelar)
+// ============================================================
+const SENHA_OPERACAO = 'FILTROSOP';
+let pedidoModalAtual = null;
+
+function abrirModalExcluir(p) {
+  pedidoModalAtual = p;
+  $('#modal-pedido-nome').textContent = `${p.cliente || 'Pedido'} — ${p.projeto || '—'}`;
+  $('#modal-motivo').value = '';
+  $('#modal-senha').value = '';
+  $('#modal-erro').style.display = 'none';
+  // Reset radio pra 'ocultar'
+  document.querySelectorAll('input[name="acao-excluir"]').forEach(r => {
+    r.checked = (r.value === 'ocultar');
+  });
+  $('#modal-excluir').setAttribute('aria-hidden', 'false');
+  setTimeout(() => $('#modal-senha').focus(), 100);
+}
+
+function fecharModalExcluir() {
+  $('#modal-excluir').setAttribute('aria-hidden', 'true');
+  pedidoModalAtual = null;
+}
+
+async function confirmarExcluir() {
+  if (!pedidoModalAtual) return;
+
+  const senha = $('#modal-senha').value;
+  const motivo = $('#modal-motivo').value.trim();
+  const acao = document.querySelector('input[name="acao-excluir"]:checked')?.value;
+  const pedidoId = pedidoModalAtual.pedido_id;
+
+  // Validação de senha
+  if (senha !== SENHA_OPERACAO) {
+    $('#modal-erro').textContent = 'Senha incorreta.';
+    $('#modal-erro').style.display = 'block';
+    return;
+  }
+
+  // Aplica o override LOCALMENTE primeiro (instantâneo pra UX)
+  const override = {
+    status_manual: acao === 'cancelar' ? 'cancelado' : 'oculto',
+    motivo: motivo || null,
+    por: 'PCP',
+    data: new Date().toISOString().slice(0, 10),
+  };
+
+  // Aplica no state em memória
+  if (acao === 'cancelar') {
+    pedidoModalAtual.status = 'cancelado';
+    pedidoModalAtual.responsavel_atual = '-';
+    pedidoModalAtual.cancelado_info = override;
+  } else {
+    pedidoModalAtual.oculto = true;
+    pedidoModalAtual.oculto_info = override;
+  }
+
+  // Salva localmente (persiste no localStorage)
+  salvarOverrideLocal(pedidoId, override);
+
+  fecharModalExcluir();
+  renderizarTudo();
+
+  // Tenta enviar pro backend (Netlify Function). Se falhar, fica só local.
+  try {
+    await enviarOverrideBackend(pedidoId, override);
+  } catch (e) {
+    console.warn('Override só salvo localmente (backend offline):', e);
+  }
+}
+
+function salvarOverrideLocal(pedidoId, override) {
+  try {
+    const overrides = JSON.parse(localStorage.getItem('overrides') || '{}');
+    overrides[pedidoId] = override;
+    localStorage.setItem('overrides', JSON.stringify(overrides));
+  } catch (e) {
+    console.warn('Erro salvando override local:', e);
+  }
+}
+
+function aplicarOverridesLocaisAosPedidos() {
+  // Quando recarregar dados.json, reaplica overrides locais
+  // (até o backend persistir definitivamente no overrides.json do repo)
+  try {
+    const overrides = JSON.parse(localStorage.getItem('overrides') || '{}');
+    for (const p of state.pedidos) {
+      const ov = overrides[p.pedido_id];
+      if (!ov) continue;
+      if (ov.status_manual === 'cancelado') {
+        p.status = 'cancelado';
+        p.responsavel_atual = '-';
+        p.cancelado_info = ov;
+      } else if (ov.status_manual === 'oculto') {
+        p.oculto = true;
+        p.oculto_info = ov;
+      }
+    }
+  } catch (e) {
+    console.warn('Erro aplicando overrides locais:', e);
+  }
+}
+
+async function enviarOverrideBackend(pedidoId, override) {
+  // Chama a Netlify Function pra commitar no overrides.json no GitHub.
+  // Funciona quando a função estiver deployada; até lá fica só local.
+  const resp = await fetch('/.netlify/functions/upsert-override', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ pedido_id: pedidoId, override, senha: SENHA_OPERACAO }),
+  });
+  if (!resp.ok) {
+    throw new Error(`Backend HTTP ${resp.status}`);
+  }
+  return resp.json();
+}
+
+// ============================================================
 // RENDERIZAÇÃO — ORQUESTRADOR
 // ============================================================
 function renderizarTudo() {
+  aplicarOverridesLocaisAosPedidos();
   popularFiltroCliente();
   renderizarCards();
   renderizarEtapas();
@@ -787,7 +930,19 @@ function ligarEventos() {
   $('#drawer-close').addEventListener('click', fecharDrawer);
   $('#drawer-backdrop').addEventListener('click', fecharDrawer);
   document.addEventListener('keydown', e => {
-    if (e.key === 'Escape' && state.pedidoAberto) fecharDrawer();
+    if (e.key === 'Escape') {
+      if (document.querySelector('#modal-excluir[aria-hidden="false"]')) fecharModalExcluir();
+      else if (state.pedidoAberto) fecharDrawer();
+    }
+  });
+
+  // Modal de exclusão
+  document.querySelectorAll('[data-close-modal]').forEach(el => {
+    el.addEventListener('click', fecharModalExcluir);
+  });
+  $('#btn-confirmar-excluir').addEventListener('click', confirmarExcluir);
+  $('#modal-senha').addEventListener('keypress', e => {
+    if (e.key === 'Enter') confirmarExcluir();
   });
 
   // Refresh
