@@ -480,8 +480,14 @@ function popularFiltroCliente() {
 
 function aplicarFiltros(pedidos) {
   const f = state.filtros;
+  const dataMin = dataMinimaDoPeriodo();
   return pedidos.filter(p => {
     if (p.oculto) return false;
+    // Filtro de período: pedido_fechado.real dentro do período selecionado
+    if (dataMin) {
+      const ped = p.marcos?.pedido_fechado?.real;
+      if (!ped || ped < dataMin) return false;
+    }
     if (f.status && p.status !== f.status) return false;
     if (f.responsavel && p.responsavel_atual !== f.responsavel) return false;
     if (f.cliente && p.cliente !== f.cliente) return false;
@@ -1340,10 +1346,11 @@ function renderizarTudo() {
 // EVENTOS
 // ============================================================
 function ligarEventos() {
-  // Filtro global de período (afeta cards de etapas)
+  // Filtro global de período (afeta cards de etapas E tabela de pedidos)
   $('#filtro-periodo').addEventListener('change', e => {
     state.periodo = e.target.value;
     renderizarEtapas();
+    renderizarTabela();
   });
 
   // Filtros
