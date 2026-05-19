@@ -322,9 +322,14 @@ def _calcular_status(marcos: dict, skus: list = None, tem_cronograma: bool = Tru
     tem_op   = marcos['op_liberada']['real'] is not None
     tem_prod = marcos['producao']['real'] is not None
 
-    # Regra 1: compravel (sobrescreve fluxo normal — não tem OP/Produção)
+    # Regra 1: compravel — pedido com produtos 15xxx não passa por produção.
+    # - Se FERT foi cadastrado → 'concluido' (fluxo administrativo encerrado).
+    # - Senão → 'compravel' (aguarda Engenharia cadastrar o código).
     if todos_skus_compraveis(skus or []):
-        status = STATUS_COMPRAVEL
+        if tem_fert:
+            status = STATUS_CONCLUIDO
+        else:
+            status = STATUS_COMPRAVEL
         return status, RESPONSAVEL_POR_STATUS[status]
 
     # Regra 2: pedido fechado mas sem cronograma E sem FERT → aguarda crono

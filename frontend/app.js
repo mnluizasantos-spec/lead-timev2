@@ -488,28 +488,21 @@ function renderizarTabela() {
 
   const tbody = $('#tabela-pedidos-body');
   if (pedidosFiltrados.length === 0) {
-    tbody.innerHTML = '<tr><td colspan="10" class="vazio">Nenhum pedido com esses filtros.</td></tr>';
+    tbody.innerHTML = '<tr><td colspan="6" class="vazio">Nenhum pedido com esses filtros.</td></tr>';
     return;
   }
 
   tbody.innerHTML = pedidosFiltrados.map(p => {
-    const status = STATUS_LABEL[p.status] || p.status;
-    const aderenciaHtml = renderAderenciaBadge(p);
-    const opPrev = p.marcos?.op_liberada?.previsto;
-    const opReal = p.marcos?.op_liberada?.real;
-    const prodInicio = p.marcos?.producao?.real;
-    const prodFim = p.marcos?.producao?.fim;
     return `
       <tr data-pedido-id="${p.pedido_id}">
-        <td class="celula-cliente">${p.cliente || '—'}</td>
-        <td class="celula-projeto" title="${p.projeto || ''}">${p.projeto || '—'}</td>
-        <td><span class="badge badge-status badge-${p.status}">${status}</span></td>
-        <td class="celula-data">${fmtData(p.marcos?.pedido_fechado?.real)}</td>
-        <td class="celula-data">${fmtData(opPrev)}</td>
-        <td class="celula-data ${opReal ? 'data-real-celula' : 'data-vazia'}">${fmtData(opReal)}</td>
-        <td class="celula-data ${prodInicio ? 'data-real-celula' : 'data-vazia'}">${fmtData(prodInicio)}</td>
-        <td class="celula-data ${prodFim ? 'data-real-celula' : 'data-vazia'}">${fmtData(prodFim)}</td>
-        <td>${aderenciaHtml}</td>
+        <td class="td-cliente-projeto">
+          <div class="td-cliente-label">${p.cliente || '—'}</div>
+          <div class="td-projeto-nome" title="${p.projeto || ''}">${p.projeto || '—'}</div>
+        </td>
+        <td>${renderStatusPill(p)}</td>
+        <td>${renderPipeline(p)}</td>
+        <td class="td-leadtime">${renderLeadTimeCelula(p)}</td>
+        <td style="text-align:center">${renderAderenciaBadge(p)}</td>
         <td class="td-acoes">
           <button class="btn-acao" data-acao="excluir" data-pedido-id="${p.pedido_id}" title="Ocultar ou cancelar este pedido">⋮</button>
         </td>
@@ -538,6 +531,150 @@ function renderizarTabela() {
   });
 }
 
+// ============================================================
+// HELPERS DE RENDERIZAÇÃO DA TABELA
+// ============================================================
+
+// 1. Status pill
+function renderStatusPill(p) {
+  const map = {
+    aguardando_fert:   { label: 'Aguardando CAD', classe: 'status-aguardando-cad' },
+    aguardando_op:     { label: 'Aguardando ENG', classe: 'status-aguardando-eng' },
+    em_producao:       { label: 'Em produção',    classe: 'status-em-producao'   },
+    concluido:         { label: 'Concluído',      classe: 'status-concluido'     },
+    cancelado:         { label: 'Cancelado',      classe: 'status-cancelado'     },
+    compravel:         { label: 'Compravel',      classe: 'status-compravel'     },
+    aguarda_crono:     { label: 'Aguarda cronograma', classe: 'status-aguarda-crono' },
+  };
+  const info = map[p.status] || { label: p.status, classe: '' };
+
+  // Atrasado tem prioridade visual: se o pedido está em alguma etapa e a
+  // data prevista dela já passou, mostra "Atrasado" em vermelho
+  if (etapaAtualAtrasada(p) && p.status !== 'concluido' && p.status !== 'cancelado') {
+    return `<span class="status-pill status-atrasado">Atrasado</span>`;
+  }
+
+  return `<span class="status-pill ${info.classe}">${info.label}</span>`;
+}
+
+// Verifica se a etapa atual já passou da data prevista
+function etapaAtualAtrasada(p) {
+  const hojeStr = hoje();
+  const m = p.marcos || {};
+  const ordem = ['fert_criado', 'op_liberada', 'producao'];
+  for (const k of ordem) {
+    const real = m[k]?.real;
+    const prev = m[k]?.previsto;
+    if (real) continue;           // etapa já concluída, não está atrasada
+    if (prev && hojeStr > prev) return true;  // não tem real e já passou data
+    return false;                  // primeira etapa pendente sem atraso
+  }
+  return false;
+}
+
+// 2. Pipeline visual COM → CAD → ENG → PROD
+function renderPipeline(p) {
+  const m = p.marcos || {};
+  const isCompravel = ['compravel', 'concluido'].includes(p.status) &&
+                       (p.skus || []).filter(s => s.tipo === 'FERT').every(s => String(s.codigo).startsWith('15'));
+
+  const etapas = [
+    { id: 'COM', marco: 'pedido_fechado' },
+    { id: 'CAD', marco: 'fert_criado'    },
+    { id: 'ENG', marco: 'op_liberada'    },
+    { id: 'PROD', marco: 'producao'      },
+  ];
+
+  const items = etapas.map((e, idx) => {
+    const real = m[e.marco]?.real;
+    const prev = m[e.marco]?.previsto;
+
+    // Compravel: ENG e PROD viram "compra"
+    if (isCompravel && (e.id === 'ENG' || e.id === 'PROD')) {
+      return `<div class="pipeline-etapa compra" title="Pedido compravel — não passa pela produção interna">compra</div>`;
+    }
+
+    if (real) {
+      // Etapa concluída
+      const classe = (e.id === 'PROD' && p.status === 'concluido')
+        ? 'pipeline-etapa concluida-prod'
+        : 'pipeline-etapa feita';
+      const tooltip = `${e.id} concluído em ${fmtData(real)}`;
+      return `<div class="${classe}" title="${tooltip}">${e.id}${e.id === 'PROD' && p.status === 'concluido' ? ' ✓' : ''}</div>`;
+    }
+
+    // Etapa não concluída — verifica se é a atual ou pendente
+    const anterior = idx > 0 ? etapas[idx - 1] : null;
+    const anteriorFeita = anterior ? !!m[anterior.marco]?.real : true;
+
+    if (anteriorFeita) {
+      // É a etapa atual. Verifica se está atrasada.
+      const atrasada = prev && hoje() > prev;
+      const classe = atrasada ? 'pipeline-etapa atrasada' : `pipeline-etapa atual-${e.id.toLowerCase()}`;
+      const tooltip = prev
+        ? (atrasada ? `${e.id} atrasada (previsto ${fmtData(prev)})` : `${e.id} em andamento (previsto ${fmtData(prev)})`)
+        : `${e.id} em andamento`;
+      return `<div class="${classe}" title="${tooltip}">${e.id}</div>`;
+    }
+
+    // Etapa pendente (anterior ainda não concluída)
+    return `<div class="pipeline-etapa" title="${e.id} pendente">${e.id}</div>`;
+  }).join('');
+
+  return `<div class="pipeline">${items}</div>`;
+}
+
+// 3. Lead Time celula: real / previsto · prog%
+function renderLeadTimeCelula(p) {
+  const m = p.marcos || {};
+  const pedReal = m.pedido_fechado?.real;
+  const pedPrev = m.pedido_fechado?.previsto;
+  const prodReal = m.producao?.real;
+  const prodPrev = m.producao?.previsto;
+
+  // Real: pedido_fechado.real até último marco realizado (ou hoje se em andamento)
+  let leadReal = null;
+  if (pedReal) {
+    if (p.status === 'concluido' && prodReal) {
+      leadReal = diasEntre(pedReal, prodReal);
+    } else if (p.status === 'concluido' && m.fert_criado?.real) {
+      // Compravel concluído: real = pedido → FERT (pq não tem produção)
+      leadReal = diasEntre(pedReal, m.fert_criado.real);
+    } else {
+      leadReal = diasEntre(pedReal, hoje());
+    }
+  }
+
+  // Previsto: pedido_fechado.previsto → producao.previsto
+  let leadPrev = null;
+  if (pedPrev && prodPrev) {
+    leadPrev = diasEntre(pedPrev, prodPrev);
+  }
+
+  let valoresHtml;
+  if (leadReal != null && leadPrev != null) {
+    valoresHtml = `<span class="real">${leadReal}d</span><span class="slash">/</span><span class="prev">${leadPrev}d</span>`;
+  } else if (leadReal != null) {
+    valoresHtml = `<span class="real">${leadReal}d</span><span class="slash">/</span><span class="prev">—</span>`;
+  } else {
+    valoresHtml = `<span style="color:var(--cinza-400)">—</span>`;
+  }
+
+  // Progresso
+  let progHtml = '';
+  if (leadReal != null && leadPrev != null && leadPrev > 0) {
+    const pct = Math.round((leadReal / leadPrev) * 100);
+    progHtml = `<div class="leadtime-prog">${pct}% do previsto</div>`;
+  }
+
+  return `
+    <div class="leadtime-cell">
+      <div class="leadtime-valores">${valoresHtml}</div>
+      ${progHtml}
+    </div>
+  `;
+}
+
 function renderAderenciaBadge(p) {
   // Aderência = pior desvio entre os lead times realizados
   const lt = p.lead_times || {};
@@ -546,13 +683,18 @@ function renderAderenciaBadge(p) {
     .filter(d => d != null);
 
   if (desvios.length === 0) {
-    return '<span class="badge badge-aderencia-na">—</span>';
+    return '<span class="aderencia ader-vazio">—</span>';
   }
 
   const pior = Math.max(...desvios);
-  if (pior > 0)  return `<span class="badge badge-aderencia-atrasado">+${pior}d</span>`;
-  if (pior < 0)  return `<span class="badge badge-aderencia-adiantado">${pior}d</span>`;
-  return '<span class="badge badge-aderencia-ok">No prazo</span>';
+  // Verde: no prazo ou adiantado
+  if (pior <= 0) {
+    if (pior < 0) return `<span class="aderencia ader-ok">${pior}d</span>`;
+    return '<span class="aderencia ader-ok">No prazo</span>';
+  }
+  // Atraso leve (1 a 3 dias) → amarelo. Forte (4+) → vermelho.
+  if (pior <= 3) return `<span class="aderencia ader-atraso-leve">+${pior}d</span>`;
+  return `<span class="aderencia ader-atraso">+${pior}d</span>`;
 }
 
 // ============================================================
