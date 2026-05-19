@@ -771,7 +771,8 @@ function renderSkus(p) {
 // ============================================================
 // MODAL DE EXCLUSÃO (ocultar / cancelar)
 // ============================================================
-const SENHA_OPERACAO = 'FILTROSOP';
+// A senha é validada SEMPRE no backend (Netlify Function).
+// O cliente não conhece a senha — envia o que o usuário digitou.
 let pedidoModalAtual = null;
 
 function abrirModalExcluir(p) {
@@ -801,14 +802,13 @@ async function confirmarExcluir() {
   const acao = document.querySelector('input[name="acao-excluir"]:checked')?.value;
   const pedidoId = pedidoModalAtual.pedido_id;
 
-  // Validação de senha
-  if (senha !== SENHA_OPERACAO) {
-    $('#modal-erro').textContent = 'Senha incorreta.';
+  if (!senha) {
+    $('#modal-erro').textContent = 'Digite a senha.';
     $('#modal-erro').style.display = 'block';
     return;
   }
 
-  // Aplica o override LOCALMENTE primeiro (instantâneo pra UX)
+  // Monta override
   const override = {
     status_manual: acao === 'cancelar' ? 'cancelado' : 'oculto',
     motivo: motivo || null,
@@ -816,7 +816,22 @@ async function confirmarExcluir() {
     data: new Date().toISOString().slice(0, 10),
   };
 
-  // Aplica no state em memória
+  // Envia pro backend ANTES de aplicar local — a senha é validada lá
+  $('#btn-confirmar-excluir').disabled = true;
+  $('#btn-confirmar-excluir').textContent = 'Enviando...';
+  $('#modal-erro').style.display = 'none';
+
+  try {
+    await enviarOverrideBackend(pedidoId, override, senha);
+  } catch (e) {
+    $('#modal-erro').textContent = e.message || 'Erro ao enviar';
+    $('#modal-erro').style.display = 'block';
+    $('#btn-confirmar-excluir').disabled = false;
+    $('#btn-confirmar-excluir').textContent = 'Confirmar';
+    return;
+  }
+
+  // Backend aceitou — aplica local
   if (acao === 'cancelar') {
     pedidoModalAtual.status = 'cancelado';
     pedidoModalAtual.responsavel_atual = '-';
@@ -826,18 +841,11 @@ async function confirmarExcluir() {
     pedidoModalAtual.oculto_info = override;
   }
 
-  // Salva localmente (persiste no localStorage)
   salvarOverrideLocal(pedidoId, override);
-
   fecharModalExcluir();
   renderizarTudo();
-
-  // Tenta enviar pro backend (Netlify Function). Se falhar, fica só local.
-  try {
-    await enviarOverrideBackend(pedidoId, override);
-  } catch (e) {
-    console.warn('Override só salvo localmente (backend offline):', e);
-  }
+  $('#btn-confirmar-excluir').disabled = false;
+  $('#btn-confirmar-excluir').textContent = 'Confirmar';
 }
 
 function salvarOverrideLocal(pedidoId, override) {
@@ -872,16 +880,21 @@ function aplicarOverridesLocaisAosPedidos() {
   }
 }
 
-async function enviarOverrideBackend(pedidoId, override) {
+async function enviarOverrideBackend(pedidoId, override, senha) {
   // Chama a Netlify Function pra commitar no overrides.json no GitHub.
-  // Funciona quando a função estiver deployada; até lá fica só local.
+  // A senha é validada lá no backend (process.env.SENHA_OP).
   const resp = await fetch('/.netlify/functions/upsert-override', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ pedido_id: pedidoId, override, senha: SENHA_OPERACAO }),
+    body: JSON.stringify({ pedido_id: pedidoId, override, senha }),
   });
   if (!resp.ok) {
-    throw new Error(`Backend HTTP ${resp.status}`);
+    let detalhe = '';
+    try {
+      const json = await resp.json();
+      detalhe = json.error || JSON.stringify(json);
+    } catch (e) { /* ignore */ }
+    throw new Error(`HTTP ${resp.status}${detalhe ? ': ' + detalhe : ''}`);
   }
   return resp.json();
 }
@@ -925,8 +938,8 @@ async function confirmarUploadApontamentos() {
     erro.style.display = 'block';
     return;
   }
-  if (senha !== SENHA_OPERACAO) {
-    erro.textContent = 'Senha incorreta.';
+  if (!senha) {
+    erro.textContent = 'Digite a senha.';
     erro.style.display = 'block';
     return;
   }
@@ -950,15 +963,19 @@ async function confirmarUploadApontamentos() {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        senha: SENHA_OPERACAO,
+        senha,
         filename: 'apontamentos.xlsx',
         content_base64: base64,
       }),
     });
 
     if (!resp.ok) {
-      const txt = await resp.text();
-      throw new Error(`HTTP ${resp.status}: ${txt}`);
+      let detalhe = '';
+      try {
+        const json = await resp.json();
+        detalhe = json.error || JSON.stringify(json);
+      } catch (e) { /* ignore */ }
+      throw new Error(`HTTP ${resp.status}${detalhe ? ': ' + detalhe : ''}`);
     }
 
     const json = await resp.json();

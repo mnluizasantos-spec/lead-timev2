@@ -2,16 +2,16 @@
  * Netlify Function: upload-apontamentos
  *
  * Recebe POST com:
- *   { senha: "FILTROSOP", filename: "apontamentos.xlsx", content_base64: "..." }
+ *   { senha: "<senha>", filename: "apontamentos.xlsx", content_base64: "..." }
  *
- * Valida senha, então usa a API do GitHub pra commitar (substituir)
- * o arquivo `apontamentos.xlsx` no repo lead-timev2.
+ * Valida senha contra process.env.SENHA_OP, então usa a API do GitHub
+ * pra commitar (substituir) o arquivo `apontamentos.xlsx` no repo.
  *
  * Environment variables necessárias no Netlify:
  *   GITHUB_TOKEN  → Personal Access Token com permissão de write no repo
  *   GITHUB_OWNER  → mnluizasantos-spec
  *   GITHUB_REPO   → lead-timev2
- *   SENHA_OP      → FILTROSOP (a senha pode ser sobreescrita aqui)
+ *   SENHA_OP      → senha exigida pra fazer upload
  */
 
 const GITHUB_API = 'https://api.github.com';
@@ -40,8 +40,11 @@ exports.handler = async (event) => {
   const { senha, filename, content_base64 } = body;
 
   // Validações
-  const senhaCorreta = process.env.SENHA_OP || 'FILTROSOP';
-  if (senha !== senhaCorreta) {
+  const senhaConfigurada = process.env.SENHA_OP;
+  if (!senhaConfigurada) {
+    return resp(500, { error: 'SENHA_OP nao configurada no Netlify' });
+  }
+  if (senha !== senhaConfigurada) {
     return resp(401, { error: 'Senha incorreta' });
   }
 

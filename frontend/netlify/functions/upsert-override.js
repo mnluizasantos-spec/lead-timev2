@@ -3,13 +3,13 @@
  *
  * Recebe POST com:
  *   {
- *     senha: "FILTROSOP",
+ *     senha: "<senha>",
  *     pedido_id: "...",
  *     override: { status_manual: "oculto"|"cancelado", motivo, por, data }
  *   }
  *
- * Valida senha, lê overrides.json atual do repo, adiciona/atualiza
- * o pedido_id, e committa de volta.
+ * Valida senha contra process.env.SENHA_OP, lê overrides.json atual do repo,
+ * adiciona/atualiza o pedido_id, e committa de volta.
  */
 
 const GITHUB_API = 'https://api.github.com';
@@ -32,8 +32,11 @@ exports.handler = async (event) => {
 
   const { senha, pedido_id, override } = body;
 
-  const senhaCorreta = process.env.SENHA_OP || 'FILTROSOP';
-  if (senha !== senhaCorreta) {
+  const senhaConfigurada = process.env.SENHA_OP;
+  if (!senhaConfigurada) {
+    return resp(500, { error: 'SENHA_OP nao configurada no Netlify' });
+  }
+  if (senha !== senhaConfigurada) {
     return resp(401, { error: 'Senha incorreta' });
   }
 

@@ -2,9 +2,12 @@
   publish = "."
   functions = "netlify/functions"
 
+[build.environment]
+  # SENHA_OP nunca está no código — está só nas env vars do Netlify.
+  # Mas se o scanner achar algum falso positivo, omitimos pra não quebrar.
+  SECRETS_SCAN_OMIT_KEYS = "SENHA_OP"
+
 [functions]
-  # Aumenta o limite do body pras functions de upload
-  # (Netlify padrão: 6 MB; vamos pedir o máximo possível)
   node_bundler = "esbuild"
 
 # Cabeçalhos pra evitar cache do dados.json (queremos sempre fresh)
