@@ -10,6 +10,7 @@ from .utils import (
     html_to_text, parse_iso, limpar_remetente, normalizar_remetente_dedup,
     extrair_cliente_do_subject, diferenca_dias
 )
+from .clientes import identificar_cliente_projeto, eh_subject_ruido
 from .marcos import classificar_marco
 from .cronograma import extrair_cronograma
 from .skus import extrair_skus
@@ -31,10 +32,17 @@ RE_REEDICAO_SUBJECT = re.compile(
 
 
 def eh_reedicao(subject: str) -> bool:
-    """Detecta se o pedido é uma reedição/revisão pelo subject."""
+    """Detecta se o pedido é uma reedição/revisão pelo subject,
+    ou um subject de ruído (ALINHAMENTO, AGENDAMENTO, INFORME, FYI).
+    Ambos casos devem ser ignorados pelo processador."""
     if not subject:
         return False
-    return bool(RE_REEDICAO_SUBJECT.search(subject))
+    if RE_REEDICAO_SUBJECT.search(subject):
+        return True
+    # Subjects de ruído (ALINHAMENTO, AGENDAMENTO, INFORME, FYI)
+    if eh_subject_ruido(subject):
+        return True
+    return False
 
 
 def processar_thread(emails_da_thread: list, auditoria: dict = None) -> dict:
@@ -234,11 +242,14 @@ def processar_thread(emails_da_thread: list, auditoria: dict = None) -> dict:
     # ============================================================
     # 9. PEDIDO FINAL
     # ============================================================
+    # Identifica cliente e projeto usando módulo dedicado
+    cliente_ident, projeto_ident = identificar_cliente_projeto(subject_thread)
+
     return {
         'pedido_id': thread_id,
         'subject': subject_thread,
-        'projeto': extrair_cliente_do_subject(subject_thread) or subject_thread,
-        'cliente': extrair_cliente_do_subject(subject_thread),
+        'projeto': projeto_ident or subject_thread,
+        'cliente': cliente_ident,
         'comercial': limpar_remetente(pedido_fechado_ev['remetente']),
         'skus': skus,
         'marcos': marcos,
