@@ -2,6 +2,7 @@
 Processa um conjunto de emails da mesma thread (conversationId)
 e produz UM pedido com os marcos, cronograma e SKUs identificados.
 """
+import re
 from collections import defaultdict
 from datetime import datetime
 
@@ -21,6 +22,21 @@ from .papeis import (
 )
 
 
+# Regex pra detectar reedição/revisão no subject
+# (com ou sem acento, em maiúsculas ou minúsculas)
+RE_REEDICAO_SUBJECT = re.compile(
+    r'\b(REEDI[ÇC][ÃA]O|REVIS[ÃA]O|REVISADO|RE-EDI[ÇC][ÃA]O)\b',
+    re.IGNORECASE
+)
+
+
+def eh_reedicao(subject: str) -> bool:
+    """Detecta se o pedido é uma reedição/revisão pelo subject."""
+    if not subject:
+        return False
+    return bool(RE_REEDICAO_SUBJECT.search(subject))
+
+
 def processar_thread(emails_da_thread: list, auditoria: dict = None) -> dict:
     """
     Processa todos os emails de uma thread e retorna o pedido consolidado.
@@ -31,14 +47,30 @@ def processar_thread(emails_da_thread: list, auditoria: dict = None) -> dict:
 
     Returns:
         Dict do pedido (schema do BLUEPRINT_V2.md seção 3.5),
-        ou None se a thread não tem pedido_fechado válido.
+        None se a thread não tem pedido_fechado válido,
+        ou None se a thread é reedição (descartada).
     """
     if auditoria is None:
         auditoria = {
             'marcos_rejeitados': [],
             'threads_sem_pedido_fechado': [],
             'remetentes_desconhecidos': set(),
+            'reedicoes_ignoradas': [],
         }
+    auditoria.setdefault('reedicoes_ignoradas', [])
+
+    # ============================================================
+    # 0. FILTRO DE REEDIÇÃO — ignora threads cujo subject (em QUALQUER
+    #    email da thread) contém 'REEDICAO', 'REVISAO', etc.
+    # ============================================================
+    for email in emails_da_thread:
+        subj = email.get('subject', '')
+        if eh_reedicao(subj):
+            auditoria['reedicoes_ignoradas'].append({
+                'thread_id': email.get('conversationId', ''),
+                'subject': subj,
+            })
+            return None
 
     # ============================================================
     # 1. EXPLODE CADA EMAIL EM MENSAGENS (split inline de quotes)

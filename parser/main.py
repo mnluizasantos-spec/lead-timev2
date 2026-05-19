@@ -106,6 +106,7 @@ def main(
         'marcos_rejeitados': [],
         'threads_sem_pedido_fechado': [],
         'remetentes_desconhecidos': set(),
+        'reedicoes_ignoradas': [],
     }
 
     pedidos = []
@@ -117,6 +118,7 @@ def main(
     print(f'✅ {len(pedidos)} pedido(s) com pedido_fechado válido')
     print(f'⚠️  {len(auditoria["threads_sem_pedido_fechado"])} thread(s) sem pedido_fechado (auditoria)')
     print(f'⚠️  {len(auditoria["marcos_rejeitados"])} marco(s) rejeitado(s) por papel')
+    print(f'🚫 {len(auditoria["reedicoes_ignoradas"])} reedicao/revisao ignorada(s)')
 
     # 4. Apontamentos (se informado)
     if apontamentos_path:
