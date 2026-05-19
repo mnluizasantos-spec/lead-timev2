@@ -253,8 +253,8 @@
         "desvio": null
       }
     },
-    "status": "compravel",
-    "responsavel_atual": "Compras",
+    "status": "concluido",
+    "responsavel_atual": "-",
     "tem_cronograma": false
   },
   {
@@ -587,8 +587,8 @@
         "desvio": null
       }
     },
-    "status": "compravel",
-    "responsavel_atual": "Compras",
+    "status": "concluido",
+    "responsavel_atual": "-",
     "tem_cronograma": false
   },
   {
@@ -653,8 +653,8 @@
         "desvio": null
       }
     },
-    "status": "compravel",
-    "responsavel_atual": "Compras",
+    "status": "concluido",
+    "responsavel_atual": "-",
     "tem_cronograma": true
   },
   {
@@ -719,8 +719,8 @@
         "desvio": null
       }
     },
-    "status": "compravel",
-    "responsavel_atual": "Compras",
+    "status": "concluido",
+    "responsavel_atual": "-",
     "tem_cronograma": false
   },
   {
@@ -1251,8 +1251,8 @@
         "desvio": null
       }
     },
-    "status": "compravel",
-    "responsavel_atual": "Compras",
+    "status": "concluido",
+    "responsavel_atual": "-",
     "tem_cronograma": true
   },
   {
@@ -2050,8 +2050,8 @@
         "desvio": null
       }
     },
-    "status": "compravel",
-    "responsavel_atual": "Compras",
+    "status": "concluido",
+    "responsavel_atual": "-",
     "tem_cronograma": false
   },
   {
