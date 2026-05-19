@@ -173,6 +173,21 @@ def eh_subject_ruido(subject: str) -> bool:
     for r in SUBJECTS_RUIDO:
         if _normalizar(r) in s_norm:
             return True
+    # CRONOGRAMA sozinho (sem PEDIDO FECHADO no subject) = ruído.
+    # Esse caso acontece quando alguém responde com o título da tabela
+    # do template inteiro como subject. Se houver "PEDIDO FECHADO" no
+    # subject também, é um pedido legítimo (mantém).
+    if 'CRONOGRAMA' in s_norm and 'PEDIDO FECHADO' not in s_norm:
+        return True
+    # Subject corrompido: tem CRONOGRAMA E PEDIDO FECHADO mas sem nenhum
+    # nome real (cliente ou projeto identificável). Ex:
+    # "RES: PEDIDO FECHADO VAREJO - CRONOGRAMA — PEDIDO FECHADO VAREJO"
+    if 'CRONOGRAMA' in s_norm:
+        cliente, projeto = identificar_cliente_projeto(subject)
+        # Sem cliente + projeto vazio ou só "CRONOGRAMA" + lixo
+        projeto_limpo = re.sub(r'[—\-\s]+', ' ', projeto or '').strip()
+        if not cliente and projeto_limpo in ('', 'CRONOGRAMA'):
+            return True
     return False
 
 
