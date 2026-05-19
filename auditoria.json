@@ -1,0 +1,63 @@
+{
+  "gerado_em": "2026-05-19T10:01:05",
+  "total_emails": 10,
+  "total_threads": 6,
+  "marcos_rejeitados": [
+    {
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAMC-ScgVsj9Avp4vPeFxDLA=",
+      "tipo_detectado": "ferts_criados",
+      "remetente": "MATHEUS GARCIA HENRIQUES",
+      "motivo": "papel_remetente=excluido, esperava=engenharia"
+    },
+    {
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAMC-ScgVsj9Avp4vPeFxDLA=",
+      "tipo_detectado": "ferts_criados",
+      "remetente": "matheus.garcia@antilhas.com.br",
+      "motivo": "papel_remetente=excluido, esperava=engenharia"
+    },
+    {
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAB9mQSJNHK5Go9nQ1Mb9clI=",
+      "tipo_detectado": "ferts_criados",
+      "remetente": "Inspeção C.Q",
+      "motivo": "papel_remetente=desconhecido, esperava=engenharia"
+    },
+    {
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAB9mQSJNHK5Go9nQ1Mb9clI=",
+      "tipo_detectado": "ferts_criados",
+      "remetente": "Inspeção C.Q",
+      "motivo": "papel_remetente=desconhecido, esperava=engenharia"
+    },
+    {
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAB9mQSJNHK5Go9nQ1Mb9clI=",
+      "tipo_detectado": "ferts_criados",
+      "remetente": "Inspeção C.Q",
+      "motivo": "papel_remetente=desconhecido, esperava=engenharia"
+    },
+    {
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAB9mQSJNHK5Go9nQ1Mb9clI=",
+      "tipo_detectado": "ferts_criados",
+      "remetente": "cqualidade@antilhas.com.br",
+      "motivo": "papel_remetente=desconhecido, esperava=engenharia"
+    },
+    {
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAB9mQSJNHK5Go9nQ1Mb9clI=",
+      "tipo_detectado": "ferts_criados",
+      "remetente": "Inspeção C.Q",
+      "motivo": "papel_remetente=desconhecido, esperava=engenharia"
+    },
+    {
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAHthAQbS0S1KqFEvTedtNyI=",
+      "tipo_detectado": "ferts_criados",
+      "remetente": "cqualidade@antilhas.com.br",
+      "motivo": "papel_remetente=desconhecido, esperava=engenharia"
+    },
+    {
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQALqRWTknnAdKqhPQ8K3RuLI=",
+      "tipo_detectado": "ferts_criados",
+      "remetente": "cqualidade@antilhas.com.br",
+      "motivo": "papel_remetente=desconhecido, esperava=engenharia"
+    }
+  ],
+  "threads_sem_pedido_fechado": [],
+  "remetentes_desconhecidos": []
+}
