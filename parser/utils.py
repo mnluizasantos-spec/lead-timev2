@@ -61,6 +61,17 @@ class _HTMLToText(HTMLParser):
         s = re.sub(r'[ \t]+', ' ', s)
         s = re.sub(r'\n[ \t]+', '\n', s)
         s = re.sub(r'\n{3,}', '\n\n', s)
+        # Junta dígitos isolados que ficaram separados por espaços/quebras
+        # devido a HTML mal formatado (ex: "<span>1</span><span>8</span>/05/2026"
+        # vira "1 8 /05/2026" → corrige pra "18/05/2026"):
+        # 1) "DD / DD / YYYY" (com espaços ao redor das barras) → "DD/DD/YYYY"
+        s = re.sub(r'(\d)\s*/\s*(\d)', r'\1/\2', s)
+        # 2) Junta dígitos adjacentes separados só por espaço, dentro de uma
+        #    sequência numérica (data ou número): "1 8/05/2026" → "18/05/2026"
+        #    Aplicamos só quando o resultado seria uma data válida.
+        s = re.sub(r'\b(\d)\s+(\d)(/\d{1,2}/\d{4})', r'\1\2\3', s)
+        s = re.sub(r'(\d{1,2}/)(\d)\s+(\d)(/\d{4})', r'\1\2\3\4', s)
+        s = re.sub(r'(\d{1,2}/\d{1,2}/)(\d)\s+(\d{3})', r'\1\2\3', s)
         return s.strip()
 
 

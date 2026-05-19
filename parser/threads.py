@@ -20,10 +20,14 @@ import re
 from .utils import limpar_remetente, parse_data_pt
 
 
-# Padrão do header de email Outlook em PT-BR
+# Padrão do header de email Outlook em PT-BR e variantes.
+# Aceita:
+#   "De: ... Enviada em: ..."   (PT-BR clássico)
+#   "De: ... Enviado: ..."      (variante portuguesa)
+#   "De: ... Sent: ..."         (inglês)
 RE_HEADER_OUTLOOK_PT = re.compile(
     r'\n+De:\s*([^\n]+?)\s*\n+'
-    r'Enviada em:\s*([^\n]+?)\s*\n+'
+    r'(?:Enviada\s+em|Enviado|Sent):\s*([^\n]+?)\s*\n+'
     r'(?:Para:\s*.+?)?'
     r'(?:\n+Cc:\s*.+?)?'
     r'\n+Assunto:\s*[^\n]+',
