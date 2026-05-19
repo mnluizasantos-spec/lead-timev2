@@ -851,9 +851,14 @@
         "desvio": null
       }
     },
-    "status": "aguardando_op",
-    "responsavel_atual": "Engenharia",
-    "tem_cronograma": false
+    "status": "cancelado",
+    "responsavel_atual": "-",
+    "tem_cronograma": false,
+    "cancelado_info": {
+      "motivo": "cliente trocou arte",
+      "por": "PCP",
+      "data": "2026-05-19"
+    }
   },
   {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAG2TRZTwZ99FpeC0u78scfw=",
