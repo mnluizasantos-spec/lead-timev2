@@ -38,6 +38,11 @@ jobs:
           pip install -r requirements.txt
 
       - name: Rodar parser
+        env:
+          # Ignora pedidos cujo pedido_fechado.real é anterior a esta data.
+          # Útil pra excluir threads antigas que o Power Automate puxou
+          # em respostas tardias. Formato: YYYY-MM-DD. Vazio = sem filtro.
+          PEDIDO_FECHADO_DESDE: '2026-05-01'
         run: |
           # Prioriza CSV se existir (mais leve, vem do dashboard).
           # Senão usa xlsx (modo legado / upload manual).
