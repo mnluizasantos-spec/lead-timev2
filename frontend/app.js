@@ -14,6 +14,8 @@
 const CONFIG = {
   // dados.json gerado pelo parser no GitHub
   URL_DADOS: 'https://raw.githubusercontent.com/mnluizasantos-spec/lead-timev2/main/dados.json',
+  // overrides.json com cancelamentos e ocultamentos manuais
+  URL_OVERRIDES: 'https://raw.githubusercontent.com/mnluizasantos-spec/lead-timev2/main/overrides.json',
 };
 
 const STATUS_LABEL = {
@@ -123,11 +125,25 @@ async function carregarDados() {
 
   try {
     // Cache-burst: ?t=timestamp pra forçar fetch fresh
-    const url = `${CONFIG.URL_DADOS}?t=${Date.now()}`;
-    const resp = await fetch(url, { cache: 'no-store' });
-    if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
-    const dados = await resp.json();
+    const ts = Date.now();
+    const [dadosResp, overridesResp] = await Promise.all([
+      fetch(`${CONFIG.URL_DADOS}?t=${ts}`,    { cache: 'no-store' }),
+      fetch(`${CONFIG.URL_OVERRIDES}?t=${ts}`, { cache: 'no-store' }).catch(() => null),
+    ]);
+    if (!dadosResp.ok) throw new Error(`HTTP ${dadosResp.status}`);
+    const dados = await dadosResp.json();
     state.pedidos = Array.isArray(dados) ? dados : [];
+
+    // Tenta carregar overrides do servidor (não fatal se falhar)
+    state.overridesServidor = {};
+    if (overridesResp && overridesResp.ok) {
+      try {
+        state.overridesServidor = await overridesResp.json() || {};
+      } catch (e) {
+        console.warn('overrides.json malformado:', e);
+      }
+    }
+
     renderizarTudo();
   } catch (e) {
     console.error('Erro ao carregar dados:', e);
@@ -243,6 +259,10 @@ function calcularFechamentoMes() {
 // RENDERIZAÇÃO — CARDS DE RESUMO
 // ============================================================
 function renderizarCards() {
+  // Cards de resumo foram removidos do layout. Função mantida vazia
+  // pra não quebrar chamadas existentes em renderizarTudo().
+  if (!$('#card-atrasados-total')) return;
+
   // Card 1: Atrasados
   const atrasados = calcularAtrasados();
   $('#card-atrasados-total').textContent = atrasados.length;
@@ -493,11 +513,18 @@ function renderizarTabela() {
   }
 
   tbody.innerHTML = pedidosFiltrados.map(p => {
+    // Motivo de cancelamento/ocultamento (se houver)
+    const info = p.cancelado_info || p.oculto_info;
+    const motivoHtml = info && info.motivo
+      ? `<div class="td-motivo">📌 ${info.motivo}${info.por ? ' · ' + info.por : ''}</div>`
+      : '';
+
     return `
       <tr data-pedido-id="${p.pedido_id}">
         <td class="td-cliente-projeto">
           <div class="td-cliente-label">${p.cliente || '—'}</div>
           <div class="td-projeto-nome" title="${p.projeto || ''}">${p.projeto || '—'}</div>
+          ${motivoHtml}
         </td>
         <td>${renderStatusPill(p)}</td>
         <td>${renderPipeline(p)}</td>
@@ -714,11 +741,34 @@ function fecharDrawer() {
 function renderDetalhe(p) {
   return `
     ${renderCabecalho(p)}
+    ${renderBannerMotivo(p)}
     ${renderMetricasResumo(p)}
     <div class="timeline-titulo">Marcos do pedido</div>
     ${renderTimelineHorizontal(p)}
     ${renderLeadTimes(p)}
     ${renderSkus(p)}
+  `;
+}
+
+function renderBannerMotivo(p) {
+  // Banner amarelo/vermelho com motivo de cancelamento ou ocultamento
+  const info = p.cancelado_info || p.oculto_info;
+  if (!info || !info.motivo) return '';
+
+  const tipo = p.cancelado_info ? 'cancelado' : 'oculto';
+  const titulo = tipo === 'cancelado' ? 'Pedido cancelado' : 'Pedido oculto';
+  const classe = tipo === 'cancelado' ? 'banner-cancelado' : 'banner-oculto';
+
+  const dataFmt = info.data ? fmtData(info.data) : '';
+  const porFmt = info.por ? ` por ${info.por}` : '';
+  const meta = [dataFmt, porFmt].filter(Boolean).join(' · ');
+
+  return `
+    <div class="banner-motivo ${classe}">
+      <div class="banner-motivo-titulo">${titulo}</div>
+      <div class="banner-motivo-texto">${info.motivo}</div>
+      ${meta ? `<div class="banner-motivo-meta">${meta}</div>` : ''}
+    </div>
   `;
 }
 
@@ -1077,13 +1127,18 @@ function salvarOverrideLocal(pedidoId, override) {
 }
 
 function aplicarOverridesLocaisAosPedidos() {
-  // Quando recarregar dados.json, reaplica overrides locais
-  // (até o backend persistir definitivamente no overrides.json do repo)
+  // Aplica overrides na seguinte ordem (último sobrescreve):
+  // 1) overrides do servidor (overrides.json — fonte da verdade)
+  // 2) localStorage (mudanças recentes que ainda não persistiram)
   try {
-    const overrides = JSON.parse(localStorage.getItem('overrides') || '{}');
+    const overridesLocal = JSON.parse(localStorage.getItem('overrides') || '{}');
+    const overridesServidor = state.overridesServidor || {};
+
     for (const p of state.pedidos) {
-      const ov = overrides[p.pedido_id];
-      if (!ov) continue;
+      // Merge: servidor primeiro, local depois (local prevalece)
+      const ov = { ...overridesServidor[p.pedido_id], ...overridesLocal[p.pedido_id] };
+      if (!ov || !ov.status_manual) continue;
+
       if (ov.status_manual === 'cancelado') {
         p.status = 'cancelado';
         p.responsavel_atual = '-';
@@ -1094,7 +1149,7 @@ function aplicarOverridesLocaisAosPedidos() {
       }
     }
   } catch (e) {
-    console.warn('Erro aplicando overrides locais:', e);
+    console.warn('Erro aplicando overrides:', e);
   }
 }
 
