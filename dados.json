@@ -592,14 +592,24 @@
     "comercial": "GLEICY MAIA DOS SANTOS",
     "skus": [
       {
+        "codigo": "15005828-0001",
+        "tipo": "FERT",
+        "descricao": "KIT CARTAO PIN AERO JARDIM BOT"
+      },
+      {
         "codigo": "5200004996",
         "tipo": "HALB",
-        "descricao": "(PIN JARDIM AERO BOT"
+        "descricao": "PIN JARDIM AERO BOT"
+      },
+      {
+        "codigo": "15005827-0001",
+        "tipo": "FERT",
+        "descricao": "KIT CARTAO PIN AERO CAPIVARA BOT"
       },
       {
         "codigo": "5200004997",
         "tipo": "HALB",
-        "descricao": "(PIN CAPIVARA AERO BOT)"
+        "descricao": "PIN CAPIVARA AERO BOT"
       }
     ],
     "marcos": {
@@ -651,8 +661,8 @@
         "desvio": null
       }
     },
-    "status": "em_producao",
-    "responsavel_atual": "PCP/Fábrica",
+    "status": "compravel",
+    "responsavel_atual": "Compras",
     "tem_cronograma": false
   },
   {
@@ -663,9 +673,9 @@
     "comercial": "GLEICY MAIA DOS SANTOS",
     "skus": [
       {
-        "codigo": "15005431-0001",
+        "codigo": "15005829-0001",
         "tipo": "FERT",
-        "descricao": "- 20068580 PAP SEDA INST24 BLZ WEB"
+        "descricao": "PAP SEDA INST26 BLZ WEB"
       }
     ],
     "marcos": {
@@ -1693,13 +1703,7 @@
     "projeto": "KOP - INST 26",
     "cliente": "KOP - INST 26",
     "comercial": "WESLEY MATHEUS DA SILVA wesley.matheus@antilhas.com.br",
-    "skus": [
-      {
-        "codigo": "11052815-0001",
-        "tipo": "FERT",
-        "descricao": "CX TPA FDO FSC®P PRES25 KOP"
-      }
-    ],
+    "skus": [],
     "marcos": {
       "pedido_fechado": {
         "previsto": null,
@@ -2260,8 +2264,8 @@
       },
       "op_liberada": {
         "previsto": null,
-        "real": null,
-        "por": null
+        "real": "2026-04-14",
+        "por": "gabriel.alcantara@antilhas.com.br"
       },
       "producao": {
         "previsto": null,
@@ -2282,7 +2286,7 @@
       },
       "fert_para_op": {
         "previsto": null,
-        "real": null,
+        "real": 7,
         "desvio": null
       },
       "op_para_producao": {
@@ -2296,8 +2300,8 @@
         "desvio": null
       }
     },
-    "status": "aguardando_op",
-    "responsavel_atual": "Engenharia",
+    "status": "em_producao",
+    "responsavel_atual": "PCP/Fábrica",
     "tem_cronograma": false
   },
   {
@@ -2308,9 +2312,19 @@
     "comercial": "WESLEY MATHEUS DA SILVA",
     "skus": [
       {
-        "codigo": "11046344-0001",
+        "codigo": "11055144-0001",
         "tipo": "FERT",
-        "descricao": "FERT ANTIGO COLOCAR EM PH"
+        "descricao": "TAG INST26 BC"
+      },
+      {
+        "codigo": "2100082495",
+        "tipo": "HALB",
+        "descricao": "TAG INST26 BC"
+      },
+      {
+        "codigo": "8600006876",
+        "tipo": "HALB",
+        "descricao": "TAG INST26 BC ME"
       }
     ],
     "marcos": {
