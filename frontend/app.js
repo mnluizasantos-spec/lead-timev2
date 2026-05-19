@@ -1035,7 +1035,7 @@ async function confirmarUploadApontamentos() {
     }
     const wb = XLSX.read(bytes, { type: 'array' });
     const sheet = wb.Sheets[wb.SheetNames[0]];
-    const csvStr = XLSX.utils.sheet_to_csv(sheet);
+    const csvStr = XLSX.utils.sheet_to_csv(sheet, { rawNumbers: true });
     const csvBytes = new TextEncoder().encode(csvStr);
     console.log(`xlsx ${(tamOriginal/1048576).toFixed(2)}MB → CSV ${(csvBytes.length/1048576).toFixed(2)}MB`);
 

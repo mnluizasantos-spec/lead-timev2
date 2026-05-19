@@ -62,6 +62,61 @@ def _data_to_str(v):
     return s[:10]
 
 
+def _parse_qtd(v) -> int:
+    """
+    Converte qtd em int, tolerante a vários formatos:
+      - 25081 → 25081
+      - '25081' → 25081
+      - ' 25,081.00 ' (formato EN com vírgula como milhar) → 25081
+      - ' 25.081,00 ' (formato BR com ponto como milhar) → 25081
+      - '25,081' → 25081
+      - None/NaN/'' → 0
+    """
+    if v is None:
+        return 0
+    # Numérico já — só arredonda
+    if isinstance(v, (int, float)):
+        try:
+            if v != v:  # NaN
+                return 0
+            return int(v)
+        except (ValueError, TypeError):
+            return 0
+    s = str(v).strip()
+    if not s or s.lower() in ('nan', 'nat', '-'):
+        return 0
+    # Se tem vírgula E ponto → formato BR ou EN
+    if ',' in s and '.' in s:
+        # Se a vírgula vem ANTES do ponto (ex: '25,081.00') = formato EN
+        if s.rfind(',') < s.rfind('.'):
+            s = s.replace(',', '')         # tira separador de milhar
+        else:
+            # formato BR (25.081,00): tira ponto (milhar), troca vírgula por ponto
+            s = s.replace('.', '').replace(',', '.')
+    elif ',' in s:
+        # Só vírgula. Se tem só uma vírgula com 1-2 dígitos depois = decimal BR
+        # Senão, vírgula é milhar
+        partes = s.split(',')
+        if len(partes) == 2 and len(partes[1]) <= 2:
+            s = s.replace(',', '.')          # decimal BR
+        else:
+            s = s.replace(',', '')           # milhar
+    elif '.' in s:
+        # Só ponto. Pode ser decimal (25.5) ou milhar BR (25.081).
+        # Como apontamentos de qtd não têm decimal, tratamos como milhar
+        # se tiver mais de 1 dígito depois do ponto.
+        partes = s.split('.')
+        if len(partes) == 2 and len(partes[1]) == 1:
+            pass  # decimal genuíno (25.5), deixa como está
+        else:
+            s = s.replace('.', '')           # milhar BR
+    # Agora tem só ponto ou nada — float() + int()
+    try:
+        return int(float(s))
+    except (ValueError, TypeError):
+        return 0
+
+
 def indexar_apontamentos(apontamentos_path: str) -> dict:
     """
     Lê apontamentos do xlsx OU csv e indexa por codproduto.
@@ -120,7 +175,7 @@ def indexar_apontamentos(apontamentos_path: str) -> dict:
             'data': data_str,
             'descdepto': str(row.get('descdepto', '')).strip(),
             'descmaq': str(row.get('descmaq', '')).strip(),
-            'qtd': int(row.get('qtdprodconfirmada', 0) or 0),
+            'qtd': _parse_qtd(row.get('qtdprodconfirmada')),
             'numdaop': str(row.get('numdaop', '')).strip(),
         })
 
