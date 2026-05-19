@@ -949,23 +949,57 @@ async function confirmarUploadApontamentos() {
     return;
   }
 
-  // Lê arquivo como base64
+  // Lê arquivo, converte pra CSV, comprime com gzip
   btn.disabled = true;
   btn.textContent = 'Enviando...';
   progressoSecao.style.display = 'block';
   progresso.textContent = 'Lendo arquivo...';
 
   try {
-    const base64 = await arquivoParaBase64(arquivo);
-    progresso.textContent = `Enviando ${(arquivo.size / 1048576).toFixed(2)} MB pro GitHub...`;
+    // 1. Lê bytes do arquivo
+    const bytes = await arquivoParaBytes(arquivo);
+    const tamOriginal = bytes.length;
 
+    // 2. Converte xlsx → CSV no navegador (SheetJS)
+    // Por que? xlsx é zip-comprimido por dentro, gzip não reduz mais.
+    // CSV é texto repetitivo, gzip reduz pra ~15% do tamanho.
+    progresso.textContent = 'Convertendo xlsx → CSV...';
+    if (typeof XLSX === 'undefined') {
+      throw new Error('SheetJS (XLSX) nao carregou. Recarregue a pagina.');
+    }
+    const wb = XLSX.read(bytes, { type: 'array' });
+    const sheet = wb.Sheets[wb.SheetNames[0]];
+    const csvStr = XLSX.utils.sheet_to_csv(sheet);
+    const csvBytes = new TextEncoder().encode(csvStr);
+    console.log(`xlsx ${(tamOriginal/1048576).toFixed(2)}MB → CSV ${(csvBytes.length/1048576).toFixed(2)}MB`);
+
+    // 3. Comprime CSV com gzip
+    progresso.textContent = 'Comprimindo CSV...';
+    if (typeof pako === 'undefined') {
+      throw new Error('pako (gzip) nao carregou. Recarregue a pagina.');
+    }
+    const comprimido = pako.gzip(csvBytes, { level: 9 });
+    const tamComprimido = comprimido.length;
+    console.log(`CSV ${(csvBytes.length/1048576).toFixed(2)}MB → gzip ${(tamComprimido/1048576).toFixed(2)}MB`);
+
+    // 4. Converte pra base64
+    const base64gz = bytesPraBase64(comprimido);
+    const tamPayloadMB = base64gz.length / 1048576;
+    progresso.textContent = `Comprimido pra ${tamPayloadMB.toFixed(2)} MB. Enviando...`;
+
+    if (tamPayloadMB > 5.5) {
+      throw new Error(`Payload ainda muito grande (${tamPayloadMB.toFixed(2)} MB). Limite ~5.5 MB.`);
+    }
+
+    // 5. Envia pra Netlify Function (que descomprime e commita CSV no GitHub)
     const resp = await fetch('/.netlify/functions/upload-apontamentos', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         senha,
-        filename: 'apontamentos.xlsx',
-        content_base64: base64,
+        filename: 'apontamentos.csv',     // agora envia CSV, mais leve
+        content_base64_gz: base64gz,
+        size_original: csvBytes.length,
       }),
     });
 
@@ -979,8 +1013,10 @@ async function confirmarUploadApontamentos() {
     }
 
     const json = await resp.json();
+    const reducaoTotal = ((1 - tamComprimido / tamOriginal) * 100).toFixed(0);
     progresso.innerHTML = `
       ✓ Enviado! Commit <code style="font-family:var(--font-mono)">${(json.sha || '').slice(0,7)}</code><br>
+      Original: ${(tamOriginal/1048576).toFixed(2)} MB · enviado: ${tamPayloadMB.toFixed(2)} MB (-${reducaoTotal}%)<br>
       O parser vai rodar agora (~30s). Atualize em 1 minuto pra ver os dados.
     `;
     progresso.style.background = 'var(--verde-100)';
@@ -996,18 +1032,24 @@ async function confirmarUploadApontamentos() {
   }
 }
 
-function arquivoParaBase64(arquivo) {
+// Lê arquivo como Uint8Array
+function arquivoParaBytes(arquivo) {
   return new Promise((resolve, reject) => {
     const reader = new FileReader();
-    reader.onload = () => {
-      // Remove o prefixo 'data:...;base64,'
-      const r = reader.result;
-      const i = r.indexOf(',');
-      resolve(i >= 0 ? r.slice(i + 1) : r);
-    };
+    reader.onload = () => resolve(new Uint8Array(reader.result));
     reader.onerror = () => reject(new Error('Falha lendo arquivo'));
-    reader.readAsDataURL(arquivo);
+    reader.readAsArrayBuffer(arquivo);
   });
+}
+
+// Converte Uint8Array em base64 (em chunks pra não estourar a call stack)
+function bytesPraBase64(bytes) {
+  const CHUNK = 0x8000; // 32KB
+  let binary = '';
+  for (let i = 0; i < bytes.length; i += CHUNK) {
+    binary += String.fromCharCode.apply(null, bytes.subarray(i, i + CHUNK));
+  }
+  return btoa(binary);
 }
 
 // ============================================================

@@ -64,7 +64,7 @@ def _data_to_str(v):
 
 def indexar_apontamentos(apontamentos_path: str) -> dict:
     """
-    Lê o xlsx e indexa por codproduto. Carrega só as colunas que importam.
+    Lê apontamentos do xlsx OU csv e indexa por codproduto.
 
     Returns:
         {codproduto_normalizado: [lista de apontamentos]}
@@ -79,12 +79,24 @@ def indexar_apontamentos(apontamentos_path: str) -> dict:
     if not apontamentos_path:
         return {}
 
+    colunas = ['data', 'codproduto', 'qtdprodconfirmada',
+               'descdepto', 'descmaq', 'numdaop']
+
     try:
-        df = pd.read_excel(
-            apontamentos_path,
-            usecols=['data', 'codproduto', 'qtdprodconfirmada',
-                     'descdepto', 'descmaq', 'numdaop']
-        )
+        ext = apontamentos_path.lower()
+        if ext.endswith('.csv'):
+            df = pd.read_csv(
+                apontamentos_path,
+                usecols=lambda c: str(c).lower().strip() in colunas,
+                dtype={'codproduto': str},   # preserva código sem perder zeros
+                low_memory=False,
+            )
+        else:
+            df = pd.read_excel(
+                apontamentos_path,
+                usecols=colunas,
+                dtype={'codproduto': str},
+            )
     except Exception as e:
         print(f'  ⚠️  Erro ao ler {apontamentos_path}: {e}')
         return {}

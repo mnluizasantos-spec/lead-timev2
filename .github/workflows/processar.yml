@@ -6,6 +6,7 @@ on:
     paths:
       - 'emails-*.json'
       - 'apontamentos.xlsx'
+      - 'apontamentos.csv'
       - 'overrides.json'
       - 'parser/**'
       - 'requirements.txt'
@@ -38,9 +39,16 @@ jobs:
 
       - name: Rodar parser
         run: |
-          if [ -f "apontamentos.xlsx" ]; then
+          # Prioriza CSV se existir (mais leve, vem do dashboard).
+          # Senão usa xlsx (modo legado / upload manual).
+          if [ -f "apontamentos.csv" ]; then
+            echo "Usando apontamentos.csv"
+            python -m parser.main "emails-*.json" dados.json apontamentos.csv auditoria.json overrides.json
+          elif [ -f "apontamentos.xlsx" ]; then
+            echo "Usando apontamentos.xlsx"
             python -m parser.main "emails-*.json" dados.json apontamentos.xlsx auditoria.json overrides.json
           else
+            echo "Sem apontamentos — rodando só com emails"
             python -m parser.main "emails-*.json" dados.json
           fi
 
