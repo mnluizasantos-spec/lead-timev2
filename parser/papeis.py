@@ -89,11 +89,41 @@ STATUS_AGUARDANDO_OP   = 'aguardando_op'
 STATUS_EM_PRODUCAO     = 'em_producao'
 STATUS_CONCLUIDO       = 'concluido'
 STATUS_CANCELADO       = 'cancelado'
+STATUS_COMPRAVEL       = 'compravel'         # compra pronto, não passa por OP/produção
+STATUS_AGUARDA_CRONOGRAMA = 'aguarda_crono'  # pedido fechado mas sem cronograma ainda
 
 RESPONSAVEL_POR_STATUS = {
-    STATUS_AGUARDANDO_FERT: 'Engenharia',
-    STATUS_AGUARDANDO_OP:   'Engenharia',
-    STATUS_EM_PRODUCAO:     'PCP/Fábrica',
-    STATUS_CONCLUIDO:       '-',
-    STATUS_CANCELADO:       '-',
+    STATUS_AGUARDANDO_FERT:     'Engenharia',
+    STATUS_AGUARDANDO_OP:       'Engenharia',
+    STATUS_EM_PRODUCAO:         'PCP/Fábrica',
+    STATUS_CONCLUIDO:           '-',
+    STATUS_CANCELADO:           '-',
+    STATUS_COMPRAVEL:           'Compras',
+    STATUS_AGUARDA_CRONOGRAMA:  'Comercial',
 }
+
+# ============================================================
+# REGRAS DE TIPO DE PEDIDO POR PREFIXO DO CÓDIGO FERT
+# ============================================================
+# Codigo FERT formato 'XXXXXXXX-YYYY' (8 dígitos + hífen + 4 dígitos).
+# Os 2 primeiros dígitos indicam o tipo de produto:
+#   15 → compravel (compra pronto, sem OP/Produção)
+PREFIXOS_FERT_COMPRAVEL = ('15',)
+
+
+def eh_fert_compravel(codigo: str) -> bool:
+    """Retorna True se o FERT é tipo 'compravel' (compra pronto)."""
+    if not codigo:
+        return False
+    return str(codigo).startswith(PREFIXOS_FERT_COMPRAVEL)
+
+
+def todos_skus_compraveis(skus: list) -> bool:
+    """
+    Retorna True se TODOS os FERTs do pedido são compraveis.
+    HALBs não contam (são insumos).
+    """
+    ferts = [s for s in (skus or []) if s.get('tipo') == 'FERT']
+    if not ferts:
+        return False
+    return all(eh_fert_compravel(s.get('codigo')) for s in ferts)

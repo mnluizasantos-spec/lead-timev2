@@ -22,6 +22,8 @@ const STATUS_LABEL = {
   em_producao:     'Em produção',
   concluido:       'Concluído',
   cancelado:       'Cancelado',
+  compravel:       'Compravel',
+  aguarda_crono:   'Aguarda cronograma',
 };
 
 const MARCOS_ORDEM = [
@@ -587,7 +589,14 @@ function renderMetricasResumo(p) {
 
 function renderTimelineHorizontal(p) {
   const marcos = p.marcos || {};
-  const items = MARCOS_ORDEM.map((m, i) => {
+  const compravel = p.status === 'compravel';
+
+  // Pra compravel, escondemos OP, Produção e Vitrine (vai direto pedido→FERT→compra pronta)
+  const marcosVisiveis = compravel
+    ? MARCOS_ORDEM.filter(m => m.key !== 'op_liberada' && m.key !== 'producao' && m.key !== 'data_vitrine')
+    : MARCOS_ORDEM;
+
+  const items = marcosVisiveis.map((m, i) => {
     const dadosMarco = marcos[m.key] || {};
     const real = dadosMarco.real;
     const prev = dadosMarco.previsto;
@@ -598,7 +607,7 @@ function renderTimelineHorizontal(p) {
     if (real) estado = 'feito';
     else {
       // É o "atual" se o anterior tá feito e este é o primeiro pendente
-      const anterior = MARCOS_ORDEM[i - 1];
+      const anterior = marcosVisiveis[i - 1];
       const anteriorFeito = anterior ? marcos[anterior.key]?.real : true;
       estado = (i === 0 || anteriorFeito) ? 'atual' : 'pendente';
     }
@@ -631,10 +640,11 @@ function renderTimelineHorizontal(p) {
       </div>
     `;
 
-    // Ícone do círculo
-    const proximoFeito = MARCOS_ORDEM[i + 1] ? marcos[MARCOS_ORDEM[i + 1].key]?.real : false;
+    // Linhas verde/cinza conectando círculos
+    const proximo = marcosVisiveis[i + 1];
+    const proximoFeito = proximo ? marcos[proximo.key]?.real : false;
     const linhaDepoisFeita = !!real && !!proximoFeito;
-    const linhaAntesFeita = i > 0 && marcos[MARCOS_ORDEM[i - 1].key]?.real && !!real;
+    const linhaAntesFeita = i > 0 && marcos[marcosVisiveis[i - 1].key]?.real && !!real;
 
     let icone;
     if (estado === 'feito') icone = '✓';
@@ -646,7 +656,7 @@ function renderTimelineHorizontal(p) {
         <div class="marco-circulo-wrap">
           ${i > 0 ? `<div class="marco-linha-antes ${linhaAntesFeita ? 'feita' : ''}"></div>` : ''}
           <div class="marco-circulo ${estado}">${icone}</div>
-          ${i < MARCOS_ORDEM.length - 1 ? `<div class="marco-linha-depois ${linhaDepoisFeita ? 'feita' : ''}"></div>` : ''}
+          ${i < marcosVisiveis.length - 1 ? `<div class="marco-linha-depois ${linhaDepoisFeita ? 'feita' : ''}"></div>` : ''}
         </div>
         <div class="marco-titulo">${m.label}</div>
         <div class="marco-papel">${por || m.papel}</div>
@@ -656,17 +666,23 @@ function renderTimelineHorizontal(p) {
     `;
   }).join('');
 
-  return `<div class="timeline-marcos">${items}</div>`;
+  const colsClass = compravel ? 'compravel' : '';
+  return `<div class="timeline-marcos ${colsClass}">${items}</div>`;
 }
 
 function renderLeadTimes(p) {
   const lt = p.lead_times || {};
-  const itens = [
-    { key: 'pedido_para_fert',  label: 'Pedido → FERT' },
-    { key: 'fert_para_op',      label: 'FERT → OP' },
-    { key: 'op_para_producao',  label: 'OP → Produção' },
-    { key: 'producao_para_vit', label: 'Produção → Vitrine' },
-  ];
+  const compravel = p.status === 'compravel';
+
+  // Pra compraveis, só mostra Pedido → FERT (resto não se aplica)
+  const itens = compravel
+    ? [{ key: 'pedido_para_fert', label: 'Pedido → FERT' }]
+    : [
+        { key: 'pedido_para_fert',  label: 'Pedido → FERT' },
+        { key: 'fert_para_op',      label: 'FERT → OP' },
+        { key: 'op_para_producao',  label: 'OP → Produção' },
+        { key: 'producao_para_vit', label: 'Produção → Vitrine' },
+      ];
 
   const itensHtml = itens.map(it => {
     const dados = lt[it.key] || {};

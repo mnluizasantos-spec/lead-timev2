@@ -637,6 +637,16 @@ h3 { font-size: 14px; }
   text-decoration: line-through;
 }
 
+.badge-compravel {
+  background: #EDE7FE;
+  color: #5B3FBA;
+}
+
+.badge-aguarda_crono {
+  background: var(--cinza-100);
+  color: var(--cinza-700);
+}
+
 /* Aderência badges (no prazo / atrasado / adiantado) */
 .badge-aderencia-ok {
   background: var(--verde-100);
@@ -830,6 +840,11 @@ h3 { font-size: 14px; }
   gap: 0;
   position: relative;
   margin-bottom: var(--space-6);
+}
+
+.timeline-marcos.compravel {
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 480px;
 }
 
 .marco {

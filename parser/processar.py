@@ -16,6 +16,7 @@ from .threads import split_thread_inline
 from .papeis import (
     STATUS_AGUARDANDO_FERT, STATUS_AGUARDANDO_OP,
     STATUS_EM_PRODUCAO, STATUS_CONCLUIDO, STATUS_CANCELADO,
+    STATUS_COMPRAVEL, STATUS_AGUARDA_CRONOGRAMA,
     RESPONSAVEL_POR_STATUS, ORDEM_MARCOS,
 )
 
@@ -183,9 +184,14 @@ def processar_thread(emails_da_thread: list, auditoria: dict = None) -> dict:
     lead_times = _calcular_lead_times(marcos)
 
     # ============================================================
-    # 8. STATUS (4 automáticos)
+    # 8. STATUS (6 automáticos: aguardando_fert/op, em_producao,
+    #    concluido, compravel, aguarda_crono)
     # ============================================================
-    status, responsavel = _calcular_status(marcos)
+    status, responsavel = _calcular_status(
+        marcos,
+        skus=skus,
+        tem_cronograma=bool(cronograma),
+    )
 
     # ============================================================
     # 9. PEDIDO FINAL
@@ -256,20 +262,41 @@ def _calcular_lead_times(marcos: dict) -> dict:
     }
 
 
-def _calcular_status(marcos: dict) -> tuple:
+def _calcular_status(marcos: dict, skus: list = None, tem_cronograma: bool = True) -> tuple:
     """
-    Status baseado em quais marcos têm valor 'real'.
+    Status baseado em quais marcos têm valor 'real', tipo de SKU e
+    presença de cronograma.
+
+    Regras (na ordem):
+    1. Se TODOS os FERTs são "compravel" (prefixo 15) → 'compravel'
+       (compra pronto, não passa por OP/produção)
+    2. Se sem cronograma E sem FERT criado → 'aguarda_crono'
+       (pedido fechado mas comercial ainda vai mandar o cronograma)
+    3. Resto: fluxo normal por marcos (aguardando_fert → aguardando_op
+       → em_producao → concluido)
 
     Returns:
         (status: str, responsavel: str)
     """
+    from .papeis import todos_skus_compraveis
+
     tem_fert = marcos['fert_criado']['real'] is not None
-    tem_op = marcos['op_liberada']['real'] is not None
+    tem_op   = marcos['op_liberada']['real'] is not None
     tem_prod = marcos['producao']['real'] is not None
 
+    # Regra 1: compravel (sobrescreve fluxo normal — não tem OP/Produção)
+    if todos_skus_compraveis(skus or []):
+        status = STATUS_COMPRAVEL
+        return status, RESPONSAVEL_POR_STATUS[status]
+
+    # Regra 2: pedido fechado mas sem cronograma E sem FERT → aguarda crono
+    if not tem_cronograma and not tem_fert:
+        status = STATUS_AGUARDA_CRONOGRAMA
+        return status, RESPONSAVEL_POR_STATUS[status]
+
+    # Regra 3: fluxo normal
     if tem_prod:
         # TODO: distinguir em_producao vs concluido (precisa info do apontamento.xlsx)
-        # Por enquanto considera em_producao
         status = STATUS_EM_PRODUCAO
     elif tem_op:
         status = STATUS_EM_PRODUCAO  # OP liberada → produção começou
