@@ -45,8 +45,40 @@ const state = {
     responsavel: '',
     cliente: '',
   },
+  periodo: '90',       // 30 | 90 | 180 | 'mes_atual' | 'tudo'
   pedidoAberto: null,  // pedido sendo exibido no drawer
 };
+
+/**
+ * Retorna a data ISO mínima conforme o filtro de período.
+ * Se 'tudo', retorna null (sem filtro).
+ */
+function dataMinimaDoPeriodo() {
+  const p = state.periodo;
+  if (p === 'tudo') return null;
+  const agora = new Date();
+  if (p === 'mes_atual') {
+    return new Date(agora.getFullYear(), agora.getMonth(), 1).toISOString().slice(0, 10);
+  }
+  const dias = parseInt(p, 10);
+  if (isNaN(dias)) return null;
+  const d = new Date(agora.getTime() - dias * 86400000);
+  return d.toISOString().slice(0, 10);
+}
+
+/**
+ * Retorna label legível do período pra mostrar no card.
+ */
+function labelDoPeriodo() {
+  switch (state.periodo) {
+    case 'tudo': return 'todos';
+    case 'mes_atual': return 'mês atual';
+    case '30': return '30d';
+    case '90': return '90d';
+    case '180': return '6m';
+    default: return state.periodo;
+  }
+}
 
 // ============================================================
 // UTILS
@@ -251,7 +283,7 @@ const ETAPAS = [
 function calcularMediasEtapas() {
   /**
    * Pra cada etapa, calcula:
-   *  - real médio (média dos lead_times.real dos pedidos do mês)
+   *  - real médio (média dos lead_times.real dos pedidos do período)
    *  - plano médio (média dos previsto)
    *  - delta = real - plano
    *
@@ -260,18 +292,24 @@ function calcularMediasEtapas() {
    *           (data_real_pedido_fechado - data_prevista_pedido_fechado)
    *  - plano = 0 (ideal é enviar no dia previsto)
    *  - delta = real (porque plano=0)
+   *
+   * Filtro: usa o filtro global de período (state.periodo).
+   * Considera pedido_fechado.real como referência temporal.
    */
-  const mesAtual = hoje().slice(0, 7);
-  const doMes = state.pedidos.filter(p => {
+  const dataMin = dataMinimaDoPeriodo();
+  const doPeriodo = state.pedidos.filter(p => {
+    if (p.oculto) return false;
     const ped = p.marcos?.pedido_fechado?.real;
-    return ped && ped.slice(0, 7) === mesAtual && !p.oculto;
+    if (!ped) return false;
+    if (dataMin && ped < dataMin) return false;
+    return true;
   });
 
   const resultados = ETAPAS.map(etapa => {
     // Card especial: pontualidade do comercial
     if (etapa.tipo === 'aderencia') {
       const desvios = [];
-      for (const p of doMes) {
+      for (const p of doPeriodo) {
         const prev = p.marcos?.pedido_fechado?.previsto;
         const real = p.marcos?.pedido_fechado?.real;
         if (prev && real) {
@@ -294,7 +332,7 @@ function calcularMediasEtapas() {
     // Cards normais (Pedido→FERT, FERT→OP, etc.)
     const reais = [];
     const planos = [];
-    for (const p of doMes) {
+    for (const p of doPeriodo) {
       const lt = p.lead_times?.[etapa.key];
       if (lt?.real != null) reais.push(lt.real);
       if (lt?.previsto != null) planos.push(lt.previsto);
@@ -403,7 +441,7 @@ function renderizarEtapas() {
         <div class="etapa-dias">${formatDias(r.real)}<span class="unit">d</span></div>
         <div class="etapa-bar"><i style="width:${larguraReal}%; background:${r.cor}"></i></div>
         <div class="etapa-meta">
-          <span>plano ${formatDias(r.plano)}d</span>
+          <span>plano ${formatDias(r.plano)}d · n=${r.amostra || 0}</span>
           ${deltaHtml}
         </div>
       </div>
@@ -1095,6 +1133,12 @@ function renderizarTudo() {
 // EVENTOS
 // ============================================================
 function ligarEventos() {
+  // Filtro global de período (afeta cards de etapas)
+  $('#filtro-periodo').addEventListener('change', e => {
+    state.periodo = e.target.value;
+    renderizarEtapas();
+  });
+
   // Filtros
   $('#filtro-busca').addEventListener('input', e => {
     state.filtros.busca = e.target.value;

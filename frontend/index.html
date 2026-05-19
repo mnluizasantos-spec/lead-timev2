@@ -26,6 +26,16 @@
         </div>
       </div>
       <div class="topbar-actions">
+        <div class="periodo-seletor">
+          <label for="filtro-periodo" class="periodo-label">Período</label>
+          <select id="filtro-periodo" class="periodo-select">
+            <option value="30">Últimos 30 dias</option>
+            <option value="90" selected>Últimos 90 dias</option>
+            <option value="180">Últimos 6 meses</option>
+            <option value="mes_atual">Mês atual</option>
+            <option value="tudo">Tudo</option>
+          </select>
+        </div>
         <button class="btn-icon" id="btn-apontamentos" title="Upload de apontamentos">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
           Apontamentos

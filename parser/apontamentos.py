@@ -148,12 +148,13 @@ def enriquecer_com_apontamentos(pedido: dict, indice_apontamentos: dict) -> dict
 
     skus = p.get('skus', [])
     ferts = [s['codigo'] for s in skus if s.get('tipo') == 'FERT']
-    halbs = [s['codigo'] for s in skus if s.get('tipo') == 'HALB']
-
-    # Coleta apontamentos (FERTs primeiro, HALBs como fallback)
-    apontamentos_pedido = []
-    busca_por = None
-    codigos_encontrados = []
+    # HALBs genéricos (insumos compartilhados como FUNDO PCT) começam com 24
+    # e podem estar em vários pedidos. Filtramos só os HALBs que começam
+    # com 21, que são específicos do pedido (TAGs, partes etc).
+    halbs = [
+        s['codigo'] for s in skus
+        if s.get('tipo') == 'HALB' and str(s.get('codigo', '')).startswith('21')
+    ]
 
     # Coleta apontamentos POR código (separado pra cada SKU)
     apontamentos_por_codigo = {}  # {codigo: [lista de apontamentos]}
@@ -168,7 +169,7 @@ def enriquecer_com_apontamentos(pedido: dict, indice_apontamentos: dict) -> dict
             codigos_encontrados.append(fert)
             busca_por = 'fert'
 
-    # Se nenhum FERT teve apontamento, tenta HALBs
+    # Se nenhum FERT teve apontamento, tenta HALBs específicos (21xxx)
     if not apontamentos_pedido:
         for halb in halbs:
             if halb in indice_apontamentos:
