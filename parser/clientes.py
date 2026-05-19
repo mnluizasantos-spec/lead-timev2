@@ -239,6 +239,85 @@ def identificar_cliente_projeto(subject: str) -> tuple:
     return (cliente, projeto)
 
 
+def extrair_projeto_dos_skus(skus: list, cliente: str = '') -> str:
+    """
+    Fallback pra projeto: pega a descrição do primeiro FERT do pedido
+    e limpa ruídos óbvios (certificações FSC, qtd PCT/N, nome do cliente).
+
+    Usado quando o subject não dá um projeto utilizável (ex: subject só
+    com cliente, tipo 'PEDIDO FECHADO VAREJO - SHOPPING IBIRAPUERA').
+
+    Args:
+        skus: lista de SKUs do pedido (cada um com tipo, codigo, descricao)
+        cliente: cliente já identificado (pra remover ele da descrição
+                 se estiver no fim, tipo 'SACL PAP AUT FF SHOP IBIRAPUERA'
+                 → tira o 'SHOP IBIRAPUERA' redundante)
+
+    Returns:
+        Descrição limpa do primeiro FERT, ou '' se não tiver descrição.
+
+    Exemplos:
+        'SACL PAP AUT FSC® FF SHOP IBIRAPUERA' (cliente=SHOPPING IBIRAPUERA)
+          → 'SACL PAP AUT FF'
+        'ETIQ ADES PCT/2.400 VENDA PROIB SEPHORA' (cliente=SEPHORA)
+          → 'ETIQ ADES VENDA PROIB'
+        'SACL PAP MAN FSC®M SOROCABA26 LUPO' (cliente=LUPO)
+          → 'SACL PAP MAN SOROCABA26'
+    """
+    if not skus:
+        return ''
+    # Pega o 1º FERT com descrição
+    ferts = [s for s in skus if s.get('tipo') == 'FERT' and s.get('descricao')]
+    if not ferts:
+        return ''
+    desc = ferts[0]['descricao']
+    return _limpar_descricao_fert(desc, cliente)
+
+
+def _limpar_descricao_fert(desc: str, cliente: str = '') -> str:
+    """Remove ruídos comuns da descrição do FERT."""
+    if not desc:
+        return ''
+
+    s = _normalizar(desc)
+
+    # Remove certificações FSC (FSC, FSC®, FSC®M, FSC®P, FSC M, FSC P)
+    s = re.sub(r'\bFSC[®\s]*[MP]?\b', '', s)
+
+    # Remove indicadores de qtd/embalagem: PCT/123, CX/50, KIT/24, PCT 2.400
+    s = re.sub(r'\b(PCT|CX|KIT|UN|PC)\s*/?\s*[\d.,]+\b', '', s)
+
+    # Remove nome do cliente do fim (se identificado) e variações
+    if cliente:
+        cliente_norm = _normalizar(cliente)
+        # Tira nome do cliente completo do fim da string
+        s = re.sub(rf'\s+{re.escape(cliente_norm)}\s*$', '', s)
+        # Tira nome do cliente parte por parte do fim, várias passadas
+        # (ex: 'SHOPPING IBIRAPUERA' → tira IBIRA, depois SHOP, depois IBIRAPUERA, etc)
+        partes_cli = cliente_norm.split()
+        # Múltiplas passadas até estabilizar
+        for _ in range(3):
+            antes = s
+            for parte in partes_cli:
+                if len(parte) < 3:
+                    continue
+                # Tira a palavra inteira no fim
+                s = re.sub(rf'\s+{re.escape(parte)}\s*$', '', s)
+                # Tira prefixos da palavra (mínimo 3 chars) no fim
+                for n in range(len(parte), 2, -1):
+                    pref = parte[:n]
+                    s = re.sub(rf'\s+{re.escape(pref)}\s*$', '', s)
+            if s == antes:
+                break
+
+    # Limpa espaços duplos e trim
+    s = re.sub(r'\s+', ' ', s).strip()
+    # Trunca em 50 chars pra não ficar gigante
+    if len(s) > 50:
+        s = s[:50].strip()
+    return s
+
+
 # ============================================================
 # TESTES
 # ============================================================
@@ -306,6 +385,31 @@ def _teste():
     assert eh_subject_ruido('FYI: produção')
     assert not eh_subject_ruido('PEDIDO FECHADO VAREJO - RENNER AGOSTO')
     print('✓ eh_subject_ruido OK')
+
+    # Testes de extrair_projeto_dos_skus
+    print('\nTeste extrair_projeto_dos_skus:')
+    casos_skus = [
+        # (skus, cliente, esperado)
+        ([{'tipo': 'FERT', 'descricao': 'SACL PAP AUT FSC® FF SHOP IBIRAPUERA'}],
+         'SHOPPING IBIRAPUERA', 'SACL PAP AUT FF'),
+        ([{'tipo': 'FERT', 'descricao': 'ETIQ ADES PCT/2.400 VENDA PROIB SEPHORA'}],
+         'SEPHORA', 'ETIQ ADES VENDA PROIB'),
+        ([{'tipo': 'FERT', 'descricao': 'SACL PAP MAN FSC®M SOROCABA26 LUPO'}],
+         'LUPO', 'SACL PAP MAN SOROCABA26'),
+        ([{'tipo': 'FERT', 'descricao': 'SACL PAP MAN FSC®P INST26 BAHIA'}],
+         'ISA BAHIA', 'SACL PAP MAN INST26'),
+        # Sem skus → vazio
+        ([], 'QUALQUER', ''),
+        # Só HALB (sem FERT) → vazio
+        ([{'tipo': 'HALB', 'descricao': 'qualquer halb'}], 'CLI', ''),
+    ]
+    for skus, cli, esp in casos_skus:
+        r = extrair_projeto_dos_skus(skus, cli)
+        ok = r == esp
+        marca = '✓' if ok else '✗'
+        print(f'  {marca} cli={cli!r:30}  → {r!r}')
+        if not ok:
+            print(f'    esperado: {esp!r}')
 
 
 if __name__ == '__main__':
