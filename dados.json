@@ -292,8 +292,8 @@
         "desvio": null
       }
     },
-    "status": "aguardando_op",
-    "responsavel_atual": "Engenharia",
+    "status": "compravel",
+    "responsavel_atual": "Compras",
     "tem_cronograma": false
   },
   {
@@ -555,8 +555,8 @@
         "desvio": null
       }
     },
-    "status": "aguardando_fert",
-    "responsavel_atual": "Engenharia",
+    "status": "aguarda_crono",
+    "responsavel_atual": "Comercial",
     "tem_cronograma": false
   },
   {
@@ -788,8 +788,8 @@
         "desvio": null
       }
     },
-    "status": "aguardando_op",
-    "responsavel_atual": "Engenharia",
+    "status": "compravel",
+    "responsavel_atual": "Compras",
     "tem_cronograma": true
   },
   {
@@ -854,8 +854,8 @@
         "desvio": null
       }
     },
-    "status": "aguardando_op",
-    "responsavel_atual": "Engenharia",
+    "status": "compravel",
+    "responsavel_atual": "Compras",
     "tem_cronograma": false
   },
   {
@@ -925,8 +925,8 @@
         "desvio": null
       }
     },
-    "status": "aguardando_fert",
-    "responsavel_atual": "Engenharia",
+    "status": "aguarda_crono",
+    "responsavel_atual": "Comercial",
     "tem_cronograma": false
   },
   {
@@ -1128,8 +1128,8 @@
         "desvio": null
       }
     },
-    "status": "aguardando_fert",
-    "responsavel_atual": "Engenharia",
+    "status": "aguarda_crono",
+    "responsavel_atual": "Comercial",
     "tem_cronograma": false
   },
   {
@@ -1623,8 +1623,8 @@
         "desvio": null
       }
     },
-    "status": "aguardando_op",
-    "responsavel_atual": "Engenharia",
+    "status": "compravel",
+    "responsavel_atual": "Compras",
     "tem_cronograma": true
   },
   {
@@ -1775,8 +1775,8 @@
         "desvio": null
       }
     },
-    "status": "aguardando_fert",
-    "responsavel_atual": "Engenharia",
+    "status": "aguarda_crono",
+    "responsavel_atual": "Comercial",
     "tem_cronograma": false
   },
   {
@@ -1907,8 +1907,8 @@
         "desvio": null
       }
     },
-    "status": "aguardando_fert",
-    "responsavel_atual": "Engenharia",
+    "status": "aguarda_crono",
+    "responsavel_atual": "Comercial",
     "tem_cronograma": false
   },
   {
@@ -1978,8 +1978,8 @@
         "desvio": null
       }
     },
-    "status": "aguardando_fert",
-    "responsavel_atual": "Engenharia",
+    "status": "aguarda_crono",
+    "responsavel_atual": "Comercial",
     "tem_cronograma": false
   },
   {
@@ -2180,8 +2180,8 @@
         "desvio": null
       }
     },
-    "status": "aguardando_fert",
-    "responsavel_atual": "Engenharia",
+    "status": "aguarda_crono",
+    "responsavel_atual": "Comercial",
     "tem_cronograma": false
   },
   {
@@ -2246,8 +2246,8 @@
         "desvio": null
       }
     },
-    "status": "aguardando_fert",
-    "responsavel_atual": "Engenharia",
+    "status": "aguarda_crono",
+    "responsavel_atual": "Comercial",
     "tem_cronograma": false
   },
   {
@@ -2312,8 +2312,8 @@
         "desvio": null
       }
     },
-    "status": "aguardando_fert",
-    "responsavel_atual": "Engenharia",
+    "status": "aguarda_crono",
+    "responsavel_atual": "Comercial",
     "tem_cronograma": false
   },
   {
@@ -2702,8 +2702,8 @@
         "desvio": null
       }
     },
-    "status": "aguardando_fert",
-    "responsavel_atual": "Engenharia",
+    "status": "aguarda_crono",
+    "responsavel_atual": "Comercial",
     "tem_cronograma": false
   },
   {
@@ -2768,8 +2768,8 @@
         "desvio": null
       }
     },
-    "status": "aguardando_op",
-    "responsavel_atual": "Engenharia",
+    "status": "compravel",
+    "responsavel_atual": "Compras",
     "tem_cronograma": false
   },
   {
@@ -2839,8 +2839,8 @@
         "desvio": null
       }
     },
-    "status": "aguardando_fert",
-    "responsavel_atual": "Engenharia",
+    "status": "compravel",
+    "responsavel_atual": "Compras",
     "tem_cronograma": false
   },
   {
@@ -2940,8 +2940,8 @@
         "desvio": null
       }
     },
-    "status": "aguardando_fert",
-    "responsavel_atual": "Engenharia",
+    "status": "aguarda_crono",
+    "responsavel_atual": "Comercial",
     "tem_cronograma": false
   },
   {
@@ -3310,8 +3310,8 @@
         "desvio": null
       }
     },
-    "status": "aguardando_fert",
-    "responsavel_atual": "Engenharia",
+    "status": "aguarda_crono",
+    "responsavel_atual": "Comercial",
     "tem_cronograma": false
   },
   {
@@ -3745,8 +3745,8 @@
         "desvio": null
       }
     },
-    "status": "aguardando_fert",
-    "responsavel_atual": "Engenharia",
+    "status": "aguarda_crono",
+    "responsavel_atual": "Comercial",
     "tem_cronograma": false
   },
   {
@@ -3821,8 +3821,8 @@
         "desvio": null
       }
     },
-    "status": "aguardando_fert",
-    "responsavel_atual": "Engenharia",
+    "status": "aguarda_crono",
+    "responsavel_atual": "Comercial",
     "tem_cronograma": false
   },
   {
@@ -3968,8 +3968,8 @@
         "desvio": null
       }
     },
-    "status": "aguardando_fert",
-    "responsavel_atual": "Engenharia",
+    "status": "aguarda_crono",
+    "responsavel_atual": "Comercial",
     "tem_cronograma": false
   }
 ]
