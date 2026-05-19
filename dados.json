@@ -1,0 +1,485 @@
+[
+  {
+    "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAL-i64pXTI9Mj4KgCNYgc1o=",
+    "subject": "PEDIDO FECHADO VAREJO - RENNER AGOSTO",
+    "projeto": "RENNER AGOSTO",
+    "cliente": "RENNER AGOSTO",
+    "comercial": "wesley.matheus@antilhas.com.br",
+    "skus": [],
+    "marcos": {
+      "pedido_fechado": {
+        "previsto": "2026-05-08",
+        "real": "2026-05-18",
+        "por": "wesley.matheus@antilhas.com.br"
+      },
+      "fert_criado": {
+        "previsto": "2026-05-19",
+        "real": null,
+        "por": null
+      },
+      "op_liberada": {
+        "previsto": "2026-05-25",
+        "real": null,
+        "por": null
+      },
+      "producao": {
+        "previsto": "2026-08-06",
+        "real": null,
+        "por": null
+      },
+      "data_vitrine": {
+        "previsto": "2026-08-10",
+        "real": null,
+        "por": null
+      }
+    },
+    "lead_times": {
+      "pedido_para_fert": {
+        "previsto": 11,
+        "real": null,
+        "desvio": null
+      },
+      "fert_para_op": {
+        "previsto": 6,
+        "real": null,
+        "desvio": null
+      },
+      "op_para_producao": {
+        "previsto": 73,
+        "real": null,
+        "desvio": null
+      },
+      "producao_para_vit": {
+        "previsto": 4,
+        "real": null,
+        "desvio": null
+      }
+    },
+    "status": "aguardando_fert",
+    "responsavel_atual": "Engenharia",
+    "tem_cronograma": true
+  },
+  {
+    "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAOelOACkG_dGj0ov3scWcxg=",
+    "subject": "RES: PEDIDO FECHADO VAREJO - RENNER JUNHO/AGO ",
+    "projeto": "RENNER JUNHO/AGO",
+    "cliente": "RENNER JUNHO/AGO",
+    "comercial": "WESLEY MATHEUS DA SILVA",
+    "skus": [
+      {
+        "codigo": "11055331-0001",
+        "tipo": "FERT",
+        "descricao": "931610552 SACL PAP MAN FSC®P CREEPER REN"
+      },
+      {
+        "codigo": "2100082686",
+        "tipo": "HALB",
+        "descricao": "931610552 SACL PAP MAN FSC®P CREEPER REN"
+      },
+      {
+        "codigo": "5200001612",
+        "tipo": "HALB",
+        "descricao": "FITA PET PRETO 9X380MM 2PTP"
+      },
+      {
+        "codigo": "5200005280",
+        "tipo": "HALB",
+        "descricao": "ETIQ ADES 40X20MM 931610552 RENNER"
+      },
+      {
+        "codigo": "8600006912",
+        "tipo": "HALB",
+        "descricao": "931610552 SACL PAP MAN FSC®P CREE REN ME"
+      },
+      {
+        "codigo": "11055332-0001",
+        "tipo": "FERT",
+        "descricao": "931565376 SACL PAP MAN FSC®M COLMEIA REN"
+      },
+      {
+        "codigo": "2100082687",
+        "tipo": "HALB",
+        "descricao": "931565376 SACL PAP MAN FSC®M COLMEIA REN"
+      },
+      {
+        "codigo": "5200001596",
+        "tipo": "HALB",
+        "descricao": "FITA PET NAUTICO 157 9X380MM 2PTP"
+      },
+      {
+        "codigo": "5200005281",
+        "tipo": "HALB",
+        "descricao": "ETIQ ADES 40X20MM 931565376 RENNER"
+      },
+      {
+        "codigo": "8600006913",
+        "tipo": "HALB",
+        "descricao": "931565376 SACL PAP MAN FSC®M COLM REN ME"
+      },
+      {
+        "codigo": "11055329-0001",
+        "tipo": "FERT",
+        "descricao": "931565114 SACL PAP MAN FSC®P COLMEIA REN"
+      },
+      {
+        "codigo": "2100082684",
+        "tipo": "HALB",
+        "descricao": "931565114 SACL PAP MAN FSC®P COLMEIA REN"
+      },
+      {
+        "codigo": "5200005282",
+        "tipo": "HALB",
+        "descricao": "ETIQ ADES 40X20MM 931565114 RENNER"
+      },
+      {
+        "codigo": "8600006914",
+        "tipo": "HALB",
+        "descricao": "931565114 SACL PAP MAN FSC®P COLM REN ME"
+      },
+      {
+        "codigo": "11055333-0001",
+        "tipo": "FERT",
+        "descricao": "931567283 SACL PAP MAN FSC®M LOVE REN"
+      },
+      {
+        "codigo": "2100082688",
+        "tipo": "HALB",
+        "descricao": "931567283 SACL PAP MAN FSC®M LOVE REN"
+      },
+      {
+        "codigo": "5200005284",
+        "tipo": "HALB",
+        "descricao": "ETIQ ADES 40X20MM 931567283 RENNER"
+      },
+      {
+        "codigo": "8600006915",
+        "tipo": "HALB",
+        "descricao": "931567283 SACL PAP MAN FSC®M LOVE REN ME"
+      },
+      {
+        "codigo": "11055330-0001",
+        "tipo": "FERT",
+        "descricao": "931566820 SACL PAP MAN FSC®P LOVE REN"
+      },
+      {
+        "codigo": "2100082685",
+        "tipo": "HALB",
+        "descricao": "931566820 SACL PAP MAN FSC®P LOVE REN"
+      },
+      {
+        "codigo": "5200005285",
+        "tipo": "HALB",
+        "descricao": "ETIQ ADES 40X20MM 931566820 RENNER"
+      },
+      {
+        "codigo": "8600006916",
+        "tipo": "HALB",
+        "descricao": "931566820 SACL PAP MAN FSC®P LOVE REN ME"
+      }
+    ],
+    "marcos": {
+      "pedido_fechado": {
+        "previsto": "2026-05-14",
+        "real": "2026-05-14",
+        "por": "WESLEY MATHEUS DA SILVA"
+      },
+      "fert_criado": {
+        "previsto": "2026-05-15",
+        "real": "2026-05-14",
+        "por": "GIOVANNA FREITAS ALVES"
+      },
+      "op_liberada": {
+        "previsto": "2026-05-18",
+        "real": "2026-05-18",
+        "por": "leticia.santos@antilhas.com.br"
+      },
+      "producao": {
+        "previsto": "2026-06-15",
+        "real": null,
+        "por": null
+      },
+      "data_vitrine": {
+        "previsto": "2026-06-17",
+        "real": null,
+        "por": null
+      }
+    },
+    "lead_times": {
+      "pedido_para_fert": {
+        "previsto": 1,
+        "real": 0,
+        "desvio": -1
+      },
+      "fert_para_op": {
+        "previsto": 3,
+        "real": 4,
+        "desvio": 1
+      },
+      "op_para_producao": {
+        "previsto": 28,
+        "real": null,
+        "desvio": null
+      },
+      "producao_para_vit": {
+        "previsto": 2,
+        "real": null,
+        "desvio": null
+      }
+    },
+    "status": "em_producao",
+    "responsavel_atual": "PCP/Fábrica",
+    "tem_cronograma": true
+  },
+  {
+    "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAMC-ScgVsj9Avp4vPeFxDLA=",
+    "subject": "RES: PEDIDO FECHADO VAREJO - SEPHORA -  INSTITUCIONAL",
+    "projeto": "SEPHORA -  INSTITUCIONAL",
+    "cliente": "SEPHORA -  INSTITUCIONAL",
+    "comercial": "WESLEY MATHEUS DA SILVA",
+    "skus": [
+      {
+        "codigo": "15005830-0001",
+        "tipo": "FERT",
+        "descricao": "ETIQ ADES PCT/2.400 VENDA PROIB SEPHORA"
+      }
+    ],
+    "marcos": {
+      "pedido_fechado": {
+        "previsto": null,
+        "real": "2026-05-14",
+        "por": "WESLEY MATHEUS DA SILVA"
+      },
+      "fert_criado": {
+        "previsto": null,
+        "real": "2026-05-15",
+        "por": "GIOVANNA FREITAS ALVES"
+      },
+      "op_liberada": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      },
+      "producao": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      },
+      "data_vitrine": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      }
+    },
+    "lead_times": {
+      "pedido_para_fert": {
+        "previsto": null,
+        "real": 1,
+        "desvio": null
+      },
+      "fert_para_op": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      },
+      "op_para_producao": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      },
+      "producao_para_vit": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      }
+    },
+    "status": "aguardando_op",
+    "responsavel_atual": "Engenharia",
+    "tem_cronograma": false
+  },
+  {
+    "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAHthAQbS0S1KqFEvTedtNyI=",
+    "subject": "RE: PEDIDO FECHADO VAREJO - QUEM DISSE BERENISSE - CAIXA PRESS KIT FRIENDS",
+    "projeto": "QUEM DISSE BERENISSE - CAIXA PRESS KIT FRIENDS",
+    "cliente": "QUEM DISSE BERENISSE - CAIXA PRESS KIT FRIENDS",
+    "comercial": "GLEICY MAIA DOS SANTOS",
+    "skus": [],
+    "marcos": {
+      "pedido_fechado": {
+        "previsto": "2026-05-14",
+        "real": "2026-05-14",
+        "por": "GLEICY MAIA DOS SANTOS"
+      },
+      "fert_criado": {
+        "previsto": "2026-05-15",
+        "real": null,
+        "por": null
+      },
+      "op_liberada": {
+        "previsto": "2026-05-26",
+        "real": null,
+        "por": null
+      },
+      "producao": {
+        "previsto": "2026-06-19",
+        "real": null,
+        "por": null
+      },
+      "data_vitrine": {
+        "previsto": "2026-07-17",
+        "real": null,
+        "por": null
+      }
+    },
+    "lead_times": {
+      "pedido_para_fert": {
+        "previsto": 1,
+        "real": null,
+        "desvio": null
+      },
+      "fert_para_op": {
+        "previsto": 11,
+        "real": null,
+        "desvio": null
+      },
+      "op_para_producao": {
+        "previsto": 24,
+        "real": null,
+        "desvio": null
+      },
+      "producao_para_vit": {
+        "previsto": 28,
+        "real": null,
+        "desvio": null
+      }
+    },
+    "status": "aguardando_fert",
+    "responsavel_atual": "Engenharia",
+    "tem_cronograma": true
+  },
+  {
+    "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQALqRWTknnAdKqhPQ8K3RuLI=",
+    "subject": "RE: PEDIDO FECHADO VAREJO - QUEM DISSE BERENISSE -  FRIENDS",
+    "projeto": "QUEM DISSE BERENISSE -  FRIENDS",
+    "cliente": "QUEM DISSE BERENISSE -  FRIENDS",
+    "comercial": "GLEICY MAIA DOS SANTOS",
+    "skus": [],
+    "marcos": {
+      "pedido_fechado": {
+        "previsto": "2026-05-14",
+        "real": "2026-05-14",
+        "por": "GLEICY MAIA DOS SANTOS"
+      },
+      "fert_criado": {
+        "previsto": "2026-05-15",
+        "real": null,
+        "por": null
+      },
+      "op_liberada": {
+        "previsto": "2026-05-27",
+        "real": null,
+        "por": null
+      },
+      "producao": {
+        "previsto": "2026-06-19",
+        "real": null,
+        "por": null
+      },
+      "data_vitrine": {
+        "previsto": "2026-07-17",
+        "real": null,
+        "por": null
+      }
+    },
+    "lead_times": {
+      "pedido_para_fert": {
+        "previsto": 1,
+        "real": null,
+        "desvio": null
+      },
+      "fert_para_op": {
+        "previsto": 12,
+        "real": null,
+        "desvio": null
+      },
+      "op_para_producao": {
+        "previsto": 23,
+        "real": null,
+        "desvio": null
+      },
+      "producao_para_vit": {
+        "previsto": 28,
+        "real": null,
+        "desvio": null
+      }
+    },
+    "status": "aguardando_fert",
+    "responsavel_atual": "Engenharia",
+    "tem_cronograma": true
+  },
+  {
+    "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAB9mQSJNHK5Go9nQ1Mb9clI=",
+    "subject": "RES: PEDIDO FECHADO VAREJO - SACOLA M CAU CHOCOLATES",
+    "projeto": "SACOLA M CAU CHOCOLATES",
+    "cliente": "SACOLA M CAU CHOCOLATES",
+    "comercial": "JULIO CESAR DELLA PASCOA MACHADO",
+    "skus": [
+      {
+        "codigo": "2100082683",
+        "tipo": "HALB",
+        "descricao": "SACL PAP MAN FSC®M 21AN CAU CHOC PT1"
+      }
+    ],
+    "marcos": {
+      "pedido_fechado": {
+        "previsto": null,
+        "real": "2026-05-13",
+        "por": "JULIO CESAR DELLA PASCOA MACHADO"
+      },
+      "fert_criado": {
+        "previsto": null,
+        "real": "2026-05-15",
+        "por": "LETICIA JACQUELINE SANTOS"
+      },
+      "op_liberada": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      },
+      "producao": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      },
+      "data_vitrine": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      }
+    },
+    "lead_times": {
+      "pedido_para_fert": {
+        "previsto": null,
+        "real": 2,
+        "desvio": null
+      },
+      "fert_para_op": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      },
+      "op_para_producao": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      },
+      "producao_para_vit": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      }
+    },
+    "status": "aguardando_op",
+    "responsavel_atual": "Engenharia",
+    "tem_cronograma": false
+  }
+]
