@@ -155,8 +155,15 @@ def enriquecer_com_apontamentos(pedido: dict, indice_apontamentos: dict) -> dict
     busca_por = None
     codigos_encontrados = []
 
+    # Coleta apontamentos POR código (separado pra cada SKU)
+    apontamentos_por_codigo = {}  # {codigo: [lista de apontamentos]}
+    apontamentos_pedido = []      # agregado (todos juntos)
+    busca_por = None
+    codigos_encontrados = []
+
     for fert in ferts:
         if fert in indice_apontamentos:
+            apontamentos_por_codigo[fert] = list(indice_apontamentos[fert])
             apontamentos_pedido.extend(indice_apontamentos[fert])
             codigos_encontrados.append(fert)
             busca_por = 'fert'
@@ -165,6 +172,7 @@ def enriquecer_com_apontamentos(pedido: dict, indice_apontamentos: dict) -> dict
     if not apontamentos_pedido:
         for halb in halbs:
             if halb in indice_apontamentos:
+                apontamentos_por_codigo[halb] = list(indice_apontamentos[halb])
                 apontamentos_pedido.extend(indice_apontamentos[halb])
                 codigos_encontrados.append(halb)
                 busca_por = 'halb'
@@ -190,9 +198,44 @@ def enriquecer_com_apontamentos(pedido: dict, indice_apontamentos: dict) -> dict
             a for a in apontamentos_pedido
             if a['data'] >= data_minima_str
         ]
+        # Filtra também o mapa por código
+        for cod in list(apontamentos_por_codigo.keys()):
+            apontamentos_por_codigo[cod] = [
+                a for a in apontamentos_por_codigo[cod]
+                if a['data'] >= data_minima_str
+            ]
+            if not apontamentos_por_codigo[cod]:
+                del apontamentos_por_codigo[cod]
 
     if not apontamentos_pedido:
         return p  # nenhum apontamento APÓS op_liberada — produção ainda não começou
+
+    # ============================================================
+    # ANEXAR PRODUÇÃO EM CADA SKU DO PEDIDO
+    # ----
+    # Pra cada SKU, calcula 1ª data, última data, qtd, deptos, n° apontamentos.
+    # SKU sem apontamento fica com producao=None (frontend mostra "sem apontamento").
+    # ============================================================
+    skus_novos = []
+    for sku in p.get('skus', []):
+        cod = sku.get('codigo')
+        ap_do_sku = apontamentos_por_codigo.get(cod, [])
+        if ap_do_sku:
+            datas_sku = sorted(set(a['data'] for a in ap_do_sku))
+            deptos_sku = sorted(set(a['descdepto'] for a in ap_do_sku if a['descdepto']))
+            qtd_sku = sum(a.get('qtd', 0) for a in ap_do_sku)
+            sku_novo = dict(sku)
+            sku_novo['producao'] = {
+                'inicio': datas_sku[0],
+                'fim': datas_sku[-1],
+                'n_apontamentos': len(ap_do_sku),
+                'deptos': deptos_sku,
+                'qtd': qtd_sku,
+            }
+            skus_novos.append(sku_novo)
+        else:
+            skus_novos.append(dict(sku))  # sem produção, mantém SKU original
+    p['skus'] = skus_novos
 
     # ============================================================
     # 1ª e ÚLTIMA produção

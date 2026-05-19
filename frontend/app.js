@@ -84,7 +84,7 @@ function daquiNDias(n) {
 async function carregarDados() {
   // Tela de loading
   $('#tabela-pedidos-body').innerHTML = `
-    <tr><td colspan="8" class="vazio">
+    <tr><td colspan="10" class="vazio">
       Carregando dados...
     </td></tr>`;
   $('#lista-meta').textContent = 'Carregando...';
@@ -100,7 +100,7 @@ async function carregarDados() {
   } catch (e) {
     console.error('Erro ao carregar dados:', e);
     $('#tabela-pedidos-body').innerHTML = `
-      <tr><td colspan="8" class="vazio">
+      <tr><td colspan="10" class="vazio">
         Erro ao carregar dados.<br>
         <small>${e.message}</small><br>
         <button class="btn-ghost" onclick="carregarDados()" style="margin-top:12px">Tentar de novo</button>
@@ -450,27 +450,27 @@ function renderizarTabela() {
 
   const tbody = $('#tabela-pedidos-body');
   if (pedidosFiltrados.length === 0) {
-    tbody.innerHTML = '<tr><td colspan="8" class="vazio">Nenhum pedido com esses filtros.</td></tr>';
+    tbody.innerHTML = '<tr><td colspan="10" class="vazio">Nenhum pedido com esses filtros.</td></tr>';
     return;
   }
 
   tbody.innerHTML = pedidosFiltrados.map(p => {
     const status = STATUS_LABEL[p.status] || p.status;
     const aderenciaHtml = renderAderenciaBadge(p);
+    const opPrev = p.marcos?.op_liberada?.previsto;
+    const opReal = p.marcos?.op_liberada?.real;
+    const prodInicio = p.marcos?.producao?.real;
+    const prodFim = p.marcos?.producao?.fim;
     return `
       <tr data-pedido-id="${p.pedido_id}">
         <td class="celula-cliente">${p.cliente || '—'}</td>
         <td class="celula-projeto" title="${p.projeto || ''}">${p.projeto || '—'}</td>
         <td><span class="badge badge-status badge-${p.status}">${status}</span></td>
         <td class="celula-data">${fmtData(p.marcos?.pedido_fechado?.real)}</td>
-        <td class="celula-data">
-          ${fmtData(p.marcos?.op_liberada?.previsto)}
-          ${p.marcos?.op_liberada?.real ? `<br><span class="data-prevista">real ${fmtData(p.marcos.op_liberada.real)}</span>` : ''}
-        </td>
-        <td class="celula-data">
-          ${fmtData(p.marcos?.producao?.previsto)}
-          ${p.marcos?.producao?.real ? `<br><span class="data-prevista">real ${fmtData(p.marcos.producao.real)}</span>` : ''}
-        </td>
+        <td class="celula-data">${fmtData(opPrev)}</td>
+        <td class="celula-data ${opReal ? 'data-real-celula' : 'data-vazia'}">${fmtData(opReal)}</td>
+        <td class="celula-data ${prodInicio ? 'data-real-celula' : 'data-vazia'}">${fmtData(prodInicio)}</td>
+        <td class="celula-data ${prodFim ? 'data-real-celula' : 'data-vazia'}">${fmtData(prodFim)}</td>
         <td>${aderenciaHtml}</td>
         <td class="td-acoes">
           <button class="btn-acao" data-acao="excluir" data-pedido-id="${p.pedido_id}" title="Ocultar ou cancelar este pedido">⋮</button>
@@ -753,13 +753,41 @@ function renderSkus(p) {
   if (skus.length === 0) {
     return '<div class="skus-section"><h3>SKUs</h3><p style="color:var(--cinza-500);font-size:13px">Nenhum SKU identificado.</p></div>';
   }
-  const itens = skus.map(s => `
-    <div class="sku-item">
-      <div class="sku-tipo sku-tipo-${s.tipo}">${s.tipo}</div>
-      <div class="sku-codigo">${s.codigo}</div>
-      <div class="sku-descricao" title="${s.descricao || ''}">${s.descricao || '—'}</div>
-    </div>
-  `).join('');
+  const itens = skus.map(s => {
+    const prod = s.producao;
+    let prodHtml;
+    if (prod) {
+      const ini = fmtData(prod.inicio);
+      const fim = fmtData(prod.fim);
+      const intervalo = ini === fim ? ini : `${ini} → ${fim}`;
+      const deptos = (prod.deptos || []).join(', ');
+      const qtdFmt = (prod.qtd || 0).toLocaleString('pt-BR');
+      prodHtml = `
+        <div class="sku-producao sku-producao-feita" title="${prod.n_apontamentos} apontamento(s)">
+          <span class="sku-producao-icone">✓</span>
+          <span class="sku-producao-datas">${intervalo}</span>
+          <span class="sku-producao-extra">· ${prod.n_apontamentos} apont · ${deptos} · ${qtdFmt} un</span>
+        </div>
+      `;
+    } else {
+      prodHtml = `
+        <div class="sku-producao sku-producao-vazia">
+          <span class="sku-producao-icone">—</span>
+          <span class="sku-producao-datas">sem apontamento</span>
+        </div>
+      `;
+    }
+    return `
+      <div class="sku-item">
+        <div class="sku-cabecalho">
+          <div class="sku-tipo sku-tipo-${s.tipo}">${s.tipo}</div>
+          <div class="sku-codigo">${s.codigo}</div>
+          <div class="sku-descricao" title="${s.descricao || ''}">${s.descricao || '—'}</div>
+        </div>
+        ${prodHtml}
+      </div>
+    `;
+  }).join('');
   return `
     <div class="skus-section">
       <h3>SKUs (${skus.length})</h3>

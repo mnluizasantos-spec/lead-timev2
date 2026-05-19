@@ -588,6 +588,15 @@ h3 { font-size: 14px; }
   font-size: 11px;
 }
 
+.celula-data.data-real-celula {
+  color: var(--verde-700, #15803D);
+  font-weight: 600;
+}
+
+.celula-data.data-vazia {
+  color: var(--cinza-300);
+}
+
 /* ============================================================
    BADGES DE STATUS
    ============================================================ */
@@ -1299,14 +1308,65 @@ h3 { font-size: 14px; }
 }
 
 .sku-item {
-  display: grid;
-  grid-template-columns: 60px 130px 1fr;
-  gap: var(--space-3);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
   padding: var(--space-2) var(--space-3);
   background: var(--cinza-50);
   border-radius: var(--radius-sm);
   font-size: 12px;
+}
+
+.sku-cabecalho {
+  display: grid;
+  grid-template-columns: 60px 130px 1fr;
+  gap: var(--space-3);
   align-items: center;
+}
+
+.sku-producao {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+  font-size: 11px;
+  margin-left: 76px;
+}
+
+.sku-producao-feita {
+  background: var(--verde-100, #DCFCE7);
+  color: var(--verde-700, #15803D);
+}
+
+.sku-producao-vazia {
+  background: transparent;
+  color: var(--cinza-400);
+  font-style: italic;
+}
+
+.sku-producao-icone {
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.sku-producao-datas {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.sku-producao-extra {
+  color: var(--cinza-500);
+  font-weight: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.sku-producao-feita .sku-producao-extra {
+  color: var(--verde-700, #15803D);
+  opacity: 0.85;
 }
 
 .sku-tipo {
