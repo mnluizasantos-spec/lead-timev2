@@ -19,6 +19,19 @@ from collections import OrderedDict
 RE_FERT = re.compile(r'\b(\d{8}-\d{4})\b')
 RE_HALB = re.compile(r'(?<!\d)(\d{10})(?!\d)')
 
+# Prefixos de 10 dígitos que NÃO são SKU do pedido (são insumos auxiliares
+# como matéria-prima, embalagem geral). Ignoramos tanto na extração
+# quanto no cruzamento com apontamentos.
+PREFIXOS_HALB_IGNORAR = ('52', '86')
+
+
+def _halb_valido(codigo: str) -> bool:
+    """True se o código de 10 dígitos é um HALB legítimo de pedido."""
+    if not codigo:
+        return False
+    return not str(codigo).startswith(PREFIXOS_HALB_IGNORAR)
+
+
 # Palavras que aparecem na tabela mas não são descrição
 PALAVRAS_RUIDO = {
     'FERT', 'HALB', 'CÓDIGO', 'CODIGO', 'DESCRIÇÃO', 'DESCRICAO',
@@ -56,9 +69,11 @@ def extrair_skus(corpo: str) -> list:
                     'descricao': descricao,
                 }
 
-        # HALB
+        # HALB (10 dígitos puros). Ignora prefixos 52 e 86 (insumos auxiliares).
         for m in RE_HALB.finditer(linha):
             codigo = m.group(1)
+            if not _halb_valido(codigo):
+                continue
             if codigo not in skus:
                 resto = linha[m.end():].strip()
                 descricao = _extrair_descricao_proximo(resto, linhas, i)
@@ -153,6 +168,23 @@ def _teste():
     skus = extrair_skus(t4)
     assert len(skus) == 1, f'esperava 1, achou {len(skus)}: {skus}'
     print('Caso 4 (dedup) OK ✓')
+
+    # Caso 5: blacklist de prefixos 52xxx e 86xxx
+    t5 = """
+    FERT 11055271-0001 KIT CX FRIENDS
+    HALB 2100082620 SEMI-ACABADO
+    HALB 5200001612 INSUMO IGNORAR
+    HALB 8600006921 OUTRO INSUMO IGNORAR
+    HALB 2400008287 FUNDO GENERICO
+    """
+    skus = extrair_skus(t5)
+    codigos = [s['codigo'] for s in skus]
+    assert '11055271-0001' in codigos
+    assert '2100082620' in codigos
+    assert '2400008287' in codigos          # 24 entra normal
+    assert '5200001612' not in codigos, f'52xxx vazou: {codigos}'
+    assert '8600006921' not in codigos, f'86xxx vazou: {codigos}'
+    print('Caso 5 (blacklist 52xxx/86xxx) OK ✓')
 
     print('\nTodos os testes de SKUs passaram ✓')
 
