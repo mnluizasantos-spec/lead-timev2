@@ -453,8 +453,9 @@
       },
       "producao": {
         "previsto": "2026-06-19",
-        "real": null,
-        "por": null
+        "real": "2026-05-16",
+        "por": null,
+        "fim": "2026-05-19"
       },
       "data_vitrine": {
         "previsto": "2026-07-17",
@@ -484,9 +485,23 @@
         "desvio": null
       }
     },
-    "status": "aguardando_op",
-    "responsavel_atual": "Engenharia",
-    "tem_cronograma": true
+    "status": "em_producao",
+    "responsavel_atual": "PCP/Fábrica",
+    "tem_cronograma": true,
+    "producao_detalhe": {
+      "busca_por": "halb",
+      "codigos_encontrados": [
+        "2400008287"
+      ],
+      "total_apontamentos": 4,
+      "primeira_data": "2026-05-16",
+      "ultima_data": "2026-05-19",
+      "deptos": [
+        "OFFSET"
+      ],
+      "qtd_total": 378000,
+      "dias_desde_ultima": 0
+    }
   },
   {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAB9mQSJNHK5Go9nQ1Mb9clI=",
@@ -1662,8 +1677,9 @@
       },
       "producao": {
         "previsto": null,
-        "real": null,
-        "por": null
+        "real": "2026-05-15",
+        "por": null,
+        "fim": "2026-05-19"
       },
       "data_vitrine": {
         "previsto": null,
@@ -1684,7 +1700,7 @@
       },
       "op_para_producao": {
         "previsto": null,
-        "real": null,
+        "real": 16,
         "desvio": null
       },
       "producao_para_vit": {
@@ -1695,7 +1711,22 @@
     },
     "status": "em_producao",
     "responsavel_atual": "PCP/Fábrica",
-    "tem_cronograma": false
+    "tem_cronograma": false,
+    "producao_detalhe": {
+      "busca_por": "fert",
+      "codigos_encontrados": [
+        "13021787-0001"
+      ],
+      "total_apontamentos": 37,
+      "primeira_data": "2026-05-15",
+      "ultima_data": "2026-05-19",
+      "deptos": [
+        "FLEXOGRAFICA",
+        "OFFSET"
+      ],
+      "qtd_total": 1243664,
+      "dias_desde_ultima": 0
+    }
   },
   {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAO82y6VnFUxAgeBs1u7A8QA=",
@@ -1793,8 +1824,9 @@
       },
       "producao": {
         "previsto": null,
-        "real": null,
-        "por": null
+        "real": "2026-05-08",
+        "por": null,
+        "fim": "2026-05-12"
       },
       "data_vitrine": {
         "previsto": null,
@@ -1815,7 +1847,7 @@
       },
       "op_para_producao": {
         "previsto": null,
-        "real": null,
+        "real": 10,
         "desvio": null
       },
       "producao_para_vit": {
@@ -1826,7 +1858,21 @@
     },
     "status": "em_producao",
     "responsavel_atual": "PCP/Fábrica",
-    "tem_cronograma": false
+    "tem_cronograma": false,
+    "producao_detalhe": {
+      "busca_por": "halb",
+      "codigos_encontrados": [
+        "2100082539"
+      ],
+      "total_apontamentos": 4,
+      "primeira_data": "2026-05-08",
+      "ultima_data": "2026-05-12",
+      "deptos": [
+        "OFFSET"
+      ],
+      "qtd_total": 12193,
+      "dias_desde_ultima": 7
+    }
   },
   {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQACs6mj0k-gREkTHCzpZaCuM=",
@@ -1955,8 +2001,9 @@
       },
       "producao": {
         "previsto": null,
-        "real": null,
-        "por": null
+        "real": "2026-05-13",
+        "por": null,
+        "fim": "2026-05-18"
       },
       "data_vitrine": {
         "previsto": null,
@@ -1977,7 +2024,7 @@
       },
       "op_para_producao": {
         "previsto": null,
-        "real": null,
+        "real": 15,
         "desvio": null
       },
       "producao_para_vit": {
@@ -1988,7 +2035,23 @@
     },
     "status": "em_producao",
     "responsavel_atual": "PCP/Fábrica",
-    "tem_cronograma": false
+    "tem_cronograma": false,
+    "producao_detalhe": {
+      "busca_por": "fert",
+      "codigos_encontrados": [
+        "13021782-0001",
+        "13021784-0001"
+      ],
+      "total_apontamentos": 33,
+      "primeira_data": "2026-05-13",
+      "ultima_data": "2026-05-18",
+      "deptos": [
+        "FLEXOGRAFICA",
+        "OFFSET"
+      ],
+      "qtd_total": 458053,
+      "dias_desde_ultima": 1
+    }
   },
   {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAFBViFEJA2hNuklxKUE1FUQ=",
@@ -2046,8 +2109,9 @@
       },
       "producao": {
         "previsto": null,
-        "real": null,
-        "por": null
+        "real": "2026-05-18",
+        "por": null,
+        "fim": "2026-05-18"
       },
       "data_vitrine": {
         "previsto": null,
@@ -2068,7 +2132,7 @@
       },
       "op_para_producao": {
         "previsto": null,
-        "real": null,
+        "real": 21,
         "desvio": null
       },
       "producao_para_vit": {
@@ -2079,7 +2143,21 @@
     },
     "status": "em_producao",
     "responsavel_atual": "PCP/Fábrica",
-    "tem_cronograma": false
+    "tem_cronograma": false,
+    "producao_detalhe": {
+      "busca_por": "halb",
+      "codigos_encontrados": [
+        "2100082568"
+      ],
+      "total_apontamentos": 2,
+      "primeira_data": "2026-05-18",
+      "ultima_data": "2026-05-18",
+      "deptos": [
+        "OFFSET"
+      ],
+      "qtd_total": 8268,
+      "dias_desde_ultima": 1
+    }
   },
   {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAB4cW7Pb0RBMqA0hlGW4ZBE=",
@@ -2426,8 +2504,9 @@
       },
       "producao": {
         "previsto": null,
-        "real": null,
-        "por": null
+        "real": "2026-05-14",
+        "por": null,
+        "fim": "2026-05-14"
       },
       "data_vitrine": {
         "previsto": null,
@@ -2448,7 +2527,7 @@
       },
       "op_para_producao": {
         "previsto": null,
-        "real": null,
+        "real": 21,
         "desvio": null
       },
       "producao_para_vit": {
@@ -2459,7 +2538,21 @@
     },
     "status": "em_producao",
     "responsavel_atual": "PCP/Fábrica",
-    "tem_cronograma": false
+    "tem_cronograma": false,
+    "producao_detalhe": {
+      "busca_por": "halb",
+      "codigos_encontrados": [
+        "2100082309"
+      ],
+      "total_apontamentos": 3,
+      "primeira_data": "2026-05-14",
+      "ultima_data": "2026-05-14",
+      "deptos": [
+        "OFFSET"
+      ],
+      "qtd_total": 6050,
+      "dias_desde_ultima": 5
+    }
   },
   {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAPsEUKiRKftDow8YfFm4jdo=",
@@ -2517,8 +2610,9 @@
       },
       "producao": {
         "previsto": null,
-        "real": null,
-        "por": null
+        "real": "2026-05-05",
+        "por": null,
+        "fim": "2026-05-07"
       },
       "data_vitrine": {
         "previsto": null,
@@ -2539,7 +2633,7 @@
       },
       "op_para_producao": {
         "previsto": null,
-        "real": null,
+        "real": 27,
         "desvio": null
       },
       "producao_para_vit": {
@@ -2550,7 +2644,22 @@
     },
     "status": "em_producao",
     "responsavel_atual": "PCP/Fábrica",
-    "tem_cronograma": false
+    "tem_cronograma": false,
+    "producao_detalhe": {
+      "busca_por": "halb",
+      "codigos_encontrados": [
+        "2100082450"
+      ],
+      "total_apontamentos": 9,
+      "primeira_data": "2026-05-05",
+      "ultima_data": "2026-05-07",
+      "deptos": [
+        "FLEXOGRAFICA",
+        "OFFSET"
+      ],
+      "qtd_total": 110845,
+      "dias_desde_ultima": 12
+    }
   },
   {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAGmV6oGAFBhNvvlDVlmylIU=",
@@ -2608,8 +2717,9 @@
       },
       "producao": {
         "previsto": null,
-        "real": null,
-        "por": null
+        "real": "2026-04-09",
+        "por": null,
+        "fim": "2026-04-15"
       },
       "data_vitrine": {
         "previsto": null,
@@ -2630,7 +2740,7 @@
       },
       "op_para_producao": {
         "previsto": null,
-        "real": null,
+        "real": 3,
         "desvio": null
       },
       "producao_para_vit": {
@@ -2639,9 +2749,27 @@
         "desvio": null
       }
     },
-    "status": "em_producao",
-    "responsavel_atual": "PCP/Fábrica",
-    "tem_cronograma": false
+    "status": "concluido",
+    "responsavel_atual": "-",
+    "tem_cronograma": false,
+    "producao_detalhe": {
+      "busca_por": "halb",
+      "codigos_encontrados": [
+        "2100082371",
+        "2100082373",
+        "2400009977",
+        "2400009978"
+      ],
+      "total_apontamentos": 23,
+      "primeira_data": "2026-04-09",
+      "ultima_data": "2026-04-15",
+      "deptos": [
+        "FLEXOGRAFICA",
+        "OFFSET"
+      ],
+      "qtd_total": 399176,
+      "dias_desde_ultima": 34
+    }
   },
   {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQACeaKZZPp45Hk75zMOcZRKs=",
@@ -2684,8 +2812,9 @@
       },
       "producao": {
         "previsto": null,
-        "real": null,
-        "por": null
+        "real": "2026-05-05",
+        "por": null,
+        "fim": "2026-05-11"
       },
       "data_vitrine": {
         "previsto": null,
@@ -2706,7 +2835,7 @@
       },
       "op_para_producao": {
         "previsto": null,
-        "real": null,
+        "real": 27,
         "desvio": null
       },
       "producao_para_vit": {
@@ -2717,7 +2846,22 @@
     },
     "status": "em_producao",
     "responsavel_atual": "PCP/Fábrica",
-    "tem_cronograma": false
+    "tem_cronograma": false,
+    "producao_detalhe": {
+      "busca_por": "halb",
+      "codigos_encontrados": [
+        "2100082281",
+        "2100082282"
+      ],
+      "total_apontamentos": 27,
+      "primeira_data": "2026-05-05",
+      "ultima_data": "2026-05-11",
+      "deptos": [
+        "OFFSET"
+      ],
+      "qtd_total": 319457,
+      "dias_desde_ultima": 8
+    }
   },
   {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAB9TdF-BAk-ZvUubcLTOvJI=",
@@ -2795,8 +2939,9 @@
       },
       "producao": {
         "previsto": null,
-        "real": null,
-        "por": null
+        "real": "2026-05-05",
+        "por": null,
+        "fim": "2026-05-13"
       },
       "data_vitrine": {
         "previsto": null,
@@ -2817,7 +2962,7 @@
       },
       "op_para_producao": {
         "previsto": null,
-        "real": null,
+        "real": 29,
         "desvio": null
       },
       "producao_para_vit": {
@@ -2828,7 +2973,22 @@
     },
     "status": "em_producao",
     "responsavel_atual": "PCP/Fábrica",
-    "tem_cronograma": false
+    "tem_cronograma": false,
+    "producao_detalhe": {
+      "busca_por": "fert",
+      "codigos_encontrados": [
+        "11054733-0001",
+        "11054754-0001"
+      ],
+      "total_apontamentos": 9,
+      "primeira_data": "2026-05-05",
+      "ultima_data": "2026-05-13",
+      "deptos": [
+        "OFFSET"
+      ],
+      "qtd_total": 45226,
+      "dias_desde_ultima": 6
+    }
   },
   {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAMNnAAPZ8PNDqMfyxr2UYR0=",
@@ -2876,8 +3036,9 @@
       },
       "producao": {
         "previsto": null,
-        "real": null,
-        "por": null
+        "real": "2026-03-18",
+        "por": null,
+        "fim": "2026-05-15"
       },
       "data_vitrine": {
         "previsto": null,
@@ -2898,7 +3059,7 @@
       },
       "op_para_producao": {
         "previsto": null,
-        "real": null,
+        "real": 9,
         "desvio": null
       },
       "producao_para_vit": {
@@ -2909,6 +3070,21 @@
     },
     "status": "em_producao",
     "responsavel_atual": "PCP/Fábrica",
-    "tem_cronograma": false
+    "tem_cronograma": false,
+    "producao_detalhe": {
+      "busca_por": "halb",
+      "codigos_encontrados": [
+        "2100081598"
+      ],
+      "total_apontamentos": 11,
+      "primeira_data": "2026-03-18",
+      "ultima_data": "2026-05-15",
+      "deptos": [
+        "FLEXOGRAFICA",
+        "OFFSET"
+      ],
+      "qtd_total": 34688,
+      "dias_desde_ultima": 4
+    }
   }
 ]
