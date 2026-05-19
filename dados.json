@@ -17,21 +17,6 @@
         "descricao": "931610798 SACL PAP MAN FSC®P TED REN"
       },
       {
-        "codigo": "5200003164",
-        "tipo": "HALB",
-        "descricao": "FITA PET LINHO 073 9X380MM 2PTP"
-      },
-      {
-        "codigo": "5200005292",
-        "tipo": "HALB",
-        "descricao": "ETIQ ADES 40X20MM 931610798 RENNER"
-      },
-      {
-        "codigo": "8600006924",
-        "tipo": "HALB",
-        "descricao": "931610798 SACL PAP MAN FSC®P TED REN ME"
-      },
-      {
         "codigo": "11055321-0001",
         "tipo": "FERT",
         "descricao": "931611002 SACL PAP MAN FSC®P MEOW REN"
@@ -40,21 +25,6 @@
         "codigo": "2100082673",
         "tipo": "HALB",
         "descricao": "931611002 SACL PAP MAN FSC®P MEOW REN"
-      },
-      {
-        "codigo": "5200005248",
-        "tipo": "HALB",
-        "descricao": "FITA PET 09X380MM 2PTP 110 SAINT JAMES"
-      },
-      {
-        "codigo": "5200005293",
-        "tipo": "HALB",
-        "descricao": "ETIQ ADES 40X20MM 931611002 RENNER"
-      },
-      {
-        "codigo": "8600006925",
-        "tipo": "HALB",
-        "descricao": "931611002 SACL PAP MAN FSC®P MEOW REN ME"
       }
     ],
     "marcos": {
@@ -128,21 +98,6 @@
         "descricao": "931610552 SACL PAP MAN FSC®P CREEPER REN"
       },
       {
-        "codigo": "5200001612",
-        "tipo": "HALB",
-        "descricao": "FITA PET PRETO 9X380MM 2PTP"
-      },
-      {
-        "codigo": "5200005280",
-        "tipo": "HALB",
-        "descricao": "ETIQ ADES 40X20MM 931610552 RENNER"
-      },
-      {
-        "codigo": "8600006912",
-        "tipo": "HALB",
-        "descricao": "931610552 SACL PAP MAN FSC®P CREE REN ME"
-      },
-      {
         "codigo": "11055332-0001",
         "tipo": "FERT",
         "descricao": "931565376 SACL PAP MAN FSC®M COLMEIA REN"
@@ -151,21 +106,6 @@
         "codigo": "2100082687",
         "tipo": "HALB",
         "descricao": "931565376 SACL PAP MAN FSC®M COLMEIA REN"
-      },
-      {
-        "codigo": "5200001596",
-        "tipo": "HALB",
-        "descricao": "FITA PET NAUTICO 157 9X380MM 2PTP"
-      },
-      {
-        "codigo": "5200005281",
-        "tipo": "HALB",
-        "descricao": "ETIQ ADES 40X20MM 931565376 RENNER"
-      },
-      {
-        "codigo": "8600006913",
-        "tipo": "HALB",
-        "descricao": "931565376 SACL PAP MAN FSC®M COLM REN ME"
       },
       {
         "codigo": "11055329-0001",
@@ -178,16 +118,6 @@
         "descricao": "931565114 SACL PAP MAN FSC®P COLMEIA REN"
       },
       {
-        "codigo": "5200005282",
-        "tipo": "HALB",
-        "descricao": "ETIQ ADES 40X20MM 931565114 RENNER"
-      },
-      {
-        "codigo": "8600006914",
-        "tipo": "HALB",
-        "descricao": "931565114 SACL PAP MAN FSC®P COLM REN ME"
-      },
-      {
         "codigo": "11055333-0001",
         "tipo": "FERT",
         "descricao": "931567283 SACL PAP MAN FSC®M LOVE REN"
@@ -198,16 +128,6 @@
         "descricao": "931567283 SACL PAP MAN FSC®M LOVE REN"
       },
       {
-        "codigo": "5200005284",
-        "tipo": "HALB",
-        "descricao": "ETIQ ADES 40X20MM 931567283 RENNER"
-      },
-      {
-        "codigo": "8600006915",
-        "tipo": "HALB",
-        "descricao": "931567283 SACL PAP MAN FSC®M LOVE REN ME"
-      },
-      {
         "codigo": "11055330-0001",
         "tipo": "FERT",
         "descricao": "931566820 SACL PAP MAN FSC®P LOVE REN"
@@ -216,16 +136,6 @@
         "codigo": "2100082685",
         "tipo": "HALB",
         "descricao": "931566820 SACL PAP MAN FSC®P LOVE REN"
-      },
-      {
-        "codigo": "5200005285",
-        "tipo": "HALB",
-        "descricao": "ETIQ ADES 40X20MM 931566820 RENNER"
-      },
-      {
-        "codigo": "8600006916",
-        "tipo": "HALB",
-        "descricao": "931566820 SACL PAP MAN FSC®P LOVE REN ME"
       }
     ],
     "marcos": {
@@ -368,11 +278,6 @@
         "codigo": "2100082621",
         "tipo": "HALB",
         "descricao": "KIT CX FDO FSC® PRESS FRIENDS QDB"
-      },
-      {
-        "codigo": "5200005287",
-        "tipo": "HALB",
-        "descricao": "FITA GORG TELA ROSA DENGO 150 35X700MM"
       }
     ],
     "marcos": {
@@ -454,11 +359,6 @@
         "codigo": "2100082637",
         "tipo": "HALB",
         "descricao": "APLIQUE FRIENDS QDB"
-      },
-      {
-        "codigo": "8600006921",
-        "tipo": "HALB",
-        "descricao": "TAG FRIENDS QDB ME"
       },
       {
         "codigo": "13021810-0001",
@@ -557,16 +457,6 @@
         "descricao": "SACL PAP MAN FSC®M 21AN CAU CHOC P1 E P2"
       },
       {
-        "codigo": "5200003024",
-        "tipo": "HALB",
-        "descricao": "FITA GORG TELA BERINJELA 043 22X480MM"
-      },
-      {
-        "codigo": "5200003025",
-        "tipo": "HALB",
-        "descricao": "FITA GORG TELA BERINJELA 043 10X320MM"
-      },
-      {
         "codigo": "2400010059",
         "tipo": "HALB",
         "descricao": "FUNDO FSCM 308X233MM KLALINER"
@@ -575,11 +465,6 @@
         "codigo": "2400010060",
         "tipo": "HALB",
         "descricao": "REF ALCA FSCM 310X030MM PARDO"
-      },
-      {
-        "codigo": "8600006911",
-        "tipo": "HALB",
-        "descricao": "SACL PAP MAN FSC®M 21 ANOS CAU CHOC ME"
       }
     ],
     "marcos": {
@@ -648,19 +533,9 @@
         "descricao": "KIT CARTAO PIN AERO JARDIM BOT"
       },
       {
-        "codigo": "5200004996",
-        "tipo": "HALB",
-        "descricao": "PIN JARDIM AERO BOT"
-      },
-      {
         "codigo": "15005827-0001",
         "tipo": "FERT",
         "descricao": "KIT CARTAO PIN AERO CAPIVARA BOT"
-      },
-      {
-        "codigo": "5200004997",
-        "tipo": "HALB",
-        "descricao": "PIN CAPIVARA AERO BOT"
       }
     ],
     "marcos": {
@@ -1001,16 +876,6 @@
         "codigo": "2100082255",
         "tipo": "HALB",
         "descricao": "REF ALCA FSC® INST25 SCHUTZ"
-      },
-      {
-        "codigo": "5200004658",
-        "tipo": "HALB",
-        "descricao": "FITA GORG ESC 400X25MM PRETO"
-      },
-      {
-        "codigo": "8600005976",
-        "tipo": "HALB",
-        "descricao": "SACL PAP MAN FSC®P INST25 SCHUTZ ME"
       }
     ],
     "marcos": {
@@ -1082,16 +947,6 @@
         "codigo": "2100082270",
         "tipo": "HALB",
         "descricao": "SACL PAP MAN FSC®M INST25 V2 ANACAPRI"
-      },
-      {
-        "codigo": "5200004753",
-        "tipo": "HALB",
-        "descricao": "FITA GORG ESC BRANCA 25X0500MM 2PTP"
-      },
-      {
-        "codigo": "8600006127",
-        "tipo": "HALB",
-        "descricao": "SACL PAP MAN FSC®M INST25 ANACAPRI ME"
       }
     ],
     "marcos": {
@@ -1165,21 +1020,6 @@
         "descricao": "931535599 SACL PAP MAN FSC®M PRETA REN"
       },
       {
-        "codigo": "5200005270",
-        "tipo": "HALB",
-        "descricao": "ETIQ ADES 40X20MM 931535599 RENNER"
-      },
-      {
-        "codigo": "5200001612",
-        "tipo": "HALB",
-        "descricao": "FITA PET PRETO 9X380MM 2PTP"
-      },
-      {
-        "codigo": "8600006902",
-        "tipo": "HALB",
-        "descricao": "931535599 SACL PAP MAN FSC®M PRETA RE ME"
-      },
-      {
         "codigo": "11055306-0001",
         "tipo": "FERT",
         "descricao": "931566643 SACL PAP MAN FSC®P PATRU REN"
@@ -1188,21 +1028,6 @@
         "codigo": "2100082648",
         "tipo": "HALB",
         "descricao": "931566643 SACL PAP MAN FSC®P PATRU REN"
-      },
-      {
-        "codigo": "5200005271",
-        "tipo": "HALB",
-        "descricao": "ETIQ ADES 40X20MM 931566643 RENNER"
-      },
-      {
-        "codigo": "5200004387",
-        "tipo": "HALB",
-        "descricao": "FITA PET 09X380MM 2PTP 0095 BOUTSEN"
-      },
-      {
-        "codigo": "8600006903",
-        "tipo": "HALB",
-        "descricao": "931566643 SACL PAP MAN FSC®P PATRU RE ME"
       },
       {
         "codigo": "11055307-0001",
@@ -1215,21 +1040,6 @@
         "descricao": "931602333 SACL PAP MAN FSC®P LINES REN"
       },
       {
-        "codigo": "5200005272",
-        "tipo": "HALB",
-        "descricao": "ETIQ ADES 40X20MM 931602333 RENNER"
-      },
-      {
-        "codigo": "5200003051",
-        "tipo": "HALB",
-        "descricao": "FITA PET 09X380MM 2PTP 117 ANIL"
-      },
-      {
-        "codigo": "8600006904",
-        "tipo": "HALB",
-        "descricao": "931602333 SACL PAP MAN FSC®P LINES RE ME"
-      },
-      {
         "codigo": "11055308-0001",
         "tipo": "FERT",
         "descricao": "931564146 SACL PAP MAN FSC®P ENCANTO REN"
@@ -1240,21 +1050,6 @@
         "descricao": "931564146 SACL PAP MAN FSC®P ENCANTO REN"
       },
       {
-        "codigo": "5200005273",
-        "tipo": "HALB",
-        "descricao": "ETIQ ADES 40X20MM 931564146 RENNER"
-      },
-      {
-        "codigo": "5200004295",
-        "tipo": "HALB",
-        "descricao": "FITA PET 09X380MM 2PTP 154 ATLANTICO"
-      },
-      {
-        "codigo": "8600006905",
-        "tipo": "HALB",
-        "descricao": "931564146 SACL PAP MAN FSC®P ENCAN RE ME"
-      },
-      {
         "codigo": "11055309-0001",
         "tipo": "FERT",
         "descricao": "931564277 SACL PAP MAN FSC®P MAGIA REN"
@@ -1263,21 +1058,6 @@
         "codigo": "2100082651",
         "tipo": "HALB",
         "descricao": "931564277 SACL PAP MAN FSC®P MAGIA REN"
-      },
-      {
-        "codigo": "5200005274",
-        "tipo": "HALB",
-        "descricao": "ETIQ ADES 40X20MM 931564277 RENNER"
-      },
-      {
-        "codigo": "5200003049",
-        "tipo": "HALB",
-        "descricao": "FITA PET 09X380MM 2PTP 112 BRASIL"
-      },
-      {
-        "codigo": "8600006906",
-        "tipo": "HALB",
-        "descricao": "931564277 SACL PAP MAN FSC®P MAGIA RE ME"
       }
     ],
     "marcos": {
@@ -1486,11 +1266,6 @@
         "codigo": "11055267-0001",
         "tipo": "FERT",
         "descricao": "TAG PAIS26 KOP"
-      },
-      {
-        "codigo": "5200005267",
-        "tipo": "HALB",
-        "descricao": "FITA GORG TELA AZUL MARINHO 215 22X900MM"
       }
     ],
     "marcos": {
@@ -1660,11 +1435,6 @@
         "descricao": "97436 CX FDO FSC®M PDVG PAIS26 BOT"
       },
       {
-        "codigo": "5200005251",
-        "tipo": "HALB",
-        "descricao": "FITA LACO GRAVATA 20X280MM VERDE"
-      },
-      {
         "codigo": "11055236-0001",
         "tipo": "FERT",
         "descricao": "97437 CTCHO ENV C VISOR FSC®M PAIS26 BOT"
@@ -1683,16 +1453,6 @@
         "codigo": "15005818-0001",
         "tipo": "FERT",
         "descricao": "KIT ETIQ ADES VD PAIS26 BOT"
-      },
-      {
-        "codigo": "5200005254",
-        "tipo": "HALB",
-        "descricao": "ETIQ ADES 45X85MM VD PAIS26 BOT"
-      },
-      {
-        "codigo": "5200005252",
-        "tipo": "HALB",
-        "descricao": "ETIQ ADES 40X40MM VD PAIS26 BOT"
       },
       {
         "codigo": "15005819-0001",
@@ -2051,11 +1811,6 @@
         "codigo": "2100082575",
         "tipo": "HALB",
         "descricao": "SACL PAP MAN FSC®G NESPRESSO PT2"
-      },
-      {
-        "codigo": "8600006885",
-        "tipo": "HALB",
-        "descricao": "SACL PAP MAN FSC®G NESPRESSO ME"
       }
     ],
     "marcos": {
@@ -2160,19 +1915,9 @@
         "descricao": "SACL PAP MAN FSC®GG INST26 SCHUTZ P2"
       },
       {
-        "codigo": "5200004658",
-        "tipo": "HALB",
-        "descricao": "FITA GORG ESC 400X25MM PRETO"
-      },
-      {
         "codigo": "2400002567",
         "tipo": "HALB",
         "descricao": "FUNDO FSCM 765X115MM BRANCO"
-      },
-      {
-        "codigo": "8600006889",
-        "tipo": "HALB",
-        "descricao": "SACL PAP MAN FSC®GG INST26 SCHUTZ ME"
       }
     ],
     "marcos": {
@@ -2482,11 +2227,6 @@
         "codigo": "2100082495",
         "tipo": "HALB",
         "descricao": "TAG INST26 BC"
-      },
-      {
-        "codigo": "8600006876",
-        "tipo": "HALB",
-        "descricao": "TAG INST26 BC ME"
       }
     ],
     "marcos": {
@@ -2572,11 +2312,6 @@
         "codigo": "2400003865",
         "tipo": "HALB",
         "descricao": "ALCA CHATA FSCM PARDO REF PARDO G ME"
-      },
-      {
-        "codigo": "8600006872",
-        "tipo": "HALB",
-        "descricao": "SACL PAP MAN FSC®M SOROCABA26 LUPO ME"
       }
     ],
     "marcos": {
@@ -2678,21 +2413,6 @@
         "codigo": "2400006722",
         "tipo": "HALB",
         "descricao": "FUNDO FSCM 155X075MM BCEA 230G"
-      },
-      {
-        "codigo": "5200005227",
-        "tipo": "HALB",
-        "descricao": "CORDAO ALG BRANCA 520X08MM"
-      },
-      {
-        "codigo": "5200005229",
-        "tipo": "HALB",
-        "descricao": "FITA GORG TELA AZUL 350X25MM"
-      },
-      {
-        "codigo": "8600006871",
-        "tipo": "HALB",
-        "descricao": "SACL PAP MAN FSC®P INST26 ISA BAHIA ME"
       }
     ],
     "marcos": {
@@ -2814,11 +2534,6 @@
         "codigo": "2400009978",
         "tipo": "HALB",
         "descricao": "REF ALCA FSCM 120X30MM BCO ZB"
-      },
-      {
-        "codigo": "8600006870",
-        "tipo": "HALB",
-        "descricao": "SACL PAP SAUT FSC®P PRES DPSP ME"
       }
     ],
     "marcos": {
@@ -3038,11 +2753,6 @@
         "descricao": "BERCO CX ECOMM FSC®P2 P2A11 PAGSEGURO"
       },
       {
-        "codigo": "8600006858",
-        "tipo": "HALB",
-        "descricao": "FL EMP CX ECOMM FSC®P2 P2A11 PAGSEGURO"
-      },
-      {
         "codigo": "11054754-0001",
         "tipo": "FERT",
         "descricao": "CX ECOMM FSC®Q60 PAGSEGURO",
@@ -3070,11 +2780,6 @@
         "codigo": "2100081661",
         "tipo": "HALB",
         "descricao": "BERCO CX ECOMM FSC®Q60 PAGSEGURO"
-      },
-      {
-        "codigo": "8600006859",
-        "tipo": "HALB",
-        "descricao": "FL EMP CX ECOMM FSC®Q60 PAGSEGURO"
       }
     ],
     "marcos": {
@@ -3172,16 +2877,6 @@
           ],
           "qtd": 34688
         }
-      },
-      {
-        "codigo": "8600006817",
-        "tipo": "HALB",
-        "descricao": "SACL PAP MAN FSC®M SALM 2026 MORANA ME"
-      },
-      {
-        "codigo": "5200005205",
-        "tipo": "HALB",
-        "descricao": "CORDAO POLY S FRAN CHOCO 064 400MM 2PTP"
       }
     ],
     "marcos": {
