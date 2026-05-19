@@ -638,6 +638,148 @@ h3 { font-size: 14px; }
 }
 
 /* ============================================================
+   TABELA NOVA — Cliente·Projeto, Status pill, Pipeline, Lead Time, Aderência
+   ============================================================ */
+
+/* CÉLULA Cliente · Projeto (caps cinza + nome bold) */
+.td-cliente-projeto {
+  min-width: 220px;
+  max-width: 320px;
+}
+.td-cliente-label {
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--cinza-500);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 2px;
+}
+.td-projeto-nome {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--cinza-900);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* STATUS PILL */
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.status-pill::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+}
+.status-aguardando-cad { background: var(--amarelo-100, #FEF3C7); color: var(--amarelo-700, #A16207); }
+.status-aguardando-eng { background: var(--laranja-100, #FFEDD5); color: var(--laranja-700, #C2410C); }
+.status-em-producao    { background: var(--azul-100);             color: var(--azul-700);              }
+.status-concluido      { background: var(--verde-100);            color: var(--verde-700);             }
+.status-cancelado      { background: var(--cinza-100);            color: var(--cinza-700); text-decoration: line-through; }
+.status-compravel      { background: #EDE7FE;                     color: #5B3FBA;                      }
+.status-aguarda-crono  { background: var(--cinza-100);            color: var(--cinza-700);             }
+.status-atrasado       { background: var(--vermelho-100, #FEE2E2); color: var(--vermelho-700, #B91C1C); }
+
+/* PIPELINE — 4 retângulos COM/CAD/ENG/PROD
+   3 cores: verde (concluída), laranja (em andamento), azul claro (próxima) */
+.pipeline {
+  display: flex;
+  gap: 4px;
+  min-width: 240px;
+  max-width: 360px;
+}
+.pipeline-etapa {
+  flex: 1;
+  height: 32px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  /* Pendente (próxima): azul claro */
+  background: var(--azul-100, #DBEAFE);
+  color: var(--azul-700, #1F4E79);
+  transition: all 0.2s;
+}
+/* Etapa concluída: verde */
+.pipeline-etapa.feita,
+.pipeline-etapa.concluida-prod {
+  background: var(--verde-500, #22C55E);
+  color: white;
+}
+/* Etapa em andamento (atual): laranja */
+.pipeline-etapa.atual-com,
+.pipeline-etapa.atual-cad,
+.pipeline-etapa.atual-eng,
+.pipeline-etapa.atual-prod {
+  background: var(--laranja-500, #F97316);
+  color: white;
+  box-shadow: 0 0 0 2px var(--laranja-100, #FFEDD5);
+}
+/* Atrasada (data prevista já passou): vermelho — exceção pra avisar */
+.pipeline-etapa.atrasada {
+  background: var(--vermelho-100, #FEE2E2);
+  color: var(--vermelho-700, #B91C1C);
+}
+/* Compra (compravel) — roxo claro pra distinguir */
+.pipeline-etapa.compra {
+  background: #EDE7FE;
+  color: #5B3FBA;
+  font-style: italic;
+}
+
+/* LEAD TIME — real / previsto + % prog */
+.td-leadtime { text-align: right; }
+.leadtime-cell {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+}
+.leadtime-valores {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--cinza-900);
+  white-space: nowrap;
+}
+.leadtime-valores .real  { color: var(--azul-700); }
+.leadtime-valores .slash { color: var(--cinza-300); margin: 0 4px; }
+.leadtime-valores .prev  { color: var(--cinza-500); }
+.leadtime-prog {
+  font-size: 11px;
+  color: var(--cinza-500);
+}
+
+/* ADERÊNCIA — badge pequeno colorido */
+.aderencia {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  min-width: 60px;
+}
+.ader-ok          { background: var(--verde-100);            color: var(--verde-700);             }
+.ader-atraso-leve { background: var(--amarelo-100, #FEF3C7); color: var(--amarelo-700, #A16207); }
+.ader-atraso      { background: var(--vermelho-100, #FEE2E2); color: var(--vermelho-700, #B91C1C); }
+.ader-vazio       { background: var(--cinza-100);            color: var(--cinza-400);             }
+
+/* ============================================================
    BADGES DE STATUS
    ============================================================ */
 .badge {
