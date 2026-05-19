@@ -1,21 +1,72 @@
 [
   {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAL-i64pXTI9Mj4KgCNYgc1o=",
-    "subject": "PEDIDO FECHADO VAREJO - RENNER AGOSTO",
+    "subject": "RES: PEDIDO FECHADO VAREJO - RENNER AGOSTO",
     "projeto": "RENNER AGOSTO",
     "cliente": "RENNER AGOSTO",
-    "comercial": "wesley.matheus@antilhas.com.br",
-    "skus": [],
+    "comercial": "WESLEY MATHEUS DA SILVA",
+    "skus": [
+      {
+        "codigo": "11055314-0001",
+        "tipo": "FERT",
+        "descricao": "931610798 SACL PAP MAN FSC®P TED REN"
+      },
+      {
+        "codigo": "2100082672",
+        "tipo": "HALB",
+        "descricao": "931610798 SACL PAP MAN FSC®P TED REN"
+      },
+      {
+        "codigo": "5200003164",
+        "tipo": "HALB",
+        "descricao": "FITA PET LINHO 073 9X380MM 2PTP"
+      },
+      {
+        "codigo": "5200005292",
+        "tipo": "HALB",
+        "descricao": "ETIQ ADES 40X20MM 931610798 RENNER"
+      },
+      {
+        "codigo": "8600006924",
+        "tipo": "HALB",
+        "descricao": "931610798 SACL PAP MAN FSC®P TED REN ME"
+      },
+      {
+        "codigo": "11055321-0001",
+        "tipo": "FERT",
+        "descricao": "931611002 SACL PAP MAN FSC®P MEOW REN"
+      },
+      {
+        "codigo": "2100082673",
+        "tipo": "HALB",
+        "descricao": "931611002 SACL PAP MAN FSC®P MEOW REN"
+      },
+      {
+        "codigo": "5200005248",
+        "tipo": "HALB",
+        "descricao": "FITA PET 09X380MM 2PTP 110 SAINT JAMES"
+      },
+      {
+        "codigo": "5200005293",
+        "tipo": "HALB",
+        "descricao": "ETIQ ADES 40X20MM 931611002 RENNER"
+      },
+      {
+        "codigo": "8600006925",
+        "tipo": "HALB",
+        "descricao": "931611002 SACL PAP MAN FSC®P MEOW REN ME"
+      }
+    ],
     "marcos": {
       "pedido_fechado": {
         "previsto": "2026-05-18",
         "real": "2026-05-18",
-        "por": "wesley.matheus@antilhas.com.br"
+        "por": "WESLEY MATHEUS DA SILVA"
       },
       "fert_criado": {
         "previsto": "2026-05-19",
-        "real": null,
-        "por": null
+        "real": "2026-05-19",
+        "por": "giovanna.alves@antilhas.com.br"
       },
       "op_liberada": {
         "previsto": "2026-05-25",
@@ -36,8 +87,8 @@
     "lead_times": {
       "pedido_para_fert": {
         "previsto": 1,
-        "real": null,
-        "desvio": null
+        "real": 1,
+        "desvio": 0
       },
       "fert_para_op": {
         "previsto": 6,
@@ -55,7 +106,7 @@
         "desvio": null
       }
     },
-    "status": "aguardando_fert",
+    "status": "aguardando_op",
     "responsavel_atual": "Engenharia",
     "tem_cronograma": true
   },
@@ -191,7 +242,7 @@
       "op_liberada": {
         "previsto": "2026-05-18",
         "real": "2026-05-18",
-        "por": "leticia.santos@antilhas.com.br"
+        "por": "LETICIA JACQUELINE SANTOS"
       },
       "producao": {
         "previsto": "2026-06-15",
@@ -453,9 +504,8 @@
       },
       "producao": {
         "previsto": "2026-06-19",
-        "real": "2026-05-16",
-        "por": null,
-        "fim": "2026-05-19"
+        "real": null,
+        "por": null
       },
       "data_vitrine": {
         "previsto": "2026-07-17",
@@ -485,23 +535,9 @@
         "desvio": null
       }
     },
-    "status": "em_producao",
-    "responsavel_atual": "PCP/Fábrica",
-    "tem_cronograma": true,
-    "producao_detalhe": {
-      "busca_por": "halb",
-      "codigos_encontrados": [
-        "2400008287"
-      ],
-      "total_apontamentos": 4,
-      "primeira_data": "2026-05-16",
-      "ultima_data": "2026-05-19",
-      "deptos": [
-        "OFFSET"
-      ],
-      "qtd_total": 378000,
-      "dias_desde_ultima": 0
-    }
+    "status": "aguardando_op",
+    "responsavel_atual": "Engenharia",
+    "tem_cronograma": true
   },
   {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAB9mQSJNHK5Go9nQ1Mb9clI=",
@@ -1586,7 +1622,17 @@
       {
         "codigo": "13021787-0001",
         "tipo": "FERT",
-        "descricao": "97438 SACL PAP NLF FSC®M PDVG PAIS26 BOT"
+        "descricao": "97438 SACL PAP NLF FSC®M PDVG PAIS26 BOT",
+        "producao": {
+          "inicio": "2026-05-15",
+          "fim": "2026-05-19",
+          "n_apontamentos": 37,
+          "deptos": [
+            "FLEXOGRAFICA",
+            "OFFSET"
+          ],
+          "qtd": 1243664
+        }
       },
       {
         "codigo": "2400010021",
@@ -1803,7 +1849,16 @@
       {
         "codigo": "2100082539",
         "tipo": "HALB",
-        "descricao": "LAMINA OLF MORUMBI NAT"
+        "descricao": "LAMINA OLF MORUMBI NAT",
+        "producao": {
+          "inicio": "2026-05-08",
+          "fim": "2026-05-12",
+          "n_apontamentos": 4,
+          "deptos": [
+            "OFFSET"
+          ],
+          "qtd": 12193
+        }
       }
     ],
     "marcos": {
@@ -1955,12 +2010,32 @@
       {
         "codigo": "13021782-0001",
         "tipo": "FERT",
-        "descricao": "SACL PAP NLF FSC®P NESPRESSO"
+        "descricao": "SACL PAP NLF FSC®P NESPRESSO",
+        "producao": {
+          "inicio": "2026-05-14",
+          "fim": "2026-05-18",
+          "n_apontamentos": 19,
+          "deptos": [
+            "FLEXOGRAFICA",
+            "OFFSET"
+          ],
+          "qtd": 262930
+        }
       },
       {
         "codigo": "13021784-0001",
         "tipo": "FERT",
-        "descricao": "SACL PAP NLF FSC®M NESPRESSO"
+        "descricao": "SACL PAP NLF FSC®M NESPRESSO",
+        "producao": {
+          "inicio": "2026-05-13",
+          "fim": "2026-05-18",
+          "n_apontamentos": 14,
+          "deptos": [
+            "FLEXOGRAFICA",
+            "OFFSET"
+          ],
+          "qtd": 195123
+        }
       },
       {
         "codigo": "11055207-0001",
@@ -2068,7 +2143,16 @@
       {
         "codigo": "2100082568",
         "tipo": "HALB",
-        "descricao": "SACL PAP MAN FSC®GG INST26 SCHUTZ P1"
+        "descricao": "SACL PAP MAN FSC®GG INST26 SCHUTZ P1",
+        "producao": {
+          "inicio": "2026-05-18",
+          "fim": "2026-05-18",
+          "n_apontamentos": 2,
+          "deptos": [
+            "OFFSET"
+          ],
+          "qtd": 8268
+        }
       },
       {
         "codigo": "2100082569",
@@ -2473,7 +2557,16 @@
       {
         "codigo": "2100082309",
         "tipo": "HALB",
-        "descricao": "SACL PAP MAN FSC®M SOROCABA26 LUPO"
+        "descricao": "SACL PAP MAN FSC®M SOROCABA26 LUPO",
+        "producao": {
+          "inicio": "2026-05-14",
+          "fim": "2026-05-14",
+          "n_apontamentos": 3,
+          "deptos": [
+            "OFFSET"
+          ],
+          "qtd": 6050
+        }
       },
       {
         "codigo": "2400003865",
@@ -2569,7 +2662,17 @@
       {
         "codigo": "2100082450",
         "tipo": "HALB",
-        "descricao": "SACL PAP MAN FSC®P INST26 ISA BAHIA"
+        "descricao": "SACL PAP MAN FSC®P INST26 ISA BAHIA",
+        "producao": {
+          "inicio": "2026-05-05",
+          "fim": "2026-05-07",
+          "n_apontamentos": 9,
+          "deptos": [
+            "FLEXOGRAFICA",
+            "OFFSET"
+          ],
+          "qtd": 110845
+        }
       },
       {
         "codigo": "2400006722",
@@ -2676,12 +2779,31 @@
       {
         "codigo": "2100082371",
         "tipo": "HALB",
-        "descricao": "SACL PAP SAUT FSC®P PRES DPSP"
+        "descricao": "SACL PAP SAUT FSC®P PRES DPSP",
+        "producao": {
+          "inicio": "2026-04-09",
+          "fim": "2026-04-15",
+          "n_apontamentos": 16,
+          "deptos": [
+            "FLEXOGRAFICA",
+            "OFFSET"
+          ],
+          "qtd": 119457
+        }
       },
       {
         "codigo": "2100082373",
         "tipo": "HALB",
-        "descricao": "TAG SACL PAP SAUT FSC®P PRES DPSP"
+        "descricao": "TAG SACL PAP SAUT FSC®P PRES DPSP",
+        "producao": {
+          "inicio": "2026-04-13",
+          "fim": "2026-04-14",
+          "n_apontamentos": 4,
+          "deptos": [
+            "OFFSET"
+          ],
+          "qtd": 9719
+        }
       },
       {
         "codigo": "2400009977",
@@ -2756,18 +2878,16 @@
       "busca_por": "halb",
       "codigos_encontrados": [
         "2100082371",
-        "2100082373",
-        "2400009977",
-        "2400009978"
+        "2100082373"
       ],
-      "total_apontamentos": 23,
+      "total_apontamentos": 20,
       "primeira_data": "2026-04-09",
       "ultima_data": "2026-04-15",
       "deptos": [
         "FLEXOGRAFICA",
         "OFFSET"
       ],
-      "qtd_total": 399176,
+      "qtd_total": 129176,
       "dias_desde_ultima": 34
     }
   },
@@ -2786,12 +2906,30 @@
       {
         "codigo": "2100082281",
         "tipo": "HALB",
-        "descricao": "CX TPA FSC®G NAM26 NAT"
+        "descricao": "CX TPA FSC®G NAM26 NAT",
+        "producao": {
+          "inicio": "2026-05-06",
+          "fim": "2026-05-11",
+          "n_apontamentos": 17,
+          "deptos": [
+            "OFFSET"
+          ],
+          "qtd": 191877
+        }
       },
       {
         "codigo": "2100082282",
         "tipo": "HALB",
-        "descricao": "CX FDO FSC®G NAM26 NAT"
+        "descricao": "CX FDO FSC®G NAM26 NAT",
+        "producao": {
+          "inicio": "2026-05-05",
+          "fim": "2026-05-11",
+          "n_apontamentos": 10,
+          "deptos": [
+            "OFFSET"
+          ],
+          "qtd": 127580
+        }
       }
     ],
     "marcos": {
@@ -2873,7 +3011,16 @@
       {
         "codigo": "11054733-0001",
         "tipo": "FERT",
-        "descricao": "CX ECOMM FSC®P2 P2A11 PAGSEGURO"
+        "descricao": "CX ECOMM FSC®P2 P2A11 PAGSEGURO",
+        "producao": {
+          "inicio": "2026-05-05",
+          "fim": "2026-05-13",
+          "n_apontamentos": 5,
+          "deptos": [
+            "OFFSET"
+          ],
+          "qtd": 35591
+        }
       },
       {
         "codigo": "2100081633",
@@ -2898,7 +3045,16 @@
       {
         "codigo": "11054754-0001",
         "tipo": "FERT",
-        "descricao": "CX ECOMM FSC®Q60 PAGSEGURO"
+        "descricao": "CX ECOMM FSC®Q60 PAGSEGURO",
+        "producao": {
+          "inicio": "2026-05-09",
+          "fim": "2026-05-11",
+          "n_apontamentos": 4,
+          "deptos": [
+            "OFFSET"
+          ],
+          "qtd": 9635
+        }
       },
       {
         "codigo": "2100081659",
@@ -3005,7 +3161,17 @@
       {
         "codigo": "2100081598",
         "tipo": "HALB",
-        "descricao": "SACL PAP MAN FSC®M SALM 2026 MORANA"
+        "descricao": "SACL PAP MAN FSC®M SALM 2026 MORANA",
+        "producao": {
+          "inicio": "2026-03-18",
+          "fim": "2026-05-15",
+          "n_apontamentos": 11,
+          "deptos": [
+            "FLEXOGRAFICA",
+            "OFFSET"
+          ],
+          "qtd": 34688
+        }
       },
       {
         "codigo": "8600006817",
