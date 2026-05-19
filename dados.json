@@ -2,8 +2,8 @@
   {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAL-i64pXTI9Mj4KgCNYgc1o=",
     "subject": "RES: PEDIDO FECHADO VAREJO - RENNER AGOSTO",
-    "projeto": "RENNER AGOSTO",
-    "cliente": "RENNER AGOSTO",
+    "projeto": "AGOSTO",
+    "cliente": "RENNER",
     "comercial": "WESLEY MATHEUS DA SILVA",
     "skus": [
       {
@@ -83,8 +83,8 @@
   {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAOelOACkG_dGj0ov3scWcxg=",
     "subject": "RES: PEDIDO FECHADO VAREJO - RENNER JUNHO/AGO ",
-    "projeto": "RENNER JUNHO/AGO",
-    "cliente": "RENNER JUNHO/AGO",
+    "projeto": "JUNHO AGO",
+    "cliente": "RENNER",
     "comercial": "WESLEY MATHEUS DA SILVA",
     "skus": [
       {
@@ -194,8 +194,8 @@
   {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAMC-ScgVsj9Avp4vPeFxDLA=",
     "subject": "RES: PEDIDO FECHADO VAREJO - SEPHORA -  INSTITUCIONAL",
-    "projeto": "SEPHORA -  INSTITUCIONAL",
-    "cliente": "SEPHORA -  INSTITUCIONAL",
+    "projeto": "RES: PEDIDO FECHADO VAREJO - SEPHORA -  INSTITUCIONAL",
+    "cliente": "SEPHORA",
     "comercial": "WESLEY MATHEUS DA SILVA",
     "skus": [
       {
@@ -260,8 +260,8 @@
   {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAHthAQbS0S1KqFEvTedtNyI=",
     "subject": "RE: PEDIDO FECHADO VAREJO - QUEM DISSE BERENISSE - CAIXA PRESS KIT FRIENDS",
-    "projeto": "QUEM DISSE BERENISSE - CAIXA PRESS KIT FRIENDS",
-    "cliente": "QUEM DISSE BERENISSE - CAIXA PRESS KIT FRIENDS",
+    "projeto": "CAIXA PRESS KIT FRIENDS",
+    "cliente": "QUEM DISSE BERENICE",
     "comercial": "GLEICY MAIA DOS SANTOS",
     "skus": [
       {
@@ -336,8 +336,8 @@
   {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQALqRWTknnAdKqhPQ8K3RuLI=",
     "subject": "RE: PEDIDO FECHADO VAREJO - QUEM DISSE BERENISSE -  FRIENDS",
-    "projeto": "QUEM DISSE BERENISSE -  FRIENDS",
-    "cliente": "QUEM DISSE BERENISSE -  FRIENDS",
+    "projeto": "FRIENDS",
+    "cliente": "QUEM DISSE BERENICE",
     "comercial": "GLEICY MAIA DOS SANTOS",
     "skus": [
       {
@@ -442,8 +442,8 @@
   {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAB9mQSJNHK5Go9nQ1Mb9clI=",
     "subject": "RES: PEDIDO FECHADO VAREJO - SACOLA M CAU CHOCOLATES",
-    "projeto": "SACOLA M CAU CHOCOLATES",
-    "cliente": "SACOLA M CAU CHOCOLATES",
+    "projeto": "SACOLA M",
+    "cliente": "CAU CHOCOL",
     "comercial": "JULIO CESAR DELLA PASCOA MACHADO",
     "skus": [
       {
@@ -523,8 +523,8 @@
   {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAG1PIdDZ3fhGlBsKXkMg0PE=",
     "subject": "RES: PEDIDO FECHADO VAREJO - BOTICÁRIO -  KIT PINS",
-    "projeto": "BOTICÁRIO -  KIT PINS",
-    "cliente": "BOTICÁRIO -  KIT PINS",
+    "projeto": "KIT PINS",
+    "cliente": "BOTICARIO",
     "comercial": "GLEICY MAIA DOS SANTOS",
     "skus": [
       {
@@ -594,8 +594,8 @@
   {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQACZ-QvwKK5dIiMdJF87xZM4=",
     "subject": "RE: PEDIDO FECHADO VAREJO - BELEZA NA WEB -  PHEASE IN / PHEASE OUT - PAPEL DE SEDA",
-    "projeto": "BELEZA NA WEB -  PHEASE IN / PHEASE OUT - PAPEL DE SEDA",
-    "cliente": "BELEZA NA WEB -  PHEASE IN / PHEASE OUT - PAPEL DE SEDA",
+    "projeto": "PAPEL DE SEDA",
+    "cliente": "BELEZA NA WEB",
     "comercial": "GLEICY MAIA DOS SANTOS",
     "skus": [
       {
@@ -660,8 +660,8 @@
   {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAPtq6L2-4BVPo798kV1ZZXw=",
     "subject": "RES: PEDIDO FECHADO VAREJO - SEDA DENGO ",
-    "projeto": "SEDA DENGO",
-    "cliente": "SEDA DENGO",
+    "projeto": "SEDA",
+    "cliente": "DENGO",
     "comercial": "LUCINEIA DAIANE RODRIGUES",
     "skus": [
       {
@@ -726,8 +726,8 @@
   {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQANIi5aRiZlxNmCecQacu5Sc=",
     "subject": "RES: PEDIDO FECHADO VAREJO - CRONOGRAMA — PEDIDO FECHADO VAREJO\t\t\t",
-    "projeto": "CRONOGRAMA — PEDIDO FECHADO VAREJO",
-    "cliente": "CRONOGRAMA — PEDIDO FECHADO VAREJO",
+    "projeto": "CRONOGRAMA —",
+    "cliente": "",
     "comercial": "JULIO CESAR DELLA PASCOA MACHADO",
     "skus": [
       {
@@ -792,7 +792,7 @@
   {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAFPoDadlAmFDodm5jJRmoQo=",
     "subject": "RES: PEDIDO FECHADO VAREJO - SHOPPING IBIRAPUERA ",
-    "projeto": "SHOPPING IBIRAPUERA",
+    "projeto": "RES: PEDIDO FECHADO VAREJO - SHOPPING IBIRAPUERA ",
     "cliente": "SHOPPING IBIRAPUERA",
     "comercial": "JULIO CESAR DELLA PASCOA MACHADO",
     "skus": [
@@ -858,8 +858,8 @@
   {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAG2TRZTwZ99FpeC0u78scfw=",
     "subject": "RES: PEDIDO FECHADO VAREJO - SACOLA P SCHUTZ",
-    "projeto": "SACOLA P SCHUTZ",
-    "cliente": "SACOLA P SCHUTZ",
+    "projeto": "SACOLA P",
+    "cliente": "SCHUTZ",
     "comercial": "WESLEY MATHEUS DA SILVA",
     "skus": [
       {
@@ -934,8 +934,8 @@
   {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAKKCyKKuXwlAm3DfK7x0ESk=",
     "subject": "RES: PEDIDO FECHADO VAREJO - SACOLA M ANACAPRI",
-    "projeto": "SACOLA M ANACAPRI",
-    "cliente": "SACOLA M ANACAPRI",
+    "projeto": "SACOLA M",
+    "cliente": "ANACAPRI",
     "comercial": "WESLEY MATHEUS DA SILVA",
     "skus": [
       {
@@ -1005,8 +1005,8 @@
   {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAH1_B5c_RDhOoUvc4sdA9A8=",
     "subject": "RES: PEDIDO FECHADO VAREJO - RENNER Junho/ 2026",
-    "projeto": "RENNER Junho/ 2026",
-    "cliente": "RENNER Junho/ 2026",
+    "projeto": "JUNHO 2026",
+    "cliente": "RENNER",
     "comercial": "WESLEY MATHEUS DA SILVA",
     "skus": [
       {
@@ -1116,8 +1116,8 @@
   {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQABSrbbqRngNNgFcabgLQkrc=",
     "subject": "Resposta automática: PEDIDO FECHADO VAREJO - SACOLAS INST DESCATHON",
-    "projeto": "SACOLAS INST DESCATHON",
-    "cliente": "SACOLAS INST DESCATHON",
+    "projeto": "RESPOSTA AUTOMATICA: - SACOLAS DESCATHON",
+    "cliente": "",
     "comercial": "NEILA DUARTE DA SILVA",
     "skus": [
       {
@@ -1192,8 +1192,8 @@
   {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQANYaA1Hw1dtDmEhqS4WEHnc=",
     "subject": "RE:  PEDIDO FECHADO VAREJO - BOTICÁRIO - SÃO JOÃO",
-    "projeto": "BOTICÁRIO - SÃO JOÃO",
-    "cliente": "BOTICÁRIO - SÃO JOÃO",
+    "projeto": "SAO JOAO",
+    "cliente": "BOTICARIO",
     "comercial": "GLEICY MAIA DOS SANTOS",
     "skus": [
       {
@@ -1259,7 +1259,7 @@
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAL4v_tbsCE4Ao0XQGW2cedY=",
     "subject": "RES: PEDIDO FECHADO VAREJO - KOP PAIS 26",
     "projeto": "KOP PAIS 26",
-    "cliente": "KOP PAIS 26",
+    "cliente": "",
     "comercial": "WESLEY MATHEUS DA SILVA",
     "skus": [
       {
@@ -1325,7 +1325,7 @@
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAD4AbasFU_ZCr8s09g9PPMs=",
     "subject": "RES: PEDIDO FECHADO VAREJO - KOP TAG KEEP KOPA",
     "projeto": "KOP TAG KEEP KOPA",
-    "cliente": "KOP TAG KEEP KOPA",
+    "cliente": "",
     "comercial": "WESLEY MATHEUS DA SILVA",
     "skus": [
       {
@@ -1390,8 +1390,8 @@
   {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAE4MZxY1ZXNJoZYy3QV2cOE=",
     "subject": "RES: PEDIDO FECHADO VAREJO - BOTICÁRIO - PAIS",
-    "projeto": "BOTICÁRIO - PAIS",
-    "cliente": "BOTICÁRIO - PAIS",
+    "projeto": "PAIS",
+    "cliente": "BOTICARIO",
     "comercial": "GLEICY MAIA DOS SANTOS",
     "skus": [
       {
@@ -1537,8 +1537,8 @@
   {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAO82y6VnFUxAgeBs1u7A8QA=",
     "subject": "RES: PEDIDO FECHADO VAREJO - KOP - INST 26 ",
-    "projeto": "KOP - INST 26",
-    "cliente": "KOP - INST 26",
+    "projeto": "KOP - 26",
+    "cliente": "",
     "comercial": "WESLEY MATHEUS DA SILVA wesley.matheus@antilhas.com.br",
     "skus": [],
     "marcos": {
@@ -1597,8 +1597,8 @@
   {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQABGxo51lWOdNuBpMTdI4mnY=",
     "subject": "RES: PEDIDO FECHADO VAREJO - NATURA - LAMINA OLFATIVA 2026",
-    "projeto": "NATURA - LAMINA OLFATIVA 2026",
-    "cliente": "NATURA - LAMINA OLFATIVA 2026",
+    "projeto": "LAMINA OLFATIVA 2026",
+    "cliente": "NATURA VAREJO",
     "comercial": "EDUARDA FERREIRA DOS SANTOS",
     "skus": [
       {
@@ -1693,7 +1693,7 @@
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQACs6mj0k-gREkTHCzpZaCuM=",
     "subject": "RES: PEDIDO FECHADO VAREJO - BC -PAIS 2026 ",
     "projeto": "BC -PAIS 2026",
-    "cliente": "BC -PAIS 2026",
+    "cliente": "",
     "comercial": "WESLEY MATHEUS DA SILVA",
     "skus": [
       {
@@ -1763,8 +1763,8 @@
   {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAMU7lBCBozRJqcSrVLXMouA=",
     "subject": "RES: PEDIDO FECHADO VAREJO - NESTLE - SACOLAS NESPRESSO ",
-    "projeto": "NESTLE - SACOLAS NESPRESSO",
-    "cliente": "NESTLE - SACOLAS NESPRESSO",
+    "projeto": "SACOLAS NESPRESSO",
+    "cliente": "NESTLE",
     "comercial": "WESLEY MATHEUS DA SILVA",
     "skus": [
       {
@@ -1886,8 +1886,8 @@
   {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAFBViFEJA2hNuklxKUE1FUQ=",
     "subject": "RES: PEDIDO FECHADO VAREJO - SACL PAP MAN FSC GG INST SCHUTZ",
-    "projeto": "SACL PAP MAN FSC GG INST SCHUTZ",
-    "cliente": "SACL PAP MAN FSC GG INST SCHUTZ",
+    "projeto": "SACL PAP MAN FSC GG",
+    "cliente": "SCHUTZ",
     "comercial": "GLEICY MAIA DOS SANTOS",
     "skus": [
       {
@@ -1991,8 +1991,8 @@
   {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAB4cW7Pb0RBMqA0hlGW4ZBE=",
     "subject": "RES: PEDIDO FECHADO VAREJO - HOPE - CARTÃO DELIVERY 2026",
-    "projeto": "HOPE - CARTÃO DELIVERY 2026",
-    "cliente": "HOPE - CARTÃO DELIVERY 2026",
+    "projeto": "HOPE - CARTAO DELIVERY 2026",
+    "cliente": "",
     "comercial": "NEILA DUARTE DA SILVA",
     "skus": [
       {
@@ -2058,7 +2058,7 @@
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAEl6VrsKg0NLsHHYC0Sjxcs=",
     "subject": "RES: PEDIDO FECHADO VAREJO - SACOLA M HOPE",
     "projeto": "SACOLA M HOPE",
-    "cliente": "SACOLA M HOPE",
+    "cliente": "",
     "comercial": "NEILA DUARTE DA SILVA",
     "skus": [
       {
@@ -2138,8 +2138,8 @@
   {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAMRI8Rd4xVZGv60GHhN8sKk=",
     "subject": "RES: PEDIDO FECHADO VAREJO - NATURA - PAIS 2026",
-    "projeto": "NATURA - PAIS 2026",
-    "cliente": "NATURA - PAIS 2026",
+    "projeto": "PAIS 2026",
+    "cliente": "NATURA VAREJO",
     "comercial": "EDUARDA FERREIRA DOS SANTOS",
     "skus": [
       {
@@ -2214,8 +2214,8 @@
   {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAOkho0qp2MNMn1I3e2yHcdY=",
     "subject": "RES: PEDIDO FECHADO VAREJO - BC - INST 26",
-    "projeto": "BC - INST 26",
-    "cliente": "BC - INST 26",
+    "projeto": "BC - 26",
+    "cliente": "",
     "comercial": "WESLEY MATHEUS DA SILVA",
     "skus": [
       {
@@ -2285,8 +2285,8 @@
   {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAM2bg8rNVadEl69YiZrPOuw=",
     "subject": "RES: PEDIDO FECHADO VAREJO - INSTITUCIONAL - LUPO",
-    "projeto": "INSTITUCIONAL - LUPO",
-    "cliente": "INSTITUCIONAL - LUPO",
+    "projeto": "RES: PEDIDO FECHADO VAREJO - INSTITUCIONAL - LUPO",
+    "cliente": "LUPO",
     "comercial": "EDUARDA FERREIRA DOS SANTOS",
     "skus": [
       {
@@ -2385,8 +2385,8 @@
   {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAPsEUKiRKftDow8YfFm4jdo=",
     "subject": "RES: PEDIDO FECHADO VAREJO - INSTITUCIONAL - ISA BAHIA",
-    "projeto": "INSTITUCIONAL - ISA BAHIA",
-    "cliente": "INSTITUCIONAL - ISA BAHIA",
+    "projeto": "RES: PEDIDO FECHADO VAREJO - INSTITUCIONAL - ISA BAHIA",
+    "cliente": "ISA BAHIA",
     "comercial": "NEILA DUARTE DA SILVA",
     "skus": [
       {
@@ -2487,8 +2487,8 @@
   {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAGmV6oGAFBhNvvlDVlmylIU=",
     "subject": "RES:  PEDIDO FECHADO VAREJO INST - SACL PAP AUT PRES DPSP - DROGARIA SÃO PAULO ",
-    "projeto": "RES:  PEDIDO FECHADO VAREJO INST - SACL PAP AUT PRES DPSP - DROGARIA SÃO PAULO ",
-    "cliente": null,
+    "projeto": "SACL PAP AUT PRES DPSP",
+    "cliente": "DROGARIA SAO PAULO",
     "comercial": "LUCINEIA DAIANE RODRIGUES",
     "skus": [
       {
@@ -2609,8 +2609,8 @@
   {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQACeaKZZPp45Hk75zMOcZRKs=",
     "subject": "RES: PEDIDO FECHADO VAREJO - NATURA - NAMORADOS",
-    "projeto": "NATURA - NAMORADOS",
-    "cliente": "NATURA - NAMORADOS",
+    "projeto": "NAMORADOS",
+    "cliente": "NATURA VAREJO",
     "comercial": "EDUARDA FERREIRA DOS SANTOS",
     "skus": [
       {
@@ -2719,8 +2719,8 @@
   {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAB9TdF-BAk-ZvUubcLTOvJI=",
     "subject": "RES: PEDIDO FECHADO VAREJO - PAGSEGURO P2-P2A11 | Q60",
-    "projeto": "PAGSEGURO P2-P2A11 | Q60",
-    "cliente": "PAGSEGURO P2-P2A11 | Q60",
+    "projeto": "P2 P2A11 | Q60",
+    "cliente": "PAGSEGURO",
     "comercial": "LUCINEIA DAIANE RODRIGUES",
     "skus": [
       {
@@ -2854,8 +2854,8 @@
   {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAMNnAAPZ8PNDqMfyxr2UYR0=",
     "subject": "RES: PEDIDO FECHADO VAREJO - INSTITUCIONAL - MORANA       ",
-    "projeto": "INSTITUCIONAL - MORANA",
-    "cliente": "INSTITUCIONAL - MORANA",
+    "projeto": "RES: PEDIDO FECHADO VAREJO - INSTITUCIONAL - MORANA       ",
+    "cliente": "MORANA",
     "comercial": "NEILA DUARTE DA SILVA",
     "skus": [
       {
