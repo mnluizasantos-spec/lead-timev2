@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-05-19T20:37:51",
+  "gerado_em": "2026-05-19T20:45:07",
   "total_emails": 128,
   "total_threads": 28,
   "marcos_rejeitados": [
@@ -56,18 +56,6 @@
       "tipo_detectado": "ferts_criados",
       "remetente": "matheus.garcia@antilhas.com.br",
       "motivo": "papel_remetente=excluido, esperava=engenharia"
-    },
-    {
-      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQANIi5aRiZlxNmCecQacu5Sc=",
-      "tipo_detectado": "ops_liberadas",
-      "remetente": "MARIA LUIZA NUNES DOS SANTOS",
-      "motivo": "papel_remetente=desconhecido, esperava=engenharia"
-    },
-    {
-      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQANIi5aRiZlxNmCecQacu5Sc=",
-      "tipo_detectado": "ops_liberadas",
-      "remetente": "MARIA LUIZA NUNES DOS SANTOS",
-      "motivo": "papel_remetente=desconhecido, esperava=engenharia"
     },
     {
       "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQANYaA1Hw1dtDmEhqS4WEHnc=",
@@ -198,6 +186,10 @@
     {
       "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAIdnd_ZA3WpLqHgN0hlWC5o=",
       "subject": "REEDICAO PEDIDO FECHADO VAREJO - RENNER "
+    },
+    {
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQANIi5aRiZlxNmCecQacu5Sc=",
+      "subject": "RES: PEDIDO FECHADO VAREJO - CRONOGRAMA — PEDIDO FECHADO VAREJO\t\t\t"
     },
     {
       "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQALTrcgAtfMtCuKVsL83dbAg=",
