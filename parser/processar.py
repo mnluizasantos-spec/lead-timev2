@@ -10,7 +10,7 @@ from .utils import (
     html_to_text, parse_iso, limpar_remetente, normalizar_remetente_dedup,
     extrair_cliente_do_subject, diferenca_dias
 )
-from .clientes import identificar_cliente_projeto, eh_subject_ruido
+from .clientes import identificar_cliente_projeto, eh_subject_ruido, extrair_projeto_dos_skus
 from .marcos import classificar_marco
 from .cronograma import extrair_cronograma
 from .skus import extrair_skus
@@ -242,13 +242,21 @@ def processar_thread(emails_da_thread: list, auditoria: dict = None) -> dict:
     # ============================================================
     # 9. PEDIDO FINAL
     # ============================================================
-    # Identifica cliente e projeto usando módulo dedicado
+    # Identifica cliente e projeto a partir do subject
     cliente_ident, projeto_ident = identificar_cliente_projeto(subject_thread)
+
+    # Fallback: se subject não deu projeto utilizável, busca na descrição
+    # do primeiro FERT (que tem o nome real do produto/projeto).
+    if not projeto_ident:
+        projeto_ident = extrair_projeto_dos_skus(skus, cliente_ident)
+
+    # Último recurso: deixa em branco. Subject cru não vai mais como projeto.
+    projeto_final = projeto_ident or ''
 
     return {
         'pedido_id': thread_id,
         'subject': subject_thread,
-        'projeto': projeto_ident or subject_thread,
+        'projeto': projeto_final,
         'cliente': cliente_ident,
         'comercial': limpar_remetente(pedido_fechado_ev['remetente']),
         'skus': skus,
