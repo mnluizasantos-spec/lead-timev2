@@ -49,68 +49,6 @@
 
   <main class="main">
     <!-- ============================================================
-         3 CARDS DE RESUMO
-         ============================================================ -->
-    <section class="cards-grid">
-      <!-- Card 1: Atrasados -->
-      <article class="card card-atrasados" data-target="atrasados">
-        <div class="card-header">
-          <div class="card-icon card-icon-danger">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-          </div>
-          <div>
-            <h3>Atrasados hoje</h3>
-            <p class="card-sub">Pedidos que estouraram a data prevista</p>
-          </div>
-        </div>
-        <div class="card-numero" id="card-atrasados-total">—</div>
-        <div class="card-breakdown" id="card-atrasados-breakdown">
-          <span>—</span>
-        </div>
-      </article>
-
-      <!-- Card 2: Produz essa semana -->
-      <article class="card card-semana" data-target="semana">
-        <div class="card-header">
-          <div class="card-icon card-icon-info">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-          </div>
-          <div>
-            <h3>Produz essa semana</h3>
-            <p class="card-sub">Próximos 5 dias úteis</p>
-          </div>
-        </div>
-        <div class="card-numero" id="card-semana-total">—</div>
-        <div class="card-breakdown" id="card-semana-breakdown">
-          <span>—</span>
-        </div>
-      </article>
-
-      <!-- Card 3: Fechamento do mês -->
-      <article class="card card-mes" data-target="mes">
-        <div class="card-header">
-          <div class="card-icon card-icon-success">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
-          </div>
-          <div>
-            <h3>Fechamento do mês</h3>
-            <p class="card-sub">Maio · resumo gerencial</p>
-          </div>
-        </div>
-        <div class="card-mini-stats">
-          <div class="mini-stat">
-            <span class="mini-stat-label">Lead time médio</span>
-            <span class="mini-stat-valor" id="card-mes-leadtime">—</span>
-          </div>
-          <div class="mini-stat">
-            <span class="mini-stat-label">Aderência</span>
-            <span class="mini-stat-valor" id="card-mes-aderencia">—</span>
-          </div>
-        </div>
-      </article>
-    </section>
-
-    <!-- ============================================================
          LEAD TIME POR ETAPA (média do mês)
          ============================================================ -->
     <section class="etapas-section">
