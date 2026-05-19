@@ -1379,6 +1379,11 @@ h3 { font-size: 14px; }
   color: var(--verde-700, #15803D);
 }
 
+.sku-producao-compravel {
+  background: #EDE7FE;
+  color: #5B3FBA;
+}
+
 .sku-producao-vazia {
   background: transparent;
   color: var(--cinza-400);

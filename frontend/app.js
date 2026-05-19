@@ -793,18 +793,28 @@ function renderSkus(p) {
   }
   const itens = skus.map(s => {
     const prod = s.producao;
+    const isCompravel = String(s.codigo || '').startsWith('15');
     let prodHtml;
+
     if (prod) {
+      // Tem apontamentos — mostra início → fim · departamentos (sem qtd)
       const ini = fmtData(prod.inicio);
       const fim = fmtData(prod.fim);
       const intervalo = ini === fim ? ini : `${ini} → ${fim}`;
       const deptos = (prod.deptos || []).join(', ');
-      const qtdFmt = (prod.qtd || 0).toLocaleString('pt-BR');
       prodHtml = `
         <div class="sku-producao sku-producao-feita" title="${prod.n_apontamentos} apontamento(s)">
           <span class="sku-producao-icone">✓</span>
           <span class="sku-producao-datas">${intervalo}</span>
-          <span class="sku-producao-extra">· ${prod.n_apontamentos} apont · ${deptos} · ${qtdFmt} un</span>
+          <span class="sku-producao-extra">· ${deptos}</span>
+        </div>
+      `;
+    } else if (isCompravel) {
+      // FERT 15xxx — é compravel, não passa por produção interna
+      prodHtml = `
+        <div class="sku-producao sku-producao-compravel">
+          <span class="sku-producao-icone">🛒</span>
+          <span class="sku-producao-datas">compravel</span>
         </div>
       `;
     } else {
