@@ -2,6 +2,7 @@
 Processa um conjunto de emails da mesma thread (conversationId)
 e produz UM pedido com os marcos, cronograma e SKUs identificados.
 """
+import os
 import re
 from collections import defaultdict
 from datetime import datetime
@@ -179,6 +180,31 @@ def processar_thread(emails_da_thread: list, auditoria: dict = None) -> dict:
     pedido_fechado_ev = mais_antigo(marcos_encontrados['pedido_fechado'])
     fert_criado_ev    = mais_antigo(marcos_encontrados['ferts_criados']) if 'ferts_criados' in marcos_encontrados else None
     op_liberada_ev    = mais_antigo(marcos_encontrados['ops_liberadas']) if 'ops_liberadas' in marcos_encontrados else None
+
+    # ============================================================
+    # 4.5. FILTRO DE DATA MÍNIMA (env: PEDIDO_FECHADO_DESDE)
+    # ----
+    # Se a env var PEDIDO_FECHADO_DESDE estiver setada (formato YYYY-MM-DD),
+    # ignoramos pedidos cujo pedido_fechado.real é anterior. Útil pra
+    # excluir threads antigas que o Power Automate puxou junto.
+    # ============================================================
+    desde = os.environ.get('PEDIDO_FECHADO_DESDE', '').strip()
+    if desde:
+        try:
+            desde_iso = datetime.fromisoformat(desde).date()
+            ped_data = pedido_fechado_ev['data'].date()
+            if ped_data < desde_iso:
+                if auditoria is not None:
+                    auditoria.setdefault('pedidos_filtrados_data', []).append({
+                        'thread_id': thread_id,
+                        'subject': subject_thread,
+                        'pedido_fechado_real': ped_data.isoformat(),
+                        'limite': desde_iso.isoformat(),
+                    })
+                return None
+        except (ValueError, AttributeError) as e:
+            # Formato inválido — ignora filtro
+            pass
 
     # ============================================================
     # 5. EXTRAI SKUs SÓ DO EMAIL DO FERTS_CRIADOS
