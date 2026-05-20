@@ -711,12 +711,18 @@ function renderLeadTimeCelula(p) {
 }
 
 function renderAderenciaBadge(p) {
-  // Aderência = SOMA dos desvios das etapas realizadas
-  // (compensação: ganho em uma etapa pode anular atraso em outra)
-  const lt = p.lead_times || {};
-  const desvios = Object.values(lt)
-    .map(x => x?.desvio)
-    .filter(d => d != null);
+  // Aderência = SOMA dos desvios dos MARCOS realizados (real vs previsto)
+  // Não usa lead_times (etapas entre marcos) pra não criar inconsistência:
+  // se vc vê "-1d" no marco e "no dia" em outro, a soma é -1d, não +1d
+  const marcos = p.marcos || {};
+  const desvios = [];
+  for (const m of ['pedido_fechado', 'fert_criado', 'op_liberada', 'producao']) {
+    const dado = marcos[m];
+    if (dado?.real && dado?.previsto) {
+      const ms = (new Date(dado.real) - new Date(dado.previsto)) / 86400000;
+      desvios.push(Math.round(ms));
+    }
+  }
 
   if (desvios.length === 0) {
     return '<span class="aderencia ader-vazio">—</span>';
@@ -819,9 +825,15 @@ function renderMetricasResumo(p) {
   const prevFim = marcos.producao?.previsto;
   const ltPrevistoTotal = (prevInicio && prevFim) ? diasEntre(prevInicio, prevFim) : null;
 
-  // Aderência = SOMA dos desvios das etapas realizadas
-  const lt = p.lead_times || {};
-  const desvios = Object.values(lt).map(x => x?.desvio).filter(d => d != null);
+  // Aderência = SOMA dos desvios dos MARCOS realizados (real vs previsto)
+  const desvios = [];
+  for (const mk of ['pedido_fechado', 'fert_criado', 'op_liberada', 'producao']) {
+    const dado = marcos[mk];
+    if (dado?.real && dado?.previsto) {
+      const ms = (new Date(dado.real) - new Date(dado.previsto)) / 86400000;
+      desvios.push(Math.round(ms));
+    }
+  }
   const soma = desvios.length ? desvios.reduce((a, b) => a + b, 0) : null;
   let aderTexto, aderClasse;
   if (soma === null) { aderTexto = '—'; aderClasse = ''; }
@@ -844,7 +856,7 @@ function renderMetricasResumo(p) {
       <div class="metrica">
         <div class="metrica-label">Aderência</div>
         <div class="metrica-valor ${aderClasse}">${aderTexto}</div>
-        <div class="metrica-sub">soma dos desvios entre etapas</div>
+        <div class="metrica-sub">soma dos desvios dos marcos</div>
       </div>
     </div>
   `;
