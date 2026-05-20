@@ -41,7 +41,9 @@
       "op_liberada": {
         "previsto": "2026-05-25",
         "real": null,
-        "por": null
+        "por": null,
+        "real_ultima": null,
+        "n_parcelas": 0
       },
       "producao": {
         "previsto": "2026-08-06",
@@ -81,6 +83,114 @@
     "tem_cronograma": true
   },
   {
+    "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQALqRWTknnAdKqhPQ8K3RuLI=",
+    "subject": "RE: PEDIDO FECHADO VAREJO - QUEM DISSE BERENISSE -  FRIENDS",
+    "projeto": "FRIENDS",
+    "cliente": "QUEM DISSE BERENICE",
+    "comercial": "GLEICY MAIA DOS SANTOS",
+    "skus": [
+      {
+        "codigo": "11055289-0001",
+        "tipo": "FERT",
+        "descricao": "CARTAO PRESENTE ROSA FRIENDS QDB"
+      },
+      {
+        "codigo": "11055286-0001",
+        "tipo": "FERT",
+        "descricao": "TAG FRIENDS QDB"
+      },
+      {
+        "codigo": "2100082636",
+        "tipo": "HALB",
+        "descricao": "TAG FRIENDS QDB"
+      },
+      {
+        "codigo": "2100082637",
+        "tipo": "HALB",
+        "descricao": "APLIQUE FRIENDS QDB"
+      },
+      {
+        "codigo": "13021810-0001",
+        "tipo": "FERT",
+        "descricao": "SACL PAP NLF FSC®G FRIENDS26 QDB"
+      },
+      {
+        "codigo": "2400008287",
+        "tipo": "HALB",
+        "descricao": "FUNDO FSCM 235X087.5MM BCEA PCT/50"
+      },
+      {
+        "codigo": "2400009489",
+        "tipo": "HALB",
+        "descricao": "FIO CHATA FSCM - C47 - RS P239C"
+      },
+      {
+        "codigo": "11055292-0001",
+        "tipo": "FERT",
+        "descricao": "CX LUVA FSC®G FRIENDS QDB"
+      },
+      {
+        "codigo": "15005822-0001",
+        "tipo": "FERT",
+        "descricao": "CARTELA ADESIVA FRIENDS QDB"
+      }
+    ],
+    "marcos": {
+      "pedido_fechado": {
+        "previsto": "2026-05-14",
+        "real": "2026-05-14",
+        "por": "GLEICY MAIA DOS SANTOS"
+      },
+      "fert_criado": {
+        "previsto": "2026-05-15",
+        "real": "2026-05-15",
+        "por": "GIOVANNA FREITAS ALVES"
+      },
+      "op_liberada": {
+        "previsto": "2026-05-27",
+        "real": "2026-05-20",
+        "por": "leticia.santos@antilhas.com.br",
+        "real_ultima": null,
+        "n_parcelas": 1
+      },
+      "producao": {
+        "previsto": "2026-06-19",
+        "real": null,
+        "por": null
+      },
+      "data_vitrine": {
+        "previsto": "2026-07-17",
+        "real": null,
+        "por": null
+      }
+    },
+    "lead_times": {
+      "pedido_para_fert": {
+        "previsto": 1,
+        "real": 1,
+        "desvio": 0
+      },
+      "fert_para_op": {
+        "previsto": 12,
+        "real": 5,
+        "desvio": -7
+      },
+      "op_para_producao": {
+        "previsto": 23,
+        "real": null,
+        "desvio": null
+      },
+      "producao_para_vit": {
+        "previsto": 28,
+        "real": null,
+        "desvio": null
+      }
+    },
+    "status": "em_producao",
+    "responsavel_atual": "PCP/Fábrica",
+    "tem_cronograma": true
+  },
+  {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAMC-ScgVsj9Avp4vPeFxDLA=",
     "subject": "RE: PEDIDO FECHADO VAREJO - SEPHORA -  INSTITUCIONAL",
     "projeto": "ETIQ ADES VENDA PROIB",
@@ -107,7 +217,9 @@
       "op_liberada": {
         "previsto": null,
         "real": null,
-        "por": null
+        "por": null,
+        "real_ultima": null,
+        "n_parcelas": 0
       },
       "producao": {
         "previsto": null,
@@ -218,7 +330,9 @@
       "op_liberada": {
         "previsto": "2026-05-18",
         "real": "2026-05-18",
-        "por": "LETICIA JACQUELINE SANTOS"
+        "por": "LETICIA JACQUELINE SANTOS",
+        "real_ultima": "2026-05-19",
+        "n_parcelas": 3
       },
       "producao": {
         "previsto": "2026-06-15",
@@ -294,7 +408,9 @@
       "op_liberada": {
         "previsto": "2026-05-26",
         "real": null,
-        "por": null
+        "por": null,
+        "real_ultima": null,
+        "n_parcelas": 0
       },
       "producao": {
         "previsto": "2026-06-19",
@@ -320,112 +436,6 @@
       },
       "op_para_producao": {
         "previsto": 24,
-        "real": null,
-        "desvio": null
-      },
-      "producao_para_vit": {
-        "previsto": 28,
-        "real": null,
-        "desvio": null
-      }
-    },
-    "status": "aguardando_op",
-    "responsavel_atual": "Engenharia",
-    "tem_cronograma": true
-  },
-  {
-    "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQALqRWTknnAdKqhPQ8K3RuLI=",
-    "subject": "RE: PEDIDO FECHADO VAREJO - QUEM DISSE BERENISSE -  FRIENDS",
-    "projeto": "FRIENDS",
-    "cliente": "QUEM DISSE BERENICE",
-    "comercial": "GLEICY MAIA DOS SANTOS",
-    "skus": [
-      {
-        "codigo": "11055289-0001",
-        "tipo": "FERT",
-        "descricao": "CARTAO PRESENTE ROSA FRIENDS QDB"
-      },
-      {
-        "codigo": "11055286-0001",
-        "tipo": "FERT",
-        "descricao": "TAG FRIENDS QDB"
-      },
-      {
-        "codigo": "2100082636",
-        "tipo": "HALB",
-        "descricao": "TAG FRIENDS QDB"
-      },
-      {
-        "codigo": "2100082637",
-        "tipo": "HALB",
-        "descricao": "APLIQUE FRIENDS QDB"
-      },
-      {
-        "codigo": "13021810-0001",
-        "tipo": "FERT",
-        "descricao": "SACL PAP NLF FSC®G FRIENDS26 QDB"
-      },
-      {
-        "codigo": "2400008287",
-        "tipo": "HALB",
-        "descricao": "FUNDO FSCM 235X087.5MM BCEA PCT/50"
-      },
-      {
-        "codigo": "2400009489",
-        "tipo": "HALB",
-        "descricao": "FIO CHATA FSCM - C47 - RS P239C"
-      },
-      {
-        "codigo": "11055292-0001",
-        "tipo": "FERT",
-        "descricao": "CX LUVA FSC®G FRIENDS QDB"
-      },
-      {
-        "codigo": "15005822-0001",
-        "tipo": "FERT",
-        "descricao": "CARTELA ADESIVA FRIENDS QDB"
-      }
-    ],
-    "marcos": {
-      "pedido_fechado": {
-        "previsto": "2026-05-14",
-        "real": "2026-05-14",
-        "por": "GLEICY MAIA DOS SANTOS"
-      },
-      "fert_criado": {
-        "previsto": "2026-05-15",
-        "real": "2026-05-15",
-        "por": "GIOVANNA FREITAS ALVES"
-      },
-      "op_liberada": {
-        "previsto": "2026-05-27",
-        "real": null,
-        "por": null
-      },
-      "producao": {
-        "previsto": "2026-06-19",
-        "real": null,
-        "por": null
-      },
-      "data_vitrine": {
-        "previsto": "2026-07-17",
-        "real": null,
-        "por": null
-      }
-    },
-    "lead_times": {
-      "pedido_para_fert": {
-        "previsto": 1,
-        "real": 1,
-        "desvio": 0
-      },
-      "fert_para_op": {
-        "previsto": 12,
-        "real": null,
-        "desvio": null
-      },
-      "op_para_producao": {
-        "previsto": 23,
         "real": null,
         "desvio": null
       },
@@ -481,7 +491,9 @@
       "op_liberada": {
         "previsto": null,
         "real": "2026-05-19",
-        "por": "ariane.luz@antilhas.com.br"
+        "por": "ARIANE DO CARMO LUZ",
+        "real_ultima": "2026-05-19",
+        "n_parcelas": 2
       },
       "producao": {
         "previsto": null,
@@ -552,7 +564,9 @@
       "op_liberada": {
         "previsto": null,
         "real": "2026-05-19",
-        "por": "leticia.santos@antilhas.com.br"
+        "por": "leticia.santos@antilhas.com.br",
+        "real_ultima": null,
+        "n_parcelas": 1
       },
       "producao": {
         "previsto": null,
@@ -618,7 +632,9 @@
       "op_liberada": {
         "previsto": null,
         "real": null,
-        "por": null
+        "por": null,
+        "real_ultima": null,
+        "n_parcelas": 0
       },
       "producao": {
         "previsto": null,
@@ -684,7 +700,9 @@
       "op_liberada": {
         "previsto": null,
         "real": null,
-        "por": null
+        "por": null,
+        "real_ultima": null,
+        "n_parcelas": 0
       },
       "producao": {
         "previsto": null,
@@ -750,7 +768,9 @@
       "op_liberada": {
         "previsto": null,
         "real": null,
-        "por": null
+        "por": null,
+        "real_ultima": null,
+        "n_parcelas": 0
       },
       "producao": {
         "previsto": null,
@@ -831,7 +851,9 @@
       "op_liberada": {
         "previsto": null,
         "real": "2026-05-14",
-        "por": "LETICIA JACQUELINE SANTOS"
+        "por": "LETICIA JACQUELINE SANTOS",
+        "real_ultima": "2026-05-14",
+        "n_parcelas": 3
       },
       "producao": {
         "previsto": null,
@@ -902,7 +924,9 @@
       "op_liberada": {
         "previsto": null,
         "real": "2026-05-13",
-        "por": "ariane.luz@antilhas.com.br"
+        "por": "ariane.luz@antilhas.com.br",
+        "real_ultima": null,
+        "n_parcelas": 1
       },
       "producao": {
         "previsto": null,
@@ -1013,7 +1037,9 @@
       "op_liberada": {
         "previsto": null,
         "real": "2026-05-08",
-        "por": "leticia.santos@antilhas.com.br"
+        "por": "leticia.santos@antilhas.com.br",
+        "real_ultima": "2026-05-11",
+        "n_parcelas": 4
       },
       "producao": {
         "previsto": null,
@@ -1089,7 +1115,9 @@
       "op_liberada": {
         "previsto": null,
         "real": "2026-05-08",
-        "por": "LETICIA JACQUELINE SANTOS"
+        "por": "LETICIA JACQUELINE SANTOS",
+        "real_ultima": "2026-05-11",
+        "n_parcelas": 4
       },
       "producao": {
         "previsto": null,
@@ -1155,7 +1183,9 @@
       "op_liberada": {
         "previsto": null,
         "real": null,
-        "por": null
+        "por": null,
+        "real_ultima": null,
+        "n_parcelas": 0
       },
       "producao": {
         "previsto": null,
@@ -1221,7 +1251,9 @@
       "op_liberada": {
         "previsto": null,
         "real": "2026-05-13",
-        "por": "ariane.luz@antilhas.com.br"
+        "por": "ariane.luz@antilhas.com.br",
+        "real_ultima": null,
+        "n_parcelas": 1
       },
       "producao": {
         "previsto": null,
