@@ -552,58 +552,58 @@
     ],
     "marcos": {
       "pedido_fechado": {
-        "previsto": null,
+        "previsto": "2026-05-11",
         "real": "2026-05-12",
         "por": "GLEICY MAIA DOS SANTOS"
       },
       "fert_criado": {
-        "previsto": null,
+        "previsto": "2026-05-11",
         "real": "2026-05-13",
         "por": "GIOVANNA FREITAS ALVES"
       },
       "op_liberada": {
-        "previsto": null,
+        "previsto": "2026-05-12",
         "real": "2026-05-19",
-        "por": "leticia.santos@antilhas.com.br",
-        "real_ultima": null,
-        "n_parcelas": 1
+        "por": "LETICIA JACQUELINE SANTOS",
+        "real_ultima": "2026-05-19",
+        "n_parcelas": 2
       },
       "producao": {
-        "previsto": null,
+        "previsto": "2026-05-16",
         "real": null,
         "por": null
       },
       "data_vitrine": {
-        "previsto": null,
+        "previsto": "2026-05-18",
         "real": null,
         "por": null
       }
     },
     "lead_times": {
       "pedido_para_fert": {
-        "previsto": null,
+        "previsto": 0,
         "real": 1,
-        "desvio": null
+        "desvio": 1
       },
       "fert_para_op": {
-        "previsto": null,
+        "previsto": 1,
         "real": 6,
-        "desvio": null
+        "desvio": 5
       },
       "op_para_producao": {
-        "previsto": null,
+        "previsto": 4,
         "real": null,
         "desvio": null
       },
       "producao_para_vit": {
-        "previsto": null,
+        "previsto": 2,
         "real": null,
         "desvio": null
       }
     },
     "status": "concluido",
     "responsavel_atual": "-",
-    "tem_cronograma": false
+    "tem_cronograma": true
   },
   {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQACZ-QvwKK5dIiMdJF87xZM4=",
