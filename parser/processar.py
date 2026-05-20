@@ -177,9 +177,15 @@ def processar_thread(emails_da_thread: list, auditoria: dict = None) -> dict:
     def mais_antigo(eventos):
         return min(eventos, key=lambda e: e['data'])
 
+    def mais_recente(eventos):
+        return max(eventos, key=lambda e: e['data'])
+
     pedido_fechado_ev = mais_antigo(marcos_encontrados['pedido_fechado'])
     fert_criado_ev    = mais_antigo(marcos_encontrados['ferts_criados']) if 'ferts_criados' in marcos_encontrados else None
     op_liberada_ev    = mais_antigo(marcos_encontrados['ops_liberadas']) if 'ops_liberadas' in marcos_encontrados else None
+    # Para OP em parcelas: também guarda a ÚLTIMA liberação se houver mais de 1
+    ops_liberadas_lista = marcos_encontrados.get('ops_liberadas', [])
+    op_liberada_ultima_ev = mais_recente(ops_liberadas_lista) if len(ops_liberadas_lista) > 1 else None
 
     # ============================================================
     # 4.5. FILTRO DE DATA MÍNIMA (env: PEDIDO_FECHADO_DESDE)
@@ -237,6 +243,9 @@ def processar_thread(emails_da_thread: list, auditoria: dict = None) -> dict:
             'previsto': cronograma.get('op_liberada').isoformat() if cronograma.get('op_liberada') else None,
             'real': op_liberada_ev['data'].date().isoformat() if op_liberada_ev else None,
             'por': op_liberada_ev['remetente'] if op_liberada_ev else None,
+            # Quando OP é liberada em parcelas, guarda a última data também
+            'real_ultima': op_liberada_ultima_ev['data'].date().isoformat() if op_liberada_ultima_ev else None,
+            'n_parcelas': len(ops_liberadas_lista) if ops_liberadas_lista else 0,
         },
         'producao': {
             'previsto': cronograma.get('producao').isoformat() if cronograma.get('producao') else None,
