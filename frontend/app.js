@@ -46,6 +46,7 @@ const state = {
     status: '',
     responsavel: '',
     cliente: '',
+    cronograma: '',   // '' | 'com' | 'sem'
   },
   periodo: '90',       // 30 | 90 | 180 | 'mes_atual' | 'tudo'
   pedidoAberto: null,  // pedido sendo exibido no drawer
@@ -491,6 +492,8 @@ function aplicarFiltros(pedidos) {
     if (f.status && p.status !== f.status) return false;
     if (f.responsavel && p.responsavel_atual !== f.responsavel) return false;
     if (f.cliente && p.cliente !== f.cliente) return false;
+    if (f.cronograma === 'com' && !p.tem_cronograma) return false;
+    if (f.cronograma === 'sem' && p.tem_cronograma) return false;
     if (f.busca) {
       const q = f.busca.toLowerCase();
       const haystack = [
@@ -1374,12 +1377,17 @@ function ligarEventos() {
     state.filtros.cliente = e.target.value;
     renderizarTabela();
   });
+  $('#filtro-cronograma').addEventListener('change', e => {
+    state.filtros.cronograma = e.target.value;
+    renderizarTabela();
+  });
   $('#btn-limpar-filtros').addEventListener('click', () => {
-    state.filtros = { busca: '', status: '', responsavel: '', cliente: '' };
+    state.filtros = { busca: '', status: '', responsavel: '', cliente: '', cronograma: '' };
     $('#filtro-busca').value = '';
     $('#filtro-status').value = '';
     $('#filtro-responsavel').value = '';
     $('#filtro-cliente').value = '';
+    $('#filtro-cronograma').value = '';
     renderizarTabela();
   });
 
