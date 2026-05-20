@@ -1157,6 +1157,74 @@
     "tem_cronograma": false
   },
   {
+    "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAL4v_tbsCE4Ao0XQGW2cedY=",
+    "subject": "RES: PEDIDO FECHADO VAREJO - KOP PAIS 26",
+    "projeto": "KOP PAIS 26",
+    "cliente": "",
+    "comercial": "WESLEY MATHEUS DA SILVA",
+    "skus": [
+      {
+        "codigo": "11055267-0001",
+        "tipo": "FERT",
+        "descricao": "TAG PAIS26 KOP"
+      }
+    ],
+    "marcos": {
+      "pedido_fechado": {
+        "previsto": "2026-05-04",
+        "real": "2026-05-04",
+        "por": "WESLEY MATHEUS DA SILVA"
+      },
+      "fert_criado": {
+        "previsto": "2026-05-05",
+        "real": "2026-05-04",
+        "por": "GIOVANNA FREITAS ALVES"
+      },
+      "op_liberada": {
+        "previsto": "2026-05-22",
+        "real": "2026-05-13",
+        "por": "ARIANE DO CARMO LUZ",
+        "real_ultima": "2026-05-13",
+        "n_parcelas": 2
+      },
+      "producao": {
+        "previsto": "2026-06-16",
+        "real": null,
+        "por": null
+      },
+      "data_vitrine": {
+        "previsto": "2026-07-22",
+        "real": null,
+        "por": null
+      }
+    },
+    "lead_times": {
+      "pedido_para_fert": {
+        "previsto": 1,
+        "real": 0,
+        "desvio": -1
+      },
+      "fert_para_op": {
+        "previsto": 17,
+        "real": 9,
+        "desvio": -8
+      },
+      "op_para_producao": {
+        "previsto": 25,
+        "real": null,
+        "desvio": null
+      },
+      "producao_para_vit": {
+        "previsto": 36,
+        "real": null,
+        "desvio": null
+      }
+    },
+    "status": "em_producao",
+    "responsavel_atual": "PCP/Fábrica",
+    "tem_cronograma": true
+  },
+  {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQANYaA1Hw1dtDmEhqS4WEHnc=",
     "subject": "RE:  PEDIDO FECHADO VAREJO - BOTICÁRIO - SÃO JOÃO",
     "projeto": "SAO JOAO",
@@ -1223,73 +1291,5 @@
     "status": "concluido",
     "responsavel_atual": "-",
     "tem_cronograma": true
-  },
-  {
-    "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAL4v_tbsCE4Ao0XQGW2cedY=",
-    "subject": "RES: PEDIDO FECHADO VAREJO - KOP PAIS 26",
-    "projeto": "KOP PAIS 26",
-    "cliente": "",
-    "comercial": "WESLEY MATHEUS DA SILVA",
-    "skus": [
-      {
-        "codigo": "11055267-0001",
-        "tipo": "FERT",
-        "descricao": "TAG PAIS26 KOP"
-      }
-    ],
-    "marcos": {
-      "pedido_fechado": {
-        "previsto": null,
-        "real": "2026-05-04",
-        "por": "WESLEY MATHEUS DA SILVA"
-      },
-      "fert_criado": {
-        "previsto": null,
-        "real": "2026-05-04",
-        "por": "GIOVANNA FREITAS ALVES"
-      },
-      "op_liberada": {
-        "previsto": null,
-        "real": "2026-05-13",
-        "por": "ariane.luz@antilhas.com.br",
-        "real_ultima": null,
-        "n_parcelas": 1
-      },
-      "producao": {
-        "previsto": null,
-        "real": null,
-        "por": null
-      },
-      "data_vitrine": {
-        "previsto": null,
-        "real": null,
-        "por": null
-      }
-    },
-    "lead_times": {
-      "pedido_para_fert": {
-        "previsto": null,
-        "real": 0,
-        "desvio": null
-      },
-      "fert_para_op": {
-        "previsto": null,
-        "real": 9,
-        "desvio": null
-      },
-      "op_para_producao": {
-        "previsto": null,
-        "real": null,
-        "desvio": null
-      },
-      "producao_para_vit": {
-        "previsto": null,
-        "real": null,
-        "desvio": null
-      }
-    },
-    "status": "em_producao",
-    "responsavel_atual": "PCP/Fábrica",
-    "tem_cronograma": false
   }
 ]
