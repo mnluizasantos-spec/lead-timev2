@@ -893,10 +893,14 @@ function renderTimelineHorizontal(p) {
     }
 
     // Datas
+    const realUltima = m.key === 'op_liberada' ? dadosMarco.real_ultima : null;
+    const nParcelas = m.key === 'op_liberada' ? (dadosMarco.n_parcelas || 0) : 0;
     const datasHtml = `
       <div class="marco-datas">
         ${prev ? `prev ${fmtData(prev)}` : 'sem previsto'}
         ${real ? `<span class="data-real">início ${fmtData(real)}</span>` : ''}
+        ${realUltima && realUltima !== real ? `<span class="data-real">última ${fmtData(realUltima)}</span>` : ''}
+        ${nParcelas > 1 ? `<span class="data-extra">${nParcelas} parcelas</span>` : ''}
         ${m.key === 'producao' && dadosMarco.fim ? `<span class="data-real">fim ${fmtData(dadosMarco.fim)}</span>` : ''}
       </div>
     `;
