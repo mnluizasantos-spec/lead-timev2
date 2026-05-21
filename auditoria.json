@@ -1,7 +1,7 @@
 {
-  "gerado_em": "2026-05-20T18:03:38",
-  "total_emails": 134,
-  "total_threads": 28,
+  "gerado_em": "2026-05-21T10:01:00",
+  "total_emails": 139,
+  "total_threads": 31,
   "marcos_rejeitados": [
     {
       "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAMC-ScgVsj9Avp4vPeFxDLA=",
@@ -184,12 +184,24 @@
   "remetentes_desconhecidos": [],
   "reedicoes_ignoradas": [
     {
-      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAIdnd_ZA3WpLqHgN0hlWC5o=",
-      "subject": "REEDICAO PEDIDO FECHADO VAREJO - RENNER "
-    },
-    {
       "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQANIi5aRiZlxNmCecQacu5Sc=",
       "subject": "RES: PEDIDO FECHADO VAREJO - CRONOGRAMA — PEDIDO FECHADO VAREJO\t\t\t"
+    },
+    {
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQADebFY3w2YpNuH1COVzIaco=",
+      "subject": "REEDIÇÃO - PEDIDO FECHADO VAREJO - VIVARA / SACL PAP MAN FSC M VIVARA"
+    },
+    {
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQALgZ5MDsHMdCnCmPZUzigPM=",
+      "subject": "REEDIÇÃO - PEDIDO FECHADO VAREJO - SANTA LUZIA / SACOLA RAPPI - "
+    },
+    {
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAIzzHWcUzEhIieTsvcUOLBg=",
+      "subject": " REEDIÇÃO - PEDIDO FECHADO VAREJO - SACOLA G LE POSTICHE"
+    },
+    {
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAIdnd_ZA3WpLqHgN0hlWC5o=",
+      "subject": "REEDICAO PEDIDO FECHADO VAREJO - RENNER "
     },
     {
       "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQALTrcgAtfMtCuKVsL83dbAg=",
