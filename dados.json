@@ -84,7 +84,7 @@
   },
   {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQALqRWTknnAdKqhPQ8K3RuLI=",
-    "subject": "RE: PEDIDO FECHADO VAREJO - QUEM DISSE BERENISSE -  FRIENDS",
+    "subject": "RES: PEDIDO FECHADO VAREJO - QUEM DISSE BERENISSE -  FRIENDS",
     "projeto": "FRIENDS",
     "cliente": "QUEM DISSE BERENICE",
     "comercial": "GLEICY MAIA DOS SANTOS",
@@ -149,9 +149,9 @@
       "op_liberada": {
         "previsto": "2026-05-27",
         "real": "2026-05-20",
-        "por": "leticia.santos@antilhas.com.br",
-        "real_ultima": null,
-        "n_parcelas": 1
+        "por": "LETICIA JACQUELINE SANTOS",
+        "real_ultima": "2026-05-21",
+        "n_parcelas": 5
       },
       "producao": {
         "previsto": "2026-06-19",
@@ -188,6 +188,84 @@
     },
     "status": "em_producao",
     "responsavel_atual": "PCP/Fábrica",
+    "tem_cronograma": true
+  },
+  {
+    "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAHthAQbS0S1KqFEvTedtNyI=",
+    "subject": "RE: PEDIDO FECHADO VAREJO - QUEM DISSE BERENISSE - CAIXA PRESS KIT FRIENDS",
+    "projeto": "CAIXA PRESS KIT FRIENDS",
+    "cliente": "QUEM DISSE BERENICE",
+    "comercial": "GLEICY MAIA DOS SANTOS",
+    "skus": [
+      {
+        "codigo": "11055271-0001",
+        "tipo": "FERT",
+        "descricao": "KIT CX TPA FDO FSC® PRESS FRIENDS QDB"
+      },
+      {
+        "codigo": "2100082620",
+        "tipo": "HALB",
+        "descricao": "KIT CX TPA FSC® PRESS FRIENDS QDB"
+      },
+      {
+        "codigo": "2100082621",
+        "tipo": "HALB",
+        "descricao": "KIT CX FDO FSC® PRESS FRIENDS QDB"
+      }
+    ],
+    "marcos": {
+      "pedido_fechado": {
+        "previsto": "2026-05-14",
+        "real": "2026-05-14",
+        "por": "GLEICY MAIA DOS SANTOS"
+      },
+      "fert_criado": {
+        "previsto": "2026-05-15",
+        "real": "2026-05-15",
+        "por": "GIOVANNA FREITAS ALVES"
+      },
+      "op_liberada": {
+        "previsto": "2026-05-26",
+        "real": null,
+        "por": null,
+        "real_ultima": null,
+        "n_parcelas": 0
+      },
+      "producao": {
+        "previsto": "2026-06-19",
+        "real": null,
+        "por": null
+      },
+      "data_vitrine": {
+        "previsto": "2026-07-17",
+        "real": null,
+        "por": null
+      }
+    },
+    "lead_times": {
+      "pedido_para_fert": {
+        "previsto": 1,
+        "real": 1,
+        "desvio": 0
+      },
+      "fert_para_op": {
+        "previsto": 11,
+        "real": null,
+        "desvio": null
+      },
+      "op_para_producao": {
+        "previsto": 24,
+        "real": null,
+        "desvio": null
+      },
+      "producao_para_vit": {
+        "previsto": 28,
+        "real": null,
+        "desvio": null
+      }
+    },
+    "status": "aguardando_op",
+    "responsavel_atual": "Engenharia",
     "tem_cronograma": true
   },
   {
@@ -369,84 +447,6 @@
     },
     "status": "em_producao",
     "responsavel_atual": "PCP/Fábrica",
-    "tem_cronograma": true
-  },
-  {
-    "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAHthAQbS0S1KqFEvTedtNyI=",
-    "subject": "RE: PEDIDO FECHADO VAREJO - QUEM DISSE BERENISSE - CAIXA PRESS KIT FRIENDS",
-    "projeto": "CAIXA PRESS KIT FRIENDS",
-    "cliente": "QUEM DISSE BERENICE",
-    "comercial": "GLEICY MAIA DOS SANTOS",
-    "skus": [
-      {
-        "codigo": "11055271-0001",
-        "tipo": "FERT",
-        "descricao": "KIT CX TPA FDO FSC® PRESS FRIENDS QDB"
-      },
-      {
-        "codigo": "2100082620",
-        "tipo": "HALB",
-        "descricao": "KIT CX TPA FSC® PRESS FRIENDS QDB"
-      },
-      {
-        "codigo": "2100082621",
-        "tipo": "HALB",
-        "descricao": "KIT CX FDO FSC® PRESS FRIENDS QDB"
-      }
-    ],
-    "marcos": {
-      "pedido_fechado": {
-        "previsto": "2026-05-14",
-        "real": "2026-05-14",
-        "por": "GLEICY MAIA DOS SANTOS"
-      },
-      "fert_criado": {
-        "previsto": "2026-05-15",
-        "real": "2026-05-15",
-        "por": "GIOVANNA FREITAS ALVES"
-      },
-      "op_liberada": {
-        "previsto": "2026-05-26",
-        "real": null,
-        "por": null,
-        "real_ultima": null,
-        "n_parcelas": 0
-      },
-      "producao": {
-        "previsto": "2026-06-19",
-        "real": null,
-        "por": null
-      },
-      "data_vitrine": {
-        "previsto": "2026-07-17",
-        "real": null,
-        "por": null
-      }
-    },
-    "lead_times": {
-      "pedido_para_fert": {
-        "previsto": 1,
-        "real": 1,
-        "desvio": 0
-      },
-      "fert_para_op": {
-        "previsto": 11,
-        "real": null,
-        "desvio": null
-      },
-      "op_para_producao": {
-        "previsto": 24,
-        "real": null,
-        "desvio": null
-      },
-      "producao_para_vit": {
-        "previsto": 28,
-        "real": null,
-        "desvio": null
-      }
-    },
-    "status": "aguardando_op",
-    "responsavel_atual": "Engenharia",
     "tem_cronograma": true
   },
   {

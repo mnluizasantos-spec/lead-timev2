@@ -1,8 +1,20 @@
 {
-  "gerado_em": "2026-05-21T13:44:25",
-  "total_emails": 139,
+  "gerado_em": "2026-05-22T10:01:07",
+  "total_emails": 143,
   "total_threads": 31,
   "marcos_rejeitados": [
+    {
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQALqRWTknnAdKqhPQ8K3RuLI=",
+      "tipo_detectado": "ferts_criados",
+      "remetente": "laborat@antilhas.com.br",
+      "motivo": "papel_remetente=desconhecido, esperava=engenharia"
+    },
+    {
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAHthAQbS0S1KqFEvTedtNyI=",
+      "tipo_detectado": "ferts_criados",
+      "remetente": "laborat@antilhas.com.br",
+      "motivo": "papel_remetente=desconhecido, esperava=engenharia"
+    },
     {
       "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAMC-ScgVsj9Avp4vPeFxDLA=",
       "tipo_detectado": "ferts_criados",
