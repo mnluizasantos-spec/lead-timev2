@@ -1,5 +1,67 @@
 [
   {
+    "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAHmd4ElU3FVKoQ_C9mgVhDA=",
+    "subject": "PEDIDO FECHADO VAREJO - FIT - MRS ROUPAS",
+    "projeto": "FIT - MRS ROUPAS",
+    "cliente": "",
+    "comercial": "eduarda.santos@antilhas.com.br",
+    "skus": [],
+    "marcos": {
+      "pedido_fechado": {
+        "previsto": "2026-05-22",
+        "real": "2026-05-22",
+        "por": "eduarda.santos@antilhas.com.br"
+      },
+      "fert_criado": {
+        "previsto": "2026-05-25",
+        "real": null,
+        "por": null
+      },
+      "op_liberada": {
+        "previsto": "2026-05-25",
+        "real": null,
+        "por": null,
+        "real_ultima": null,
+        "n_parcelas": 0
+      },
+      "producao": {
+        "previsto": "2026-06-26",
+        "real": null,
+        "por": null
+      },
+      "data_vitrine": {
+        "previsto": "2026-06-15",
+        "real": null,
+        "por": null
+      }
+    },
+    "lead_times": {
+      "pedido_para_fert": {
+        "previsto": 3,
+        "real": null,
+        "desvio": null
+      },
+      "fert_para_op": {
+        "previsto": 0,
+        "real": null,
+        "desvio": null
+      },
+      "op_para_producao": {
+        "previsto": 32,
+        "real": null,
+        "desvio": null
+      },
+      "producao_para_vit": {
+        "previsto": -11,
+        "real": null,
+        "desvio": null
+      }
+    },
+    "status": "aguardando_fert",
+    "responsavel_atual": "Engenharia",
+    "tem_cronograma": true
+  },
+  {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAL-i64pXTI9Mj4KgCNYgc1o=",
     "subject": "RES: PEDIDO FECHADO VAREJO - RENNER AGOSTO",
     "projeto": "AGOSTO",
@@ -36,14 +98,14 @@
       "fert_criado": {
         "previsto": "2026-05-19",
         "real": "2026-05-19",
-        "por": "giovanna.alves@antilhas.com.br"
+        "por": "GIOVANNA FREITAS ALVES"
       },
       "op_liberada": {
         "previsto": "2026-05-25",
-        "real": null,
-        "por": null,
+        "real": "2026-05-22",
+        "por": "leticia.santos@antilhas.com.br",
         "real_ultima": null,
-        "n_parcelas": 0
+        "n_parcelas": 1
       },
       "producao": {
         "previsto": "2026-08-06",
@@ -64,8 +126,8 @@
       },
       "fert_para_op": {
         "previsto": 6,
-        "real": null,
-        "desvio": null
+        "real": 3,
+        "desvio": -3
       },
       "op_para_producao": {
         "previsto": 73,
@@ -78,8 +140,86 @@
         "desvio": null
       }
     },
-    "status": "aguardando_op",
-    "responsavel_atual": "Engenharia",
+    "status": "em_producao",
+    "responsavel_atual": "PCP/Fábrica",
+    "tem_cronograma": true
+  },
+  {
+    "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAHthAQbS0S1KqFEvTedtNyI=",
+    "subject": "RES: PEDIDO FECHADO VAREJO - QUEM DISSE BERENISSE - CAIXA PRESS KIT FRIENDS",
+    "projeto": "CAIXA PRESS KIT FRIENDS",
+    "cliente": "QUEM DISSE BERENICE",
+    "comercial": "GLEICY MAIA DOS SANTOS",
+    "skus": [
+      {
+        "codigo": "11055271-0001",
+        "tipo": "FERT",
+        "descricao": "KIT CX TPA FDO FSC® PRESS FRIENDS QDB"
+      },
+      {
+        "codigo": "2100082620",
+        "tipo": "HALB",
+        "descricao": "KIT CX TPA FSC® PRESS FRIENDS QDB"
+      },
+      {
+        "codigo": "2100082621",
+        "tipo": "HALB",
+        "descricao": "KIT CX FDO FSC® PRESS FRIENDS QDB"
+      }
+    ],
+    "marcos": {
+      "pedido_fechado": {
+        "previsto": "2026-05-14",
+        "real": "2026-05-14",
+        "por": "GLEICY MAIA DOS SANTOS"
+      },
+      "fert_criado": {
+        "previsto": "2026-05-15",
+        "real": "2026-05-15",
+        "por": "GIOVANNA FREITAS ALVES"
+      },
+      "op_liberada": {
+        "previsto": "2026-05-26",
+        "real": "2026-05-22",
+        "por": "leticia.santos@antilhas.com.br",
+        "real_ultima": null,
+        "n_parcelas": 1
+      },
+      "producao": {
+        "previsto": "2026-06-19",
+        "real": null,
+        "por": null
+      },
+      "data_vitrine": {
+        "previsto": "2026-07-17",
+        "real": null,
+        "por": null
+      }
+    },
+    "lead_times": {
+      "pedido_para_fert": {
+        "previsto": 1,
+        "real": 1,
+        "desvio": 0
+      },
+      "fert_para_op": {
+        "previsto": 11,
+        "real": 7,
+        "desvio": -4
+      },
+      "op_para_producao": {
+        "previsto": 24,
+        "real": null,
+        "desvio": null
+      },
+      "producao_para_vit": {
+        "previsto": 28,
+        "real": null,
+        "desvio": null
+      }
+    },
+    "status": "em_producao",
+    "responsavel_atual": "PCP/Fábrica",
     "tem_cronograma": true
   },
   {
@@ -188,84 +328,6 @@
     },
     "status": "em_producao",
     "responsavel_atual": "PCP/Fábrica",
-    "tem_cronograma": true
-  },
-  {
-    "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAHthAQbS0S1KqFEvTedtNyI=",
-    "subject": "RE: PEDIDO FECHADO VAREJO - QUEM DISSE BERENISSE - CAIXA PRESS KIT FRIENDS",
-    "projeto": "CAIXA PRESS KIT FRIENDS",
-    "cliente": "QUEM DISSE BERENICE",
-    "comercial": "GLEICY MAIA DOS SANTOS",
-    "skus": [
-      {
-        "codigo": "11055271-0001",
-        "tipo": "FERT",
-        "descricao": "KIT CX TPA FDO FSC® PRESS FRIENDS QDB"
-      },
-      {
-        "codigo": "2100082620",
-        "tipo": "HALB",
-        "descricao": "KIT CX TPA FSC® PRESS FRIENDS QDB"
-      },
-      {
-        "codigo": "2100082621",
-        "tipo": "HALB",
-        "descricao": "KIT CX FDO FSC® PRESS FRIENDS QDB"
-      }
-    ],
-    "marcos": {
-      "pedido_fechado": {
-        "previsto": "2026-05-14",
-        "real": "2026-05-14",
-        "por": "GLEICY MAIA DOS SANTOS"
-      },
-      "fert_criado": {
-        "previsto": "2026-05-15",
-        "real": "2026-05-15",
-        "por": "GIOVANNA FREITAS ALVES"
-      },
-      "op_liberada": {
-        "previsto": "2026-05-26",
-        "real": null,
-        "por": null,
-        "real_ultima": null,
-        "n_parcelas": 0
-      },
-      "producao": {
-        "previsto": "2026-06-19",
-        "real": null,
-        "por": null
-      },
-      "data_vitrine": {
-        "previsto": "2026-07-17",
-        "real": null,
-        "por": null
-      }
-    },
-    "lead_times": {
-      "pedido_para_fert": {
-        "previsto": 1,
-        "real": 1,
-        "desvio": 0
-      },
-      "fert_para_op": {
-        "previsto": 11,
-        "real": null,
-        "desvio": null
-      },
-      "op_para_producao": {
-        "previsto": 24,
-        "real": null,
-        "desvio": null
-      },
-      "producao_para_vit": {
-        "previsto": 28,
-        "real": null,
-        "desvio": null
-      }
-    },
-    "status": "aguardando_op",
-    "responsavel_atual": "Engenharia",
     "tem_cronograma": true
   },
   {
