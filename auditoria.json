@@ -1,7 +1,7 @@
 {
-  "gerado_em": "2026-05-25T13:45:35",
-  "total_emails": 146,
-  "total_threads": 32,
+  "gerado_em": "2026-05-26T10:00:59",
+  "total_emails": 151,
+  "total_threads": 33,
   "marcos_rejeitados": [
     {
       "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAHthAQbS0S1KqFEvTedtNyI=",
@@ -195,6 +195,10 @@
   ],
   "remetentes_desconhecidos": [],
   "reedicoes_ignoradas": [
+    {
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAJcWrWlQ4aNAmLgXe3FhCww=",
+      "subject": "REEDIÇÃO - PEDIDO FECHADO VAREJO - SANTA LUZIA / SACOLA INSTITUCIONAL  - "
+    },
     {
       "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQANIi5aRiZlxNmCecQacu5Sc=",
       "subject": "RES: PEDIDO FECHADO VAREJO - CRONOGRAMA — PEDIDO FECHADO VAREJO\t\t\t"

@@ -1,21 +1,27 @@
 [
   {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAHmd4ElU3FVKoQ_C9mgVhDA=",
-    "subject": "PEDIDO FECHADO VAREJO - FIT - MRS ROUPAS",
+    "subject": "RES: PEDIDO FECHADO VAREJO - FIT - MRS ROUPAS",
     "projeto": "FIT - MRS ROUPAS",
     "cliente": "",
-    "comercial": "eduarda.santos@antilhas.com.br",
-    "skus": [],
+    "comercial": "EDUARDA FERREIRA DOS SANTOS",
+    "skus": [
+      {
+        "codigo": "15005831-0001",
+        "tipo": "FERT",
+        "descricao": "ETIQ ADES RL/500 INST26 FIT"
+      }
+    ],
     "marcos": {
       "pedido_fechado": {
         "previsto": "2026-05-22",
         "real": "2026-05-22",
-        "por": "eduarda.santos@antilhas.com.br"
+        "por": "EDUARDA FERREIRA DOS SANTOS"
       },
       "fert_criado": {
         "previsto": "2026-05-25",
-        "real": null,
-        "por": null
+        "real": "2026-05-25",
+        "por": "giovanna.alves@antilhas.com.br"
       },
       "op_liberada": {
         "previsto": "2026-05-25",
@@ -38,8 +44,8 @@
     "lead_times": {
       "pedido_para_fert": {
         "previsto": 3,
-        "real": null,
-        "desvio": null
+        "real": 3,
+        "desvio": 0
       },
       "fert_para_op": {
         "previsto": 0,
@@ -57,14 +63,14 @@
         "desvio": null
       }
     },
-    "status": "aguardando_fert",
-    "responsavel_atual": "Engenharia",
+    "status": "concluido",
+    "responsavel_atual": "-",
     "tem_cronograma": true
   },
   {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAL-i64pXTI9Mj4KgCNYgc1o=",
-    "subject": "RES: PEDIDO FECHADO VAREJO - RENNER AGOSTO",
-    "projeto": "AGOSTO",
+    "subject": "RES: BF_2256  PEDIDO FECHADO VAREJO - RENNER AGOSTO",
+    "projeto": "BF_2256 AGOSTO",
     "cliente": "RENNER",
     "comercial": "WESLEY MATHEUS DA SILVA",
     "skus": [
@@ -91,29 +97,29 @@
     ],
     "marcos": {
       "pedido_fechado": {
-        "previsto": "2026-05-18",
+        "previsto": "2026-05-25",
         "real": "2026-05-18",
         "por": "WESLEY MATHEUS DA SILVA"
       },
       "fert_criado": {
-        "previsto": "2026-05-19",
+        "previsto": "2026-05-26",
         "real": "2026-05-19",
         "por": "GIOVANNA FREITAS ALVES"
       },
       "op_liberada": {
-        "previsto": "2026-05-25",
+        "previsto": "2026-05-29",
         "real": "2026-05-22",
-        "por": "leticia.santos@antilhas.com.br",
-        "real_ultima": null,
-        "n_parcelas": 1
+        "por": "LETICIA JACQUELINE SANTOS",
+        "real_ultima": "2026-05-25",
+        "n_parcelas": 3
       },
       "producao": {
-        "previsto": "2026-08-06",
+        "previsto": "2026-08-13",
         "real": null,
         "por": null
       },
       "data_vitrine": {
-        "previsto": "2026-08-10",
+        "previsto": "2026-08-17",
         "real": null,
         "por": null
       }
@@ -125,12 +131,12 @@
         "desvio": 0
       },
       "fert_para_op": {
-        "previsto": 6,
+        "previsto": 3,
         "real": 3,
-        "desvio": -3
+        "desvio": 0
       },
       "op_para_producao": {
-        "previsto": 73,
+        "previsto": 76,
         "real": null,
         "desvio": null
       },
