@@ -1,8 +1,44 @@
 {
-  "gerado_em": "2026-05-26T13:27:01",
-  "total_emails": 151,
+  "gerado_em": "2026-05-27T10:01:08",
+  "total_emails": 157,
   "total_threads": 33,
   "marcos_rejeitados": [
+    {
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAG1PIdDZ3fhGlBsKXkMg0PE=",
+      "tipo_detectado": "ops_liberadas",
+      "remetente": "GLEICY MAIA DOS SANTOS",
+      "motivo": "papel_remetente=comercial, esperava=engenharia"
+    },
+    {
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAG1PIdDZ3fhGlBsKXkMg0PE=",
+      "tipo_detectado": "ferts_criados",
+      "remetente": "MATHEUS GARCIA HENRIQUES",
+      "motivo": "papel_remetente=excluido, esperava=engenharia"
+    },
+    {
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAG1PIdDZ3fhGlBsKXkMg0PE=",
+      "tipo_detectado": "ops_liberadas",
+      "remetente": "gleicy.maia@antilhas.com.br",
+      "motivo": "papel_remetente=comercial, esperava=engenharia"
+    },
+    {
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAG1PIdDZ3fhGlBsKXkMg0PE=",
+      "tipo_detectado": "ferts_criados",
+      "remetente": "MATHEUS GARCIA HENRIQUES",
+      "motivo": "papel_remetente=excluido, esperava=engenharia"
+    },
+    {
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAG1PIdDZ3fhGlBsKXkMg0PE=",
+      "tipo_detectado": "ferts_criados",
+      "remetente": "matheus.garcia@antilhas.com.br",
+      "motivo": "papel_remetente=excluido, esperava=engenharia"
+    },
+    {
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAHthAQbS0S1KqFEvTedtNyI=",
+      "tipo_detectado": "ops_liberadas",
+      "remetente": "gleicy.maia@antilhas.com.br",
+      "motivo": "papel_remetente=comercial, esperava=engenharia"
+    },
     {
       "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAHthAQbS0S1KqFEvTedtNyI=",
       "tipo_detectado": "ferts_criados",
