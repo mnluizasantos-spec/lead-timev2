@@ -819,7 +819,16 @@
       {
         "codigo": "13021811-0001",
         "tipo": "FERT",
-        "descricao": "SACL PAP AUT FSC® FF SHOP IBIRAPUERA"
+        "descricao": "SACL PAP AUT FSC® FF SHOP IBIRAPUERA",
+        "producao": {
+          "inicio": "2026-05-26",
+          "fim": "2026-05-26",
+          "n_apontamentos": 1,
+          "deptos": [
+            "CAJAMAR"
+          ],
+          "qtd": 10000
+        }
       }
     ],
     "marcos": {
@@ -842,8 +851,9 @@
       },
       "producao": {
         "previsto": null,
-        "real": null,
-        "por": null
+        "real": "2026-05-26",
+        "por": null,
+        "fim": "2026-05-26"
       },
       "data_vitrine": {
         "previsto": null,
@@ -876,6 +886,20 @@
     "status": "cancelado",
     "responsavel_atual": "-",
     "tem_cronograma": false,
+    "producao_detalhe": {
+      "busca_por": "fert",
+      "codigos_encontrados": [
+        "13021811-0001"
+      ],
+      "total_apontamentos": 1,
+      "primeira_data": "2026-05-26",
+      "ultima_data": "2026-05-26",
+      "deptos": [
+        "CAJAMAR"
+      ],
+      "qtd_total": 10000,
+      "dias_desde_ultima": 1
+    },
     "cancelado_info": {
       "motivo": "cliente trocou arte",
       "por": "PCP",
