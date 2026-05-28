@@ -1,7 +1,7 @@
 {
-  "gerado_em": "2026-05-27T13:58:35",
-  "total_emails": 157,
-  "total_threads": 33,
+  "gerado_em": "2026-05-28T10:01:06",
+  "total_emails": 159,
+  "total_threads": 35,
   "marcos_rejeitados": [
     {
       "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAG1PIdDZ3fhGlBsKXkMg0PE=",
@@ -222,6 +222,11 @@
   ],
   "threads_sem_pedido_fechado": [
     {
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQALCQK96aMRdCjUUWOONpbV8=",
+      "subject": "PEDIDO FECHADO VAREJO - GRUPO DE E_MAIL",
+      "marcos_que_tem": []
+    },
+    {
       "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQACBmEg54ipZPifPXcH85ijU=",
       "subject": "RES: PEDIDO FECHADO VAREJO - HAVAIANAS COLLAB VAREJO",
       "marcos_que_tem": [
@@ -231,6 +236,10 @@
   ],
   "remetentes_desconhecidos": [],
   "reedicoes_ignoradas": [
+    {
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAMVxdys3z5JBpycGBVGDdes=",
+      "subject": "ENC: REEDIÇÃO PEDIDO FECHADO VAREJO -INSTUCIONAL -  BROKSFIELD DONNA"
+    },
     {
       "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAJcWrWlQ4aNAmLgXe3FhCww=",
       "subject": "REEDIÇÃO - PEDIDO FECHADO VAREJO - SANTA LUZIA / SACOLA INSTITUCIONAL  - "
