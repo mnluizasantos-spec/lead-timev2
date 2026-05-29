@@ -1,8 +1,8 @@
 {
   "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAFPoDadlAmFDodm5jJRmoQo=": {
-    "status_manual": "cancelado",
-    "motivo": "cliente trocou arte",
+    "status_manual": "oculto",
+    "motivo": null,
     "por": "PCP",
-    "data": "2026-05-19"
+    "data": "2026-05-29"
   }
 }
