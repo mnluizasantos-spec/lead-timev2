@@ -151,6 +151,74 @@
     "tem_cronograma": true
   },
   {
+    "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAMC-ScgVsj9Avp4vPeFxDLA=",
+    "subject": "RE: PEDIDO FECHADO VAREJO - SEPHORA -  INSTITUCIONAL",
+    "projeto": "ETIQ ADES VENDA PROIB",
+    "cliente": "SEPHORA",
+    "comercial": "WESLEY MATHEUS DA SILVA",
+    "skus": [
+      {
+        "codigo": "15005830-0001",
+        "tipo": "FERT",
+        "descricao": "ETIQ ADES PCT/2.400 VENDA PROIB SEPHORA"
+      }
+    ],
+    "marcos": {
+      "pedido_fechado": {
+        "previsto": null,
+        "real": "2026-05-14",
+        "por": "WESLEY MATHEUS DA SILVA"
+      },
+      "fert_criado": {
+        "previsto": null,
+        "real": "2026-05-15",
+        "por": "GIOVANNA FREITAS ALVES"
+      },
+      "op_liberada": {
+        "previsto": null,
+        "real": null,
+        "por": null,
+        "real_ultima": null,
+        "n_parcelas": 0
+      },
+      "producao": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      },
+      "data_vitrine": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      }
+    },
+    "lead_times": {
+      "pedido_para_fert": {
+        "previsto": null,
+        "real": 1,
+        "desvio": null
+      },
+      "fert_para_op": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      },
+      "op_para_producao": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      },
+      "producao_para_vit": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      }
+    },
+    "status": "concluido",
+    "responsavel_atual": "-",
+    "tem_cronograma": false
+  },
+  {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAHthAQbS0S1KqFEvTedtNyI=",
     "subject": "RE: PEDIDO FECHADO VAREJO - QUEM DISSE BERENISSE - CAIXA PRESS KIT FRIENDS",
     "projeto": "CAIXA PRESS KIT FRIENDS",
@@ -335,74 +403,6 @@
     "status": "em_producao",
     "responsavel_atual": "PCP/Fábrica",
     "tem_cronograma": true
-  },
-  {
-    "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAMC-ScgVsj9Avp4vPeFxDLA=",
-    "subject": "RE: PEDIDO FECHADO VAREJO - SEPHORA -  INSTITUCIONAL",
-    "projeto": "ETIQ ADES VENDA PROIB",
-    "cliente": "SEPHORA",
-    "comercial": "WESLEY MATHEUS DA SILVA",
-    "skus": [
-      {
-        "codigo": "15005830-0001",
-        "tipo": "FERT",
-        "descricao": "ETIQ ADES PCT/2.400 VENDA PROIB SEPHORA"
-      }
-    ],
-    "marcos": {
-      "pedido_fechado": {
-        "previsto": null,
-        "real": "2026-05-14",
-        "por": "WESLEY MATHEUS DA SILVA"
-      },
-      "fert_criado": {
-        "previsto": null,
-        "real": "2026-05-15",
-        "por": "GIOVANNA FREITAS ALVES"
-      },
-      "op_liberada": {
-        "previsto": null,
-        "real": null,
-        "por": null,
-        "real_ultima": null,
-        "n_parcelas": 0
-      },
-      "producao": {
-        "previsto": null,
-        "real": null,
-        "por": null
-      },
-      "data_vitrine": {
-        "previsto": null,
-        "real": null,
-        "por": null
-      }
-    },
-    "lead_times": {
-      "pedido_para_fert": {
-        "previsto": null,
-        "real": 1,
-        "desvio": null
-      },
-      "fert_para_op": {
-        "previsto": null,
-        "real": null,
-        "desvio": null
-      },
-      "op_para_producao": {
-        "previsto": null,
-        "real": null,
-        "desvio": null
-      },
-      "producao_para_vit": {
-        "previsto": null,
-        "real": null,
-        "desvio": null
-      }
-    },
-    "status": "concluido",
-    "responsavel_atual": "-",
-    "tem_cronograma": false
   },
   {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAOelOACkG_dGj0ov3scWcxg=",
@@ -898,7 +898,7 @@
         "CAJAMAR"
       ],
       "qtd_total": 10000,
-      "dias_desde_ultima": 2
+      "dias_desde_ultima": 3
     },
     "cancelado_info": {
       "motivo": "cliente trocou arte",
@@ -1249,6 +1249,74 @@
     "tem_cronograma": false
   },
   {
+    "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQANYaA1Hw1dtDmEhqS4WEHnc=",
+    "subject": "Resposta automática: PEDIDO FECHADO VAREJO - BOTICÁRIO - SÃO JOÃO ",
+    "projeto": "RESPOSTA AUTOMATICA: SAO JOAO",
+    "cliente": "BOTICARIO",
+    "comercial": "GLEICY MAIA DOS SANTOS",
+    "skus": [
+      {
+        "codigo": "15005820-0001",
+        "tipo": "FERT",
+        "descricao": "98134 CARTELA ADES SAO JOAO26 BOT"
+      }
+    ],
+    "marcos": {
+      "pedido_fechado": {
+        "previsto": "2026-05-28",
+        "real": "2026-05-04",
+        "por": "GLEICY MAIA DOS SANTOS"
+      },
+      "fert_criado": {
+        "previsto": "2026-05-28",
+        "real": "2026-05-04",
+        "por": "giovanna.alves@antilhas.com.br"
+      },
+      "op_liberada": {
+        "previsto": "2026-06-01",
+        "real": null,
+        "por": null,
+        "real_ultima": null,
+        "n_parcelas": 0
+      },
+      "producao": {
+        "previsto": null,
+        "real": null,
+        "por": null
+      },
+      "data_vitrine": {
+        "previsto": "2026-06-12",
+        "real": null,
+        "por": null
+      }
+    },
+    "lead_times": {
+      "pedido_para_fert": {
+        "previsto": 0,
+        "real": 0,
+        "desvio": 0
+      },
+      "fert_para_op": {
+        "previsto": 4,
+        "real": null,
+        "desvio": null
+      },
+      "op_para_producao": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      },
+      "producao_para_vit": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      }
+    },
+    "status": "concluido",
+    "responsavel_atual": "-",
+    "tem_cronograma": true
+  },
+  {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAL4v_tbsCE4Ao0XQGW2cedY=",
     "subject": "RES: PEDIDO FECHADO VAREJO - KOP PAIS 26",
     "projeto": "KOP PAIS 26",
@@ -1314,74 +1382,6 @@
     },
     "status": "em_producao",
     "responsavel_atual": "PCP/Fábrica",
-    "tem_cronograma": true
-  },
-  {
-    "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQANYaA1Hw1dtDmEhqS4WEHnc=",
-    "subject": "RE:  PEDIDO FECHADO VAREJO - BOTICÁRIO - SÃO JOÃO",
-    "projeto": "SAO JOAO",
-    "cliente": "BOTICARIO",
-    "comercial": "GLEICY MAIA DOS SANTOS",
-    "skus": [
-      {
-        "codigo": "15005820-0001",
-        "tipo": "FERT",
-        "descricao": "98134 CARTELA ADES SAO JOAO26 BOT"
-      }
-    ],
-    "marcos": {
-      "pedido_fechado": {
-        "previsto": "2026-05-04",
-        "real": "2026-05-04",
-        "por": "GLEICY MAIA DOS SANTOS"
-      },
-      "fert_criado": {
-        "previsto": "2026-05-04",
-        "real": "2026-05-04",
-        "por": "giovanna.alves@antilhas.com.br"
-      },
-      "op_liberada": {
-        "previsto": null,
-        "real": null,
-        "por": null,
-        "real_ultima": null,
-        "n_parcelas": 0
-      },
-      "producao": {
-        "previsto": null,
-        "real": null,
-        "por": null
-      },
-      "data_vitrine": {
-        "previsto": "2026-06-13",
-        "real": null,
-        "por": null
-      }
-    },
-    "lead_times": {
-      "pedido_para_fert": {
-        "previsto": 0,
-        "real": 0,
-        "desvio": 0
-      },
-      "fert_para_op": {
-        "previsto": null,
-        "real": null,
-        "desvio": null
-      },
-      "op_para_producao": {
-        "previsto": null,
-        "real": null,
-        "desvio": null
-      },
-      "producao_para_vit": {
-        "previsto": null,
-        "real": null,
-        "desvio": null
-      }
-    },
-    "status": "concluido",
-    "responsavel_atual": "-",
     "tem_cronograma": true
   }
 ]
