@@ -883,8 +883,8 @@
         "desvio": null
       }
     },
-    "status": "cancelado",
-    "responsavel_atual": "-",
+    "status": "em_producao",
+    "responsavel_atual": "PCP/Fábrica",
     "tem_cronograma": false,
     "producao_detalhe": {
       "busca_por": "fert",
@@ -900,10 +900,10 @@
       "qtd_total": 10000,
       "dias_desde_ultima": 3
     },
-    "cancelado_info": {
-      "motivo": "cliente trocou arte",
+    "oculto": true,
+    "oculto_info": {
       "por": "PCP",
-      "data": "2026-05-19"
+      "data": "2026-05-29"
     }
   },
   {
