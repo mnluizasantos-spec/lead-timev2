@@ -152,7 +152,7 @@
   },
   {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAMC-ScgVsj9Avp4vPeFxDLA=",
-    "subject": "RE: PEDIDO FECHADO VAREJO - SEPHORA -  INSTITUCIONAL",
+    "subject": "RES: PEDIDO FECHADO VAREJO - SEPHORA -  INSTITUCIONAL",
     "projeto": "ETIQ ADES VENDA PROIB",
     "cliente": "SEPHORA",
     "comercial": "WESLEY MATHEUS DA SILVA",
@@ -898,7 +898,7 @@
         "CAJAMAR"
       ],
       "qtd_total": 10000,
-      "dias_desde_ultima": 3
+      "dias_desde_ultima": 4
     },
     "oculto": true,
     "oculto_info": {
