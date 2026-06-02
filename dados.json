@@ -82,7 +82,16 @@
       {
         "codigo": "2100082672",
         "tipo": "HALB",
-        "descricao": "931610798 SACL PAP MAN FSC®P TED REN"
+        "descricao": "931610798 SACL PAP MAN FSC®P TED REN",
+        "producao": {
+          "inicio": "2026-06-01",
+          "fim": "2026-06-01",
+          "n_apontamentos": 1,
+          "deptos": [
+            "OFFSET"
+          ],
+          "qtd": 7899
+        }
       },
       {
         "codigo": "11055321-0001",
@@ -115,8 +124,9 @@
       },
       "producao": {
         "previsto": "2026-08-13",
-        "real": null,
-        "por": null
+        "real": "2026-06-01",
+        "por": null,
+        "fim": "2026-06-01"
       },
       "data_vitrine": {
         "previsto": "2026-08-17",
@@ -137,8 +147,8 @@
       },
       "op_para_producao": {
         "previsto": 76,
-        "real": null,
-        "desvio": null
+        "real": 10,
+        "desvio": -66
       },
       "producao_para_vit": {
         "previsto": 4,
@@ -148,7 +158,21 @@
     },
     "status": "em_producao",
     "responsavel_atual": "PCP/Fábrica",
-    "tem_cronograma": true
+    "tem_cronograma": true,
+    "producao_detalhe": {
+      "busca_por": "halb",
+      "codigos_encontrados": [
+        "2100082672"
+      ],
+      "total_apontamentos": 1,
+      "primeira_data": "2026-06-01",
+      "ultima_data": "2026-06-01",
+      "deptos": [
+        "OFFSET"
+      ],
+      "qtd_total": 7899,
+      "dias_desde_ultima": 1
+    }
   },
   {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAMC-ScgVsj9Avp4vPeFxDLA=",
@@ -449,7 +473,16 @@
       {
         "codigo": "2100082688",
         "tipo": "HALB",
-        "descricao": "931567283 SACL PAP MAN FSC®M LOVE REN"
+        "descricao": "931567283 SACL PAP MAN FSC®M LOVE REN",
+        "producao": {
+          "inicio": "2026-06-01",
+          "fim": "2026-06-02",
+          "n_apontamentos": 2,
+          "deptos": [
+            "OFFSET"
+          ],
+          "qtd": 9072
+        }
       },
       {
         "codigo": "11055330-0001",
@@ -459,7 +492,16 @@
       {
         "codigo": "2100082685",
         "tipo": "HALB",
-        "descricao": "931566820 SACL PAP MAN FSC®P LOVE REN"
+        "descricao": "931566820 SACL PAP MAN FSC®P LOVE REN",
+        "producao": {
+          "inicio": "2026-06-02",
+          "fim": "2026-06-02",
+          "n_apontamentos": 1,
+          "deptos": [
+            "OFFSET"
+          ],
+          "qtd": 7965
+        }
       }
     ],
     "marcos": {
@@ -482,8 +524,9 @@
       },
       "producao": {
         "previsto": "2026-06-15",
-        "real": null,
-        "por": null
+        "real": "2026-06-01",
+        "por": null,
+        "fim": "2026-06-02"
       },
       "data_vitrine": {
         "previsto": "2026-06-17",
@@ -504,8 +547,8 @@
       },
       "op_para_producao": {
         "previsto": 28,
-        "real": null,
-        "desvio": null
+        "real": 14,
+        "desvio": -14
       },
       "producao_para_vit": {
         "previsto": 2,
@@ -515,7 +558,22 @@
     },
     "status": "em_producao",
     "responsavel_atual": "PCP/Fábrica",
-    "tem_cronograma": true
+    "tem_cronograma": true,
+    "producao_detalhe": {
+      "busca_por": "halb",
+      "codigos_encontrados": [
+        "2100082688",
+        "2100082685"
+      ],
+      "total_apontamentos": 3,
+      "primeira_data": "2026-06-01",
+      "ultima_data": "2026-06-02",
+      "deptos": [
+        "OFFSET"
+      ],
+      "qtd_total": 17037,
+      "dias_desde_ultima": 0
+    }
   },
   {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAB9mQSJNHK5Go9nQ1Mb9clI=",
@@ -1072,7 +1130,16 @@
       {
         "codigo": "2100082665",
         "tipo": "HALB",
-        "descricao": "931535599 SACL PAP MAN FSC®M PRETA REN"
+        "descricao": "931535599 SACL PAP MAN FSC®M PRETA REN",
+        "producao": {
+          "inicio": "2026-06-01",
+          "fim": "2026-06-01",
+          "n_apontamentos": 1,
+          "deptos": [
+            "OFFSET"
+          ],
+          "qtd": 9352
+        }
       },
       {
         "codigo": "11055306-0001",
@@ -1135,8 +1202,9 @@
       },
       "producao": {
         "previsto": null,
-        "real": null,
-        "por": null
+        "real": "2026-06-01",
+        "por": null,
+        "fim": "2026-06-01"
       },
       "data_vitrine": {
         "previsto": null,
@@ -1157,7 +1225,7 @@
       },
       "op_para_producao": {
         "previsto": null,
-        "real": null,
+        "real": 24,
         "desvio": null
       },
       "producao_para_vit": {
@@ -1168,7 +1236,21 @@
     },
     "status": "em_producao",
     "responsavel_atual": "PCP/Fábrica",
-    "tem_cronograma": false
+    "tem_cronograma": false,
+    "producao_detalhe": {
+      "busca_por": "halb",
+      "codigos_encontrados": [
+        "2100082665"
+      ],
+      "total_apontamentos": 1,
+      "primeira_data": "2026-06-01",
+      "ultima_data": "2026-06-01",
+      "deptos": [
+        "OFFSET"
+      ],
+      "qtd_total": 9352,
+      "dias_desde_ultima": 1
+    }
   },
   {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQABSrbbqRngNNgFcabgLQkrc=",
