@@ -528,25 +528,43 @@ function pedidoEhCompravel(p) {
 // Etapas de lead time que pertencem à produção interna (não se aplicam a comprável)
 const ETAPAS_PRODUCAO = ['fert_para_op', 'op_para_producao'];
 
-// Classifica a aderência de UM pedido pela soma dos desvios dos marcos
-// (mesma regra do badge da tabela, pra ficar consistente).
-// Comprável não passa por produção: OP e Produção ficam de fora do cálculo.
-function classificarAderencia(p) {
-  const marcos = p.marcos || {};
-  const relevantes = pedidoEhCompravel(p)
-    ? ['pedido_fechado', 'fert_criado']
-    : ['pedido_fechado', 'fert_criado', 'op_liberada', 'producao'];
-  const desvios = [];
-  for (const m of relevantes) {
-    const d = marcos[m];
-    if (d?.real && d?.previsto) {
-      desvios.push(Math.round((new Date(d.real) - new Date(d.previsto)) / 86400000));
-    }
+// Marco final do lead time conforme o tipo de pedido:
+//   comprável -> termina no FERT criado;  produzido -> termina na Produção.
+// Em pedido em andamento, usa o último marco já realizado até esse limite.
+function endpointLeadTime(p) {
+  const m = p.marcos || {};
+  const candidatos = pedidoEhCompravel(p)
+    ? ['fert_criado']
+    : ['fert_criado', 'op_liberada', 'producao'];
+  let fim = null;
+  for (const k of candidatos) {
+    if (m[k]?.real && m[k]?.previsto) fim = k;
   }
-  if (desvios.length === 0) return 'na';
-  const soma = desvios.reduce((a, b) => a + b, 0);
-  if (soma <= 0) return 'ok';
-  if (soma <= 3) return 'leve';
+  return fim; // chave do marco final, ou null se nada além do pedido aconteceu
+}
+
+// Regra ÚNICA de lead time (usada em tabela, drawer, KPIs e donut):
+//   início = pedido_fechado · fim = endpointLeadTime
+//   dias = diferença entre datas (corridos) · aderência = dias reais − dias previstos
+//   aderência > 0 = atrasou · < 0 = adiantou
+function leadTimeDoPedido(p) {
+  const m = p.marcos || {};
+  const ini = m.pedido_fechado;
+  const fimK = endpointLeadTime(p);
+  if (!ini?.real || !ini?.previsto || !fimK) {
+    return { real: null, previsto: null, aderencia: null, fim: fimK };
+  }
+  const real = diasEntre(ini.real, m[fimK].real);
+  const previsto = diasEntre(ini.previsto, m[fimK].previsto);
+  return { real, previsto, aderencia: real - previsto, fim: fimK };
+}
+
+// Classifica a aderência: diferença de duração (real − previsto), sem somar etapas.
+function classificarAderencia(p) {
+  const { aderencia } = leadTimeDoPedido(p);
+  if (aderencia == null) return 'na';
+  if (aderencia <= 0) return 'ok';
+  if (aderencia <= 3) return 'leve';
   return 'atraso';
 }
 
@@ -574,15 +592,11 @@ function calcularKPIs(lista) {
     if (r) { atraso.total++; r === 'Engenharia' ? atraso.eng++ : atraso.pcp++; }
   }
 
+  // Lead time médio = média do lead time real (ponta a ponta) dos pedidos que já têm fim
   const lts = [];
   for (const p of lista) {
-    const lt = p.lead_times || {};
-    const compravel = pedidoEhCompravel(p);
-    for (const k of Object.keys(lt)) {
-      if (compravel && ETAPAS_PRODUCAO.includes(k)) continue; // comprável não produz
-      const v = lt[k]?.real;
-      if (v != null && v >= 0) lts.push(v);
-    }
+    const { real } = leadTimeDoPedido(p);
+    if (real != null && real >= 0) lts.push(real);
   }
   const ltMedio = lts.length ? Math.round(lts.reduce((s, n) => s + n, 0) / lts.length) : null;
 
@@ -613,7 +627,7 @@ function renderizarKPIs(k) {
     {
       cls: 'ic-warn', icon: ICON_KPI.clock, bar: 'var(--laranja-500)',
       label: 'Lead time médio', value: k.ltMedio != null ? k.ltMedio : '—', unit: k.ltMedio != null ? 'd' : '',
-      foot: `<span class="kpi-chip">entre marcos realizados</span>`,
+      foot: `<span class="kpi-chip">média por pedido (até o fim)</span>`,
     },
     {
       cls: 'ic-ok', icon: ICON_KPI.check, bar: 'var(--verde-500)',
@@ -873,44 +887,19 @@ function renderPipeline(p) {
 
 // 3. Lead Time celula: real / previsto · prog%
 function renderLeadTimeCelula(p) {
-  const m = p.marcos || {};
-  const pedReal = m.pedido_fechado?.real;
-  const pedPrev = m.pedido_fechado?.previsto;
-  const prodReal = m.producao?.real;
-  const prodPrev = m.producao?.previsto;
-
-  // Real: pedido_fechado.real até último marco realizado (ou hoje se em andamento)
-  let leadReal = null;
-  if (pedReal) {
-    if (p.status === 'concluido' && prodReal) {
-      leadReal = diasEntre(pedReal, prodReal);
-    } else if (p.status === 'concluido' && m.fert_criado?.real) {
-      // Compravel concluído: real = pedido → FERT (pq não tem produção)
-      leadReal = diasEntre(pedReal, m.fert_criado.real);
-    } else {
-      leadReal = diasEntre(pedReal, hoje());
-    }
-  }
-
-  // Previsto: pedido_fechado.previsto → producao.previsto
-  let leadPrev = null;
-  if (pedPrev && prodPrev) {
-    leadPrev = diasEntre(pedPrev, prodPrev);
-  }
+  const { real, previsto } = leadTimeDoPedido(p);
 
   let valoresHtml;
-  if (leadReal != null && leadPrev != null) {
-    valoresHtml = `<span class="real">${leadReal}d</span><span class="slash">/</span><span class="prev">${leadPrev}d</span>`;
-  } else if (leadReal != null) {
-    valoresHtml = `<span class="real">${leadReal}d</span><span class="slash">/</span><span class="prev">—</span>`;
+  if (real != null && previsto != null) {
+    valoresHtml = `<span class="real">${real}d</span><span class="slash">/</span><span class="prev">${previsto}d</span>`;
   } else {
     valoresHtml = `<span style="color:var(--cinza-400)">—</span>`;
   }
 
-  // Progresso
+  // Progresso (só quando o previsto é positivo, pra não dividir por zero)
   let progHtml = '';
-  if (leadReal != null && leadPrev != null && leadPrev > 0) {
-    const pct = Math.round((leadReal / leadPrev) * 100);
+  if (real != null && previsto != null && previsto > 0) {
+    const pct = Math.round((real / previsto) * 100);
     progHtml = `<div class="leadtime-prog">${pct}% do previsto</div>`;
   }
 
@@ -923,35 +912,19 @@ function renderLeadTimeCelula(p) {
 }
 
 function renderAderenciaBadge(p) {
-  // Aderência = SOMA dos desvios dos MARCOS realizados (real vs previsto)
-  // Não usa lead_times (etapas entre marcos) pra não criar inconsistência:
-  // se vc vê "-1d" no marco e "no dia" em outro, a soma é -1d, não +1d
-  const marcos = p.marcos || {};
-  const desvios = [];
-  const marcosAderencia = pedidoEhCompravel(p)
-    ? ['pedido_fechado', 'fert_criado']
-    : ['pedido_fechado', 'fert_criado', 'op_liberada', 'producao'];
-  for (const m of marcosAderencia) {
-    const dado = marcos[m];
-    if (dado?.real && dado?.previsto) {
-      const ms = (new Date(dado.real) - new Date(dado.previsto)) / 86400000;
-      desvios.push(Math.round(ms));
-    }
-  }
-
-  if (desvios.length === 0) {
+  // Aderência = diferença de duração: dias reais − dias previstos do lead time.
+  const { aderencia } = leadTimeDoPedido(p);
+  if (aderencia == null) {
     return '<span class="aderencia ader-vazio">—</span>';
   }
-
-  const soma = desvios.reduce((a, b) => a + b, 0);
   // Verde: no prazo ou adiantado
-  if (soma <= 0) {
-    if (soma < 0) return `<span class="aderencia ader-ok">${soma}d</span>`;
+  if (aderencia <= 0) {
+    if (aderencia < 0) return `<span class="aderencia ader-ok">${aderencia}d</span>`;
     return '<span class="aderencia ader-ok">No prazo</span>';
   }
   // Atraso leve (1 a 3 dias) → amarelo. Forte (4+) → vermelho.
-  if (soma <= 3) return `<span class="aderencia ader-atraso-leve">+${soma}d</span>`;
-  return `<span class="aderencia ader-atraso">+${soma}d</span>`;
+  if (aderencia <= 3) return `<span class="aderencia ader-atraso-leve">+${aderencia}d</span>`;
+  return `<span class="aderencia ader-atraso">+${aderencia}d</span>`;
 }
 
 // ============================================================
@@ -1021,57 +994,34 @@ function renderCabecalho(p) {
 }
 
 function renderMetricasResumo(p) {
-  // 3 métricas: lead time real até último marco · previsto total · aderência
-  const marcos = p.marcos || {};
-  const realInicio = marcos.pedido_fechado?.real;
+  // 3 métricas pela regra única: lead time real · previsto · aderência (real − previsto)
+  const { real: ltReal, previsto: ltPrev, aderencia: ltAder, fim } = leadTimeDoPedido(p);
+  const fimLabel = fim === 'fert_criado' ? 'FERT'
+                 : fim === 'op_liberada' ? 'OP'
+                 : fim === 'producao' ? 'produção' : 'fim';
 
-  // Lead time real = início do pedido até o último marco que ACONTECEU
-  // (não usa "hoje" — usa só dados que efetivamente aconteceram)
-  const ORDEM_MARCOS_LT = ['pedido_fechado', 'fert_criado', 'op_liberada', 'producao'];
-  let ultimoMarcoReal = null;
-  for (const k of ORDEM_MARCOS_LT) {
-    if (marcos[k]?.real) ultimoMarcoReal = marcos[k].real;
-  }
-  const ltRealAteAgora = (realInicio && ultimoMarcoReal)
-    ? diasEntre(realInicio, ultimoMarcoReal)
-    : null;
-
-  const prevInicio = marcos.pedido_fechado?.previsto;
-  const prevFim = marcos.producao?.previsto;
-  const ltPrevistoTotal = (prevInicio && prevFim) ? diasEntre(prevInicio, prevFim) : null;
-
-  // Aderência = SOMA dos desvios dos MARCOS realizados (real vs previsto)
-  const desvios = [];
-  for (const mk of ['pedido_fechado', 'fert_criado', 'op_liberada', 'producao']) {
-    const dado = marcos[mk];
-    if (dado?.real && dado?.previsto) {
-      const ms = (new Date(dado.real) - new Date(dado.previsto)) / 86400000;
-      desvios.push(Math.round(ms));
-    }
-  }
-  const soma = desvios.length ? desvios.reduce((a, b) => a + b, 0) : null;
   let aderTexto, aderClasse;
-  if (soma === null) { aderTexto = '—'; aderClasse = ''; }
-  else if (soma > 0) { aderTexto = `+${soma}d atrasado`; aderClasse = 'cor-atrasado'; }
-  else if (soma < 0) { aderTexto = `${soma}d adiantado`; aderClasse = 'cor-ok'; }
-  else { aderTexto = 'No prazo'; aderClasse = 'cor-ok'; }
+  if (ltAder == null)      { aderTexto = '—';                    aderClasse = ''; }
+  else if (ltAder > 0)     { aderTexto = `+${ltAder}d atrasado`; aderClasse = 'cor-atrasado'; }
+  else if (ltAder < 0)     { aderTexto = `${ltAder}d adiantado`; aderClasse = 'cor-ok'; }
+  else                     { aderTexto = 'No prazo';            aderClasse = 'cor-ok'; }
 
   return `
     <div class="metricas-resumo">
       <div class="metrica">
         <div class="metrica-label">Lead time real</div>
-        <div class="metrica-valor">${ltRealAteAgora !== null ? ltRealAteAgora + 'd' : '—'}</div>
-        <div class="metrica-sub">pedido → último marco</div>
+        <div class="metrica-valor">${ltReal !== null ? ltReal + 'd' : '—'}</div>
+        <div class="metrica-sub">pedido → ${fimLabel}</div>
       </div>
       <div class="metrica">
-        <div class="metrica-label">Previsto total</div>
-        <div class="metrica-valor">${ltPrevistoTotal !== null ? ltPrevistoTotal + 'd' : '—'}</div>
-        <div class="metrica-sub">pedido → produção</div>
+        <div class="metrica-label">Previsto</div>
+        <div class="metrica-valor">${ltPrev !== null ? ltPrev + 'd' : '—'}</div>
+        <div class="metrica-sub">pedido → ${fimLabel}</div>
       </div>
       <div class="metrica">
         <div class="metrica-label">Aderência</div>
         <div class="metrica-valor ${aderClasse}">${aderTexto}</div>
-        <div class="metrica-sub">soma dos desvios dos marcos</div>
+        <div class="metrica-sub">dias reais − previstos</div>
       </div>
     </div>
   `;
