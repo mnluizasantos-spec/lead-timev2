@@ -644,7 +644,16 @@
       {
         "codigo": "2100082687",
         "tipo": "HALB",
-        "descricao": "931565376 SACL PAP MAN FSC®M COLMEIA REN"
+        "descricao": "931565376 SACL PAP MAN FSC®M COLMEIA REN",
+        "producao": {
+          "inicio": "2026-06-02",
+          "fim": "2026-06-02",
+          "n_apontamentos": 2,
+          "deptos": [
+            "OFFSET"
+          ],
+          "qtd": 4759
+        }
       },
       {
         "codigo": "11055329-0001",
@@ -654,7 +663,16 @@
       {
         "codigo": "2100082684",
         "tipo": "HALB",
-        "descricao": "931565114 SACL PAP MAN FSC®P COLMEIA REN"
+        "descricao": "931565114 SACL PAP MAN FSC®P COLMEIA REN",
+        "producao": {
+          "inicio": "2026-06-02",
+          "fim": "2026-06-02",
+          "n_apontamentos": 1,
+          "deptos": [
+            "OFFSET"
+          ],
+          "qtd": 7893
+        }
       },
       {
         "codigo": "11055333-0001",
@@ -668,11 +686,11 @@
         "producao": {
           "inicio": "2026-06-01",
           "fim": "2026-06-02",
-          "n_apontamentos": 2,
+          "n_apontamentos": 3,
           "deptos": [
             "OFFSET"
           ],
-          "qtd": 9072
+          "qtd": 18377
         }
       },
       {
@@ -691,7 +709,7 @@
           "deptos": [
             "OFFSET"
           ],
-          "qtd": 7965
+          "qtd": 10346
         }
       }
     ],
@@ -753,16 +771,18 @@
     "producao_detalhe": {
       "busca_por": "halb",
       "codigos_encontrados": [
+        "2100082687",
+        "2100082684",
         "2100082688",
         "2100082685"
       ],
-      "total_apontamentos": 3,
+      "total_apontamentos": 7,
       "primeira_data": "2026-06-01",
       "ultima_data": "2026-06-02",
       "deptos": [
         "OFFSET"
       ],
-      "qtd_total": 17037,
+      "qtd_total": 41375,
       "dias_desde_ultima": 3
     }
   },
@@ -1324,12 +1344,12 @@
         "descricao": "931535599 SACL PAP MAN FSC®M PRETA REN",
         "producao": {
           "inicio": "2026-06-01",
-          "fim": "2026-06-01",
-          "n_apontamentos": 1,
+          "fim": "2026-06-03",
+          "n_apontamentos": 3,
           "deptos": [
             "OFFSET"
           ],
-          "qtd": 9352
+          "qtd": 18743
         }
       },
       {
@@ -1350,7 +1370,16 @@
       {
         "codigo": "2100082649",
         "tipo": "HALB",
-        "descricao": "931602333 SACL PAP MAN FSC®P LINES REN"
+        "descricao": "931602333 SACL PAP MAN FSC®P LINES REN",
+        "producao": {
+          "inicio": "2026-06-03",
+          "fim": "2026-06-03",
+          "n_apontamentos": 1,
+          "deptos": [
+            "OFFSET"
+          ],
+          "qtd": 9365
+        }
       },
       {
         "codigo": "11055308-0001",
@@ -1395,7 +1424,7 @@
         "previsto": null,
         "real": "2026-06-01",
         "por": null,
-        "fim": "2026-06-01"
+        "fim": "2026-06-03"
       },
       "data_vitrine": {
         "previsto": null,
@@ -1431,16 +1460,17 @@
     "producao_detalhe": {
       "busca_por": "halb",
       "codigos_encontrados": [
-        "2100082665"
+        "2100082665",
+        "2100082649"
       ],
-      "total_apontamentos": 1,
+      "total_apontamentos": 4,
       "primeira_data": "2026-06-01",
-      "ultima_data": "2026-06-01",
+      "ultima_data": "2026-06-03",
       "deptos": [
         "OFFSET"
       ],
-      "qtd_total": 9352,
-      "dias_desde_ultima": 4
+      "qtd_total": 28108,
+      "dias_desde_ultima": 2
     }
   },
   {
@@ -1599,7 +1629,16 @@
       {
         "codigo": "11055267-0001",
         "tipo": "FERT",
-        "descricao": "TAG PAIS26 KOP"
+        "descricao": "TAG PAIS26 KOP",
+        "producao": {
+          "inicio": "2026-06-03",
+          "fim": "2026-06-03",
+          "n_apontamentos": 2,
+          "deptos": [
+            "OFFSET"
+          ],
+          "qtd": 2875
+        }
       }
     ],
     "marcos": {
@@ -1622,8 +1661,9 @@
       },
       "producao": {
         "previsto": "2026-06-16",
-        "real": null,
-        "por": null
+        "real": "2026-06-03",
+        "por": null,
+        "fim": "2026-06-03"
       },
       "data_vitrine": {
         "previsto": "2026-07-22",
@@ -1644,8 +1684,8 @@
       },
       "op_para_producao": {
         "previsto": 25,
-        "real": null,
-        "desvio": null
+        "real": 21,
+        "desvio": -4
       },
       "producao_para_vit": {
         "previsto": 36,
@@ -1655,6 +1695,20 @@
     },
     "status": "em_producao",
     "responsavel_atual": "PCP/Fábrica",
-    "tem_cronograma": true
+    "tem_cronograma": true,
+    "producao_detalhe": {
+      "busca_por": "fert",
+      "codigos_encontrados": [
+        "11055267-0001"
+      ],
+      "total_apontamentos": 2,
+      "primeira_data": "2026-06-03",
+      "ultima_data": "2026-06-03",
+      "deptos": [
+        "OFFSET"
+      ],
+      "qtd_total": 2875,
+      "dias_desde_ultima": 2
+    }
   }
 ]
