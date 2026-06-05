@@ -352,7 +352,9 @@ function calcularMediasEtapas() {
     // Cards normais (Pedido→FERT, FERT→OP, etc.)
     const reais = [];
     const planos = [];
+    const ehProducao = ['fert_para_op', 'op_para_producao'].includes(etapa.key);
     for (const p of doPeriodo) {
+      if (ehProducao && pedidoEhCompravel(p)) continue; // comprável não passa por produção
       const lt = p.lead_times?.[etapa.key];
       if (lt?.real != null) reais.push(lt.real);
       if (lt?.previsto != null) planos.push(lt.previsto);
@@ -516,12 +518,26 @@ const ICON_KPI = {
   check: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>',
 };
 
+// Pedido comprável: não passa pela produção interna (mesma regra do pipeline).
+// Status comprável/concluído E todos os FERT com código iniciando em "15".
+function pedidoEhCompravel(p) {
+  return ['compravel', 'concluido'].includes(p.status) &&
+    (p.skus || []).filter(s => s.tipo === 'FERT').every(s => String(s.codigo || '').startsWith('15'));
+}
+
+// Etapas de lead time que pertencem à produção interna (não se aplicam a comprável)
+const ETAPAS_PRODUCAO = ['fert_para_op', 'op_para_producao'];
+
 // Classifica a aderência de UM pedido pela soma dos desvios dos marcos
-// (mesma regra do badge da tabela, pra ficar consistente)
+// (mesma regra do badge da tabela, pra ficar consistente).
+// Comprável não passa por produção: OP e Produção ficam de fora do cálculo.
 function classificarAderencia(p) {
   const marcos = p.marcos || {};
+  const relevantes = pedidoEhCompravel(p)
+    ? ['pedido_fechado', 'fert_criado']
+    : ['pedido_fechado', 'fert_criado', 'op_liberada', 'producao'];
   const desvios = [];
-  for (const m of ['pedido_fechado', 'fert_criado', 'op_liberada', 'producao']) {
+  for (const m of relevantes) {
     const d = marcos[m];
     if (d?.real && d?.previsto) {
       desvios.push(Math.round((new Date(d.real) - new Date(d.previsto)) / 86400000));
@@ -534,12 +550,14 @@ function classificarAderencia(p) {
   return 'atraso';
 }
 
-// Pedido atrasado = marco previsto venceu e ainda não foi cumprido
+// Pedido atrasado = marco previsto venceu e ainda não foi cumprido.
+// Comprável não produz, então OP e Produção não contam como atraso.
 function responsavelAtrasoPedido(p) {
   if (p.status === 'concluido' || p.status === 'cancelado') return null;
   const ho = hoje();
   const m = p.marcos || {};
   if (m.fert_criado?.previsto && m.fert_criado.previsto < ho && !m.fert_criado.real) return 'Engenharia';
+  if (pedidoEhCompravel(p)) return null; // não passa por OP/Produção
   if (m.op_liberada?.previsto && m.op_liberada.previsto < ho && !m.op_liberada.real) return 'Engenharia';
   if (m.producao?.previsto && m.producao.previsto < ho && !m.producao.real) return 'PCP/Fábrica';
   return null;
@@ -559,7 +577,9 @@ function calcularKPIs(lista) {
   const lts = [];
   for (const p of lista) {
     const lt = p.lead_times || {};
+    const compravel = pedidoEhCompravel(p);
     for (const k of Object.keys(lt)) {
+      if (compravel && ETAPAS_PRODUCAO.includes(k)) continue; // comprável não produz
       const v = lt[k]?.real;
       if (v != null && v >= 0) lts.push(v);
     }
@@ -908,7 +928,10 @@ function renderAderenciaBadge(p) {
   // se vc vê "-1d" no marco e "no dia" em outro, a soma é -1d, não +1d
   const marcos = p.marcos || {};
   const desvios = [];
-  for (const m of ['pedido_fechado', 'fert_criado', 'op_liberada', 'producao']) {
+  const marcosAderencia = pedidoEhCompravel(p)
+    ? ['pedido_fechado', 'fert_criado']
+    : ['pedido_fechado', 'fert_criado', 'op_liberada', 'producao'];
+  for (const m of marcosAderencia) {
     const dado = marcos[m];
     if (dado?.real && dado?.previsto) {
       const ms = (new Date(dado.real) - new Date(dado.previsto)) / 86400000;
@@ -1056,7 +1079,7 @@ function renderMetricasResumo(p) {
 
 function renderTimelineHorizontal(p) {
   const marcos = p.marcos || {};
-  const compravel = p.status === 'compravel';
+  const compravel = pedidoEhCompravel(p);
 
   // Pra compravel, escondemos OP, Produção e Vitrine (vai direto pedido→FERT→compra pronta)
   const marcosVisiveis = compravel
@@ -1144,7 +1167,7 @@ function renderTimelineHorizontal(p) {
 
 function renderLeadTimes(p) {
   const lt = p.lead_times || {};
-  const compravel = p.status === 'compravel';
+  const compravel = pedidoEhCompravel(p);
 
   // Pra compraveis, só mostra Pedido → FERT (resto não se aplica)
   const itens = compravel
