@@ -54,19 +54,6 @@
     <section class="kpi-grid" id="kpi-grid"></section>
 
     <!-- ============================================================
-         LEAD TIME POR ETAPA (média do mês)
-         ============================================================ -->
-    <section class="etapas-section">
-      <div class="etapas-header">
-        <h2>Lead time médio por etapa</h2>
-        <p class="etapas-sub">Maio · média entre pedidos do mês</p>
-      </div>
-      <div class="etapas-grid" id="etapas-grid">
-        <!-- preenchido por JS -->
-      </div>
-    </section>
-
-    <!-- ============================================================
          ANALYTICS — breakdown por etapa + donut de aderência
          ============================================================ -->
     <section class="analytics-grid">
@@ -76,8 +63,12 @@
             <h3>Breakdown por etapa</h3>
             <div class="sub">Real × plano · média do período</div>
           </div>
+          <span class="panel-badge" id="breakdown-total">total —</span>
         </div>
-        <div class="panel-body"><div class="stage-rows" id="stage-breakdown"></div></div>
+        <div class="panel-body">
+          <div class="flowbar" id="stage-flowbar"></div>
+          <div class="stage-rows" id="stage-breakdown"></div>
+        </div>
       </div>
       <div class="panel">
         <div class="panel-head">
