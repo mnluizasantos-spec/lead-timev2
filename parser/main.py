@@ -14,6 +14,7 @@ Por padrão:
 """
 import glob
 import json
+import re
 import sys
 from collections import defaultdict
 from datetime import datetime
@@ -60,21 +61,73 @@ def carregar_emails_de_arquivos(padrao_glob: str) -> list:
     return emails
 
 
+# Prefixo de resposta/encaminhamento/auto-reply (PT-BR e EN)
+RE_PREFIXO_RESPOSTA = re.compile(
+    r'^\s*(?:(?:RES|RE|ENC|FW|FWD|ENCAMINHAR|AW)\s*:\s*|RESPOSTA\s+AUTOM[\u00c1A]TICA\s*:\s*)+',
+    re.IGNORECASE,
+)
+
+
+def _eh_abertura_pedido(subject: str) -> bool:
+    """True se o assunto e a ABERTURA de um pedido (sem prefixo de resposta)."""
+    if not subject:
+        return False
+    if RE_PREFIXO_RESPOSTA.match(subject):
+        return False
+    return bool(re.search(r'PEDIDO\s+FECHADO', subject, re.IGNORECASE))
+
+
 def agrupar_por_thread(emails: list) -> dict:
     """
-    Agrupa emails por conversationId (ou subject normalizado como fallback).
-    Returns: {thread_id: [lista_de_emails]}
+    Agrupa emails em pedidos.
+
+    Comeca pela conversa do Outlook (conversationId). POReM uma mesma conversa
+    pode conter VARIOS pedidos: o Exchange agrupa conversa pelo topico (assunto),
+    entao dois "PEDIDO FECHADO VAREJO - <CLIENTE>" distintos (produtos/datas
+    diferentes) caem no MESMO conversationId. Por isso, dentro de cada conversa a
+    gente quebra num pedido novo toda vez que aparece um email de ABERTURA (assunto
+    sem 'RES:/RE:/...'). Cada resposta vai pro pedido aberto mais recente.
+
+    O 1o pedido de cada conversa mantem id = conversationId (compativel com o que
+    ja existe); os demais ganham sufixo '#2', '#3', ...
+    Returns: {pedido_id: [lista_de_emails]}
     """
-    threads = defaultdict(list)
+    # 0) dedup por id de mensagem (os dumps mensais emails-*.json se sobrepoem,
+    #    entao o mesmo email aparece 2x; sem isso cada abertura duplicada vira
+    #    um pedido a mais)
+    vistos = set()
+    unicos = []
+    for e in emails:
+        mid = e.get('id') or ''
+        if mid and mid in vistos:
+            continue
+        if mid:
+            vistos.add(mid)
+        unicos.append(e)
+    emails = unicos
+
+    # 1) agrupa por conversa (fallback: assunto normalizado)
+    por_conversa = defaultdict(list)
     for email in emails:
         tid = email.get('conversationId') or email.get('id') or ''
         if not tid:
-            # Fallback: usa subject normalizado
-            subj = email.get('subject', '').upper()
-            subj = subj.replace('RES:', '').replace('RE:', '').replace('FW:', '').strip()
+            subj = (email.get('subject') or '').upper()
+            subj = RE_PREFIXO_RESPOSTA.sub('', subj).strip()
             tid = f'fallback:{subj[:80]}'
-        threads[tid].append(email)
-    return dict(threads)
+        por_conversa[tid].append(email)
+
+    # 2) dentro de cada conversa, segmenta a cada email de abertura
+    threads = {}
+    for tid, lista in por_conversa.items():
+        lista_ord = sorted(lista, key=lambda e: e.get('receivedDateTime') or '')
+        n_aberturas = 0
+        chave_atual = tid  # respostas antes da 1a abertura ficam na conversa base
+        for email in lista_ord:
+            if _eh_abertura_pedido(email.get('subject', '')):
+                n_aberturas += 1
+                chave_atual = tid if n_aberturas == 1 else f'{tid}#{n_aberturas}'
+            threads.setdefault(chave_atual, []).append(email)
+    return threads
 
 
 def main(
@@ -111,7 +164,7 @@ def main(
 
     pedidos = []
     for thread_id, emails_thread in threads.items():
-        pedido = processar_thread(emails_thread, auditoria)
+        pedido = processar_thread(emails_thread, auditoria, pedido_id=thread_id)
         if pedido is not None:
             pedidos.append(pedido)
 
