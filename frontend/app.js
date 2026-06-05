@@ -294,10 +294,10 @@ function renderizarCards() {
 // RENDERIZAÇÃO — LEAD TIME POR ETAPA
 // ============================================================
 const ETAPAS = [
-  { key: '__comercial_aderencia', label: 'Comercial (envio)',  cor: 'var(--azul-900)', tipo: 'aderencia' },
-  { key: 'pedido_para_fert',  label: 'Pedido → FERT',    cor: 'var(--azul-700)' },
-  { key: 'fert_para_op',      label: 'FERT → OP',        cor: 'var(--azul-500)' },
-  { key: 'op_para_producao',  label: 'OP → Produção',    cor: 'var(--laranja-500)' },
+  { key: '__comercial_aderencia', label: 'COM',  cor: 'var(--azul-900)', tipo: 'aderencia' },
+  { key: 'pedido_para_fert',  label: 'CAD',   cor: 'var(--azul-700)' },
+  { key: 'fert_para_op',      label: 'ENG',   cor: 'var(--azul-500)' },
+  { key: 'op_para_producao',  label: 'PROD',  cor: 'var(--laranja-500)' },
 ];
 
 function calcularMediasEtapas() {
@@ -597,13 +597,14 @@ function renderizarBreakdown() {
   const host = $('#stage-breakdown');
   if (!host) return;
   const { resultados, gargalo } = calcularMediasEtapas();
-  const etapas = resultados.filter(r => r.tipo !== 'aderencia');
-  const maxV = Math.max(1, ...etapas.flatMap(r => [r.real, r.plano]).filter(v => v != null));
   const fmt = v => v != null ? v.toFixed(1).replace('.', ',') : '—';
 
-  // Barra empilhada + total (soma dos lead times reais por etapa)
-  const ABREV = { pedido_para_fert: 'PED→FERT', fert_para_op: 'FERT→OP', op_para_producao: 'OP→PROD' };
-  const comReal = etapas.filter(r => r.real != null && r.real > 0);
+  // Durações da cadeia (CAD, ENG, PROD); COM é pontualidade, fora da barra de soma
+  const duracoes = resultados.filter(r => r.tipo !== 'aderencia');
+  const maxV = Math.max(1, ...duracoes.flatMap(r => [r.real, r.plano]).filter(v => v != null));
+
+  // Barra empilhada + total (cadeia: CAD + ENG + PROD)
+  const comReal = duracoes.filter(r => r.real != null && r.real > 0);
   const totalReal = comReal.reduce((s, r) => s + r.real, 0);
   const flow = $('#stage-flowbar');
   if (flow) {
@@ -612,7 +613,7 @@ function renderizarBreakdown() {
           const pct = (r.real / totalReal) * 100;
           return `<div class="flowbar-seg" style="flex:0 0 ${pct}%; background:${r.cor}" title="${r.label}: ${fmt(r.real)}d">
             <span class="seg-d">${fmt(r.real)}d</span>
-            <span class="seg-n">${ABREV[r.key] || r.label}</span>
+            <span class="seg-n">${r.label}</span>
           </div>`;
         }).join('')
       : '';
@@ -620,10 +621,25 @@ function renderizarBreakdown() {
   const totalEl = $('#breakdown-total');
   if (totalEl) totalEl.textContent = totalReal > 0 ? `total ${fmt(totalReal)}d` : 'total —';
 
-  host.innerHTML = etapas.map(r => {
+  // Linhas: COM (pontualidade do envio) + CAD/ENG/PROD (duração real × plano)
+  host.innerHTML = resultados.map(r => {
+    // COM = pontualidade do comercial (sem barra; mostra adiantou/atrasou)
+    if (r.tipo === 'aderencia') {
+      let txt, cls;
+      if (r.real == null)        { txt = 'sem dados';                          cls = 'zero'; }
+      else if (r.real < -0.05)   { txt = `adiantou ${fmt(Math.abs(r.real))}d`; cls = 'pos'; }
+      else if (r.real > 0.05)    { txt = `atrasou ${fmt(r.real)}d`;            cls = 'neg'; }
+      else                       { txt = 'no dia';                             cls = 'zero'; }
+      return `
+        <div class="stage-row">
+          <div class="sr-name">${r.label}</div>
+          <div class="sr-meta">envio: <span class="delta ${cls}">${txt}</span> · n=${r.amostra || 0}</div>
+        </div>`;
+    }
+
+    const isG = gargalo === r.key;
     const wReal = r.real != null ? (r.real / maxV) * 100 : 0;
     const wPlan = r.plano != null ? (r.plano / maxV) * 100 : 0;
-    const isG = gargalo === r.key;
     let deltaCls = 'zero', deltaTxt = 'no plano';
     if (r.delta != null) {
       const ad = fmt(Math.abs(r.delta));
