@@ -1,7 +1,7 @@
 [
   {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAA7Wa8cMl8lCgxa3Z96wukU=",
-    "subject": "RES: PEDIDO FECHADO VAREJO - ME LINDA - INSTITUCIONAL",
+    "subject": "PEDIDO FECHADO VAREJO - ME LINDA - INSTITUCIONAL",
     "projeto": "ME LINDA",
     "cliente": "",
     "comercial": "EDUARDA FERREIRA DOS SANTOS",
@@ -124,7 +124,7 @@
   },
   {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAGZ3z48NHsRGjiY1MBBkkIs=",
-    "subject": "RES: BF_2257 PEDIDO FECHADO VAREJO - LUVA MOUSSE KOP 26",
+    "subject": "BF_2257 PEDIDO FECHADO VAREJO - LUVA MOUSSE KOP 26",
     "projeto": "BF_2257 - LUVA MOUSSE KOP 26",
     "cliente": "",
     "comercial": "WESLEY MATHEUS DA SILVA",
@@ -191,8 +191,183 @@
     "tem_cronograma": true
   },
   {
+    "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQANYaA1Hw1dtDmEhqS4WEHnc=#2",
+    "subject": "PEDIDO FECHADO VAREJO - BOTICÁRIO - SÃO JOÃO ",
+    "projeto": "SAO JOAO",
+    "cliente": "BOTICARIO",
+    "comercial": "WESLEY MATHEUS DA SILVA",
+    "skus": [
+      {
+        "codigo": "13021834-0001",
+        "tipo": "FERT",
+        "descricao": "SACL PAP AUT FSC®M SAO JOAO26 BOT",
+        "producao": {
+          "inicio": "2026-06-02",
+          "fim": "2026-06-03",
+          "n_apontamentos": 4,
+          "deptos": [
+            "FLEXOGRAFICA"
+          ],
+          "qtd": 78320
+        }
+      },
+      {
+        "codigo": "2100077670",
+        "tipo": "HALB",
+        "descricao": "90822 REF FDO FSC®M PDVG INST25 BOT"
+      },
+      {
+        "codigo": "2400003145",
+        "tipo": "HALB",
+        "descricao": "ALCA CHATA FSCM - C02 - VERDE - P556C"
+      }
+    ],
+    "marcos": {
+      "pedido_fechado": {
+        "previsto": "2026-05-28",
+        "real": "2026-05-28",
+        "por": "WESLEY MATHEUS DA SILVA"
+      },
+      "fert_criado": {
+        "previsto": "2026-05-28",
+        "real": "2026-05-28",
+        "por": "GIOVANNA FREITAS ALVES"
+      },
+      "op_liberada": {
+        "previsto": "2026-06-01",
+        "real": "2026-06-02",
+        "por": "leticia.santos@antilhas.com.br",
+        "real_ultima": null,
+        "n_parcelas": 1
+      },
+      "producao": {
+        "previsto": null,
+        "real": "2026-06-02",
+        "por": null,
+        "fim": "2026-06-03"
+      },
+      "data_vitrine": {
+        "previsto": "2026-06-12",
+        "real": null,
+        "por": null
+      }
+    },
+    "lead_times": {
+      "pedido_para_fert": {
+        "previsto": 0,
+        "real": 0,
+        "desvio": 0
+      },
+      "fert_para_op": {
+        "previsto": 4,
+        "real": 5,
+        "desvio": 1
+      },
+      "op_para_producao": {
+        "previsto": null,
+        "real": 0,
+        "desvio": null
+      },
+      "producao_para_vit": {
+        "previsto": null,
+        "real": null,
+        "desvio": null
+      }
+    },
+    "status": "em_producao",
+    "responsavel_atual": "PCP/Fábrica",
+    "tem_cronograma": true,
+    "producao_detalhe": {
+      "busca_por": "fert",
+      "codigos_encontrados": [
+        "13021834-0001"
+      ],
+      "total_apontamentos": 4,
+      "primeira_data": "2026-06-02",
+      "ultima_data": "2026-06-03",
+      "deptos": [
+        "FLEXOGRAFICA"
+      ],
+      "qtd_total": 78320,
+      "dias_desde_ultima": 2
+    }
+  },
+  {
+    "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAL-i64pXTI9Mj4KgCNYgc1o=#2",
+    "subject": "BF_2256  PEDIDO FECHADO VAREJO - RENNER AGOSTO",
+    "projeto": "BF_2256 AGOSTO",
+    "cliente": "RENNER",
+    "comercial": "WESLEY MATHEUS DA SILVA",
+    "skus": [
+      {
+        "codigo": "11055340-0001",
+        "tipo": "FERT",
+        "descricao": "931611301 SACL PAP MAN FSC®M SHINE REN"
+      },
+      {
+        "codigo": "2100082708",
+        "tipo": "HALB",
+        "descricao": "931611301 SACL PAP MAN FSC®M SHINE REN"
+      }
+    ],
+    "marcos": {
+      "pedido_fechado": {
+        "previsto": "2026-05-25",
+        "real": "2026-05-25",
+        "por": "WESLEY MATHEUS DA SILVA"
+      },
+      "fert_criado": {
+        "previsto": "2026-05-26",
+        "real": "2026-05-25",
+        "por": "giovanna.alves@antilhas.com.br"
+      },
+      "op_liberada": {
+        "previsto": "2026-05-29",
+        "real": null,
+        "por": null,
+        "real_ultima": null,
+        "n_parcelas": 0
+      },
+      "producao": {
+        "previsto": "2026-08-13",
+        "real": null,
+        "por": null
+      },
+      "data_vitrine": {
+        "previsto": "2026-08-17",
+        "real": null,
+        "por": null
+      }
+    },
+    "lead_times": {
+      "pedido_para_fert": {
+        "previsto": 1,
+        "real": 0,
+        "desvio": -1
+      },
+      "fert_para_op": {
+        "previsto": 3,
+        "real": null,
+        "desvio": null
+      },
+      "op_para_producao": {
+        "previsto": 76,
+        "real": null,
+        "desvio": null
+      },
+      "producao_para_vit": {
+        "previsto": 4,
+        "real": null,
+        "desvio": null
+      }
+    },
+    "status": "aguardando_op",
+    "responsavel_atual": "Engenharia",
+    "tem_cronograma": true
+  },
+  {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAHmd4ElU3FVKoQ_C9mgVhDA=",
-    "subject": "RES: PEDIDO FECHADO VAREJO - FIT - MRS ROUPAS",
+    "subject": "PEDIDO FECHADO VAREJO - FIT - MRS ROUPAS",
     "projeto": "FIT - MRS ROUPAS",
     "cliente": "",
     "comercial": "EDUARDA FERREIRA DOS SANTOS",
@@ -260,8 +435,8 @@
   },
   {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAL-i64pXTI9Mj4KgCNYgc1o=",
-    "subject": "RES: BF_2256  PEDIDO FECHADO VAREJO - RENNER AGOSTO",
-    "projeto": "BF_2256 AGOSTO",
+    "subject": "PEDIDO FECHADO VAREJO - RENNER AGOSTO",
+    "projeto": "AGOSTO",
     "cliente": "RENNER",
     "comercial": "WESLEY MATHEUS DA SILVA",
     "skus": [
@@ -297,30 +472,30 @@
     ],
     "marcos": {
       "pedido_fechado": {
-        "previsto": "2026-05-25",
+        "previsto": "2026-05-18",
         "real": "2026-05-18",
         "por": "WESLEY MATHEUS DA SILVA"
       },
       "fert_criado": {
-        "previsto": "2026-05-26",
+        "previsto": "2026-05-19",
         "real": "2026-05-19",
         "por": "GIOVANNA FREITAS ALVES"
       },
       "op_liberada": {
-        "previsto": "2026-05-29",
+        "previsto": "2026-05-25",
         "real": "2026-05-22",
         "por": "LETICIA JACQUELINE SANTOS",
         "real_ultima": "2026-05-25",
         "n_parcelas": 3
       },
       "producao": {
-        "previsto": "2026-08-13",
+        "previsto": "2026-08-06",
         "real": "2026-06-01",
         "por": null,
         "fim": "2026-06-01"
       },
       "data_vitrine": {
-        "previsto": "2026-08-17",
+        "previsto": "2026-08-10",
         "real": null,
         "por": null
       }
@@ -332,14 +507,14 @@
         "desvio": 0
       },
       "fert_para_op": {
-        "previsto": 3,
+        "previsto": 6,
         "real": 3,
-        "desvio": 0
+        "desvio": -3
       },
       "op_para_producao": {
-        "previsto": 76,
+        "previsto": 73,
         "real": 10,
-        "desvio": -66
+        "desvio": -63
       },
       "producao_para_vit": {
         "previsto": 4,
@@ -367,7 +542,7 @@
   },
   {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAMC-ScgVsj9Avp4vPeFxDLA=",
-    "subject": "RES: PEDIDO FECHADO VAREJO - SEPHORA -  INSTITUCIONAL",
+    "subject": "PEDIDO FECHADO VAREJO - SEPHORA -  INSTITUCIONAL",
     "projeto": "ETIQ ADES VENDA PROIB",
     "cliente": "SEPHORA",
     "comercial": "WESLEY MATHEUS DA SILVA",
@@ -435,7 +610,7 @@
   },
   {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAHthAQbS0S1KqFEvTedtNyI=",
-    "subject": "RE: PEDIDO FECHADO VAREJO - QUEM DISSE BERENISSE - CAIXA PRESS KIT FRIENDS",
+    "subject": "PEDIDO FECHADO VAREJO - QUEM DISSE BERENISSE - CAIXA PRESS KIT FRIENDS",
     "projeto": "CAIXA PRESS KIT FRIENDS",
     "cliente": "QUEM DISSE BERENICE",
     "comercial": "GLEICY MAIA DOS SANTOS",
@@ -513,7 +688,7 @@
   },
   {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQALqRWTknnAdKqhPQ8K3RuLI=",
-    "subject": "RES: PEDIDO FECHADO VAREJO - QUEM DISSE BERENISSE -  FRIENDS",
+    "subject": "PEDIDO FECHADO VAREJO - QUEM DISSE BERENISSE -  FRIENDS",
     "projeto": "FRIENDS",
     "cliente": "QUEM DISSE BERENICE",
     "comercial": "GLEICY MAIA DOS SANTOS",
@@ -621,7 +796,7 @@
   },
   {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAOelOACkG_dGj0ov3scWcxg=",
-    "subject": "RES: PEDIDO FECHADO VAREJO - RENNER JUNHO/AGO ",
+    "subject": "PEDIDO FECHADO VAREJO - RENNER JUNHO/AGO ",
     "projeto": "JUNHO AGO",
     "cliente": "RENNER",
     "comercial": "WESLEY MATHEUS DA SILVA",
@@ -788,7 +963,7 @@
   },
   {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAB9mQSJNHK5Go9nQ1Mb9clI=",
-    "subject": "RES: PEDIDO FECHADO VAREJO - SACOLA M CAU CHOCOLATES",
+    "subject": "PEDIDO FECHADO VAREJO - SACOLA M CAU CHOCOLATES",
     "projeto": "SACOLA M",
     "cliente": "CAU CHOCOL",
     "comercial": "JULIO CESAR DELLA PASCOA MACHADO",
@@ -871,7 +1046,7 @@
   },
   {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAG1PIdDZ3fhGlBsKXkMg0PE=",
-    "subject": "RES: PEDIDO FECHADO VAREJO - BOTICÁRIO -  KIT PINS",
+    "subject": "PEDIDO FECHADO VAREJO - BOTICÁRIO -  KIT PINS",
     "projeto": "KIT PINS",
     "cliente": "BOTICARIO",
     "comercial": "GLEICY MAIA DOS SANTOS",
@@ -944,7 +1119,7 @@
   },
   {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQACZ-QvwKK5dIiMdJF87xZM4=",
-    "subject": "RE: PEDIDO FECHADO VAREJO - BELEZA NA WEB -  PHEASE IN / PHEASE OUT - PAPEL DE SEDA",
+    "subject": "PEDIDO FECHADO VAREJO - BELEZA NA WEB -  PHEASE IN / PHEASE OUT - PAPEL DE SEDA",
     "projeto": "PAPEL DE SEDA",
     "cliente": "BELEZA NA WEB",
     "comercial": "GLEICY MAIA DOS SANTOS",
@@ -1012,7 +1187,7 @@
   },
   {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAPtq6L2-4BVPo798kV1ZZXw=",
-    "subject": "RES: PEDIDO FECHADO VAREJO - SEDA DENGO ",
+    "subject": "PEDIDO FECHADO VAREJO - SEDA DENGO ",
     "projeto": "SEDA",
     "cliente": "DENGO",
     "comercial": "LUCINEIA DAIANE RODRIGUES",
@@ -1080,7 +1255,7 @@
   },
   {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAFPoDadlAmFDodm5jJRmoQo=",
-    "subject": "RES: PEDIDO FECHADO VAREJO - SHOPPING IBIRAPUERA ",
+    "subject": "PEDIDO FECHADO VAREJO - SHOPPING IBIRAPUERA ",
     "projeto": "SACL PAP AUT FF",
     "cliente": "SHOPPING IBIRAPUERA",
     "comercial": "JULIO CESAR DELLA PASCOA MACHADO",
@@ -1177,7 +1352,7 @@
   },
   {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAG2TRZTwZ99FpeC0u78scfw=",
-    "subject": "RES: PEDIDO FECHADO VAREJO - SACOLA P SCHUTZ",
+    "subject": "PEDIDO FECHADO VAREJO - SACOLA P SCHUTZ",
     "projeto": "SACOLA P",
     "cliente": "SCHUTZ",
     "comercial": "WESLEY MATHEUS DA SILVA",
@@ -1255,7 +1430,7 @@
   },
   {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAKKCyKKuXwlAm3DfK7x0ESk=",
-    "subject": "RES: PEDIDO FECHADO VAREJO - SACOLA M ANACAPRI",
+    "subject": "PEDIDO FECHADO VAREJO - SACOLA M ANACAPRI",
     "projeto": "SACOLA M",
     "cliente": "ANACAPRI",
     "comercial": "WESLEY MATHEUS DA SILVA",
@@ -1328,7 +1503,7 @@
   },
   {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAH1_B5c_RDhOoUvc4sdA9A8=",
-    "subject": "RES: PEDIDO FECHADO VAREJO - RENNER Junho/ 2026",
+    "subject": "PEDIDO FECHADO VAREJO - RENNER Junho/ 2026",
     "projeto": "JUNHO 2026",
     "cliente": "RENNER",
     "comercial": "WESLEY MATHEUS DA SILVA",
@@ -1475,8 +1650,8 @@
   },
   {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQABSrbbqRngNNgFcabgLQkrc=",
-    "subject": "Resposta automática: PEDIDO FECHADO VAREJO - SACOLAS INST DESCATHON",
-    "projeto": "RESPOSTA AUTOMATICA: - SACOLAS DESCATHON",
+    "subject": "PEDIDO FECHADO VAREJO - SACOLAS INST DESCATHON",
+    "projeto": "SACOLAS DESCATHON",
     "cliente": "",
     "comercial": "NEILA DUARTE DA SILVA",
     "skus": [
@@ -1553,7 +1728,7 @@
   },
   {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQANYaA1Hw1dtDmEhqS4WEHnc=",
-    "subject": "RES: PEDIDO FECHADO VAREJO - BOTICÁRIO - SÃO JOÃO ",
+    "subject": " PEDIDO FECHADO VAREJO - BOTICÁRIO - SÃO JOÃO",
     "projeto": "SAO JOAO",
     "cliente": "BOTICARIO",
     "comercial": "GLEICY MAIA DOS SANTOS",
@@ -1566,21 +1741,21 @@
     ],
     "marcos": {
       "pedido_fechado": {
-        "previsto": "2026-05-28",
+        "previsto": "2026-05-04",
         "real": "2026-05-04",
         "por": "GLEICY MAIA DOS SANTOS"
       },
       "fert_criado": {
-        "previsto": "2026-05-28",
+        "previsto": "2026-05-04",
         "real": "2026-05-04",
         "por": "giovanna.alves@antilhas.com.br"
       },
       "op_liberada": {
-        "previsto": "2026-06-01",
-        "real": "2026-06-02",
-        "por": "leticia.santos@antilhas.com.br",
+        "previsto": null,
+        "real": null,
+        "por": null,
         "real_ultima": null,
-        "n_parcelas": 1
+        "n_parcelas": 0
       },
       "producao": {
         "previsto": null,
@@ -1588,7 +1763,7 @@
         "por": null
       },
       "data_vitrine": {
-        "previsto": "2026-06-12",
+        "previsto": "2026-06-13",
         "real": null,
         "por": null
       }
@@ -1600,9 +1775,9 @@
         "desvio": 0
       },
       "fert_para_op": {
-        "previsto": 4,
-        "real": 29,
-        "desvio": 25
+        "previsto": null,
+        "real": null,
+        "desvio": null
       },
       "op_para_producao": {
         "previsto": null,
@@ -1621,7 +1796,7 @@
   },
   {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAL4v_tbsCE4Ao0XQGW2cedY=",
-    "subject": "RES: PEDIDO FECHADO VAREJO - KOP PAIS 26",
+    "subject": "PEDIDO FECHADO VAREJO - KOP PAIS 26",
     "projeto": "KOP PAIS 26",
     "cliente": "",
     "comercial": "WESLEY MATHEUS DA SILVA",
