@@ -597,6 +597,14 @@ h3 { font-size: 15px; }
 .panel-head h3 { font-size: 15px; font-weight: 650; }
 .panel-head .sub { font-size: 12.5px; color: var(--cinza-500); margin-top: 2px; }
 .panel-body { padding: var(--s6); }
+.panel-badge { background: var(--azul-100); color: var(--azul-700); padding: 3px 10px; border-radius: var(--r-full); font-size: 12px; font-weight: 700; font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+/* barra empilhada (somatório do lead time por etapa) */
+.flowbar { display: flex; height: 48px; border-radius: var(--r-md); overflow: hidden; border: var(--bd); background: var(--cinza-50); margin-bottom: var(--s5); }
+.flowbar:empty { display: none; }
+.flowbar-seg { display: flex; flex-direction: column; align-items: center; justify-content: center; color: #fff; font-weight: 700; position: relative; min-width: 0; transition: flex-basis .5s cubic-bezier(.4,0,.2,1); overflow: hidden; padding: 0 4px; }
+.flowbar-seg .seg-d { font-size: 13px; line-height: 1.1; }
+.flowbar-seg .seg-n { font-size: 9.5px; font-weight: 600; opacity: .9; letter-spacing: .04em; text-transform: uppercase; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
 
 /* breakdown por etapa */
 .stage-rows { display: flex; flex-direction: column; gap: var(--s3); }
