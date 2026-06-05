@@ -374,102 +374,6 @@ function calcularMediasEtapas() {
   return { resultados, gargalo };
 }
 
-function renderizarEtapas() {
-  const { resultados, gargalo } = calcularMediasEtapas();
-
-  // Pra largura da barra: maior valor entre real e plano de TODAS as etapas
-  // (sem contar a aderência, que usa escala diferente)
-  const valoresLeadtime = resultados
-    .filter(r => r.tipo !== 'aderencia')
-    .flatMap(r => [r.real, r.plano])
-    .filter(v => v != null);
-  const maxValor = valoresLeadtime.length ? Math.max(...valoresLeadtime, 1) : 1;
-
-  $('#etapas-grid').innerHTML = resultados.map(r => {
-    const isGargalo = gargalo === r.key;
-
-    // Dias formatados com vírgula (padrão BR)
-    const formatDias = v => v != null ? v.toFixed(1).replace('.', ',') : '—';
-
-    // ============= CARD ESPECIAL: aderência do comercial =============
-    if (r.tipo === 'aderencia') {
-      const sem = r.real == null;
-      let valorDisplay, deltaHtml, larguraBarra, corBarra;
-
-      if (sem) {
-        valorDisplay = '—';
-        deltaHtml = '<span class="delta zero">sem cronograma</span>';
-        larguraBarra = 0;
-        corBarra = 'var(--cinza-300)';
-      } else if (r.real <= 0) {
-        // No prazo ou adiantado
-        valorDisplay = r.real < -0.05
-          ? `<span style="color:var(--verde-700)">${formatDias(Math.abs(r.real))}</span>`
-          : '<span style="color:var(--verde-700)">0,0</span>';
-        deltaHtml = r.real < -0.05
-          ? `<span class="delta pos">↓ adiantou ${formatDias(Math.abs(r.real))}d</span>`
-          : `<span class="delta pos">no dia</span>`;
-        larguraBarra = 100;
-        corBarra = 'var(--verde-500)';
-      } else {
-        // Atrasou
-        valorDisplay = `<span style="color:var(--vermelho-700)">+${formatDias(r.real)}</span>`;
-        deltaHtml = `<span class="delta neg">↑ atrasou ${formatDias(r.real)}d</span>`;
-        // Barra: máx 7 dias = 100%
-        larguraBarra = Math.min(100, (r.real / 7) * 100);
-        corBarra = 'var(--vermelho-500)';
-      }
-
-      return `
-        <div class="etapa-card">
-          <div class="top-stripe" style="background:${r.cor}"></div>
-          <div class="etapa-head">
-            <span class="etapa-nome">${r.label}</span>
-          </div>
-          <div class="etapa-dias">${valorDisplay}<span class="unit">d</span></div>
-          <div class="etapa-bar"><i style="width:${larguraBarra}%; background:${corBarra}"></i></div>
-          <div class="etapa-meta">
-            <span>plano: no dia</span>
-            ${deltaHtml}
-          </div>
-        </div>
-      `;
-    }
-
-    // ============= CARDS NORMAIS =============
-    const larguraReal = r.real != null ? (r.real / maxValor) * 100 : 0;
-
-    let deltaHtml = '';
-    if (r.delta != null) {
-      const absD = Math.abs(r.delta).toFixed(1).replace('.', ',');
-      if (r.delta > 0.05) {
-        deltaHtml = `<span class="delta neg">↑ ${absD}d</span>`;
-      } else if (r.delta < -0.05) {
-        deltaHtml = `<span class="delta pos">↓ ${absD}d</span>`;
-      } else {
-        deltaHtml = `<span class="delta zero">no plano</span>`;
-      }
-    } else {
-      deltaHtml = `<span class="delta zero">sem dados</span>`;
-    }
-
-    return `
-      <div class="etapa-card ${isGargalo ? 'is-gargalo' : ''}">
-        <div class="top-stripe" style="background:${r.cor}"></div>
-        <div class="etapa-head">
-          <span class="etapa-nome">${r.label}</span>
-          ${isGargalo ? '<span class="tag-gargalo">Gargalo</span>' : ''}
-        </div>
-        <div class="etapa-dias">${formatDias(r.real)}<span class="unit">d</span></div>
-        <div class="etapa-bar"><i style="width:${larguraReal}%; background:${r.cor}"></i></div>
-        <div class="etapa-meta">
-          <span>plano ${formatDias(r.plano)}d · n=${r.amostra || 0}</span>
-          ${deltaHtml}
-        </div>
-      </div>
-    `;
-  }).join('');
-}
 function popularFiltroCliente() {
   const clientes = Array.from(new Set(
     state.pedidos.map(p => p.cliente).filter(Boolean)
@@ -696,6 +600,25 @@ function renderizarBreakdown() {
   const etapas = resultados.filter(r => r.tipo !== 'aderencia');
   const maxV = Math.max(1, ...etapas.flatMap(r => [r.real, r.plano]).filter(v => v != null));
   const fmt = v => v != null ? v.toFixed(1).replace('.', ',') : '—';
+
+  // Barra empilhada + total (soma dos lead times reais por etapa)
+  const ABREV = { pedido_para_fert: 'PED→FERT', fert_para_op: 'FERT→OP', op_para_producao: 'OP→PROD' };
+  const comReal = etapas.filter(r => r.real != null && r.real > 0);
+  const totalReal = comReal.reduce((s, r) => s + r.real, 0);
+  const flow = $('#stage-flowbar');
+  if (flow) {
+    flow.innerHTML = totalReal > 0
+      ? comReal.map(r => {
+          const pct = (r.real / totalReal) * 100;
+          return `<div class="flowbar-seg" style="flex:0 0 ${pct}%; background:${r.cor}" title="${r.label}: ${fmt(r.real)}d">
+            <span class="seg-d">${fmt(r.real)}d</span>
+            <span class="seg-n">${ABREV[r.key] || r.label}</span>
+          </div>`;
+        }).join('')
+      : '';
+  }
+  const totalEl = $('#breakdown-total');
+  if (totalEl) totalEl.textContent = totalReal > 0 ? `total ${fmt(totalReal)}d` : 'total —';
 
   host.innerHTML = etapas.map(r => {
     const wReal = r.real != null ? (r.real / maxV) * 100 : 0;
@@ -1522,7 +1445,6 @@ function renderizarTudo() {
   aplicarOverridesLocaisAosPedidos();
   popularFiltroCliente();
   renderizarCards();
-  renderizarEtapas();
   renderizarTabela();
 }
 
@@ -1533,7 +1455,6 @@ function ligarEventos() {
   // Filtro global de período (afeta cards de etapas E tabela de pedidos)
   $('#filtro-periodo').addEventListener('change', e => {
     state.periodo = e.target.value;
-    renderizarEtapas();
     renderizarTabela();
   });
 
