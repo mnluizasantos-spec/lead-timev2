@@ -611,10 +611,9 @@ function renderizarBreakdown() {
     flow.innerHTML = totalReal > 0
       ? comReal.map(r => {
           const pct = (r.real / totalReal) * 100;
-          return `<div class="flowbar-seg" style="flex:0 0 ${pct}%; background:${r.cor}" title="${r.label}: ${fmt(r.real)}d">
-            <span class="seg-d">${fmt(r.real)}d</span>
-            <span class="seg-n">${r.label}</span>
-          </div>`;
+          const segD = pct >= 7 ? `<span class="seg-d">${fmt(r.real)}d</span>` : '';
+          const segN = pct >= 12 ? `<span class="seg-n">${r.label}</span>` : '';
+          return `<div class="flowbar-seg" style="flex:0 0 ${pct}%; background:${r.cor}" title="${r.label}: ${fmt(r.real)}d">${segD}${segN}</div>`;
         }).join('')
       : '';
   }
@@ -651,7 +650,7 @@ function renderizarBreakdown() {
         <div class="sr-name">${r.label}${isG ? '<span class="tag-gargalo">Gargalo</span>' : ''}</div>
         <div class="sr-track">
           <div class="sr-plan" style="width:${wPlan}%"></div>
-          <div class="sr-real" style="width:${wReal}%; background:${r.cor}">${r.real != null ? fmt(r.real) + 'd' : ''}</div>
+          <div class="sr-real" style="width:${wReal}%; background:${r.cor}">${(r.real != null && wReal >= 14) ? fmt(r.real) + 'd' : ''}</div>
         </div>
         <div class="sr-meta">real <b>${fmt(r.real)}</b> · plano <b>${fmt(r.plano)}</b> · <span class="delta ${deltaCls}">${deltaTxt}</span> · n=${r.amostra || 0}</div>
       </div>`;
