@@ -1,9 +1,45 @@
 {
-  "gerado_em": "2026-06-04T13:39:24",
-  "total_emails": 334,
-  "total_threads": 35,
+  "gerado_em": "2026-06-05T12:18:03",
+  "total_emails": 353,
+  "total_threads": 38,
   "marcos_rejeitados": [
     {
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQANYaA1Hw1dtDmEhqS4WEHnc=",
+      "tipo_detectado": "ops_liberadas",
+      "remetente": "gleicy.maia@antilhas.com.br",
+      "motivo": "papel_remetente=comercial, esperava=engenharia"
+    },
+    {
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQANYaA1Hw1dtDmEhqS4WEHnc=",
+      "tipo_detectado": "ops_liberadas",
+      "remetente": "maria.nunes@antilhas.com.br",
+      "motivo": "papel_remetente=desconhecido, esperava=engenharia"
+    },
+    {
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQANYaA1Hw1dtDmEhqS4WEHnc=",
+      "tipo_detectado": "ferts_criados",
+      "remetente": "laborat@antilhas.com.br",
+      "motivo": "papel_remetente=desconhecido, esperava=engenharia"
+    },
+    {
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQANYaA1Hw1dtDmEhqS4WEHnc=",
+      "tipo_detectado": "ops_liberadas",
+      "remetente": "gleicy.maia@antilhas.com.br",
+      "motivo": "papel_remetente=comercial, esperava=engenharia"
+    },
+    {
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQANYaA1Hw1dtDmEhqS4WEHnc=",
+      "tipo_detectado": "ops_liberadas",
+      "remetente": "maria.nunes@antilhas.com.br",
+      "motivo": "papel_remetente=desconhecido, esperava=engenharia"
+    },
+    {
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQANYaA1Hw1dtDmEhqS4WEHnc=",
+      "tipo_detectado": "ferts_criados",
+      "remetente": "laborat@antilhas.com.br",
+      "motivo": "papel_remetente=desconhecido, esperava=engenharia"
+    },
+    {
       "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAMC-ScgVsj9Avp4vPeFxDLA=",
       "tipo_detectado": "ferts_criados",
       "remetente": "MATHEUS GARCIA HENRIQUES",
@@ -134,42 +170,6 @@
       "tipo_detectado": "ferts_criados",
       "remetente": "matheus.garcia@antilhas.com.br",
       "motivo": "papel_remetente=excluido, esperava=engenharia"
-    },
-    {
-      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQANYaA1Hw1dtDmEhqS4WEHnc=",
-      "tipo_detectado": "ops_liberadas",
-      "remetente": "gleicy.maia@antilhas.com.br",
-      "motivo": "papel_remetente=comercial, esperava=engenharia"
-    },
-    {
-      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQANYaA1Hw1dtDmEhqS4WEHnc=",
-      "tipo_detectado": "ops_liberadas",
-      "remetente": "maria.nunes@antilhas.com.br",
-      "motivo": "papel_remetente=desconhecido, esperava=engenharia"
-    },
-    {
-      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQANYaA1Hw1dtDmEhqS4WEHnc=",
-      "tipo_detectado": "ferts_criados",
-      "remetente": "laborat@antilhas.com.br",
-      "motivo": "papel_remetente=desconhecido, esperava=engenharia"
-    },
-    {
-      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQANYaA1Hw1dtDmEhqS4WEHnc=",
-      "tipo_detectado": "ops_liberadas",
-      "remetente": "gleicy.maia@antilhas.com.br",
-      "motivo": "papel_remetente=comercial, esperava=engenharia"
-    },
-    {
-      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQANYaA1Hw1dtDmEhqS4WEHnc=",
-      "tipo_detectado": "ops_liberadas",
-      "remetente": "maria.nunes@antilhas.com.br",
-      "motivo": "papel_remetente=desconhecido, esperava=engenharia"
-    },
-    {
-      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQANYaA1Hw1dtDmEhqS4WEHnc=",
-      "tipo_detectado": "ferts_criados",
-      "remetente": "laborat@antilhas.com.br",
-      "motivo": "papel_remetente=desconhecido, esperava=engenharia"
     },
     {
       "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAG1PIdDZ3fhGlBsKXkMg0PE=",
@@ -477,28 +477,40 @@
   "remetentes_desconhecidos": [],
   "reedicoes_ignoradas": [
     {
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAPF2ZdlHkohOmB-MEE3z19M=",
+      "subject": "RES: REEDIÇÃO PEDIDO FECHADO VAREJO - HOPE -  INSTITUCIONAL"
+    },
+    {
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQADLwmNeFjztBrWfiS3QxSAw=",
+      "subject": "RES: REEDICAO PEDIDO FECHADO VAREJO - NESTLE"
+    },
+    {
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAME4HJRfnnBLslq09-9hvZs=",
+      "subject": "RES: REEDIÇÃO PEDIDO FECHADO VAREJO - SEPHORA -  INSTITUCIONAL"
+    },
+    {
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAJ3KlOfJZMdFoVs8Nir9Sc4=",
+      "subject": "RE: REEDIÇÃO PEDIDO FECHADO VAREJO - CAIXA P - TRACK & FIELD COFFE "
+    },
+    {
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAJcWrWlQ4aNAmLgXe3FhCww=",
+      "subject": "RE: REEDIÇÃO - PEDIDO FECHADO VAREJO - SANTA LUZIA / SACOLA INSTITUCIONAL  - "
+    },
+    {
       "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQALgZ5MDsHMdCnCmPZUzigPM=",
       "subject": "RE: REEDIÇÃO - PEDIDO FECHADO VAREJO - SANTA LUZIA / SACOLA RAPPI - "
     },
     {
-      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAME4HJRfnnBLslq09-9hvZs=",
-      "subject": "RE: REEDIÇÃO PEDIDO FECHADO VAREJO - SEPHORA -  INSTITUCIONAL"
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQADebFY3w2YpNuH1COVzIaco=",
+      "subject": "RES: REEDIÇÃO - PEDIDO FECHADO VAREJO - VIVARA / SACL PAP MAN FSC M VIVARA"
     },
     {
       "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAMVxdys3z5JBpycGBVGDdes=",
       "subject": "ENC: REEDIÇÃO PEDIDO FECHADO VAREJO -INSTUCIONAL -  BROKSFIELD DONNA"
     },
     {
-      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAJcWrWlQ4aNAmLgXe3FhCww=",
-      "subject": "REEDIÇÃO - PEDIDO FECHADO VAREJO - SANTA LUZIA / SACOLA INSTITUCIONAL  - "
-    },
-    {
       "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQANIi5aRiZlxNmCecQacu5Sc=",
       "subject": "RES: PEDIDO FECHADO VAREJO - CRONOGRAMA — PEDIDO FECHADO VAREJO\t\t\t"
-    },
-    {
-      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQADebFY3w2YpNuH1COVzIaco=",
-      "subject": "REEDIÇÃO - PEDIDO FECHADO VAREJO - VIVARA / SACL PAP MAN FSC M VIVARA"
     },
     {
       "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAIzzHWcUzEhIieTsvcUOLBg=",
@@ -513,20 +525,12 @@
       "subject": "RES: REEDIÇÃO PEDIDO FECHADO VAREJO - MAHOGANY PRESENTEÁVEL"
     },
     {
-      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAJ3KlOfJZMdFoVs8Nir9Sc4=",
-      "subject": "RE: REEDIÇÃO PEDIDO FECHADO VAREJO - CAIXA P - TRACK & FIELD COFFE "
-    },
-    {
       "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAAn1RdE7VoNLokmF1rURiXA=",
       "subject": "RE: REEDIÇÃO PEDIDO FECHADO VAREJO - CAIXA INSTITUCIONAL  - C&A"
     },
     {
       "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAN-AXOJTbztBmUGnjGG82sI=",
       "subject": "RES:  REEDIÇÃO PEDIDO FECHADO VAREJO - RENNER JUNHO A AGOSTO/ 2026"
-    },
-    {
-      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAPF2ZdlHkohOmB-MEE3z19M=",
-      "subject": "RES: REEDIÇÃO PEDIDO FECHADO VAREJO - HOPE -  INSTITUCIONAL"
     }
   ],
   "pedidos_filtrados_data": [

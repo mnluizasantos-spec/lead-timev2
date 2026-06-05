@@ -1,5 +1,196 @@
 [
   {
+    "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAA7Wa8cMl8lCgxa3Z96wukU=",
+    "subject": "RES: PEDIDO FECHADO VAREJO - ME LINDA - INSTITUCIONAL",
+    "projeto": "ME LINDA",
+    "cliente": "",
+    "comercial": "EDUARDA FERREIRA DOS SANTOS",
+    "skus": [
+      {
+        "codigo": "11055356-0001",
+        "tipo": "FERT",
+        "descricao": "SACL PAP MAN FSC®PP PRES INST26 MELINDA"
+      },
+      {
+        "codigo": "2100082712",
+        "tipo": "HALB",
+        "descricao": "SACL PAP MAN FSC®PP PRES INST26 MELINDA"
+      },
+      {
+        "codigo": "2400010088",
+        "tipo": "HALB",
+        "descricao": "FUNDO FSCM 128X63MM BRANCO"
+      },
+      {
+        "codigo": "11055360-0001",
+        "tipo": "FERT",
+        "descricao": "SACL PAP MAN FSC®P PRES INST26 MELINDA"
+      },
+      {
+        "codigo": "2100082716",
+        "tipo": "HALB",
+        "descricao": "SACL PAP MAN FSC®P PRES INST26 MELINDA"
+      },
+      {
+        "codigo": "2400010089",
+        "tipo": "HALB",
+        "descricao": "FUNDO FSCM 198X88MM BRANCO"
+      },
+      {
+        "codigo": "11055368-0001",
+        "tipo": "FERT",
+        "descricao": "SACL PAP MAN FSC®M PRES INST26 MELINDA"
+      },
+      {
+        "codigo": "2100082729",
+        "tipo": "HALB",
+        "descricao": "SACL PAP MAN FSC®M PRES INST26 MELINDA"
+      },
+      {
+        "codigo": "2400010090",
+        "tipo": "HALB",
+        "descricao": "FUNDO FSCM 288X108MM BRANCO"
+      },
+      {
+        "codigo": "11055373-0001",
+        "tipo": "FERT",
+        "descricao": "CX TPA FDO FSC®M PRES INST26 MELINDA"
+      },
+      {
+        "codigo": "2100082738",
+        "tipo": "HALB",
+        "descricao": "CX TPA FSC®M PRES INST26 MELINDA"
+      },
+      {
+        "codigo": "2100082739",
+        "tipo": "HALB",
+        "descricao": "CX FDO FSC®M PRES INST26 MELINDA"
+      }
+    ],
+    "marcos": {
+      "pedido_fechado": {
+        "previsto": "2026-06-02",
+        "real": "2026-06-02",
+        "por": "EDUARDA FERREIRA DOS SANTOS"
+      },
+      "fert_criado": {
+        "previsto": "2026-06-03",
+        "real": "2026-06-03",
+        "por": "GIOVANNA FREITAS ALVES"
+      },
+      "op_liberada": {
+        "previsto": "2026-06-09",
+        "real": null,
+        "por": null,
+        "real_ultima": null,
+        "n_parcelas": 0
+      },
+      "producao": {
+        "previsto": "2026-06-10",
+        "real": null,
+        "por": null
+      },
+      "data_vitrine": {
+        "previsto": "2026-07-21",
+        "real": null,
+        "por": null
+      }
+    },
+    "lead_times": {
+      "pedido_para_fert": {
+        "previsto": 1,
+        "real": 1,
+        "desvio": 0
+      },
+      "fert_para_op": {
+        "previsto": 6,
+        "real": null,
+        "desvio": null
+      },
+      "op_para_producao": {
+        "previsto": 1,
+        "real": null,
+        "desvio": null
+      },
+      "producao_para_vit": {
+        "previsto": 41,
+        "real": null,
+        "desvio": null
+      }
+    },
+    "status": "aguardando_op",
+    "responsavel_atual": "Engenharia",
+    "tem_cronograma": true
+  },
+  {
+    "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAGZ3z48NHsRGjiY1MBBkkIs=",
+    "subject": "RES: BF_2257 PEDIDO FECHADO VAREJO - LUVA MOUSSE KOP 26",
+    "projeto": "BF_2257 - LUVA MOUSSE KOP 26",
+    "cliente": "",
+    "comercial": "WESLEY MATHEUS DA SILVA",
+    "skus": [
+      {
+        "codigo": "11055381-0001",
+        "tipo": "FERT",
+        "descricao": "LUV MOUSSE26 KOP"
+      }
+    ],
+    "marcos": {
+      "pedido_fechado": {
+        "previsto": "2026-06-02",
+        "real": "2026-06-02",
+        "por": "WESLEY MATHEUS DA SILVA"
+      },
+      "fert_criado": {
+        "previsto": "2026-06-02",
+        "real": "2026-06-02",
+        "por": "GIOVANNA FREITAS ALVES"
+      },
+      "op_liberada": {
+        "previsto": "2026-06-08",
+        "real": null,
+        "por": null,
+        "real_ultima": null,
+        "n_parcelas": 0
+      },
+      "producao": {
+        "previsto": "2026-06-26",
+        "real": null,
+        "por": null
+      },
+      "data_vitrine": {
+        "previsto": "2026-06-29",
+        "real": null,
+        "por": null
+      }
+    },
+    "lead_times": {
+      "pedido_para_fert": {
+        "previsto": 0,
+        "real": 0,
+        "desvio": 0
+      },
+      "fert_para_op": {
+        "previsto": 6,
+        "real": null,
+        "desvio": null
+      },
+      "op_para_producao": {
+        "previsto": 18,
+        "real": null,
+        "desvio": null
+      },
+      "producao_para_vit": {
+        "previsto": 3,
+        "real": null,
+        "desvio": null
+      }
+    },
+    "status": "aguardando_op",
+    "responsavel_atual": "Engenharia",
+    "tem_cronograma": true
+  },
+  {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAHmd4ElU3FVKoQ_C9mgVhDA=",
     "subject": "RES: PEDIDO FECHADO VAREJO - FIT - MRS ROUPAS",
     "projeto": "FIT - MRS ROUPAS",
@@ -171,7 +362,7 @@
         "OFFSET"
       ],
       "qtd_total": 7899,
-      "dias_desde_ultima": 3
+      "dias_desde_ultima": 4
     }
   },
   {
@@ -572,7 +763,7 @@
         "OFFSET"
       ],
       "qtd_total": 17037,
-      "dias_desde_ultima": 2
+      "dias_desde_ultima": 3
     }
   },
   {
@@ -956,7 +1147,7 @@
         "CAJAMAR"
       ],
       "qtd_total": 10000,
-      "dias_desde_ultima": 9
+      "dias_desde_ultima": 10
     },
     "oculto": true,
     "oculto_info": {
@@ -1249,7 +1440,7 @@
         "OFFSET"
       ],
       "qtd_total": 9352,
-      "dias_desde_ultima": 3
+      "dias_desde_ultima": 4
     }
   },
   {
@@ -1332,8 +1523,8 @@
   },
   {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQANYaA1Hw1dtDmEhqS4WEHnc=",
-    "subject": "Resposta automática: PEDIDO FECHADO VAREJO - BOTICÁRIO - SÃO JOÃO ",
-    "projeto": "RESPOSTA AUTOMATICA: SAO JOAO",
+    "subject": "RES: PEDIDO FECHADO VAREJO - BOTICÁRIO - SÃO JOÃO ",
+    "projeto": "SAO JOAO",
     "cliente": "BOTICARIO",
     "comercial": "GLEICY MAIA DOS SANTOS",
     "skus": [
@@ -1356,10 +1547,10 @@
       },
       "op_liberada": {
         "previsto": "2026-06-01",
-        "real": null,
-        "por": null,
+        "real": "2026-06-02",
+        "por": "leticia.santos@antilhas.com.br",
         "real_ultima": null,
-        "n_parcelas": 0
+        "n_parcelas": 1
       },
       "producao": {
         "previsto": null,
@@ -1380,8 +1571,8 @@
       },
       "fert_para_op": {
         "previsto": 4,
-        "real": null,
-        "desvio": null
+        "real": 29,
+        "desvio": 25
       },
       "op_para_producao": {
         "previsto": null,
