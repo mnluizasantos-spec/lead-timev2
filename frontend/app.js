@@ -449,8 +449,9 @@ function endpointLeadTime(p) {
 
 // Regra ÚNICA de lead time (usada em tabela, drawer, KPIs e donut):
 //   início = pedido_fechado · fim = endpointLeadTime
-//   dias = diferença entre datas (corridos) · aderência = dias reais − dias previstos
-//   aderência > 0 = atrasou · < 0 = adiantou
+//   real/previsto = DURAÇÃO (diferença de datas, corridos) — informativo
+//   aderência = ATRASO DA ENTREGA = data real da etapa final − data prevista dela
+//   aderência > 0 = atrasou · < 0 = adiantou · 0 = no prazo
 function leadTimeDoPedido(p) {
   const m = p.marcos || {};
   const ini = m.pedido_fechado;
@@ -460,7 +461,8 @@ function leadTimeDoPedido(p) {
   }
   const real = diasEntre(ini.real, m[fimK].real);
   const previsto = diasEntre(ini.previsto, m[fimK].previsto);
-  return { real, previsto, aderencia: real - previsto, fim: fimK };
+  const aderencia = diasEntre(m[fimK].previsto, m[fimK].real); // entrega vs previsto
+  return { real, previsto, aderencia, fim: fimK };
 }
 
 // Classifica a aderência: diferença de duração (real − previsto), sem somar etapas.
@@ -959,7 +961,7 @@ function renderMetricasResumo(p) {
       <div class="metrica">
         <div class="metrica-label">Aderência</div>
         <div class="metrica-valor ${aderClasse}">${aderTexto}</div>
-        <div class="metrica-sub">dias reais − previstos</div>
+        <div class="metrica-sub">data final real vs prevista</div>
       </div>
     </div>
   `;
