@@ -682,9 +682,14 @@
         "desvio": null
       }
     },
-    "status": "em_producao",
-    "responsavel_atual": "PCP/Fábrica",
-    "tem_cronograma": true
+    "status": "cancelado",
+    "responsavel_atual": "-",
+    "tem_cronograma": true,
+    "cancelado_info": {
+      "motivo": "Pedido cancelado",
+      "por": "PCP",
+      "data": "2026-06-05"
+    }
   },
   {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQALqRWTknnAdKqhPQ8K3RuLI=",
