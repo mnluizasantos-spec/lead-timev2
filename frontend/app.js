@@ -507,9 +507,201 @@ function aplicarFiltros(pedidos) {
 }
 
 // ============================================================
+// DASHBOARD — KPIs + Donut de aderência + Breakdown por etapa
+// ============================================================
+const ICON_KPI = {
+  box:   '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>',
+  alert: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>',
+  clock: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>',
+  check: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>',
+};
+
+// Classifica a aderência de UM pedido pela soma dos desvios dos marcos
+// (mesma regra do badge da tabela, pra ficar consistente)
+function classificarAderencia(p) {
+  const marcos = p.marcos || {};
+  const desvios = [];
+  for (const m of ['pedido_fechado', 'fert_criado', 'op_liberada', 'producao']) {
+    const d = marcos[m];
+    if (d?.real && d?.previsto) {
+      desvios.push(Math.round((new Date(d.real) - new Date(d.previsto)) / 86400000));
+    }
+  }
+  if (desvios.length === 0) return 'na';
+  const soma = desvios.reduce((a, b) => a + b, 0);
+  if (soma <= 0) return 'ok';
+  if (soma <= 3) return 'leve';
+  return 'atraso';
+}
+
+// Pedido atrasado = marco previsto venceu e ainda não foi cumprido
+function responsavelAtrasoPedido(p) {
+  if (p.status === 'concluido' || p.status === 'cancelado') return null;
+  const ho = hoje();
+  const m = p.marcos || {};
+  if (m.fert_criado?.previsto && m.fert_criado.previsto < ho && !m.fert_criado.real) return 'Engenharia';
+  if (m.op_liberada?.previsto && m.op_liberada.previsto < ho && !m.op_liberada.real) return 'Engenharia';
+  if (m.producao?.previsto && m.producao.previsto < ho && !m.producao.real) return 'PCP/Fábrica';
+  return null;
+}
+
+function calcularKPIs(lista) {
+  const total = lista.length;
+  const ativos = lista.filter(p => p.status !== 'concluido' && p.status !== 'cancelado').length;
+  const concluidos = lista.filter(p => p.status === 'concluido').length;
+
+  const atraso = { total: 0, eng: 0, pcp: 0 };
+  for (const p of lista) {
+    const r = responsavelAtrasoPedido(p);
+    if (r) { atraso.total++; r === 'Engenharia' ? atraso.eng++ : atraso.pcp++; }
+  }
+
+  const lts = [];
+  for (const p of lista) {
+    const lt = p.lead_times || {};
+    for (const k of Object.keys(lt)) {
+      const v = lt[k]?.real;
+      if (v != null && v >= 0) lts.push(v);
+    }
+  }
+  const ltMedio = lts.length ? Math.round(lts.reduce((s, n) => s + n, 0) / lts.length) : null;
+
+  const dist = { ok: 0, leve: 0, atraso: 0, na: 0 };
+  for (const p of lista) dist[classificarAderencia(p)]++;
+  const comDados = dist.ok + dist.leve + dist.atraso;
+  const aderenciaPct = comDados ? Math.round((dist.ok / comDados) * 100) : null;
+
+  return { total, ativos, concluidos, atraso, ltMedio, dist, comDados, aderenciaPct };
+}
+
+function renderizarKPIs(k) {
+  const grid = $('#kpi-grid');
+  if (!grid) return;
+  const cards = [
+    {
+      cls: 'ic-info', icon: ICON_KPI.box, bar: 'var(--azul-500)',
+      label: 'Pedidos', value: k.total, unit: '',
+      foot: `<span class="kpi-chip">${k.ativos} ativos</span><span class="kpi-chip">${k.concluidos} concluídos</span>`,
+    },
+    {
+      cls: 'ic-danger', icon: ICON_KPI.alert, bar: 'var(--vermelho-500)',
+      label: 'Atrasados', value: k.atraso.total, unit: '',
+      foot: k.atraso.total
+        ? `${k.atraso.eng ? `<span class="kpi-chip danger">${k.atraso.eng} Engenharia</span>` : ''}${k.atraso.pcp ? `<span class="kpi-chip warn">${k.atraso.pcp} PCP/Fábrica</span>` : ''}`
+        : `<span class="kpi-chip">nenhum atraso</span>`,
+    },
+    {
+      cls: 'ic-warn', icon: ICON_KPI.clock, bar: 'var(--laranja-500)',
+      label: 'Lead time médio', value: k.ltMedio != null ? k.ltMedio : '—', unit: k.ltMedio != null ? 'd' : '',
+      foot: `<span class="kpi-chip">entre marcos realizados</span>`,
+    },
+    {
+      cls: 'ic-ok', icon: ICON_KPI.check, bar: 'var(--verde-500)',
+      label: 'Aderência ao plano', value: k.aderenciaPct != null ? k.aderenciaPct : '—', unit: k.aderenciaPct != null ? '%' : '',
+      foot: `<span class="kpi-chip">${k.dist.ok}/${k.comDados || 0} no prazo</span>`,
+    },
+  ];
+  grid.innerHTML = cards.map(c => `
+    <div class="kpi" style="--accent-bar:${c.bar}">
+      <div class="kpi-top">
+        <span class="kpi-label">${c.label}</span>
+        <span class="kpi-icon ${c.cls}">${c.icon}</span>
+      </div>
+      <div class="kpi-value">${c.value}<span class="unit">${c.unit}</span></div>
+      <div class="kpi-foot">${c.foot}</div>
+    </div>
+  `).join('');
+}
+
+function renderizarDonut(k) {
+  const wrap = $('#aderencia-donut');
+  if (!wrap) return;
+  const segs = [
+    { label: 'No prazo / adiantado', cor: 'var(--verde-500)', n: k.dist.ok },
+    { label: 'Atraso leve (1–3d)',   cor: 'var(--amarelo-500)', n: k.dist.leve },
+    { label: 'Atraso (4d+)',         cor: 'var(--vermelho-500)', n: k.dist.atraso },
+  ];
+  const total = k.comDados;
+  const r = 70, C = 2 * Math.PI * r;
+  let offset = 0;
+  const ring = total
+    ? segs.filter(s => s.n > 0).map(s => {
+        const len = (s.n / total) * C;
+        const el = `<circle cx="84" cy="84" r="${r}" fill="none" stroke="${s.cor}" stroke-width="22" stroke-dasharray="${len} ${C - len}" stroke-dashoffset="${-offset}" transform="rotate(-90 84 84)"/>`;
+        offset += len;
+        return el;
+      }).join('')
+    : `<circle cx="84" cy="84" r="${r}" fill="none" stroke="var(--cinza-150)" stroke-width="22"/>`;
+  const center = total
+    ? `<div class="big">${k.aderenciaPct}%</div><div class="lbl">no prazo</div>`
+    : `<div class="big">—</div><div class="lbl">sem dados</div>`;
+  let legend = segs.map(s => `
+    <div class="donut-legend-row">
+      <span class="lk"><span class="dot" style="background:${s.cor}"></span>${s.label}</span>
+      <span class="vv">${s.n}</span>
+    </div>`).join('');
+  if (k.dist.na) {
+    legend += `
+    <div class="donut-legend-row">
+      <span class="lk"><span class="dot" style="background:var(--cinza-300)"></span>Sem datas</span>
+      <span class="vv">${k.dist.na}</span>
+    </div>`;
+  }
+  wrap.innerHTML = `
+    <div class="donut">
+      <svg viewBox="0 0 168 168" width="168" height="168">${ring}</svg>
+      <div class="center">${center}</div>
+    </div>
+    <div class="donut-legend">${legend}</div>`;
+}
+
+function renderizarBreakdown() {
+  const host = $('#stage-breakdown');
+  if (!host) return;
+  const { resultados, gargalo } = calcularMediasEtapas();
+  const etapas = resultados.filter(r => r.tipo !== 'aderencia');
+  const maxV = Math.max(1, ...etapas.flatMap(r => [r.real, r.plano]).filter(v => v != null));
+  const fmt = v => v != null ? v.toFixed(1).replace('.', ',') : '—';
+
+  host.innerHTML = etapas.map(r => {
+    const wReal = r.real != null ? (r.real / maxV) * 100 : 0;
+    const wPlan = r.plano != null ? (r.plano / maxV) * 100 : 0;
+    const isG = gargalo === r.key;
+    let deltaCls = 'zero', deltaTxt = 'no plano';
+    if (r.delta != null) {
+      const ad = fmt(Math.abs(r.delta));
+      if (r.delta > 0.05) { deltaCls = 'neg'; deltaTxt = `+${ad}d`; }
+      else if (r.delta < -0.05) { deltaCls = 'pos'; deltaTxt = `−${ad}d`; }
+    } else { deltaTxt = 'sem dados'; }
+    return `
+      <div class="stage-row ${isG ? 'gargalo' : ''}">
+        <div class="sr-name">${r.label}${isG ? '<span class="tag-gargalo">Gargalo</span>' : ''}</div>
+        <div class="sr-track">
+          <div class="sr-plan" style="width:${wPlan}%"></div>
+          <div class="sr-real" style="width:${wReal}%; background:${r.cor}">${r.real != null ? fmt(r.real) + 'd' : ''}</div>
+        </div>
+        <div class="sr-meta">real <b>${fmt(r.real)}</b> · plano <b>${fmt(r.plano)}</b> · <span class="delta ${deltaCls}">${deltaTxt}</span> · n=${r.amostra || 0}</div>
+      </div>`;
+  }).join('') + `
+    <div class="legend">
+      <span><i></i>real</span>
+      <span><i class="plan"></i>plano</span>
+    </div>`;
+}
+
+function renderizarDashboard() {
+  const lista = aplicarFiltros(state.pedidos);
+  const k = calcularKPIs(lista);
+  renderizarKPIs(k);
+  renderizarDonut(k);
+  renderizarBreakdown();
+}
+
+// ============================================================
 // RENDERIZAÇÃO — TABELA
 // ============================================================
 function renderizarTabela() {
+  renderizarDashboard();
   const pedidosFiltrados = aplicarFiltros(state.pedidos);
   $('#lista-count').textContent = pedidosFiltrados.length;
   $('#lista-meta').textContent = `de ${state.pedidos.length} total`;
