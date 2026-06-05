@@ -49,6 +49,11 @@
 
   <main class="main">
     <!-- ============================================================
+         KPIs (resumo) — preenchido por JS
+         ============================================================ -->
+    <section class="kpi-grid" id="kpi-grid"></section>
+
+    <!-- ============================================================
          LEAD TIME POR ETAPA (média do mês)
          ============================================================ -->
     <section class="etapas-section">
@@ -58,6 +63,30 @@
       </div>
       <div class="etapas-grid" id="etapas-grid">
         <!-- preenchido por JS -->
+      </div>
+    </section>
+
+    <!-- ============================================================
+         ANALYTICS — breakdown por etapa + donut de aderência
+         ============================================================ -->
+    <section class="analytics-grid">
+      <div class="panel">
+        <div class="panel-head">
+          <div>
+            <h3>Breakdown por etapa</h3>
+            <div class="sub">Real × plano · média do período</div>
+          </div>
+        </div>
+        <div class="panel-body"><div class="stage-rows" id="stage-breakdown"></div></div>
+      </div>
+      <div class="panel">
+        <div class="panel-head">
+          <div>
+            <h3>Aderência ao plano</h3>
+            <div class="sub">Distribuição dos pedidos</div>
+          </div>
+        </div>
+        <div class="panel-body"><div class="donut-wrap" id="aderencia-donut"></div></div>
       </div>
     </section>
 
