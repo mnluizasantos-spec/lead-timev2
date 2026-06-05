@@ -46,7 +46,7 @@ def eh_reedicao(subject: str) -> bool:
     return False
 
 
-def processar_thread(emails_da_thread: list, auditoria: dict = None) -> dict:
+def processar_thread(emails_da_thread: list, auditoria: dict = None, pedido_id: str = None) -> dict:
     """
     Processa todos os emails de uma thread e retorna o pedido consolidado.
 
@@ -289,7 +289,7 @@ def processar_thread(emails_da_thread: list, auditoria: dict = None) -> dict:
     projeto_final = projeto_ident or ''
 
     return {
-        'pedido_id': thread_id,
+        'pedido_id': pedido_id or thread_id,
         'subject': subject_thread,
         'projeto': projeto_final,
         'cliente': cliente_ident,
