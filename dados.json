@@ -1,5 +1,73 @@
 [
   {
+    "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAGZ3z48NHsRGjiY1MBBkkIs=",
+    "subject": "BF_2257 PEDIDO FECHADO VAREJO - LUVA MOUSSE KOP 26",
+    "projeto": "BF_2257 - LUVA MOUSSE KOP 26",
+    "cliente": "",
+    "comercial": "WESLEY MATHEUS DA SILVA",
+    "skus": [
+      {
+        "codigo": "11055381-0001",
+        "tipo": "FERT",
+        "descricao": "LUV MOUSSE26 KOP"
+      }
+    ],
+    "marcos": {
+      "pedido_fechado": {
+        "previsto": "2026-06-02",
+        "real": "2026-06-02",
+        "por": "WESLEY MATHEUS DA SILVA"
+      },
+      "fert_criado": {
+        "previsto": "2026-06-02",
+        "real": "2026-06-02",
+        "por": "GIOVANNA FREITAS ALVES"
+      },
+      "op_liberada": {
+        "previsto": "2026-06-08",
+        "real": "2026-06-05",
+        "por": "leticia.santos@antilhas.com.br",
+        "real_ultima": null,
+        "n_parcelas": 1
+      },
+      "producao": {
+        "previsto": "2026-06-26",
+        "real": null,
+        "por": null
+      },
+      "data_vitrine": {
+        "previsto": "2026-06-29",
+        "real": null,
+        "por": null
+      }
+    },
+    "lead_times": {
+      "pedido_para_fert": {
+        "previsto": 0,
+        "real": 0,
+        "desvio": 0
+      },
+      "fert_para_op": {
+        "previsto": 6,
+        "real": 3,
+        "desvio": -3
+      },
+      "op_para_producao": {
+        "previsto": 18,
+        "real": null,
+        "desvio": null
+      },
+      "producao_para_vit": {
+        "previsto": 3,
+        "real": null,
+        "desvio": null
+      }
+    },
+    "status": "em_producao",
+    "responsavel_atual": "PCP/Fábrica",
+    "tem_cronograma": true
+  },
+  {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAA7Wa8cMl8lCgxa3Z96wukU=",
     "subject": "PEDIDO FECHADO VAREJO - ME LINDA - INSTITUCIONAL",
     "projeto": "ME LINDA",
@@ -123,74 +191,6 @@
     "tem_cronograma": true
   },
   {
-    "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAGZ3z48NHsRGjiY1MBBkkIs=",
-    "subject": "BF_2257 PEDIDO FECHADO VAREJO - LUVA MOUSSE KOP 26",
-    "projeto": "BF_2257 - LUVA MOUSSE KOP 26",
-    "cliente": "",
-    "comercial": "WESLEY MATHEUS DA SILVA",
-    "skus": [
-      {
-        "codigo": "11055381-0001",
-        "tipo": "FERT",
-        "descricao": "LUV MOUSSE26 KOP"
-      }
-    ],
-    "marcos": {
-      "pedido_fechado": {
-        "previsto": "2026-06-02",
-        "real": "2026-06-02",
-        "por": "WESLEY MATHEUS DA SILVA"
-      },
-      "fert_criado": {
-        "previsto": "2026-06-02",
-        "real": "2026-06-02",
-        "por": "GIOVANNA FREITAS ALVES"
-      },
-      "op_liberada": {
-        "previsto": "2026-06-08",
-        "real": null,
-        "por": null,
-        "real_ultima": null,
-        "n_parcelas": 0
-      },
-      "producao": {
-        "previsto": "2026-06-26",
-        "real": null,
-        "por": null
-      },
-      "data_vitrine": {
-        "previsto": "2026-06-29",
-        "real": null,
-        "por": null
-      }
-    },
-    "lead_times": {
-      "pedido_para_fert": {
-        "previsto": 0,
-        "real": 0,
-        "desvio": 0
-      },
-      "fert_para_op": {
-        "previsto": 6,
-        "real": null,
-        "desvio": null
-      },
-      "op_para_producao": {
-        "previsto": 18,
-        "real": null,
-        "desvio": null
-      },
-      "producao_para_vit": {
-        "previsto": 3,
-        "real": null,
-        "desvio": null
-      }
-    },
-    "status": "aguardando_op",
-    "responsavel_atual": "Engenharia",
-    "tem_cronograma": true
-  },
-  {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQANYaA1Hw1dtDmEhqS4WEHnc=#2",
     "subject": "PEDIDO FECHADO VAREJO - BOTICÁRIO - SÃO JOÃO ",
     "projeto": "SAO JOAO",
@@ -289,7 +289,7 @@
         "FLEXOGRAFICA"
       ],
       "qtd_total": 78320,
-      "dias_desde_ultima": 2
+      "dias_desde_ultima": 3
     }
   },
   {
@@ -537,7 +537,7 @@
         "OFFSET"
       ],
       "qtd_total": 7899,
-      "dias_desde_ultima": 4
+      "dias_desde_ultima": 5
     }
   },
   {
@@ -963,7 +963,7 @@
         "OFFSET"
       ],
       "qtd_total": 41375,
-      "dias_desde_ultima": 3
+      "dias_desde_ultima": 4
     }
   },
   {
@@ -1347,7 +1347,7 @@
         "CAJAMAR"
       ],
       "qtd_total": 10000,
-      "dias_desde_ultima": 10
+      "dias_desde_ultima": 11
     },
     "oculto": true,
     "oculto_info": {
@@ -1650,7 +1650,7 @@
         "OFFSET"
       ],
       "qtd_total": 28108,
-      "dias_desde_ultima": 2
+      "dias_desde_ultima": 3
     }
   },
   {
@@ -1888,7 +1888,7 @@
         "OFFSET"
       ],
       "qtd_total": 2875,
-      "dias_desde_ultima": 2
+      "dias_desde_ultima": 3
     }
   }
 ]
