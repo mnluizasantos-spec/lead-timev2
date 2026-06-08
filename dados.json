@@ -289,7 +289,7 @@
         "FLEXOGRAFICA"
       ],
       "qtd_total": 78320,
-      "dias_desde_ultima": 4
+      "dias_desde_ultima": 5
     }
   },
   {
@@ -537,7 +537,7 @@
         "OFFSET"
       ],
       "qtd_total": 7899,
-      "dias_desde_ultima": 6
+      "dias_desde_ultima": 7
     }
   },
   {
@@ -846,12 +846,12 @@
         "descricao": "931565114 SACL PAP MAN FSC®P COLMEIA REN",
         "producao": {
           "inicio": "2026-06-02",
-          "fim": "2026-06-02",
-          "n_apontamentos": 1,
+          "fim": "2026-06-08",
+          "n_apontamentos": 3,
           "deptos": [
             "OFFSET"
           ],
-          "qtd": 7893
+          "qtd": 15889
         }
       },
       {
@@ -884,12 +884,12 @@
         "descricao": "931566820 SACL PAP MAN FSC®P LOVE REN",
         "producao": {
           "inicio": "2026-06-02",
-          "fim": "2026-06-02",
-          "n_apontamentos": 1,
+          "fim": "2026-06-05",
+          "n_apontamentos": 2,
           "deptos": [
             "OFFSET"
           ],
-          "qtd": 10346
+          "qtd": 20760
         }
       }
     ],
@@ -915,7 +915,7 @@
         "previsto": "2026-06-15",
         "real": "2026-06-01",
         "por": null,
-        "fim": "2026-06-02"
+        "fim": "2026-06-08"
       },
       "data_vitrine": {
         "previsto": "2026-06-17",
@@ -956,14 +956,14 @@
         "2100082688",
         "2100082685"
       ],
-      "total_apontamentos": 7,
+      "total_apontamentos": 10,
       "primeira_data": "2026-06-01",
-      "ultima_data": "2026-06-02",
+      "ultima_data": "2026-06-08",
       "deptos": [
         "OFFSET"
       ],
-      "qtd_total": 41375,
-      "dias_desde_ultima": 5
+      "qtd_total": 59785,
+      "dias_desde_ultima": 0
     }
   },
   {
@@ -1347,7 +1347,7 @@
         "CAJAMAR"
       ],
       "qtd_total": 10000,
-      "dias_desde_ultima": 12
+      "dias_desde_ultima": 13
     },
     "oculto": true,
     "oculto_info": {
@@ -1650,7 +1650,7 @@
         "OFFSET"
       ],
       "qtd_total": 28108,
-      "dias_desde_ultima": 4
+      "dias_desde_ultima": 5
     }
   },
   {
@@ -1888,7 +1888,7 @@
         "OFFSET"
       ],
       "qtd_total": 2875,
-      "dias_desde_ultima": 4
+      "dias_desde_ultima": 5
     }
   }
 ]
