@@ -1,8 +1,20 @@
 {
-  "gerado_em": "2026-06-08T14:33:35",
-  "total_emails": 355,
-  "total_threads": 41,
+  "gerado_em": "2026-06-09T10:01:17",
+  "total_emails": 362,
+  "total_threads": 42,
   "marcos_rejeitados": [
+    {
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAB9mQSJNHK5Go9nQ1Mb9clI=",
+      "tipo_detectado": "ferts_criados",
+      "remetente": "julio.machado@antilhas.com.br",
+      "motivo": "papel_remetente=comercial, esperava=engenharia"
+    },
+    {
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAGZ3z48NHsRGjiY1MBBkkIs=",
+      "tipo_detectado": "ferts_criados",
+      "remetente": "matheus.garcia@antilhas.com.br",
+      "motivo": "papel_remetente=excluido, esperava=engenharia"
+    },
     {
       "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQANYaA1Hw1dtDmEhqS4WEHnc=",
       "tipo_detectado": "ferts_criados",
@@ -249,16 +261,20 @@
   "remetentes_desconhecidos": [],
   "reedicoes_ignoradas": [
     {
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAH8KDH4q8XRDiwrTavzID58=",
+      "subject": "REEDIÇÃO PEDIDO FECHADO VAREJO - VIVENDA DA CAMARÃO - SACOLA INST. BUONA MASSA "
+    },
+    {
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAME4HJRfnnBLslq09-9hvZs=",
+      "subject": "REEDIÇÃO PEDIDO FECHADO VAREJO - SEPHORA -  INSTITUCIONAL"
+    },
+    {
       "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAPF2ZdlHkohOmB-MEE3z19M=",
       "subject": "RES: REEDIÇÃO PEDIDO FECHADO VAREJO - HOPE -  INSTITUCIONAL"
     },
     {
       "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQADLwmNeFjztBrWfiS3QxSAw=",
       "subject": "RES: REEDICAO PEDIDO FECHADO VAREJO - NESTLE"
-    },
-    {
-      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAME4HJRfnnBLslq09-9hvZs=",
-      "subject": "REEDIÇÃO PEDIDO FECHADO VAREJO - SEPHORA -  INSTITUCIONAL"
     },
     {
       "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAJ3KlOfJZMdFoVs8Nir9Sc4=",
