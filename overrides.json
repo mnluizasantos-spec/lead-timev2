@@ -18,8 +18,8 @@
     "data": "2026-06-10"
   },
   "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAB9mQSJNHK5Go9nQ1Mb9clI=#2": {
-    "status_manual": "cancelado",
-    "motivo": "FAZER EXTERNO",
+    "status_manual": "oculto",
+    "motivo": null,
     "por": "PCP",
     "data": "2026-06-10"
   }
