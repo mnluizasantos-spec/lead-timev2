@@ -1089,8 +1089,8 @@
         "desvio": null
       }
     },
-    "status": "em_producao",
-    "responsavel_atual": "PCP/Fábrica",
+    "status": "cancelado",
+    "responsavel_atual": "-",
     "tem_cronograma": false,
     "producao_detalhe": {
       "busca_por": "halb",
@@ -1105,6 +1105,11 @@
       ],
       "qtd_total": 700,
       "dias_desde_ultima": 1
+    },
+    "cancelado_info": {
+      "motivo": "FAZER EXTERNO",
+      "por": "PCP",
+      "data": "2026-06-10"
     }
   },
   {
@@ -1167,7 +1172,12 @@
     },
     "status": "aguarda_crono",
     "responsavel_atual": "Comercial",
-    "tem_cronograma": false
+    "tem_cronograma": false,
+    "oculto": true,
+    "oculto_info": {
+      "por": "PCP",
+      "data": "2026-06-10"
+    }
   },
   {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAG1PIdDZ3fhGlBsKXkMg0PE=",
