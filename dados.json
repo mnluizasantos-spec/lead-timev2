@@ -1849,7 +1849,12 @@
     },
     "status": "em_producao",
     "responsavel_atual": "PCP/Fábrica",
-    "tem_cronograma": false
+    "tem_cronograma": false,
+    "oculto": true,
+    "oculto_info": {
+      "por": "PCP",
+      "data": "2026-06-10"
+    }
   },
   {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQANYaA1Hw1dtDmEhqS4WEHnc=",
