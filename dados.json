@@ -701,7 +701,16 @@
       {
         "codigo": "11055289-0001",
         "tipo": "FERT",
-        "descricao": "CARTAO PRESENTE ROSA FRIENDS QDB"
+        "descricao": "CARTAO PRESENTE ROSA FRIENDS QDB",
+        "producao": {
+          "inicio": "2026-06-09",
+          "fim": "2026-06-10",
+          "n_apontamentos": 4,
+          "deptos": [
+            "OFFSET"
+          ],
+          "qtd": 42351
+        }
       },
       {
         "codigo": "11055286-0001",
@@ -736,7 +745,16 @@
       {
         "codigo": "11055292-0001",
         "tipo": "FERT",
-        "descricao": "CX LUVA FSC®G FRIENDS QDB"
+        "descricao": "CX LUVA FSC®G FRIENDS QDB",
+        "producao": {
+          "inicio": "2026-06-09",
+          "fim": "2026-06-09",
+          "n_apontamentos": 2,
+          "deptos": [
+            "OFFSET"
+          ],
+          "qtd": 18152
+        }
       },
       {
         "codigo": "15005822-0001",
@@ -764,8 +782,9 @@
       },
       "producao": {
         "previsto": "2026-06-19",
-        "real": null,
-        "por": null
+        "real": "2026-06-09",
+        "por": null,
+        "fim": "2026-06-10"
       },
       "data_vitrine": {
         "previsto": "2026-07-17",
@@ -786,8 +805,8 @@
       },
       "op_para_producao": {
         "previsto": 23,
-        "real": null,
-        "desvio": null
+        "real": 20,
+        "desvio": -3
       },
       "producao_para_vit": {
         "previsto": 28,
@@ -797,7 +816,22 @@
     },
     "status": "em_producao",
     "responsavel_atual": "PCP/Fábrica",
-    "tem_cronograma": true
+    "tem_cronograma": true,
+    "producao_detalhe": {
+      "busca_por": "fert",
+      "codigos_encontrados": [
+        "11055289-0001",
+        "11055292-0001"
+      ],
+      "total_apontamentos": 6,
+      "primeira_data": "2026-06-09",
+      "ultima_data": "2026-06-10",
+      "deptos": [
+        "OFFSET"
+      ],
+      "qtd_total": 60503,
+      "dias_desde_ultima": 0
+    }
   },
   {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAOelOACkG_dGj0ov3scWcxg=",
@@ -827,12 +861,12 @@
         "descricao": "931565376 SACL PAP MAN FSC®M COLMEIA REN",
         "producao": {
           "inicio": "2026-06-02",
-          "fim": "2026-06-02",
-          "n_apontamentos": 2,
+          "fim": "2026-06-09",
+          "n_apontamentos": 3,
           "deptos": [
             "OFFSET"
           ],
-          "qtd": 4759
+          "qtd": 9363
         }
       },
       {
@@ -915,7 +949,7 @@
         "previsto": "2026-06-15",
         "real": "2026-06-01",
         "por": null,
-        "fim": "2026-06-08"
+        "fim": "2026-06-09"
       },
       "data_vitrine": {
         "previsto": "2026-06-17",
@@ -956,14 +990,14 @@
         "2100082688",
         "2100082685"
       ],
-      "total_apontamentos": 10,
+      "total_apontamentos": 11,
       "primeira_data": "2026-06-01",
-      "ultima_data": "2026-06-08",
+      "ultima_data": "2026-06-09",
       "deptos": [
         "OFFSET"
       ],
-      "qtd_total": 59785,
-      "dias_desde_ultima": 2
+      "qtd_total": 64389,
+      "dias_desde_ultima": 1
     }
   },
   {
@@ -981,7 +1015,16 @@
       {
         "codigo": "2100082683",
         "tipo": "HALB",
-        "descricao": "SACL PAP MAN FSC®M 21AN CAU CHOC P1 E P2"
+        "descricao": "SACL PAP MAN FSC®M 21AN CAU CHOC P1 E P2",
+        "producao": {
+          "inicio": "2026-06-09",
+          "fim": "2026-06-09",
+          "n_apontamentos": 1,
+          "deptos": [
+            "OFFSET"
+          ],
+          "qtd": 700
+        }
       },
       {
         "codigo": "2400010059",
@@ -1014,8 +1057,9 @@
       },
       "producao": {
         "previsto": null,
-        "real": null,
-        "por": null
+        "real": "2026-06-09",
+        "por": null,
+        "fim": "2026-06-09"
       },
       "data_vitrine": {
         "previsto": null,
@@ -1036,7 +1080,7 @@
       },
       "op_para_producao": {
         "previsto": null,
-        "real": null,
+        "real": 21,
         "desvio": null
       },
       "producao_para_vit": {
@@ -1047,7 +1091,21 @@
     },
     "status": "em_producao",
     "responsavel_atual": "PCP/Fábrica",
-    "tem_cronograma": false
+    "tem_cronograma": false,
+    "producao_detalhe": {
+      "busca_por": "halb",
+      "codigos_encontrados": [
+        "2100082683"
+      ],
+      "total_apontamentos": 1,
+      "primeira_data": "2026-06-09",
+      "ultima_data": "2026-06-09",
+      "deptos": [
+        "OFFSET"
+      ],
+      "qtd_total": 700,
+      "dias_desde_ultima": 1
+    }
   },
   {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAB9mQSJNHK5Go9nQ1Mb9clI=#2",
@@ -1586,12 +1644,12 @@
         "descricao": "931535599 SACL PAP MAN FSC®M PRETA REN",
         "producao": {
           "inicio": "2026-06-01",
-          "fim": "2026-06-03",
-          "n_apontamentos": 3,
+          "fim": "2026-06-09",
+          "n_apontamentos": 5,
           "deptos": [
             "OFFSET"
           ],
-          "qtd": 18743
+          "qtd": 28124
         }
       },
       {
@@ -1615,12 +1673,12 @@
         "descricao": "931602333 SACL PAP MAN FSC®P LINES REN",
         "producao": {
           "inicio": "2026-06-03",
-          "fim": "2026-06-03",
-          "n_apontamentos": 1,
+          "fim": "2026-06-08",
+          "n_apontamentos": 2,
           "deptos": [
             "OFFSET"
           ],
-          "qtd": 9365
+          "qtd": 18705
         }
       },
       {
@@ -1666,7 +1724,7 @@
         "previsto": null,
         "real": "2026-06-01",
         "por": null,
-        "fim": "2026-06-03"
+        "fim": "2026-06-09"
       },
       "data_vitrine": {
         "previsto": null,
@@ -1705,14 +1763,14 @@
         "2100082665",
         "2100082649"
       ],
-      "total_apontamentos": 4,
+      "total_apontamentos": 7,
       "primeira_data": "2026-06-01",
-      "ultima_data": "2026-06-03",
+      "ultima_data": "2026-06-09",
       "deptos": [
         "OFFSET"
       ],
-      "qtd_total": 28108,
-      "dias_desde_ultima": 7
+      "qtd_total": 46829,
+      "dias_desde_ultima": 1
     }
   },
   {
@@ -1874,12 +1932,12 @@
         "descricao": "TAG PAIS26 KOP",
         "producao": {
           "inicio": "2026-06-03",
-          "fim": "2026-06-03",
-          "n_apontamentos": 2,
+          "fim": "2026-06-10",
+          "n_apontamentos": 3,
           "deptos": [
             "OFFSET"
           ],
-          "qtd": 2875
+          "qtd": 5167
         }
       }
     ],
@@ -1905,7 +1963,7 @@
         "previsto": "2026-06-16",
         "real": "2026-06-03",
         "por": null,
-        "fim": "2026-06-03"
+        "fim": "2026-06-10"
       },
       "data_vitrine": {
         "previsto": "2026-07-22",
@@ -1943,14 +2001,14 @@
       "codigos_encontrados": [
         "11055267-0001"
       ],
-      "total_apontamentos": 2,
+      "total_apontamentos": 3,
       "primeira_data": "2026-06-03",
-      "ultima_data": "2026-06-03",
+      "ultima_data": "2026-06-10",
       "deptos": [
         "OFFSET"
       ],
-      "qtd_total": 2875,
-      "dias_desde_ultima": 7
+      "qtd_total": 5167,
+      "dias_desde_ultima": 0
     }
   }
 ]
