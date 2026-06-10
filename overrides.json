@@ -10,5 +10,11 @@
     "motivo": "Pedido cancelado",
     "por": "PCP",
     "data": "2026-06-05"
+  },
+  "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQABSrbbqRngNNgFcabgLQkrc=": {
+    "status_manual": "oculto",
+    "motivo": null,
+    "por": "PCP",
+    "data": "2026-06-10"
   }
 }
