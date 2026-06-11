@@ -1,5 +1,67 @@
 [
   {
+    "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAOCHBQl7FtpIkonxADbSXLw=",
+    "subject": "BF 2269 | PEDIDO FECHADO VAREJO - SACOLA PP - CARE",
+    "projeto": "BF 2269 | - SACOLA PP - CARE",
+    "cliente": "",
+    "comercial": "eduarda.santos@antilhas.com.br",
+    "skus": [],
+    "marcos": {
+      "pedido_fechado": {
+        "previsto": "2026-06-10",
+        "real": "2026-06-10",
+        "por": "eduarda.santos@antilhas.com.br"
+      },
+      "fert_criado": {
+        "previsto": "2026-06-11",
+        "real": null,
+        "por": null
+      },
+      "op_liberada": {
+        "previsto": "2026-06-15",
+        "real": null,
+        "por": null,
+        "real_ultima": null,
+        "n_parcelas": 0
+      },
+      "producao": {
+        "previsto": "2026-07-24",
+        "real": null,
+        "por": null
+      },
+      "data_vitrine": {
+        "previsto": "2026-07-27",
+        "real": null,
+        "por": null
+      }
+    },
+    "lead_times": {
+      "pedido_para_fert": {
+        "previsto": 1,
+        "real": null,
+        "desvio": null
+      },
+      "fert_para_op": {
+        "previsto": 4,
+        "real": null,
+        "desvio": null
+      },
+      "op_para_producao": {
+        "previsto": 39,
+        "real": null,
+        "desvio": null
+      },
+      "producao_para_vit": {
+        "previsto": 3,
+        "real": null,
+        "desvio": null
+      }
+    },
+    "status": "aguardando_fert",
+    "responsavel_atual": "Engenharia",
+    "tem_cronograma": true
+  },
+  {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAA7Wa8cMl8lCgxa3Z96wukU=",
     "subject": "PEDIDO FECHADO VAREJO - ME LINDA - INSTITUCIONAL",
     "projeto": "ME LINDA",
@@ -81,9 +143,9 @@
       "op_liberada": {
         "previsto": "2026-06-09",
         "real": "2026-06-09",
-        "por": "ariane.luz@antilhas.com.br",
-        "real_ultima": null,
-        "n_parcelas": 1
+        "por": "ARIANE DO CARMO LUZ",
+        "real_ultima": "2026-06-10",
+        "n_parcelas": 5
       },
       "producao": {
         "previsto": "2026-06-10",
@@ -289,7 +351,7 @@
         "FLEXOGRAFICA"
       ],
       "qtd_total": 78320,
-      "dias_desde_ultima": 7
+      "dias_desde_ultima": 8
     }
   },
   {
@@ -537,7 +599,7 @@
         "OFFSET"
       ],
       "qtd_total": 7899,
-      "dias_desde_ultima": 9
+      "dias_desde_ultima": 10
     }
   },
   {
@@ -830,7 +892,7 @@
         "OFFSET"
       ],
       "qtd_total": 60503,
-      "dias_desde_ultima": 0
+      "dias_desde_ultima": 1
     }
   },
   {
@@ -997,7 +1059,7 @@
         "OFFSET"
       ],
       "qtd_total": 64389,
-      "dias_desde_ultima": 1
+      "dias_desde_ultima": 2
     }
   },
   {
@@ -1104,7 +1166,7 @@
         "OFFSET"
       ],
       "qtd_total": 700,
-      "dias_desde_ultima": 1
+      "dias_desde_ultima": 2
     },
     "cancelado_info": {
       "motivo": "FAZER EXTERNO",
@@ -1462,8 +1524,8 @@
         "desvio": null
       }
     },
-    "status": "em_producao",
-    "responsavel_atual": "PCP/Fábrica",
+    "status": "concluido",
+    "responsavel_atual": "-",
     "tem_cronograma": false,
     "producao_detalhe": {
       "busca_por": "fert",
@@ -1477,7 +1539,7 @@
         "CAJAMAR"
       ],
       "qtd_total": 10000,
-      "dias_desde_ultima": 15
+      "dias_desde_ultima": 16
     },
     "oculto": true,
     "oculto_info": {
@@ -1780,7 +1842,7 @@
         "OFFSET"
       ],
       "qtd_total": 46829,
-      "dias_desde_ultima": 1
+      "dias_desde_ultima": 2
     }
   },
   {
@@ -2023,7 +2085,7 @@
         "OFFSET"
       ],
       "qtd_total": 5167,
-      "dias_desde_ultima": 0
+      "dias_desde_ultima": 1
     }
   }
 ]
