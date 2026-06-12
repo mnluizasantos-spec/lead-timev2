@@ -1096,12 +1096,12 @@
         "descricao": "SACL PAP MAN FSC®M 21AN CAU CHOC P1 E P2",
         "producao": {
           "inicio": "2026-06-09",
-          "fim": "2026-06-09",
-          "n_apontamentos": 1,
+          "fim": "2026-06-10",
+          "n_apontamentos": 2,
           "deptos": [
             "OFFSET"
           ],
-          "qtd": 700
+          "qtd": 1272
         }
       },
       {
@@ -1137,7 +1137,7 @@
         "previsto": null,
         "real": "2026-06-09",
         "por": null,
-        "fim": "2026-06-09"
+        "fim": "2026-06-10"
       },
       "data_vitrine": {
         "previsto": null,
@@ -1175,14 +1175,14 @@
       "codigos_encontrados": [
         "2100082683"
       ],
-      "total_apontamentos": 1,
+      "total_apontamentos": 2,
       "primeira_data": "2026-06-09",
-      "ultima_data": "2026-06-09",
+      "ultima_data": "2026-06-10",
       "deptos": [
         "OFFSET"
       ],
-      "qtd_total": 700,
-      "dias_desde_ultima": 3
+      "qtd_total": 1272,
+      "dias_desde_ultima": 2
     },
     "cancelado_info": {
       "motivo": "FAZER EXTERNO",
@@ -1748,7 +1748,16 @@
       {
         "codigo": "2100082648",
         "tipo": "HALB",
-        "descricao": "931566643 SACL PAP MAN FSC®P PATRU REN"
+        "descricao": "931566643 SACL PAP MAN FSC®P PATRU REN",
+        "producao": {
+          "inicio": "2026-06-11",
+          "fim": "2026-06-11",
+          "n_apontamentos": 2,
+          "deptos": [
+            "OFFSET"
+          ],
+          "qtd": 5202
+        }
       },
       {
         "codigo": "11055307-0001",
@@ -1812,7 +1821,7 @@
         "previsto": null,
         "real": "2026-06-01",
         "por": null,
-        "fim": "2026-06-09"
+        "fim": "2026-06-11"
       },
       "data_vitrine": {
         "previsto": null,
@@ -1849,16 +1858,17 @@
       "busca_por": "halb",
       "codigos_encontrados": [
         "2100082665",
+        "2100082648",
         "2100082649"
       ],
-      "total_apontamentos": 7,
+      "total_apontamentos": 9,
       "primeira_data": "2026-06-01",
-      "ultima_data": "2026-06-09",
+      "ultima_data": "2026-06-11",
       "deptos": [
         "OFFSET"
       ],
-      "qtd_total": 46829,
-      "dias_desde_ultima": 3
+      "qtd_total": 52031,
+      "dias_desde_ultima": 1
     }
   },
   {
@@ -2026,11 +2036,11 @@
         "producao": {
           "inicio": "2026-06-03",
           "fim": "2026-06-10",
-          "n_apontamentos": 3,
+          "n_apontamentos": 4,
           "deptos": [
             "OFFSET"
           ],
-          "qtd": 5167
+          "qtd": 6678
         }
       }
     ],
@@ -2094,13 +2104,13 @@
       "codigos_encontrados": [
         "11055267-0001"
       ],
-      "total_apontamentos": 3,
+      "total_apontamentos": 4,
       "primeira_data": "2026-06-03",
       "ultima_data": "2026-06-10",
       "deptos": [
         "OFFSET"
       ],
-      "qtd_total": 5167,
+      "qtd_total": 6678,
       "dias_desde_ultima": 2
     }
   }
