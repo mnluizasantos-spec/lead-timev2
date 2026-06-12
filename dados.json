@@ -4,18 +4,34 @@
     "subject": "BF 2269 | PEDIDO FECHADO VAREJO - SACOLA PP - CARE",
     "projeto": "BF 2269 | - SACOLA PP - CARE",
     "cliente": "",
-    "comercial": "eduarda.santos@antilhas.com.br",
-    "skus": [],
+    "comercial": "EDUARDA FERREIRA DOS SANTOS",
+    "skus": [
+      {
+        "codigo": "11055399-0001",
+        "tipo": "FERT",
+        "descricao": "SACL PAP MAN FSC®PP CARE INST26 CASA GRA"
+      },
+      {
+        "codigo": "2100082749",
+        "tipo": "HALB",
+        "descricao": "SACL PAP MAN FSC®PP CARE INST26 CASA GRA"
+      },
+      {
+        "codigo": "2100082750",
+        "tipo": "HALB",
+        "descricao": "REF FDO FSC®PP CARE INST26 CASA GRA"
+      }
+    ],
     "marcos": {
       "pedido_fechado": {
         "previsto": "2026-06-10",
         "real": "2026-06-10",
-        "por": "eduarda.santos@antilhas.com.br"
+        "por": "EDUARDA FERREIRA DOS SANTOS"
       },
       "fert_criado": {
         "previsto": "2026-06-11",
-        "real": null,
-        "por": null
+        "real": "2026-06-11",
+        "por": "GIOVANNA FREITAS ALVES"
       },
       "op_liberada": {
         "previsto": "2026-06-15",
@@ -38,8 +54,8 @@
     "lead_times": {
       "pedido_para_fert": {
         "previsto": 1,
-        "real": null,
-        "desvio": null
+        "real": 1,
+        "desvio": 0
       },
       "fert_para_op": {
         "previsto": 4,
@@ -57,7 +73,7 @@
         "desvio": null
       }
     },
-    "status": "aguardando_fert",
+    "status": "aguardando_op",
     "responsavel_atual": "Engenharia",
     "tem_cronograma": true
   },
@@ -351,7 +367,7 @@
         "FLEXOGRAFICA"
       ],
       "qtd_total": 78320,
-      "dias_desde_ultima": 8
+      "dias_desde_ultima": 9
     }
   },
   {
@@ -599,7 +615,7 @@
         "OFFSET"
       ],
       "qtd_total": 7899,
-      "dias_desde_ultima": 10
+      "dias_desde_ultima": 11
     }
   },
   {
@@ -892,7 +908,7 @@
         "OFFSET"
       ],
       "qtd_total": 60503,
-      "dias_desde_ultima": 1
+      "dias_desde_ultima": 2
     }
   },
   {
@@ -1059,7 +1075,7 @@
         "OFFSET"
       ],
       "qtd_total": 64389,
-      "dias_desde_ultima": 2
+      "dias_desde_ultima": 3
     }
   },
   {
@@ -1166,7 +1182,7 @@
         "OFFSET"
       ],
       "qtd_total": 700,
-      "dias_desde_ultima": 2
+      "dias_desde_ultima": 3
     },
     "cancelado_info": {
       "motivo": "FAZER EXTERNO",
@@ -1539,7 +1555,7 @@
         "CAJAMAR"
       ],
       "qtd_total": 10000,
-      "dias_desde_ultima": 16
+      "dias_desde_ultima": 17
     },
     "oculto": true,
     "oculto_info": {
@@ -1842,7 +1858,7 @@
         "OFFSET"
       ],
       "qtd_total": 46829,
-      "dias_desde_ultima": 2
+      "dias_desde_ultima": 3
     }
   },
   {
@@ -2085,7 +2101,7 @@
         "OFFSET"
       ],
       "qtd_total": 5167,
-      "dias_desde_ultima": 1
+      "dias_desde_ultima": 2
     }
   }
 ]

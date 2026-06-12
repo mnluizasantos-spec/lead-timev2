@@ -1,6 +1,6 @@
 {
-  "gerado_em": "2026-06-11T14:14:43",
-  "total_emails": 376,
+  "gerado_em": "2026-06-12T10:01:23",
+  "total_emails": 386,
   "total_threads": 48,
   "marcos_rejeitados": [
     {
@@ -26,6 +26,36 @@
       "tipo_detectado": "ferts_criados",
       "remetente": "laborat@antilhas.com.br",
       "motivo": "papel_remetente=desconhecido, esperava=engenharia"
+    },
+    {
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAB7CVBTAzK9MoXUVcD9V_iw=",
+      "tipo_detectado": "ops_liberadas",
+      "remetente": "NEILA DUARTE DA SILVA",
+      "motivo": "papel_remetente=comercial, esperava=engenharia"
+    },
+    {
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAB7CVBTAzK9MoXUVcD9V_iw=",
+      "tipo_detectado": "ferts_criados",
+      "remetente": "cassia.cavaleiro@antilhas.com.br",
+      "motivo": "papel_remetente=excluido, esperava=engenharia"
+    },
+    {
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAB7CVBTAzK9MoXUVcD9V_iw=",
+      "tipo_detectado": "ops_liberadas",
+      "remetente": "NEILA DUARTE DA SILVA",
+      "motivo": "papel_remetente=comercial, esperava=engenharia"
+    },
+    {
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAB7CVBTAzK9MoXUVcD9V_iw=",
+      "tipo_detectado": "ferts_criados",
+      "remetente": "CASSIA REGINA FERNANDES CAVALEIRO",
+      "motivo": "papel_remetente=excluido, esperava=engenharia"
+    },
+    {
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAB7CVBTAzK9MoXUVcD9V_iw=",
+      "tipo_detectado": "ops_liberadas",
+      "remetente": "NEILA DUARTE DA SILVA",
+      "motivo": "papel_remetente=comercial, esperava=engenharia"
     },
     {
       "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAB9mQSJNHK5Go9nQ1Mb9clI=",
@@ -303,7 +333,9 @@
     {
       "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAB7CVBTAzK9MoXUVcD9V_iw=",
       "subject": "BF_2202 PEDIDO FECHADO VAREJO - DECATHLON -  PHEASE IN / PHEASE OUT - ETIQUETA ADESIVA",
-      "marcos_que_tem": []
+      "marcos_que_tem": [
+        "ferts_criados"
+      ]
     },
     {
       "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQALCQK96aMRdCjUUWOONpbV8=",
