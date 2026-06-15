@@ -429,7 +429,7 @@
         "FLEXOGRAFICA"
       ],
       "qtd_total": 78320,
-      "dias_desde_ultima": 11
+      "dias_desde_ultima": 12
     }
   },
   {
@@ -677,7 +677,7 @@
         "OFFSET"
       ],
       "qtd_total": 7899,
-      "dias_desde_ultima": 13
+      "dias_desde_ultima": 14
     }
   },
   {
@@ -844,12 +844,12 @@
         "descricao": "CARTAO PRESENTE ROSA FRIENDS QDB",
         "producao": {
           "inicio": "2026-06-09",
-          "fim": "2026-06-10",
-          "n_apontamentos": 4,
+          "fim": "2026-06-12",
+          "n_apontamentos": 5,
           "deptos": [
             "OFFSET"
           ],
-          "qtd": 42351
+          "qtd": 59834
         }
       },
       {
@@ -888,12 +888,12 @@
         "descricao": "CX LUVA FSC®G FRIENDS QDB",
         "producao": {
           "inicio": "2026-06-09",
-          "fim": "2026-06-09",
-          "n_apontamentos": 2,
+          "fim": "2026-06-12",
+          "n_apontamentos": 3,
           "deptos": [
             "OFFSET"
           ],
-          "qtd": 18152
+          "qtd": 29496
         }
       },
       {
@@ -924,7 +924,7 @@
         "previsto": "2026-06-19",
         "real": "2026-06-09",
         "por": null,
-        "fim": "2026-06-10"
+        "fim": "2026-06-12"
       },
       "data_vitrine": {
         "previsto": "2026-07-17",
@@ -963,14 +963,14 @@
         "11055289-0001",
         "11055292-0001"
       ],
-      "total_apontamentos": 6,
+      "total_apontamentos": 8,
       "primeira_data": "2026-06-09",
-      "ultima_data": "2026-06-10",
+      "ultima_data": "2026-06-12",
       "deptos": [
         "OFFSET"
       ],
-      "qtd_total": 60503,
-      "dias_desde_ultima": 4
+      "qtd_total": 89330,
+      "dias_desde_ultima": 3
     }
   },
   {
@@ -1137,7 +1137,7 @@
         "OFFSET"
       ],
       "qtd_total": 64389,
-      "dias_desde_ultima": 5
+      "dias_desde_ultima": 6
     }
   },
   {
@@ -1158,12 +1158,12 @@
         "descricao": "SACL PAP MAN FSC®M 21AN CAU CHOC P1 E P2",
         "producao": {
           "inicio": "2026-06-09",
-          "fim": "2026-06-10",
-          "n_apontamentos": 2,
+          "fim": "2026-06-12",
+          "n_apontamentos": 4,
           "deptos": [
             "OFFSET"
           ],
-          "qtd": 1272
+          "qtd": 3725
         }
       },
       {
@@ -1199,7 +1199,7 @@
         "previsto": null,
         "real": "2026-06-09",
         "por": null,
-        "fim": "2026-06-10"
+        "fim": "2026-06-12"
       },
       "data_vitrine": {
         "previsto": null,
@@ -1237,14 +1237,14 @@
       "codigos_encontrados": [
         "2100082683"
       ],
-      "total_apontamentos": 2,
+      "total_apontamentos": 4,
       "primeira_data": "2026-06-09",
-      "ultima_data": "2026-06-10",
+      "ultima_data": "2026-06-12",
       "deptos": [
         "OFFSET"
       ],
-      "qtd_total": 1272,
-      "dias_desde_ultima": 4
+      "qtd_total": 3725,
+      "dias_desde_ultima": 3
     },
     "cancelado_info": {
       "motivo": "FAZER EXTERNO",
@@ -1617,7 +1617,7 @@
         "CAJAMAR"
       ],
       "qtd_total": 10000,
-      "dias_desde_ultima": 19
+      "dias_desde_ultima": 20
     },
     "oculto": true,
     "oculto_info": {
@@ -1930,7 +1930,7 @@
         "OFFSET"
       ],
       "qtd_total": 52031,
-      "dias_desde_ultima": 3
+      "dias_desde_ultima": 4
     }
   },
   {
@@ -2173,7 +2173,7 @@
         "OFFSET"
       ],
       "qtd_total": 6678,
-      "dias_desde_ultima": 4
+      "dias_desde_ultima": 5
     }
   }
 ]
