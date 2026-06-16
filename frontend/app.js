@@ -300,7 +300,7 @@ const ETAPAS = [
   { key: 'op_para_producao',  label: 'PROD',  cor: 'var(--laranja-500)' },
 ];
 
-function calcularMediasEtapas() {
+function calcularMediasEtapas(lista) {
   /**
    * Pra cada etapa, calcula:
    *  - real médio (média dos lead_times.real dos pedidos do período)
@@ -313,17 +313,11 @@ function calcularMediasEtapas() {
    *  - plano = 0 (ideal é enviar no dia previsto)
    *  - delta = real (porque plano=0)
    *
-   * Filtro: usa o filtro global de período (state.periodo).
-   * Considera pedido_fechado.real como referência temporal.
+   * Filtro: honra TODOS os filtros ativos (período, status, cliente,
+   * responsável, cronograma e busca) — recebe a mesma lista já filtrada
+   * que o resto do dashboard usa.
    */
-  const dataMin = dataMinimaDoPeriodo();
-  const doPeriodo = state.pedidos.filter(p => {
-    if (p.oculto) return false;
-    const ped = p.marcos?.pedido_fechado?.real;
-    if (!ped) return false;
-    if (dataMin && ped < dataMin) return false;
-    return true;
-  });
+  const doPeriodo = lista || aplicarFiltros(state.pedidos);
 
   const resultados = ETAPAS.map(etapa => {
     // Card especial: pontualidade do comercial
@@ -595,10 +589,10 @@ function renderizarDonut(k) {
     <div class="donut-legend">${legend}</div>`;
 }
 
-function renderizarBreakdown() {
+function renderizarBreakdown(lista) {
   const host = $('#stage-breakdown');
   if (!host) return;
-  const { resultados, gargalo } = calcularMediasEtapas();
+  const { resultados, gargalo } = calcularMediasEtapas(lista);
   const fmt = v => v != null ? v.toFixed(1).replace('.', ',') : '—';
 
   // Durações da cadeia (CAD, ENG, PROD); COM é pontualidade, fora da barra de soma
@@ -668,7 +662,7 @@ function renderizarDashboard() {
   const k = calcularKPIs(lista);
   renderizarKPIs(k);
   renderizarDonut(k);
-  renderizarBreakdown();
+  renderizarBreakdown(lista);
 }
 
 // ============================================================
