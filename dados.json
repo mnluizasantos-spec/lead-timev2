@@ -385,7 +385,16 @@
       {
         "codigo": "2100077670",
         "tipo": "HALB",
-        "descricao": "90822 REF FDO FSC®M PDVG INST25 BOT"
+        "descricao": "90822 REF FDO FSC®M PDVG INST25 BOT",
+        "producao": {
+          "inicio": "2026-06-02",
+          "fim": "2026-06-15",
+          "n_apontamentos": 16,
+          "deptos": [
+            "OFFSET"
+          ],
+          "qtd": 1258626
+        }
       },
       {
         "codigo": "2400003145",
@@ -886,12 +895,30 @@
       {
         "codigo": "2100082636",
         "tipo": "HALB",
-        "descricao": "TAG FRIENDS QDB"
+        "descricao": "TAG FRIENDS QDB",
+        "producao": {
+          "inicio": "2026-06-09",
+          "fim": "2026-06-12",
+          "n_apontamentos": 6,
+          "deptos": [
+            "OFFSET"
+          ],
+          "qtd": 99987
+        }
       },
       {
         "codigo": "2100082637",
         "tipo": "HALB",
-        "descricao": "APLIQUE FRIENDS QDB"
+        "descricao": "APLIQUE FRIENDS QDB",
+        "producao": {
+          "inicio": "2026-06-09",
+          "fim": "2026-06-12",
+          "n_apontamentos": 5,
+          "deptos": [
+            "OFFSET"
+          ],
+          "qtd": 37438
+        }
       },
       {
         "codigo": "13021810-0001",
