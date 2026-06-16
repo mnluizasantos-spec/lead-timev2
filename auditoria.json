@@ -1,8 +1,14 @@
 {
-  "gerado_em": "2026-06-15T16:07:28",
-  "total_emails": 388,
-  "total_threads": 50,
+  "gerado_em": "2026-06-16T10:01:29",
+  "total_emails": 391,
+  "total_threads": 51,
   "marcos_rejeitados": [
+    {
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAP4x-gmsOL5Ps9JJWe8oQ8I=",
+      "tipo_detectado": "ferts_criados",
+      "remetente": "laborat@antilhas.com.br",
+      "motivo": "papel_remetente=desconhecido, esperava=engenharia"
+    },
     {
       "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAB7CVBTAzK9MoXUVcD9V_iw=",
       "tipo_detectado": "ops_liberadas",
