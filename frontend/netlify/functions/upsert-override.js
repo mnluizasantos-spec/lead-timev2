@@ -44,9 +44,11 @@ exports.handler = async (event) => {
     return resp(400, { error: 'pedido_id e override são obrigatórios' });
   }
 
-  const validos = ['oculto', 'cancelado'];
-  if (!validos.includes(override.status_manual)) {
-    return resp(400, { error: `status_manual deve ser ${validos.join(' ou ')}` });
+  const statusValidos = ['oculto', 'cancelado'];
+  const temStatus = statusValidos.includes(override.status_manual);
+  const temProducao = !!(override.producao_real || override.producao_previsto);
+  if (!temStatus && !temProducao) {
+    return resp(400, { error: 'override precisa de status_manual (oculto/cancelado) ou producao_real/producao_previsto' });
   }
 
   const token = process.env.GITHUB_TOKEN;
@@ -77,15 +79,15 @@ exports.handler = async (event) => {
       }
     }
 
-    // 2. Aplica o novo override
-    overrides[pedido_id] = override;
+    // 2. Aplica o novo override (merge: preserva campos anteriores do pedido)
+    overrides[pedido_id] = { ...(overrides[pedido_id] || {}), ...override };
 
     // 3. Commit de volta
     const novoJson = JSON.stringify(overrides, null, 2);
     const novoBase64 = Buffer.from(novoJson, 'utf-8').toString('base64');
 
     const putBody = {
-      message: `chore: ${override.status_manual} pedido ${pedido_id.slice(-20)}`,
+      message: `chore: override pedido ${pedido_id.slice(-20)}`,
       content: novoBase64,
       committer: {
         name: 'Lead Time Dashboard',
