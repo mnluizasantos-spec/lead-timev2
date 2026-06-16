@@ -220,6 +220,46 @@
   </div>
 
   <!-- ============================================================
+       MODAL DE PRODUÇÃO (concluir / corrigir data prevista)
+       ============================================================ -->
+  <div class="modal" id="modal-producao" aria-hidden="true">
+    <div class="modal-backdrop" data-close-modal-prod></div>
+    <div class="modal-panel">
+      <div class="modal-header">
+        <h3>Produção</h3>
+        <button class="btn-close" data-close-modal-prod aria-label="Fechar">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p class="modal-desc"><strong id="modal-prod-nome">—</strong></p>
+
+        <div class="modal-secao">
+          <label class="modal-label" for="prod-real">Produção concluída em</label>
+          <input type="date" id="prod-real" class="modal-input" />
+          <div class="modal-radio-sub">Marca o pedido como concluído e usa esta data como fim do lead time.</div>
+        </div>
+
+        <div class="modal-secao">
+          <label class="modal-label" for="prod-previsto">Corrigir data prevista de produção</label>
+          <input type="date" id="prod-previsto" class="modal-input" />
+          <div class="modal-radio-sub">Use quando o comercial enviou a data errada no cronograma.</div>
+        </div>
+
+        <div class="modal-secao">
+          <label class="modal-label" for="prod-senha">Senha</label>
+          <input type="password" id="prod-senha" class="modal-input" placeholder="Senha de operação" />
+          <div class="modal-erro" id="prod-erro" style="display:none"></div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-ghost" data-close-modal-prod>Cancelar</button>
+        <button class="btn-primary" id="btn-confirmar-prod">Salvar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
        MODAL DE UPLOAD DE APONTAMENTOS
        ============================================================ -->
   <div class="modal" id="modal-apontamentos" aria-hidden="true">
