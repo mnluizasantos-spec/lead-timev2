@@ -853,14 +853,9 @@
         "desvio": null
       }
     },
-    "status": "cancelado",
-    "responsavel_atual": "-",
-    "tem_cronograma": true,
-    "cancelado_info": {
-      "motivo": "Pedido cancelado",
-      "por": "PCP",
-      "data": "2026-06-05"
-    }
+    "status": "em_producao",
+    "responsavel_atual": "PCP/Fábrica",
+    "tem_cronograma": true
   },
   {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQALqRWTknnAdKqhPQ8K3RuLI=",
@@ -1271,8 +1266,8 @@
         "desvio": null
       }
     },
-    "status": "cancelado",
-    "responsavel_atual": "-",
+    "status": "em_producao",
+    "responsavel_atual": "PCP/Fábrica",
     "tem_cronograma": false,
     "producao_detalhe": {
       "busca_por": "halb",
@@ -1287,11 +1282,6 @@
       ],
       "qtd_total": 3725,
       "dias_desde_ultima": 4
-    },
-    "cancelado_info": {
-      "motivo": "FAZER EXTERNO",
-      "por": "PCP",
-      "data": "2026-06-10"
     }
   },
   {
@@ -1593,11 +1583,6 @@
       ],
       "qtd_total": 10000,
       "dias_desde_ultima": 21
-    },
-    "oculto": true,
-    "oculto_info": {
-      "por": "PCP",
-      "data": "2026-05-29"
     }
   },
   {
@@ -1984,12 +1969,7 @@
     },
     "status": "em_producao",
     "responsavel_atual": "PCP/Fábrica",
-    "tem_cronograma": false,
-    "oculto": true,
-    "oculto_info": {
-      "por": "PCP",
-      "data": "2026-06-10"
-    }
+    "tem_cronograma": false
   },
   {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQANYaA1Hw1dtDmEhqS4WEHnc=",
