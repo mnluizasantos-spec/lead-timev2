@@ -1,7 +1,7 @@
 {
-  "gerado_em": "2026-06-16T14:13:35",
+  "gerado_em": "2026-06-16T15:26:35",
   "total_emails": 391,
-  "total_threads": 51,
+  "total_threads": 45,
   "marcos_rejeitados": [
     {
       "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAP4x-gmsOL5Ps9JJWe8oQ8I=",
@@ -337,13 +337,6 @@
       ]
     },
     {
-      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAB7CVBTAzK9MoXUVcD9V_iw=",
-      "subject": "BF_2202 PEDIDO FECHADO VAREJO - DECATHLON -  PHEASE IN / PHEASE OUT - ETIQUETA ADESIVA",
-      "marcos_que_tem": [
-        "ferts_criados"
-      ]
-    },
-    {
       "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQALCQK96aMRdCjUUWOONpbV8=",
       "subject": "PEDIDO FECHADO VAREJO - GRUPO DE E_MAIL",
       "marcos_que_tem": []
@@ -363,20 +356,12 @@
       "subject": "REEDICAO PEDIDO FECHADO VAREJO - RENNER "
     },
     {
-      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAIdnd_ZA3WpLqHgN0hlWC5o=",
-      "subject": "BF_02361 REEDICAO PEDIDO FECHADO VAREJO - RENNER "
-    },
-    {
       "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQABjNQ5PRMhlAsoAbqPdiYMI=",
       "subject": "REEDIÇÃO PEDIDO FECHADO VAREJO - CARE - INSTITUCIONAL"
     },
     {
       "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAH8KDH4q8XRDiwrTavzID58=",
       "subject": "REEDIÇÃO PEDIDO FECHADO VAREJO - VIVENDA DA CAMARÃO - SACOLA INST. BUONA MASSA "
-    },
-    {
-      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAH8KDH4q8XRDiwrTavzID58=",
-      "subject": "BF_02061 / REEDIÇÃO PEDIDO FECHADO VAREJO - VIVENDA DA CAMARÃO - SACOLA INST. BUONA MASSA "
     },
     {
       "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAME4HJRfnnBLslq09-9hvZs=",
@@ -401,10 +386,6 @@
     {
       "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQALgZ5MDsHMdCnCmPZUzigPM=",
       "subject": " REEDIÇÃO - PEDIDO FECHADO VAREJO - SANTA LUZIA / SACOLA RAPPI - "
-    },
-    {
-      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQALgZ5MDsHMdCnCmPZUzigPM=",
-      "subject": "REEDIÇÃO - PEDIDO FECHADO VAREJO - SANTA LUZIA / SACOLA RAPPI - "
     },
     {
       "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQADebFY3w2YpNuH1COVzIaco=",
