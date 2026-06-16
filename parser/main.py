@@ -22,6 +22,8 @@ from datetime import datetime
 from .processar import processar_thread
 from .apontamentos import indexar_apontamentos, enriquecer_com_apontamentos
 from .overrides import carregar_overrides, aplicar_overrides
+from .utils import html_to_text
+from .cronograma import extrair_cronograma
 
 
 def carregar_emails_de_arquivos(padrao_glob: str) -> list:
@@ -77,6 +79,16 @@ def _eh_abertura_pedido(subject: str) -> bool:
     return bool(re.search(r'PEDIDO\s+FECHADO', subject, re.IGNORECASE))
 
 
+def _vitrine_de(email) -> str:
+    """Data de vitrine do cronograma do email de abertura (assinatura do pedido).
+    Pedidos diferentes na mesma conversa tem vitrines diferentes; um reenvio do
+    mesmo pedido repete a mesma vitrine (ou nao traz cronograma)."""
+    corpo = html_to_text(email.get('body', '') or '')
+    cr = extrair_cronograma(corpo) or {}
+    v = cr.get('data_vitrine')
+    return str(v) if v else None
+
+
 def agrupar_por_thread(emails: list) -> dict:
     """
     Agrupa emails em pedidos.
@@ -116,16 +128,31 @@ def agrupar_por_thread(emails: list) -> dict:
             tid = f'fallback:{subj[:80]}'
         por_conversa[tid].append(email)
 
-    # 2) dentro de cada conversa, segmenta a cada email de abertura
+    # 2) dentro de cada conversa, segmenta por ABERTURA com vitrine DIFERENTE.
+    #    Uma abertura so vira pedido novo se trouxer uma data de vitrine
+    #    diferente da do pedido ja aberto. Reenvio do mesmo pedido (mesma
+    #    vitrine) ou abertura sem cronograma fica no mesmo pedido — evita
+    #    quebrar um pedido em dois quando o comercial reenvia o email.
     threads = {}
     for tid, lista in por_conversa.items():
         lista_ord = sorted(lista, key=lambda e: e.get('receivedDateTime') or '')
-        n_aberturas = 0
+        n_pedidos = 0
         chave_atual = tid  # respostas antes da 1a abertura ficam na conversa base
+        vitrine_atual = None
         for email in lista_ord:
             if _eh_abertura_pedido(email.get('subject', '')):
-                n_aberturas += 1
-                chave_atual = tid if n_aberturas == 1 else f'{tid}#{n_aberturas}'
+                vit = _vitrine_de(email)
+                if n_pedidos == 0:
+                    # 1a abertura: pedido base (mantem id = conversationId)
+                    n_pedidos = 1
+                    chave_atual = tid
+                    vitrine_atual = vit
+                elif vit and vit != vitrine_atual:
+                    # abertura com vitrine diferente => pedido realmente novo
+                    n_pedidos += 1
+                    chave_atual = f'{tid}#{n_pedidos}'
+                    vitrine_atual = vit
+                # senao: reenvio/abertura sem vitrine => fica no pedido atual
             threads.setdefault(chave_atual, []).append(email)
     return threads
 
