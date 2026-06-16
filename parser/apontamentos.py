@@ -275,7 +275,17 @@ def enriquecer_com_apontamentos(pedido: dict, indice_apontamentos: dict) -> dict
     skus_novos = []
     for sku in p.get('skus', []):
         cod = sku.get('codigo')
-        ap_do_sku = apontamentos_por_codigo.get(cod, [])
+        tipo = sku.get('tipo')
+        # Produção por SKU: vale pra CADA FERT e pra HALB específico do pedido
+        # (21xxx), buscando os apontamentos do próprio código no índice completo.
+        # (Antes só anexava nos códigos do agregado, que era FERT-primeiro: se um
+        # FERT tinha apontamento, os HALBs 21xxx do mesmo pedido ficavam sem
+        # produção mesmo tendo apontamento.) HALB genérico/insumo compartilhado
+        # (24xxx) fica de fora pra não puxar produção de outros pedidos.
+        elegivel = (tipo == 'FERT') or (tipo == 'HALB' and str(cod or '').startswith('21'))
+        ap_do_sku = list(indice_apontamentos.get(cod, [])) if elegivel else []
+        if data_minima_str:
+            ap_do_sku = [a for a in ap_do_sku if a['data'] >= data_minima_str]
         if ap_do_sku:
             datas_sku = sorted(set(a['data'] for a in ap_do_sku))
             deptos_sku = sorted(set(a['descdepto'] for a in ap_do_sku if a['descdepto']))
