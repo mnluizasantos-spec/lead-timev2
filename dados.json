@@ -963,7 +963,16 @@
       {
         "codigo": "13021810-0001",
         "tipo": "FERT",
-        "descricao": "SACL PAP NLF FSC®G FRIENDS26 QDB"
+        "descricao": "SACL PAP NLF FSC®G FRIENDS26 QDB",
+        "producao": {
+          "inicio": "2026-06-15",
+          "fim": "2026-06-15",
+          "n_apontamentos": 4,
+          "deptos": [
+            "FLEXOGRAFICA"
+          ],
+          "qtd": 101220
+        }
       },
       {
         "codigo": "2400008287",
@@ -1017,7 +1026,7 @@
         "previsto": "2026-06-19",
         "real": "2026-06-09",
         "por": null,
-        "fim": "2026-06-12"
+        "fim": "2026-06-15"
       },
       "data_vitrine": {
         "previsto": "2026-07-17",
@@ -1054,16 +1063,18 @@
       "busca_por": "fert",
       "codigos_encontrados": [
         "11055289-0001",
+        "13021810-0001",
         "11055292-0001"
       ],
-      "total_apontamentos": 8,
+      "total_apontamentos": 12,
       "primeira_data": "2026-06-09",
-      "ultima_data": "2026-06-12",
+      "ultima_data": "2026-06-15",
       "deptos": [
+        "FLEXOGRAFICA",
         "OFFSET"
       ],
-      "qtd_total": 89330,
-      "dias_desde_ultima": 4
+      "qtd_total": 190550,
+      "dias_desde_ultima": 1
     }
   },
   {
