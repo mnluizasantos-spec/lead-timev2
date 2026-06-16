@@ -923,6 +923,9 @@ function renderCabecalho(p) {
           <span class="badge badge-status badge-${p.status}">${status}</span>
         </span>
       </div>
+      <div class="detalhe-acoes" style="margin-top:12px">
+        <button class="btn-ghost btn-prod" data-acao="producao" data-pedido-id="${p.pedido_id}">Produção / concluir</button>
+      </div>
     </div>
   `;
 }
@@ -1186,6 +1189,90 @@ function fecharModalExcluir() {
   pedidoModalAtual = null;
 }
 
+// ============================================================
+// MODAL DE PRODUÇÃO — concluir produção (data) / corrigir data prevista
+// ============================================================
+let pedidoProdAtual = null;
+
+function abrirModalProducao(p) {
+  pedidoProdAtual = p;
+  $('#modal-prod-nome').textContent = p.projeto || p.subject || p.pedido_id;
+  $('#prod-real').value = p.marcos?.producao?.real || '';
+  $('#prod-previsto').value = p.marcos?.producao?.previsto || '';
+  $('#prod-senha').value = '';
+  $('#prod-erro').style.display = 'none';
+  $('#modal-producao').setAttribute('aria-hidden', 'false');
+  setTimeout(() => $('#prod-real').focus(), 100);
+}
+
+function fecharModalProducao() {
+  $('#modal-producao').setAttribute('aria-hidden', 'true');
+  pedidoProdAtual = null;
+}
+
+async function confirmarProducao() {
+  if (!pedidoProdAtual) return;
+  const senha = $('#prod-senha').value;
+  const real = $('#prod-real').value || null;
+  const previsto = $('#prod-previsto').value || null;
+  const erroEl = $('#prod-erro');
+
+  if (!senha) {
+    erroEl.textContent = 'Digite a senha.';
+    erroEl.style.display = 'block';
+    return;
+  }
+  if (!real && !previsto) {
+    erroEl.textContent = 'Informe a data de produção concluída ou a data prevista.';
+    erroEl.style.display = 'block';
+    return;
+  }
+
+  const pedidoId = pedidoProdAtual.pedido_id;
+  const override = { por: 'PCP', data: new Date().toISOString().slice(0, 10) };
+  if (real) override.producao_real = real;
+  if (previsto) override.producao_previsto = previsto;
+
+  const btn = $('#btn-confirmar-prod');
+  btn.disabled = true;
+  btn.textContent = 'Enviando...';
+  erroEl.style.display = 'none';
+
+  try {
+    await enviarOverrideBackend(pedidoId, override, senha);
+  } catch (e) {
+    erroEl.textContent = e.message || 'Erro ao enviar';
+    erroEl.style.display = 'block';
+    btn.disabled = false;
+    btn.textContent = 'Salvar';
+    return;
+  }
+
+  // Backend aceitou — aplica local pra feedback imediato
+  const p = pedidoProdAtual;
+  p.marcos = p.marcos || {};
+  p.marcos.producao = p.marcos.producao || {};
+  if (previsto) p.marcos.producao.previsto = previsto;
+  if (real) {
+    p.marcos.producao.real = real;
+    p.marcos.producao.por = 'PCP';
+    p.status = 'concluido';
+    p.responsavel_atual = '-';
+    p.producao_info = override;
+  }
+  p.lead_times = recalcularLeadTimes(p.marcos);
+
+  // Persiste no localStorage (merge com override anterior do pedido)
+  let ovExist = {};
+  try { ovExist = (JSON.parse(localStorage.getItem('overrides') || '{}'))[pedidoId] || {}; } catch (e) { /* ignore */ }
+  salvarOverrideLocal(pedidoId, { ...ovExist, ...override });
+
+  fecharModalProducao();
+  renderizarTudo();
+  btn.disabled = false;
+  btn.textContent = 'Salvar';
+}
+
 async function confirmarExcluir() {
   if (!pedidoModalAtual) return;
 
@@ -1250,6 +1337,32 @@ function salvarOverrideLocal(pedidoId, override) {
   }
 }
 
+// Recalcula lead_times a partir dos marcos (espelha _calcular_lead_times do parser).
+// Usado quando um override muda datas de produção, pra o dashboard refletir na hora.
+function recalcularLeadTimes(m) {
+  const dd = (a, b) => {
+    if (!a || !b) return null;
+    const d1 = new Date(a + 'T00:00:00');
+    const d2 = new Date(b + 'T00:00:00');
+    if (isNaN(d1) || isNaN(d2)) return null;
+    return Math.round((d2 - d1) / 86400000);
+  };
+  const P = k => (m && m[k] && m[k].previsto) || null;
+  const R = k => (m && m[k] && m[k].real) || null;
+  const lead = (de, ate, rde, rate) => {
+    const previsto = dd(P(de), P(ate));
+    const real = (rde && rate) ? dd(R(rde), R(rate)) : null;
+    const desvio = (previsto != null && real != null) ? real - previsto : null;
+    return { previsto, real, desvio };
+  };
+  return {
+    pedido_para_fert:  lead('pedido_fechado', 'fert_criado', 'pedido_fechado', 'fert_criado'),
+    fert_para_op:      lead('fert_criado', 'op_liberada', 'fert_criado', 'op_liberada'),
+    op_para_producao:  lead('op_liberada', 'producao', 'op_liberada', 'producao'),
+    producao_para_vit: lead('producao', 'data_vitrine', null, null),
+  };
+}
+
 function aplicarOverridesLocaisAosPedidos() {
   // Aplica overrides na seguinte ordem (último sobrescreve):
   // 1) overrides do servidor (overrides.json — fonte da verdade)
@@ -1261,7 +1374,7 @@ function aplicarOverridesLocaisAosPedidos() {
     for (const p of state.pedidos) {
       // Merge: servidor primeiro, local depois (local prevalece)
       const ov = { ...overridesServidor[p.pedido_id], ...overridesLocal[p.pedido_id] };
-      if (!ov || !ov.status_manual) continue;
+      if (!ov || Object.keys(ov).length === 0) continue;
 
       if (ov.status_manual === 'cancelado') {
         p.status = 'cancelado';
@@ -1270,6 +1383,24 @@ function aplicarOverridesLocaisAosPedidos() {
       } else if (ov.status_manual === 'oculto') {
         p.oculto = true;
         p.oculto_info = ov;
+      }
+
+      // Produção: corrige data prevista e/ou marca produção concluída (real).
+      if (ov.producao_previsto || ov.producao_real) {
+        p.marcos = p.marcos || {};
+        p.marcos.producao = p.marcos.producao || {};
+        if (ov.producao_previsto) p.marcos.producao.previsto = ov.producao_previsto;
+        if (ov.producao_real) {
+          p.marcos.producao.real = ov.producao_real;
+          p.marcos.producao.por = ov.por || 'PCP';
+          // produzido manualmente => concluído (se não estiver cancelado/oculto)
+          if (ov.status_manual !== 'cancelado' && ov.status_manual !== 'oculto') {
+            p.status = 'concluido';
+            p.responsavel_atual = '-';
+          }
+          p.producao_info = { real: ov.producao_real, por: ov.por, data: ov.data };
+        }
+        p.lead_times = recalcularLeadTimes(p.marcos);
       }
     }
   } catch (e) {
@@ -1515,6 +1646,21 @@ function ligarEventos() {
     el.addEventListener('click', fecharModalExcluir);
   });
   $('#btn-confirmar-excluir').addEventListener('click', confirmarExcluir);
+
+  // Modal de produção (concluir / corrigir data prevista)
+  const btnProd = $('#btn-confirmar-prod');
+  if (btnProd) btnProd.addEventListener('click', confirmarProducao);
+  document.querySelectorAll('[data-close-modal-prod]').forEach(el => {
+    el.addEventListener('click', fecharModalProducao);
+  });
+  document.addEventListener('click', (e) => {
+    const b = e.target.closest('[data-acao="producao"]');
+    if (!b) return;
+    e.stopPropagation();
+    const id = b.dataset.pedidoId;
+    const p = state.pedidos.find(x => x.pedido_id === id);
+    if (p) abrirModalProducao(p);
+  });
   $('#modal-senha').addEventListener('keypress', e => {
     if (e.key === 'Enter') confirmarExcluir();
   });
