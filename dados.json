@@ -388,12 +388,12 @@
         "descricao": "90822 REF FDO FSC®M PDVG INST25 BOT",
         "producao": {
           "inicio": "2026-06-02",
-          "fim": "2026-06-15",
-          "n_apontamentos": 16,
+          "fim": "2026-06-16",
+          "n_apontamentos": 17,
           "deptos": [
             "OFFSET"
           ],
-          "qtd": 1258626
+          "qtd": 1489026
         }
       },
       {
@@ -926,12 +926,12 @@
         "descricao": "SACL PAP NLF FSC®G FRIENDS26 QDB",
         "producao": {
           "inicio": "2026-06-15",
-          "fim": "2026-06-15",
-          "n_apontamentos": 4,
+          "fim": "2026-06-17",
+          "n_apontamentos": 9,
           "deptos": [
             "FLEXOGRAFICA"
           ],
-          "qtd": 101220
+          "qtd": 180839
         }
       },
       {
@@ -950,12 +950,12 @@
         "descricao": "CX LUVA FSC®G FRIENDS QDB",
         "producao": {
           "inicio": "2026-06-09",
-          "fim": "2026-06-12",
-          "n_apontamentos": 3,
+          "fim": "2026-06-16",
+          "n_apontamentos": 4,
           "deptos": [
             "OFFSET"
           ],
-          "qtd": 29496
+          "qtd": 40737
         }
       },
       {
@@ -986,7 +986,7 @@
         "previsto": "2026-06-19",
         "real": "2026-06-09",
         "por": null,
-        "fim": "2026-06-15"
+        "fim": "2026-06-17"
       },
       "data_vitrine": {
         "previsto": "2026-07-17",
@@ -1026,15 +1026,15 @@
         "13021810-0001",
         "11055292-0001"
       ],
-      "total_apontamentos": 12,
+      "total_apontamentos": 18,
       "primeira_data": "2026-06-09",
-      "ultima_data": "2026-06-15",
+      "ultima_data": "2026-06-17",
       "deptos": [
         "FLEXOGRAFICA",
         "OFFSET"
       ],
-      "qtd_total": 190550,
-      "dias_desde_ultima": 2
+      "qtd_total": 281410,
+      "dias_desde_ultima": 0
     }
   },
   {
