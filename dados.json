@@ -128,10 +128,10 @@
       },
       "op_liberada": {
         "previsto": "2026-06-15",
-        "real": null,
-        "por": null,
+        "real": "2026-06-16",
+        "por": "leticia.santos@antilhas.com.br",
         "real_ultima": null,
-        "n_parcelas": 0
+        "n_parcelas": 1
       },
       "producao": {
         "previsto": "2026-07-24",
@@ -152,8 +152,8 @@
       },
       "fert_para_op": {
         "previsto": 4,
-        "real": null,
-        "desvio": null
+        "real": 5,
+        "desvio": 1
       },
       "op_para_producao": {
         "previsto": 39,
@@ -166,8 +166,76 @@
         "desvio": null
       }
     },
-    "status": "aguardando_op",
-    "responsavel_atual": "Engenharia",
+    "status": "em_producao",
+    "responsavel_atual": "PCP/Fábrica",
+    "tem_cronograma": true
+  },
+  {
+    "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAGZ3z48NHsRGjiY1MBBkkIs=",
+    "subject": "BF_2257 PEDIDO FECHADO VAREJO - LUVA MOUSSE KOP 26",
+    "projeto": "BF_2257 - LUVA MOUSSE KOP 26",
+    "cliente": "",
+    "comercial": "WESLEY MATHEUS DA SILVA",
+    "skus": [
+      {
+        "codigo": "11055381-0001",
+        "tipo": "FERT",
+        "descricao": "LUV MOUSSE26 KOP"
+      }
+    ],
+    "marcos": {
+      "pedido_fechado": {
+        "previsto": "2026-06-02",
+        "real": "2026-06-02",
+        "por": "WESLEY MATHEUS DA SILVA"
+      },
+      "fert_criado": {
+        "previsto": "2026-06-02",
+        "real": "2026-06-02",
+        "por": "GIOVANNA FREITAS ALVES"
+      },
+      "op_liberada": {
+        "previsto": "2026-06-08",
+        "real": "2026-06-05",
+        "por": "LETICIA JACQUELINE SANTOS",
+        "real_ultima": "2026-06-05",
+        "n_parcelas": 3
+      },
+      "producao": {
+        "previsto": "2026-06-26",
+        "real": null,
+        "por": null
+      },
+      "data_vitrine": {
+        "previsto": "2026-06-29",
+        "real": null,
+        "por": null
+      }
+    },
+    "lead_times": {
+      "pedido_para_fert": {
+        "previsto": 0,
+        "real": 0,
+        "desvio": 0
+      },
+      "fert_para_op": {
+        "previsto": 6,
+        "real": 3,
+        "desvio": -3
+      },
+      "op_para_producao": {
+        "previsto": 18,
+        "real": null,
+        "desvio": null
+      },
+      "producao_para_vit": {
+        "previsto": 3,
+        "real": null,
+        "desvio": null
+      }
+    },
+    "status": "em_producao",
+    "responsavel_atual": "PCP/Fábrica",
     "tem_cronograma": true
   },
   {
@@ -294,74 +362,6 @@
     "tem_cronograma": true
   },
   {
-    "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAGZ3z48NHsRGjiY1MBBkkIs=",
-    "subject": "BF_2257 PEDIDO FECHADO VAREJO - LUVA MOUSSE KOP 26",
-    "projeto": "BF_2257 - LUVA MOUSSE KOP 26",
-    "cliente": "",
-    "comercial": "WESLEY MATHEUS DA SILVA",
-    "skus": [
-      {
-        "codigo": "11055381-0001",
-        "tipo": "FERT",
-        "descricao": "LUV MOUSSE26 KOP"
-      }
-    ],
-    "marcos": {
-      "pedido_fechado": {
-        "previsto": "2026-06-02",
-        "real": "2026-06-02",
-        "por": "WESLEY MATHEUS DA SILVA"
-      },
-      "fert_criado": {
-        "previsto": "2026-06-02",
-        "real": "2026-06-02",
-        "por": "GIOVANNA FREITAS ALVES"
-      },
-      "op_liberada": {
-        "previsto": "2026-06-08",
-        "real": "2026-06-05",
-        "por": "LETICIA JACQUELINE SANTOS",
-        "real_ultima": "2026-06-05",
-        "n_parcelas": 2
-      },
-      "producao": {
-        "previsto": "2026-06-26",
-        "real": null,
-        "por": null
-      },
-      "data_vitrine": {
-        "previsto": "2026-06-29",
-        "real": null,
-        "por": null
-      }
-    },
-    "lead_times": {
-      "pedido_para_fert": {
-        "previsto": 0,
-        "real": 0,
-        "desvio": 0
-      },
-      "fert_para_op": {
-        "previsto": 6,
-        "real": 3,
-        "desvio": -3
-      },
-      "op_para_producao": {
-        "previsto": 18,
-        "real": null,
-        "desvio": null
-      },
-      "producao_para_vit": {
-        "previsto": 3,
-        "real": null,
-        "desvio": null
-      }
-    },
-    "status": "em_producao",
-    "responsavel_atual": "PCP/Fábrica",
-    "tem_cronograma": true
-  },
-  {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQANYaA1Hw1dtDmEhqS4WEHnc=#2",
     "subject": "PEDIDO FECHADO VAREJO - BOTICÁRIO - SÃO JOÃO ",
     "projeto": "SAO JOAO",
@@ -469,7 +469,7 @@
         "FLEXOGRAFICA"
       ],
       "qtd_total": 78320,
-      "dias_desde_ultima": 13
+      "dias_desde_ultima": 14
     }
   },
   {
@@ -702,8 +702,8 @@
         "desvio": null
       }
     },
-    "status": "em_producao",
-    "responsavel_atual": "PCP/Fábrica",
+    "status": "concluido",
+    "responsavel_atual": "-",
     "tem_cronograma": true,
     "producao_detalhe": {
       "busca_por": "halb",
@@ -717,7 +717,7 @@
         "OFFSET"
       ],
       "qtd_total": 7899,
-      "dias_desde_ultima": 15
+      "dias_desde_ultima": 16
     }
   },
   {
@@ -1034,7 +1034,7 @@
         "OFFSET"
       ],
       "qtd_total": 190550,
-      "dias_desde_ultima": 1
+      "dias_desde_ultima": 2
     }
   },
   {
@@ -1201,7 +1201,7 @@
         "OFFSET"
       ],
       "qtd_total": 64389,
-      "dias_desde_ultima": 7
+      "dias_desde_ultima": 8
     }
   },
   {
@@ -1308,7 +1308,7 @@
         "OFFSET"
       ],
       "qtd_total": 3725,
-      "dias_desde_ultima": 4
+      "dias_desde_ultima": 5
     }
   },
   {
@@ -1609,7 +1609,7 @@
         "CAJAMAR"
       ],
       "qtd_total": 10000,
-      "dias_desde_ultima": 21
+      "dias_desde_ultima": 22
     }
   },
   {
@@ -1917,7 +1917,7 @@
         "OFFSET"
       ],
       "qtd_total": 52031,
-      "dias_desde_ultima": 5
+      "dias_desde_ultima": 6
     }
   },
   {
@@ -2155,7 +2155,7 @@
         "OFFSET"
       ],
       "qtd_total": 6678,
-      "dias_desde_ultima": 6
+      "dias_desde_ultima": 7
     }
   }
 ]
