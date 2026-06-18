@@ -1,5 +1,73 @@
 [
   {
+    "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAMtXqWuIRChLvZ1AWKwHNm8=",
+    "subject": "BF_02206 | PEDIDO FECHADO VAREJO - SACL PAP AUT PREZUNIC/COSTA AZUL ",
+    "projeto": "BF_02206 | - SACL PAP AUT PREZUNIC/COSTA AZUL",
+    "cliente": "",
+    "comercial": "LUCINEIA DAIANE RODRIGUES",
+    "skus": [
+      {
+        "codigo": "13021836-0001",
+        "tipo": "FERT",
+        "descricao": "SACL PAP AUT FSC®FF PREZUNIC INST25 CENCO"
+      }
+    ],
+    "marcos": {
+      "pedido_fechado": {
+        "previsto": "2026-06-17",
+        "real": "2026-06-17",
+        "por": "LUCINEIA DAIANE RODRIGUES"
+      },
+      "fert_criado": {
+        "previsto": "2026-06-18",
+        "real": "2026-06-17",
+        "por": "GIOVANNA FREITAS ALVES"
+      },
+      "op_liberada": {
+        "previsto": "2026-06-18",
+        "real": null,
+        "por": null,
+        "real_ultima": null,
+        "n_parcelas": 0
+      },
+      "producao": {
+        "previsto": "2026-06-24",
+        "real": null,
+        "por": null
+      },
+      "data_vitrine": {
+        "previsto": "2026-06-26",
+        "real": null,
+        "por": null
+      }
+    },
+    "lead_times": {
+      "pedido_para_fert": {
+        "previsto": 1,
+        "real": 0,
+        "desvio": -1
+      },
+      "fert_para_op": {
+        "previsto": 0,
+        "real": null,
+        "desvio": null
+      },
+      "op_para_producao": {
+        "previsto": 6,
+        "real": null,
+        "desvio": null
+      },
+      "producao_para_vit": {
+        "previsto": 2,
+        "real": null,
+        "desvio": null
+      }
+    },
+    "status": "aguardando_op",
+    "responsavel_atual": "Engenharia",
+    "tem_cronograma": true
+  },
+  {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAP4x-gmsOL5Ps9JJWe8oQ8I=",
     "subject": "BF 2214 | PEDIDO FECHADO VAREJO - FIT INSTITUCIONAL",
     "projeto": "BF 2214 | - FIT",
@@ -469,7 +537,7 @@
         "FLEXOGRAFICA"
       ],
       "qtd_total": 78320,
-      "dias_desde_ultima": 14
+      "dias_desde_ultima": 15
     }
   },
   {
@@ -717,7 +785,7 @@
         "OFFSET"
       ],
       "qtd_total": 7899,
-      "dias_desde_ultima": 16
+      "dias_desde_ultima": 17
     }
   },
   {
@@ -1034,7 +1102,7 @@
         "OFFSET"
       ],
       "qtd_total": 281410,
-      "dias_desde_ultima": 0
+      "dias_desde_ultima": 1
     }
   },
   {
@@ -1201,7 +1269,7 @@
         "OFFSET"
       ],
       "qtd_total": 64389,
-      "dias_desde_ultima": 8
+      "dias_desde_ultima": 9
     }
   },
   {
@@ -1308,7 +1376,7 @@
         "OFFSET"
       ],
       "qtd_total": 3725,
-      "dias_desde_ultima": 5
+      "dias_desde_ultima": 6
     }
   },
   {
@@ -1609,7 +1677,7 @@
         "CAJAMAR"
       ],
       "qtd_total": 10000,
-      "dias_desde_ultima": 22
+      "dias_desde_ultima": 23
     }
   },
   {
@@ -1917,7 +1985,7 @@
         "OFFSET"
       ],
       "qtd_total": 52031,
-      "dias_desde_ultima": 6
+      "dias_desde_ultima": 7
     }
   },
   {
@@ -2155,7 +2223,7 @@
         "OFFSET"
       ],
       "qtd_total": 6678,
-      "dias_desde_ultima": 7
+      "dias_desde_ultima": 8
     }
   }
 ]
