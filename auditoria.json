@@ -1,7 +1,7 @@
 {
-  "gerado_em": "2026-06-18T13:46:34",
-  "total_emails": 411,
-  "total_threads": 46,
+  "gerado_em": "2026-06-19T10:01:16",
+  "total_emails": 418,
+  "total_threads": 47,
   "marcos_rejeitados": [
     {
       "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAP4x-gmsOL5Ps9JJWe8oQ8I=",
@@ -14,6 +14,24 @@
       "tipo_detectado": "ferts_criados",
       "remetente": "laborat@antilhas.com.br",
       "motivo": "papel_remetente=desconhecido, esperava=engenharia"
+    },
+    {
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAP4x-gmsOL5Ps9JJWe8oQ8I=",
+      "tipo_detectado": "pedido_revisado",
+      "remetente": "leticia.santos@antilhas.com.br",
+      "motivo": "papel_remetente=engenharia, esperava=comercial"
+    },
+    {
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAP4x-gmsOL5Ps9JJWe8oQ8I=",
+      "tipo_detectado": "pedido_revisado",
+      "remetente": "LETICIA JACQUELINE SANTOS",
+      "motivo": "papel_remetente=engenharia, esperava=comercial"
+    },
+    {
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAP4x-gmsOL5Ps9JJWe8oQ8I=",
+      "tipo_detectado": "pedido_revisado",
+      "remetente": "LETICIA JACQUELINE SANTOS",
+      "motivo": "papel_remetente=engenharia, esperava=comercial"
     },
     {
       "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAGZ3z48NHsRGjiY1MBBkkIs=",

@@ -1,5 +1,67 @@
 [
   {
+    "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAFJG3OVeQw9FmkGz9vjrjjg=",
+    "subject": "BF_02334 | PEDIDO FECHADO VAREJO - SUPERMERCADO JAGUARÉ ",
+    "projeto": "BF_02334 | SUPERMERCADO",
+    "cliente": "MERCADO JAGUARE",
+    "comercial": "lucineia.rodrigues@antilhas.com.br",
+    "skus": [],
+    "marcos": {
+      "pedido_fechado": {
+        "previsto": "2026-06-18",
+        "real": "2026-06-18",
+        "por": "lucineia.rodrigues@antilhas.com.br"
+      },
+      "fert_criado": {
+        "previsto": "2026-06-19",
+        "real": null,
+        "por": null
+      },
+      "op_liberada": {
+        "previsto": "2026-06-22",
+        "real": null,
+        "por": null,
+        "real_ultima": null,
+        "n_parcelas": 0
+      },
+      "producao": {
+        "previsto": "2026-06-30",
+        "real": null,
+        "por": null
+      },
+      "data_vitrine": {
+        "previsto": "2026-07-01",
+        "real": null,
+        "por": null
+      }
+    },
+    "lead_times": {
+      "pedido_para_fert": {
+        "previsto": 1,
+        "real": null,
+        "desvio": null
+      },
+      "fert_para_op": {
+        "previsto": 3,
+        "real": null,
+        "desvio": null
+      },
+      "op_para_producao": {
+        "previsto": 8,
+        "real": null,
+        "desvio": null
+      },
+      "producao_para_vit": {
+        "previsto": 1,
+        "real": null,
+        "desvio": null
+      }
+    },
+    "status": "aguardando_fert",
+    "responsavel_atual": "Engenharia",
+    "tem_cronograma": true
+  },
+  {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAMtXqWuIRChLvZ1AWKwHNm8=",
     "subject": "BF_02206 | PEDIDO FECHADO VAREJO - SACL PAP AUT PREZUNIC/COSTA AZUL ",
     "projeto": "BF_02206 | - SACL PAP AUT PREZUNIC/COSTA AZUL",
@@ -118,10 +180,10 @@
       },
       "op_liberada": {
         "previsto": "2026-06-18",
-        "real": null,
-        "por": null,
-        "real_ultima": null,
-        "n_parcelas": 0
+        "real": "2026-06-18",
+        "por": "ARIANE DO CARMO LUZ",
+        "real_ultima": "2026-06-18",
+        "n_parcelas": 3
       },
       "producao": {
         "previsto": "2026-07-24",
@@ -142,8 +204,8 @@
       },
       "fert_para_op": {
         "previsto": 3,
-        "real": null,
-        "desvio": null
+        "real": 3,
+        "desvio": 0
       },
       "op_para_producao": {
         "previsto": 36,
@@ -156,8 +218,8 @@
         "desvio": null
       }
     },
-    "status": "aguardando_op",
-    "responsavel_atual": "Engenharia",
+    "status": "em_producao",
+    "responsavel_atual": "PCP/Fábrica",
     "tem_cronograma": true
   },
   {
@@ -522,8 +584,8 @@
         "desvio": null
       }
     },
-    "status": "em_producao",
-    "responsavel_atual": "PCP/Fábrica",
+    "status": "concluido",
+    "responsavel_atual": "-",
     "tem_cronograma": true,
     "producao_detalhe": {
       "busca_por": "fert",
@@ -537,7 +599,7 @@
         "FLEXOGRAFICA"
       ],
       "qtd_total": 78320,
-      "dias_desde_ultima": 15
+      "dias_desde_ultima": 16
     }
   },
   {
@@ -785,7 +847,7 @@
         "OFFSET"
       ],
       "qtd_total": 7899,
-      "dias_desde_ultima": 17
+      "dias_desde_ultima": 18
     }
   },
   {
@@ -1102,7 +1164,7 @@
         "OFFSET"
       ],
       "qtd_total": 281410,
-      "dias_desde_ultima": 1
+      "dias_desde_ultima": 2
     }
   },
   {
@@ -1269,7 +1331,7 @@
         "OFFSET"
       ],
       "qtd_total": 64389,
-      "dias_desde_ultima": 9
+      "dias_desde_ultima": 10
     }
   },
   {
@@ -1376,7 +1438,7 @@
         "OFFSET"
       ],
       "qtd_total": 3725,
-      "dias_desde_ultima": 6
+      "dias_desde_ultima": 7
     }
   },
   {
@@ -1677,7 +1739,7 @@
         "CAJAMAR"
       ],
       "qtd_total": 10000,
-      "dias_desde_ultima": 23
+      "dias_desde_ultima": 24
     }
   },
   {
@@ -1985,7 +2047,7 @@
         "OFFSET"
       ],
       "qtd_total": 52031,
-      "dias_desde_ultima": 7
+      "dias_desde_ultima": 8
     }
   },
   {
@@ -2223,7 +2285,7 @@
         "OFFSET"
       ],
       "qtd_total": 6678,
-      "dias_desde_ultima": 8
+      "dias_desde_ultima": 9
     }
   }
 ]
