@@ -518,12 +518,12 @@
         "descricao": "90822 REF FDO FSC®M PDVG INST25 BOT",
         "producao": {
           "inicio": "2026-06-02",
-          "fim": "2026-06-16",
-          "n_apontamentos": 17,
+          "fim": "2026-06-18",
+          "n_apontamentos": 20,
           "deptos": [
             "OFFSET"
           ],
-          "qtd": 1489026
+          "qtd": 1720626
         }
       },
       {
@@ -1009,12 +1009,12 @@
         "descricao": "CARTAO PRESENTE ROSA FRIENDS QDB",
         "producao": {
           "inicio": "2026-06-09",
-          "fim": "2026-06-12",
-          "n_apontamentos": 5,
+          "fim": "2026-06-19",
+          "n_apontamentos": 7,
           "deptos": [
             "OFFSET"
           ],
-          "qtd": 59834
+          "qtd": 334934
         }
       },
       {
@@ -1056,12 +1056,12 @@
         "descricao": "SACL PAP NLF FSC®G FRIENDS26 QDB",
         "producao": {
           "inicio": "2026-06-15",
-          "fim": "2026-06-17",
-          "n_apontamentos": 9,
+          "fim": "2026-06-18",
+          "n_apontamentos": 18,
           "deptos": [
             "FLEXOGRAFICA"
           ],
-          "qtd": 180839
+          "qtd": 325705
         }
       },
       {
@@ -1080,12 +1080,12 @@
         "descricao": "CX LUVA FSC®G FRIENDS QDB",
         "producao": {
           "inicio": "2026-06-09",
-          "fim": "2026-06-16",
-          "n_apontamentos": 4,
+          "fim": "2026-06-18",
+          "n_apontamentos": 6,
           "deptos": [
             "OFFSET"
           ],
-          "qtd": 40737
+          "qtd": 73027
         }
       },
       {
@@ -1116,7 +1116,7 @@
         "previsto": "2026-06-19",
         "real": "2026-06-09",
         "por": null,
-        "fim": "2026-06-17"
+        "fim": "2026-06-19"
       },
       "data_vitrine": {
         "previsto": "2026-07-17",
@@ -1156,15 +1156,15 @@
         "13021810-0001",
         "11055292-0001"
       ],
-      "total_apontamentos": 18,
+      "total_apontamentos": 31,
       "primeira_data": "2026-06-09",
-      "ultima_data": "2026-06-17",
+      "ultima_data": "2026-06-19",
       "deptos": [
         "FLEXOGRAFICA",
         "OFFSET"
       ],
-      "qtd_total": 281410,
-      "dias_desde_ultima": 2
+      "qtd_total": 733666,
+      "dias_desde_ultima": 0
     }
   },
   {
@@ -1835,7 +1835,16 @@
       {
         "codigo": "2100082270",
         "tipo": "HALB",
-        "descricao": "SACL PAP MAN FSC®M INST25 V2 ANACAPRI"
+        "descricao": "SACL PAP MAN FSC®M INST25 V2 ANACAPRI",
+        "producao": {
+          "inicio": "2026-06-19",
+          "fim": "2026-06-19",
+          "n_apontamentos": 3,
+          "deptos": [
+            "OFFSET"
+          ],
+          "qtd": 21022
+        }
       }
     ],
     "marcos": {
@@ -1858,8 +1867,9 @@
       },
       "producao": {
         "previsto": null,
-        "real": null,
-        "por": null
+        "real": "2026-06-19",
+        "por": null,
+        "fim": "2026-06-19"
       },
       "data_vitrine": {
         "previsto": null,
@@ -1880,7 +1890,7 @@
       },
       "op_para_producao": {
         "previsto": null,
-        "real": null,
+        "real": 37,
         "desvio": null
       },
       "producao_para_vit": {
@@ -1891,7 +1901,21 @@
     },
     "status": "em_producao",
     "responsavel_atual": "PCP/Fábrica",
-    "tem_cronograma": false
+    "tem_cronograma": false,
+    "producao_detalhe": {
+      "busca_por": "halb",
+      "codigos_encontrados": [
+        "2100082270"
+      ],
+      "total_apontamentos": 3,
+      "primeira_data": "2026-06-19",
+      "ultima_data": "2026-06-19",
+      "deptos": [
+        "OFFSET"
+      ],
+      "qtd_total": 21022,
+      "dias_desde_ultima": 0
+    }
   },
   {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAH1_B5c_RDhOoUvc4sdA9A8=",
@@ -2209,12 +2233,12 @@
         "descricao": "TAG PAIS26 KOP",
         "producao": {
           "inicio": "2026-06-03",
-          "fim": "2026-06-10",
-          "n_apontamentos": 4,
+          "fim": "2026-06-17",
+          "n_apontamentos": 5,
           "deptos": [
             "OFFSET"
           ],
-          "qtd": 6678
+          "qtd": 8415
         }
       }
     ],
@@ -2240,7 +2264,7 @@
         "previsto": "2026-06-16",
         "real": "2026-06-03",
         "por": null,
-        "fim": "2026-06-10"
+        "fim": "2026-06-17"
       },
       "data_vitrine": {
         "previsto": "2026-07-22",
@@ -2278,14 +2302,14 @@
       "codigos_encontrados": [
         "11055267-0001"
       ],
-      "total_apontamentos": 4,
+      "total_apontamentos": 5,
       "primeira_data": "2026-06-03",
-      "ultima_data": "2026-06-10",
+      "ultima_data": "2026-06-17",
       "deptos": [
         "OFFSET"
       ],
-      "qtd_total": 6678,
-      "dias_desde_ultima": 9
+      "qtd_total": 8415,
+      "dias_desde_ultima": 2
     }
   }
 ]
