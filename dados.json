@@ -1,21 +1,89 @@
 [
   {
-    "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAFJG3OVeQw9FmkGz9vjrjjg=",
-    "subject": "BF_02334 | PEDIDO FECHADO VAREJO - SUPERMERCADO JAGUARÉ ",
-    "projeto": "BF_02334 | SUPERMERCADO",
-    "cliente": "MERCADO JAGUARE",
-    "comercial": "lucineia.rodrigues@antilhas.com.br",
+    "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAF8vmWdtrCBPpJBGw6vHpk0=",
+    "subject": "BF_02328 | PEDIDO FECHADO VAREJO - SACOLAS P /M - VIVARA PAIS 2026",
+    "projeto": "BF_02328 | SACOLAS P M PAIS 2026",
+    "cliente": "VIVARA",
+    "comercial": "LUCINEIA DAIANE RODRIGUES",
     "skus": [],
     "marcos": {
       "pedido_fechado": {
-        "previsto": "2026-06-18",
-        "real": "2026-06-18",
-        "por": "lucineia.rodrigues@antilhas.com.br"
+        "previsto": "2026-06-19",
+        "real": "2026-06-19",
+        "por": "LUCINEIA DAIANE RODRIGUES"
       },
       "fert_criado": {
         "previsto": "2026-06-19",
         "real": null,
         "por": null
+      },
+      "op_liberada": {
+        "previsto": "2026-06-22",
+        "real": null,
+        "por": null,
+        "real_ultima": null,
+        "n_parcelas": 0
+      },
+      "producao": {
+        "previsto": "2026-06-23",
+        "real": null,
+        "por": null
+      },
+      "data_vitrine": {
+        "previsto": "2026-07-10",
+        "real": null,
+        "por": null
+      }
+    },
+    "lead_times": {
+      "pedido_para_fert": {
+        "previsto": 0,
+        "real": null,
+        "desvio": null
+      },
+      "fert_para_op": {
+        "previsto": 3,
+        "real": null,
+        "desvio": null
+      },
+      "op_para_producao": {
+        "previsto": 1,
+        "real": null,
+        "desvio": null
+      },
+      "producao_para_vit": {
+        "previsto": 17,
+        "real": null,
+        "desvio": null
+      }
+    },
+    "status": "aguardando_fert",
+    "responsavel_atual": "Engenharia",
+    "tem_cronograma": true
+  },
+  {
+    "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAFJG3OVeQw9FmkGz9vjrjjg=",
+    "subject": "BF_02334 | PEDIDO FECHADO VAREJO - SUPERMERCADO JAGUARÉ ",
+    "projeto": "BF_02334 | SUPERMERCADO",
+    "cliente": "MERCADO JAGUARE",
+    "comercial": "LUCINEIA DAIANE RODRIGUES",
+    "skus": [
+      {
+        "codigo": "13021838-0001",
+        "tipo": "FERT",
+        "descricao": "SACL PAP AUT FSC®FF MERCADO JAGUARE"
+      }
+    ],
+    "marcos": {
+      "pedido_fechado": {
+        "previsto": "2026-06-18",
+        "real": "2026-06-18",
+        "por": "LUCINEIA DAIANE RODRIGUES"
+      },
+      "fert_criado": {
+        "previsto": "2026-06-19",
+        "real": "2026-06-19",
+        "por": "GIOVANNA FREITAS ALVES"
       },
       "op_liberada": {
         "previsto": "2026-06-22",
@@ -38,8 +106,8 @@
     "lead_times": {
       "pedido_para_fert": {
         "previsto": 1,
-        "real": null,
-        "desvio": null
+        "real": 1,
+        "desvio": 0
       },
       "fert_para_op": {
         "previsto": 3,
@@ -57,7 +125,7 @@
         "desvio": null
       }
     },
-    "status": "aguardando_fert",
+    "status": "aguardando_op",
     "responsavel_atual": "Engenharia",
     "tem_cronograma": true
   },
@@ -87,10 +155,10 @@
       },
       "op_liberada": {
         "previsto": "2026-06-18",
-        "real": null,
-        "por": null,
+        "real": "2026-06-19",
+        "por": "leticia.santos@antilhas.com.br",
         "real_ultima": null,
-        "n_parcelas": 0
+        "n_parcelas": 1
       },
       "producao": {
         "previsto": "2026-06-24",
@@ -111,8 +179,8 @@
       },
       "fert_para_op": {
         "previsto": 0,
-        "real": null,
-        "desvio": null
+        "real": 2,
+        "desvio": 2
       },
       "op_para_producao": {
         "previsto": 6,
@@ -125,8 +193,8 @@
         "desvio": null
       }
     },
-    "status": "aguardando_op",
-    "responsavel_atual": "Engenharia",
+    "status": "em_producao",
+    "responsavel_atual": "PCP/Fábrica",
     "tem_cronograma": true
   },
   {
@@ -599,7 +667,7 @@
         "FLEXOGRAFICA"
       ],
       "qtd_total": 78320,
-      "dias_desde_ultima": 16
+      "dias_desde_ultima": 17
     }
   },
   {
@@ -847,7 +915,7 @@
         "OFFSET"
       ],
       "qtd_total": 7899,
-      "dias_desde_ultima": 18
+      "dias_desde_ultima": 19
     }
   },
   {
@@ -1164,7 +1232,7 @@
         "OFFSET"
       ],
       "qtd_total": 733666,
-      "dias_desde_ultima": 0
+      "dias_desde_ultima": 1
     }
   },
   {
@@ -1331,7 +1399,7 @@
         "OFFSET"
       ],
       "qtd_total": 64389,
-      "dias_desde_ultima": 10
+      "dias_desde_ultima": 11
     }
   },
   {
@@ -1438,7 +1506,7 @@
         "OFFSET"
       ],
       "qtd_total": 3725,
-      "dias_desde_ultima": 7
+      "dias_desde_ultima": 8
     }
   },
   {
@@ -1739,7 +1807,7 @@
         "CAJAMAR"
       ],
       "qtd_total": 10000,
-      "dias_desde_ultima": 24
+      "dias_desde_ultima": 25
     }
   },
   {
@@ -1914,7 +1982,7 @@
         "OFFSET"
       ],
       "qtd_total": 21022,
-      "dias_desde_ultima": 0
+      "dias_desde_ultima": 1
     }
   },
   {
@@ -2071,7 +2139,7 @@
         "OFFSET"
       ],
       "qtd_total": 52031,
-      "dias_desde_ultima": 8
+      "dias_desde_ultima": 9
     }
   },
   {
@@ -2309,7 +2377,7 @@
         "OFFSET"
       ],
       "qtd_total": 8415,
-      "dias_desde_ultima": 2
+      "dias_desde_ultima": 3
     }
   }
 ]

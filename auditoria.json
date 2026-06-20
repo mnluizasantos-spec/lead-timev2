@@ -1,8 +1,20 @@
 {
-  "gerado_em": "2026-06-19T19:05:05",
-  "total_emails": 418,
-  "total_threads": 47,
+  "gerado_em": "2026-06-20T10:01:23",
+  "total_emails": 428,
+  "total_threads": 49,
   "marcos_rejeitados": [
+    {
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAJ7xPaEemGVNkecAgA2Fn_o=",
+      "tipo_detectado": "ops_liberadas",
+      "remetente": "wesley.matheus@antilhas.com.br",
+      "motivo": "papel_remetente=comercial, esperava=engenharia"
+    },
+    {
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAJ7xPaEemGVNkecAgA2Fn_o=",
+      "tipo_detectado": "ops_liberadas",
+      "remetente": "WESLEY MATHEUS DA SILVA",
+      "motivo": "papel_remetente=comercial, esperava=engenharia"
+    },
     {
       "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAP4x-gmsOL5Ps9JJWe8oQ8I=",
       "tipo_detectado": "ferts_criados",
@@ -353,6 +365,13 @@
     }
   ],
   "threads_sem_pedido_fechado": [
+    {
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAJ7xPaEemGVNkecAgA2Fn_o=",
+      "subject": "BF_2256  PEDIDO FECHADO VAREJO - RENNER JULHO",
+      "marcos_que_tem": [
+        "ferts_criados"
+      ]
+    },
     {
       "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAB7CVBTAzK9MoXUVcD9V_iw=",
       "subject": "BF_2202 PEDIDO FECHADO VAREJO - DECATHLON -  PHEASE IN / PHEASE OUT - ETIQUETA ADESIVA",
