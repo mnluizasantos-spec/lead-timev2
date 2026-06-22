@@ -1,6 +1,6 @@
 {
-  "gerado_em": "2026-06-21T12:24:17",
-  "total_emails": 429,
+  "gerado_em": "2026-06-22T10:01:25",
+  "total_emails": 430,
   "total_threads": 49,
   "marcos_rejeitados": [
     {
@@ -26,6 +26,12 @@
       "tipo_detectado": "ferts_criados",
       "remetente": "laborat@antilhas.com.br",
       "motivo": "papel_remetente=desconhecido, esperava=engenharia"
+    },
+    {
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAJ7xPaEemGVNkecAgA2Fn_o=",
+      "tipo_detectado": "ops_liberadas",
+      "remetente": "WESLEY MATHEUS DA SILVA",
+      "motivo": "papel_remetente=comercial, esperava=engenharia"
     },
     {
       "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAP4x-gmsOL5Ps9JJWe8oQ8I=",
