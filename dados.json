@@ -1907,11 +1907,11 @@
         "producao": {
           "inicio": "2026-06-19",
           "fim": "2026-06-19",
-          "n_apontamentos": 3,
+          "n_apontamentos": 9,
           "deptos": [
             "OFFSET"
           ],
-          "qtd": 21022
+          "qtd": 108842
         }
       }
     ],
@@ -1975,13 +1975,13 @@
       "codigos_encontrados": [
         "2100082270"
       ],
-      "total_apontamentos": 3,
+      "total_apontamentos": 9,
       "primeira_data": "2026-06-19",
       "ultima_data": "2026-06-19",
       "deptos": [
         "OFFSET"
       ],
-      "qtd_total": 21022,
+      "qtd_total": 108842,
       "dias_desde_ultima": 3
     }
   },
