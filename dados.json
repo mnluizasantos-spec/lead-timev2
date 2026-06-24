@@ -278,7 +278,16 @@
       {
         "codigo": "13021836-0001",
         "tipo": "FERT",
-        "descricao": "SACL PAP AUT FSC®FF PREZUNIC INST25 CENCO"
+        "descricao": "SACL PAP AUT FSC®FF PREZUNIC INST25 CENCO",
+        "producao": {
+          "inicio": "2026-06-23",
+          "fim": "2026-06-23",
+          "n_apontamentos": 1,
+          "deptos": [
+            "CAJAMAR"
+          ],
+          "qtd": 53422
+        }
       }
     ],
     "marcos": {
@@ -301,8 +310,9 @@
       },
       "producao": {
         "previsto": "2026-06-24",
-        "real": null,
-        "por": null
+        "real": "2026-06-23",
+        "por": null,
+        "fim": "2026-06-23"
       },
       "data_vitrine": {
         "previsto": "2026-06-26",
@@ -323,8 +333,8 @@
       },
       "op_para_producao": {
         "previsto": 6,
-        "real": null,
-        "desvio": null
+        "real": 4,
+        "desvio": -2
       },
       "producao_para_vit": {
         "previsto": 2,
@@ -334,7 +344,21 @@
     },
     "status": "em_producao",
     "responsavel_atual": "PCP/Fábrica",
-    "tem_cronograma": true
+    "tem_cronograma": true,
+    "producao_detalhe": {
+      "busca_por": "fert",
+      "codigos_encontrados": [
+        "13021836-0001"
+      ],
+      "total_apontamentos": 1,
+      "primeira_data": "2026-06-23",
+      "ultima_data": "2026-06-23",
+      "deptos": [
+        "CAJAMAR"
+      ],
+      "qtd_total": 53422,
+      "dias_desde_ultima": 1
+    }
   },
   {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAP4x-gmsOL5Ps9JJWe8oQ8I=",
@@ -1263,12 +1287,12 @@
         "descricao": "SACL PAP NLF FSC®G FRIENDS26 QDB",
         "producao": {
           "inicio": "2026-06-15",
-          "fim": "2026-06-18",
-          "n_apontamentos": 18,
+          "fim": "2026-06-23",
+          "n_apontamentos": 19,
           "deptos": [
             "FLEXOGRAFICA"
           ],
-          "qtd": 325705
+          "qtd": 329293
         }
       },
       {
@@ -1323,7 +1347,7 @@
         "previsto": "2026-06-19",
         "real": "2026-06-09",
         "por": null,
-        "fim": "2026-06-19"
+        "fim": "2026-06-23"
       },
       "data_vitrine": {
         "previsto": "2026-07-17",
@@ -1363,15 +1387,15 @@
         "13021810-0001",
         "11055292-0001"
       ],
-      "total_apontamentos": 31,
+      "total_apontamentos": 32,
       "primeira_data": "2026-06-09",
-      "ultima_data": "2026-06-19",
+      "ultima_data": "2026-06-23",
       "deptos": [
         "FLEXOGRAFICA",
         "OFFSET"
       ],
-      "qtd_total": 733666,
-      "dias_desde_ultima": 5
+      "qtd_total": 737254,
+      "dias_desde_ultima": 1
     }
   },
   {
@@ -1389,7 +1413,16 @@
       {
         "codigo": "2100082686",
         "tipo": "HALB",
-        "descricao": "931610552 SACL PAP MAN FSC®P CREEPER REN"
+        "descricao": "931610552 SACL PAP MAN FSC®P CREEPER REN",
+        "producao": {
+          "inicio": "2026-06-23",
+          "fim": "2026-06-23",
+          "n_apontamentos": 1,
+          "deptos": [
+            "OFFSET"
+          ],
+          "qtd": 4906
+        }
       },
       {
         "codigo": "11055332-0001",
@@ -1490,7 +1523,7 @@
         "previsto": "2026-06-15",
         "real": "2026-06-01",
         "por": null,
-        "fim": "2026-06-09"
+        "fim": "2026-06-23"
       },
       "data_vitrine": {
         "previsto": "2026-06-17",
@@ -1526,19 +1559,20 @@
     "producao_detalhe": {
       "busca_por": "halb",
       "codigos_encontrados": [
+        "2100082686",
         "2100082687",
         "2100082684",
         "2100082688",
         "2100082685"
       ],
-      "total_apontamentos": 11,
+      "total_apontamentos": 12,
       "primeira_data": "2026-06-01",
-      "ultima_data": "2026-06-09",
+      "ultima_data": "2026-06-23",
       "deptos": [
         "OFFSET"
       ],
-      "qtd_total": 64389,
-      "dias_desde_ultima": 15
+      "qtd_total": 69295,
+      "dias_desde_ultima": 1
     }
   },
   {
