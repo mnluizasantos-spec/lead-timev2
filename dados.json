@@ -118,7 +118,33 @@
     "projeto": "BF_02328 | SACOLAS P M PAIS 2026",
     "cliente": "VIVARA",
     "comercial": "LUCINEIA DAIANE RODRIGUES",
-    "skus": [],
+    "skus": [
+      {
+        "codigo": "11055443-0001",
+        "tipo": "FERT",
+        "descricao": "SACL PAP SAUT FSC®P LIFE PAIS26 VIVARA"
+      },
+      {
+        "codigo": "2100082813",
+        "tipo": "HALB",
+        "descricao": "SACL PAP SAUT FSC®P LIFE PAIS26 VIVARA"
+      },
+      {
+        "codigo": "2400002076",
+        "tipo": "HALB",
+        "descricao": "FUNDO FSCM 175X065MM BRANCO"
+      },
+      {
+        "codigo": "11055445-0001",
+        "tipo": "FERT",
+        "descricao": "SACL PAP SAUT FSC®M LIFE PAIS26 VIVARA"
+      },
+      {
+        "codigo": "2100082815",
+        "tipo": "HALB",
+        "descricao": "SACL PAP SAUT FSC®M LIFE PAIS26 VIVARA"
+      }
+    ],
     "marcos": {
       "pedido_fechado": {
         "previsto": "2026-06-19",
@@ -127,8 +153,8 @@
       },
       "fert_criado": {
         "previsto": "2026-06-19",
-        "real": null,
-        "por": null
+        "real": "2026-06-23",
+        "por": "GIOVANNA FREITAS ALVES"
       },
       "op_liberada": {
         "previsto": "2026-06-22",
@@ -151,8 +177,8 @@
     "lead_times": {
       "pedido_para_fert": {
         "previsto": 0,
-        "real": null,
-        "desvio": null
+        "real": 4,
+        "desvio": 4
       },
       "fert_para_op": {
         "previsto": 3,
@@ -170,7 +196,7 @@
         "desvio": null
       }
     },
-    "status": "aguardando_fert",
+    "status": "aguardando_op",
     "responsavel_atual": "Engenharia",
     "tem_cronograma": true
   },
@@ -201,9 +227,9 @@
       "op_liberada": {
         "previsto": "2026-06-22",
         "real": "2026-06-22",
-        "por": "leticia.santos@antilhas.com.br",
-        "real_ultima": null,
-        "n_parcelas": 1
+        "por": "LETICIA JACQUELINE SANTOS",
+        "real_ultima": "2026-06-22",
+        "n_parcelas": 2
       },
       "producao": {
         "previsto": "2026-06-30",
@@ -780,7 +806,7 @@
         "FLEXOGRAFICA"
       ],
       "qtd_total": 78320,
-      "dias_desde_ultima": 20
+      "dias_desde_ultima": 21
     }
   },
   {
@@ -1028,7 +1054,7 @@
         "OFFSET"
       ],
       "qtd_total": 7899,
-      "dias_desde_ultima": 22
+      "dias_desde_ultima": 23
     }
   },
   {
@@ -1345,7 +1371,7 @@
         "OFFSET"
       ],
       "qtd_total": 733666,
-      "dias_desde_ultima": 4
+      "dias_desde_ultima": 5
     }
   },
   {
@@ -1512,7 +1538,7 @@
         "OFFSET"
       ],
       "qtd_total": 64389,
-      "dias_desde_ultima": 14
+      "dias_desde_ultima": 15
     }
   },
   {
@@ -1619,7 +1645,7 @@
         "OFFSET"
       ],
       "qtd_total": 3725,
-      "dias_desde_ultima": 11
+      "dias_desde_ultima": 12
     }
   },
   {
@@ -1920,7 +1946,7 @@
         "CAJAMAR"
       ],
       "qtd_total": 10000,
-      "dias_desde_ultima": 28
+      "dias_desde_ultima": 29
     }
   },
   {
@@ -2095,7 +2121,7 @@
         "OFFSET"
       ],
       "qtd_total": 108842,
-      "dias_desde_ultima": 4
+      "dias_desde_ultima": 5
     }
   },
   {
@@ -2252,7 +2278,7 @@
         "OFFSET"
       ],
       "qtd_total": 52031,
-      "dias_desde_ultima": 12
+      "dias_desde_ultima": 13
     }
   },
   {
@@ -2490,7 +2516,7 @@
         "OFFSET"
       ],
       "qtd_total": 8415,
-      "dias_desde_ultima": 6
+      "dias_desde_ultima": 7
     }
   }
 ]

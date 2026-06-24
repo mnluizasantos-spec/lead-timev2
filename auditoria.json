@@ -1,6 +1,6 @@
 {
-  "gerado_em": "2026-06-23T13:20:52",
-  "total_emails": 437,
+  "gerado_em": "2026-06-24T10:01:22",
+  "total_emails": 442,
   "total_threads": 50,
   "marcos_rejeitados": [
     {
@@ -38,6 +38,36 @@
       "tipo_detectado": "ops_liberadas",
       "remetente": "WESLEY MATHEUS DA SILVA",
       "motivo": "papel_remetente=comercial, esperava=engenharia"
+    },
+    {
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAJ7xPaEemGVNkecAgA2Fn_o=",
+      "tipo_detectado": "ops_liberadas",
+      "remetente": "WESLEY MATHEUS DA SILVA",
+      "motivo": "papel_remetente=comercial, esperava=engenharia"
+    },
+    {
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAJ7xPaEemGVNkecAgA2Fn_o=",
+      "tipo_detectado": "ops_liberadas",
+      "remetente": "WESLEY MATHEUS DA SILVA",
+      "motivo": "papel_remetente=comercial, esperava=engenharia"
+    },
+    {
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAJ7xPaEemGVNkecAgA2Fn_o=",
+      "tipo_detectado": "ops_liberadas",
+      "remetente": "WESLEY MATHEUS DA SILVA",
+      "motivo": "papel_remetente=comercial, esperava=engenharia"
+    },
+    {
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAJ7xPaEemGVNkecAgA2Fn_o=",
+      "tipo_detectado": "ops_liberadas",
+      "remetente": "WESLEY MATHEUS DA SILVA",
+      "motivo": "papel_remetente=comercial, esperava=engenharia"
+    },
+    {
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAJ7xPaEemGVNkecAgA2Fn_o=",
+      "tipo_detectado": "ferts_criados",
+      "remetente": "cqualidade@antilhas.com.br",
+      "motivo": "papel_remetente=desconhecido, esperava=engenharia"
     },
     {
       "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAP4x-gmsOL5Ps9JJWe8oQ8I=",
@@ -393,7 +423,8 @@
       "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAJ7xPaEemGVNkecAgA2Fn_o=",
       "subject": "BF_2256  PEDIDO FECHADO VAREJO - RENNER JULHO",
       "marcos_que_tem": [
-        "ferts_criados"
+        "ferts_criados",
+        "pedido_revisado"
       ]
     },
     {
