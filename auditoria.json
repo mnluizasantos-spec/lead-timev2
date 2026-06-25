@@ -1,7 +1,7 @@
 {
-  "gerado_em": "2026-06-24T19:18:52",
+  "gerado_em": "2026-06-25T10:01:25",
   "total_emails": 442,
-  "total_threads": 50,
+  "total_threads": 53,
   "marcos_rejeitados": [
     {
       "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAJ7xPaEemGVNkecAgA2Fn_o=",
@@ -68,6 +68,18 @@
       "tipo_detectado": "ferts_criados",
       "remetente": "cqualidade@antilhas.com.br",
       "motivo": "papel_remetente=desconhecido, esperava=engenharia"
+    },
+    {
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAJ7xPaEemGVNkecAgA2Fn_o=",
+      "tipo_detectado": "ops_liberadas",
+      "remetente": "WESLEY MATHEUS DA SILVA",
+      "motivo": "papel_remetente=comercial, esperava=engenharia"
+    },
+    {
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAJ7xPaEemGVNkecAgA2Fn_o=",
+      "tipo_detectado": "ops_liberadas",
+      "remetente": "WESLEY MATHEUS DA SILVA",
+      "motivo": "papel_remetente=comercial, esperava=engenharia"
     },
     {
       "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAP4x-gmsOL5Ps9JJWe8oQ8I=",
@@ -424,7 +436,8 @@
       "subject": "BF_2256  PEDIDO FECHADO VAREJO - RENNER JULHO",
       "marcos_que_tem": [
         "ferts_criados",
-        "pedido_revisado"
+        "pedido_revisado",
+        "ops_liberadas"
       ]
     },
     {
@@ -449,6 +462,18 @@
   ],
   "remetentes_desconhecidos": [],
   "reedicoes_ignoradas": [
+    {
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAF7LmPwgj5dKgzsyEtXKAVM=",
+      "subject": "RES: BF_ 02393 REEDIÇÃO PEDIDO FECHADO VAREJO - TRACK FILD - INSTITUCIONAL - Retificado"
+    },
+    {
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAEcBtVxRzxxFlvrbDtq_ieY=",
+      "subject": "RES: BF_ 02393 REEDIÇÃO PEDIDO FECHADO VAREJO - TRACK FILD - INSTITUCIONAL - Retificado"
+    },
+    {
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQALQSsZcmhdpHhuG2CtxPVOw=",
+      "subject": "BF_ 02393 REEDIÇÃO PEDIDO FECHADO VAREJO - TRACK FILD - INSTITUCIONAL"
+    },
     {
       "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAIdnd_ZA3WpLqHgN0hlWC5o=",
       "subject": "REEDICAO PEDIDO FECHADO VAREJO - RENNER "
