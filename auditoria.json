@@ -1,8 +1,68 @@
 {
-  "gerado_em": "2026-06-25T12:37:11",
+  "gerado_em": "2026-06-26T10:01:23",
   "total_emails": 442,
   "total_threads": 53,
   "marcos_rejeitados": [
+    {
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAB7CVBTAzK9MoXUVcD9V_iw=",
+      "tipo_detectado": "ops_liberadas",
+      "remetente": "neila.duarte@antilhas.com.br",
+      "motivo": "papel_remetente=comercial, esperava=engenharia"
+    },
+    {
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAB7CVBTAzK9MoXUVcD9V_iw=",
+      "tipo_detectado": "ops_liberadas",
+      "remetente": "NEILA DUARTE DA SILVA",
+      "motivo": "papel_remetente=comercial, esperava=engenharia"
+    },
+    {
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAB7CVBTAzK9MoXUVcD9V_iw=",
+      "tipo_detectado": "ops_liberadas",
+      "remetente": "NEILA DUARTE DA SILVA",
+      "motivo": "papel_remetente=comercial, esperava=engenharia"
+    },
+    {
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAB7CVBTAzK9MoXUVcD9V_iw=",
+      "tipo_detectado": "ferts_criados",
+      "remetente": "laborat@antilhas.com.br",
+      "motivo": "papel_remetente=desconhecido, esperava=engenharia"
+    },
+    {
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAB7CVBTAzK9MoXUVcD9V_iw=",
+      "tipo_detectado": "ops_liberadas",
+      "remetente": "NEILA DUARTE DA SILVA",
+      "motivo": "papel_remetente=comercial, esperava=engenharia"
+    },
+    {
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAB7CVBTAzK9MoXUVcD9V_iw=",
+      "tipo_detectado": "ferts_criados",
+      "remetente": "cassia.cavaleiro@antilhas.com.br",
+      "motivo": "papel_remetente=excluido, esperava=engenharia"
+    },
+    {
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAB7CVBTAzK9MoXUVcD9V_iw=",
+      "tipo_detectado": "ops_liberadas",
+      "remetente": "NEILA DUARTE DA SILVA",
+      "motivo": "papel_remetente=comercial, esperava=engenharia"
+    },
+    {
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAB7CVBTAzK9MoXUVcD9V_iw=",
+      "tipo_detectado": "ferts_criados",
+      "remetente": "CASSIA REGINA FERNANDES CAVALEIRO",
+      "motivo": "papel_remetente=excluido, esperava=engenharia"
+    },
+    {
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAB7CVBTAzK9MoXUVcD9V_iw=",
+      "tipo_detectado": "ops_liberadas",
+      "remetente": "NEILA DUARTE DA SILVA",
+      "motivo": "papel_remetente=comercial, esperava=engenharia"
+    },
+    {
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAB7CVBTAzK9MoXUVcD9V_iw=",
+      "tipo_detectado": "ops_liberadas",
+      "remetente": "NEILA DUARTE DA SILVA",
+      "motivo": "papel_remetente=comercial, esperava=engenharia"
+    },
     {
       "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAJ7xPaEemGVNkecAgA2Fn_o=",
       "tipo_detectado": "ops_liberadas",
@@ -122,60 +182,6 @@
       "tipo_detectado": "ferts_criados",
       "remetente": "MATHEUS GARCIA HENRIQUES",
       "motivo": "papel_remetente=excluido, esperava=engenharia"
-    },
-    {
-      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAB7CVBTAzK9MoXUVcD9V_iw=",
-      "tipo_detectado": "ops_liberadas",
-      "remetente": "neila.duarte@antilhas.com.br",
-      "motivo": "papel_remetente=comercial, esperava=engenharia"
-    },
-    {
-      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAB7CVBTAzK9MoXUVcD9V_iw=",
-      "tipo_detectado": "ops_liberadas",
-      "remetente": "NEILA DUARTE DA SILVA",
-      "motivo": "papel_remetente=comercial, esperava=engenharia"
-    },
-    {
-      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAB7CVBTAzK9MoXUVcD9V_iw=",
-      "tipo_detectado": "ops_liberadas",
-      "remetente": "NEILA DUARTE DA SILVA",
-      "motivo": "papel_remetente=comercial, esperava=engenharia"
-    },
-    {
-      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAB7CVBTAzK9MoXUVcD9V_iw=",
-      "tipo_detectado": "ferts_criados",
-      "remetente": "laborat@antilhas.com.br",
-      "motivo": "papel_remetente=desconhecido, esperava=engenharia"
-    },
-    {
-      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAB7CVBTAzK9MoXUVcD9V_iw=",
-      "tipo_detectado": "ops_liberadas",
-      "remetente": "NEILA DUARTE DA SILVA",
-      "motivo": "papel_remetente=comercial, esperava=engenharia"
-    },
-    {
-      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAB7CVBTAzK9MoXUVcD9V_iw=",
-      "tipo_detectado": "ferts_criados",
-      "remetente": "cassia.cavaleiro@antilhas.com.br",
-      "motivo": "papel_remetente=excluido, esperava=engenharia"
-    },
-    {
-      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAB7CVBTAzK9MoXUVcD9V_iw=",
-      "tipo_detectado": "ops_liberadas",
-      "remetente": "NEILA DUARTE DA SILVA",
-      "motivo": "papel_remetente=comercial, esperava=engenharia"
-    },
-    {
-      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAB7CVBTAzK9MoXUVcD9V_iw=",
-      "tipo_detectado": "ferts_criados",
-      "remetente": "CASSIA REGINA FERNANDES CAVALEIRO",
-      "motivo": "papel_remetente=excluido, esperava=engenharia"
-    },
-    {
-      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAB7CVBTAzK9MoXUVcD9V_iw=",
-      "tipo_detectado": "ops_liberadas",
-      "remetente": "NEILA DUARTE DA SILVA",
-      "motivo": "papel_remetente=comercial, esperava=engenharia"
     },
     {
       "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAB9mQSJNHK5Go9nQ1Mb9clI=",
@@ -432,19 +438,19 @@
   ],
   "threads_sem_pedido_fechado": [
     {
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAB7CVBTAzK9MoXUVcD9V_iw=",
+      "subject": "BF_2202 PEDIDO FECHADO VAREJO - DECATHLON -  PHEASE IN / PHEASE OUT - ETIQUETA ADESIVA",
+      "marcos_que_tem": [
+        "ferts_criados"
+      ]
+    },
+    {
       "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAJ7xPaEemGVNkecAgA2Fn_o=",
       "subject": "BF_2256  PEDIDO FECHADO VAREJO - RENNER JULHO",
       "marcos_que_tem": [
         "ferts_criados",
         "pedido_revisado",
         "ops_liberadas"
-      ]
-    },
-    {
-      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAB7CVBTAzK9MoXUVcD9V_iw=",
-      "subject": "BF_2202 PEDIDO FECHADO VAREJO - DECATHLON -  PHEASE IN / PHEASE OUT - ETIQUETA ADESIVA",
-      "marcos_que_tem": [
-        "ferts_criados"
       ]
     },
     {
