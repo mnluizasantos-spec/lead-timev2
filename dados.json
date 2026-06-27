@@ -158,10 +158,10 @@
       },
       "op_liberada": {
         "previsto": "2026-06-22",
-        "real": null,
-        "por": null,
-        "real_ultima": null,
-        "n_parcelas": 0
+        "real": "2026-06-26",
+        "por": "LETICIA JACQUELINE SANTOS",
+        "real_ultima": "2026-06-26",
+        "n_parcelas": 3
       },
       "producao": {
         "previsto": "2026-06-23",
@@ -182,8 +182,8 @@
       },
       "fert_para_op": {
         "previsto": 3,
-        "real": null,
-        "desvio": null
+        "real": 3,
+        "desvio": 0
       },
       "op_para_producao": {
         "previsto": 1,
@@ -196,8 +196,8 @@
         "desvio": null
       }
     },
-    "status": "aguardando_op",
-    "responsavel_atual": "Engenharia",
+    "status": "em_producao",
+    "responsavel_atual": "PCP/Fábrica",
     "tem_cronograma": true
   },
   {
@@ -357,7 +357,7 @@
         "CAJAMAR"
       ],
       "qtd_total": 53422,
-      "dias_desde_ultima": 3
+      "dias_desde_ultima": 4
     }
   },
   {
@@ -830,7 +830,7 @@
         "FLEXOGRAFICA"
       ],
       "qtd_total": 78320,
-      "dias_desde_ultima": 23
+      "dias_desde_ultima": 24
     }
   },
   {
@@ -1078,7 +1078,7 @@
         "OFFSET"
       ],
       "qtd_total": 7899,
-      "dias_desde_ultima": 25
+      "dias_desde_ultima": 26
     }
   },
   {
@@ -1395,7 +1395,7 @@
         "OFFSET"
       ],
       "qtd_total": 737254,
-      "dias_desde_ultima": 3
+      "dias_desde_ultima": 4
     }
   },
   {
@@ -1572,7 +1572,7 @@
         "OFFSET"
       ],
       "qtd_total": 69295,
-      "dias_desde_ultima": 3
+      "dias_desde_ultima": 4
     }
   },
   {
@@ -1679,7 +1679,7 @@
         "OFFSET"
       ],
       "qtd_total": 3725,
-      "dias_desde_ultima": 14
+      "dias_desde_ultima": 15
     }
   },
   {
@@ -1980,7 +1980,7 @@
         "CAJAMAR"
       ],
       "qtd_total": 10000,
-      "dias_desde_ultima": 31
+      "dias_desde_ultima": 32
     }
   },
   {
@@ -2155,7 +2155,7 @@
         "OFFSET"
       ],
       "qtd_total": 108842,
-      "dias_desde_ultima": 7
+      "dias_desde_ultima": 8
     }
   },
   {
@@ -2295,8 +2295,8 @@
         "desvio": null
       }
     },
-    "status": "em_producao",
-    "responsavel_atual": "PCP/Fábrica",
+    "status": "concluido",
+    "responsavel_atual": "-",
     "tem_cronograma": false,
     "producao_detalhe": {
       "busca_por": "halb",
@@ -2312,7 +2312,7 @@
         "OFFSET"
       ],
       "qtd_total": 52031,
-      "dias_desde_ultima": 15
+      "dias_desde_ultima": 16
     }
   },
   {
@@ -2550,7 +2550,7 @@
         "OFFSET"
       ],
       "qtd_total": 8415,
-      "dias_desde_ultima": 9
+      "dias_desde_ultima": 10
     }
   }
 ]
