@@ -357,7 +357,7 @@
         "CAJAMAR"
       ],
       "qtd_total": 53422,
-      "dias_desde_ultima": 4
+      "dias_desde_ultima": 5
     }
   },
   {
@@ -830,7 +830,7 @@
         "FLEXOGRAFICA"
       ],
       "qtd_total": 78320,
-      "dias_desde_ultima": 24
+      "dias_desde_ultima": 25
     }
   },
   {
@@ -1078,7 +1078,7 @@
         "OFFSET"
       ],
       "qtd_total": 7899,
-      "dias_desde_ultima": 26
+      "dias_desde_ultima": 27
     }
   },
   {
@@ -1395,7 +1395,7 @@
         "OFFSET"
       ],
       "qtd_total": 737254,
-      "dias_desde_ultima": 4
+      "dias_desde_ultima": 5
     }
   },
   {
@@ -1572,7 +1572,7 @@
         "OFFSET"
       ],
       "qtd_total": 69295,
-      "dias_desde_ultima": 4
+      "dias_desde_ultima": 5
     }
   },
   {
@@ -1664,8 +1664,8 @@
         "desvio": null
       }
     },
-    "status": "em_producao",
-    "responsavel_atual": "PCP/Fábrica",
+    "status": "concluido",
+    "responsavel_atual": "-",
     "tem_cronograma": false,
     "producao_detalhe": {
       "busca_por": "halb",
@@ -1679,7 +1679,7 @@
         "OFFSET"
       ],
       "qtd_total": 3725,
-      "dias_desde_ultima": 15
+      "dias_desde_ultima": 16
     }
   },
   {
@@ -1980,7 +1980,7 @@
         "CAJAMAR"
       ],
       "qtd_total": 10000,
-      "dias_desde_ultima": 32
+      "dias_desde_ultima": 33
     }
   },
   {
@@ -2155,7 +2155,7 @@
         "OFFSET"
       ],
       "qtd_total": 108842,
-      "dias_desde_ultima": 8
+      "dias_desde_ultima": 9
     }
   },
   {
@@ -2312,7 +2312,7 @@
         "OFFSET"
       ],
       "qtd_total": 52031,
-      "dias_desde_ultima": 16
+      "dias_desde_ultima": 17
     }
   },
   {
@@ -2550,7 +2550,7 @@
         "OFFSET"
       ],
       "qtd_total": 8415,
-      "dias_desde_ultima": 10
+      "dias_desde_ultima": 11
     }
   }
 ]
