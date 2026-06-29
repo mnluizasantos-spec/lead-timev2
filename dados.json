@@ -210,7 +210,16 @@
       {
         "codigo": "13021838-0001",
         "tipo": "FERT",
-        "descricao": "SACL PAP AUT FSC®FF MERCADO JAGUARE"
+        "descricao": "SACL PAP AUT FSC®FF MERCADO JAGUARE",
+        "producao": {
+          "inicio": "2026-06-25",
+          "fim": "2026-06-26",
+          "n_apontamentos": 2,
+          "deptos": [
+            "CAJAMAR"
+          ],
+          "qtd": 30820
+        }
       }
     ],
     "marcos": {
@@ -233,8 +242,9 @@
       },
       "producao": {
         "previsto": "2026-06-30",
-        "real": null,
-        "por": null
+        "real": "2026-06-25",
+        "por": null,
+        "fim": "2026-06-26"
       },
       "data_vitrine": {
         "previsto": "2026-07-01",
@@ -255,8 +265,8 @@
       },
       "op_para_producao": {
         "previsto": 8,
-        "real": null,
-        "desvio": null
+        "real": 3,
+        "desvio": -5
       },
       "producao_para_vit": {
         "previsto": 1,
@@ -266,7 +276,21 @@
     },
     "status": "em_producao",
     "responsavel_atual": "PCP/Fábrica",
-    "tem_cronograma": true
+    "tem_cronograma": true,
+    "producao_detalhe": {
+      "busca_por": "fert",
+      "codigos_encontrados": [
+        "13021838-0001"
+      ],
+      "total_apontamentos": 2,
+      "primeira_data": "2026-06-25",
+      "ultima_data": "2026-06-26",
+      "deptos": [
+        "CAJAMAR"
+      ],
+      "qtd_total": 30820,
+      "dias_desde_ultima": 3
+    }
   },
   {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAMtXqWuIRChLvZ1AWKwHNm8=",
@@ -357,7 +381,7 @@
         "CAJAMAR"
       ],
       "qtd_total": 53422,
-      "dias_desde_ultima": 5
+      "dias_desde_ultima": 6
     }
   },
   {
@@ -659,7 +683,16 @@
       {
         "codigo": "2100082738",
         "tipo": "HALB",
-        "descricao": "CX TPA FSC®M PRES INST26 MELINDA"
+        "descricao": "CX TPA FSC®M PRES INST26 MELINDA",
+        "producao": {
+          "inicio": "2026-06-26",
+          "fim": "2026-06-26",
+          "n_apontamentos": 1,
+          "deptos": [
+            "OFFSET"
+          ],
+          "qtd": 95
+        }
       },
       {
         "codigo": "2100082739",
@@ -687,8 +720,9 @@
       },
       "producao": {
         "previsto": "2026-06-10",
-        "real": null,
-        "por": null
+        "real": "2026-06-26",
+        "por": null,
+        "fim": "2026-06-26"
       },
       "data_vitrine": {
         "previsto": "2026-07-21",
@@ -709,8 +743,8 @@
       },
       "op_para_producao": {
         "previsto": 1,
-        "real": null,
-        "desvio": null
+        "real": 17,
+        "desvio": 16
       },
       "producao_para_vit": {
         "previsto": 41,
@@ -720,7 +754,21 @@
     },
     "status": "em_producao",
     "responsavel_atual": "PCP/Fábrica",
-    "tem_cronograma": true
+    "tem_cronograma": true,
+    "producao_detalhe": {
+      "busca_por": "halb",
+      "codigos_encontrados": [
+        "2100082738"
+      ],
+      "total_apontamentos": 1,
+      "primeira_data": "2026-06-26",
+      "ultima_data": "2026-06-26",
+      "deptos": [
+        "OFFSET"
+      ],
+      "qtd_total": 95,
+      "dias_desde_ultima": 3
+    }
   },
   {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQANYaA1Hw1dtDmEhqS4WEHnc=#2",
@@ -749,12 +797,12 @@
         "descricao": "90822 REF FDO FSC®M PDVG INST25 BOT",
         "producao": {
           "inicio": "2026-06-02",
-          "fim": "2026-06-18",
-          "n_apontamentos": 20,
+          "fim": "2026-06-25",
+          "n_apontamentos": 22,
           "deptos": [
             "OFFSET"
           ],
-          "qtd": 1720626
+          "qtd": 1747584
         }
       },
       {
@@ -830,7 +878,7 @@
         "FLEXOGRAFICA"
       ],
       "qtd_total": 78320,
-      "dias_desde_ultima": 25
+      "dias_desde_ultima": 26
     }
   },
   {
@@ -1078,7 +1126,7 @@
         "OFFSET"
       ],
       "qtd_total": 7899,
-      "dias_desde_ultima": 27
+      "dias_desde_ultima": 28
     }
   },
   {
@@ -1287,12 +1335,12 @@
         "descricao": "SACL PAP NLF FSC®G FRIENDS26 QDB",
         "producao": {
           "inicio": "2026-06-15",
-          "fim": "2026-06-23",
-          "n_apontamentos": 19,
+          "fim": "2026-06-26",
+          "n_apontamentos": 20,
           "deptos": [
             "FLEXOGRAFICA"
           ],
-          "qtd": 329293
+          "qtd": 335693
         }
       },
       {
@@ -1347,7 +1395,7 @@
         "previsto": "2026-06-19",
         "real": "2026-06-09",
         "por": null,
-        "fim": "2026-06-23"
+        "fim": "2026-06-26"
       },
       "data_vitrine": {
         "previsto": "2026-07-17",
@@ -1387,15 +1435,15 @@
         "13021810-0001",
         "11055292-0001"
       ],
-      "total_apontamentos": 32,
+      "total_apontamentos": 33,
       "primeira_data": "2026-06-09",
-      "ultima_data": "2026-06-23",
+      "ultima_data": "2026-06-26",
       "deptos": [
         "FLEXOGRAFICA",
         "OFFSET"
       ],
-      "qtd_total": 737254,
-      "dias_desde_ultima": 5
+      "qtd_total": 743654,
+      "dias_desde_ultima": 3
     }
   },
   {
@@ -1416,12 +1464,12 @@
         "descricao": "931610552 SACL PAP MAN FSC®P CREEPER REN",
         "producao": {
           "inicio": "2026-06-23",
-          "fim": "2026-06-23",
-          "n_apontamentos": 1,
+          "fim": "2026-06-25",
+          "n_apontamentos": 2,
           "deptos": [
             "OFFSET"
           ],
-          "qtd": 4906
+          "qtd": 9373
         }
       },
       {
@@ -1523,7 +1571,7 @@
         "previsto": "2026-06-15",
         "real": "2026-06-01",
         "por": null,
-        "fim": "2026-06-23"
+        "fim": "2026-06-25"
       },
       "data_vitrine": {
         "previsto": "2026-06-17",
@@ -1565,14 +1613,14 @@
         "2100082688",
         "2100082685"
       ],
-      "total_apontamentos": 12,
+      "total_apontamentos": 13,
       "primeira_data": "2026-06-01",
-      "ultima_data": "2026-06-23",
+      "ultima_data": "2026-06-25",
       "deptos": [
         "OFFSET"
       ],
-      "qtd_total": 69295,
-      "dias_desde_ultima": 5
+      "qtd_total": 73762,
+      "dias_desde_ultima": 4
     }
   },
   {
@@ -1679,7 +1727,7 @@
         "OFFSET"
       ],
       "qtd_total": 3725,
-      "dias_desde_ultima": 16
+      "dias_desde_ultima": 17
     }
   },
   {
@@ -1980,7 +2028,7 @@
         "CAJAMAR"
       ],
       "qtd_total": 10000,
-      "dias_desde_ultima": 33
+      "dias_desde_ultima": 34
     }
   },
   {
@@ -2079,12 +2127,12 @@
         "descricao": "SACL PAP MAN FSC®M INST25 V2 ANACAPRI",
         "producao": {
           "inicio": "2026-06-19",
-          "fim": "2026-06-19",
-          "n_apontamentos": 9,
+          "fim": "2026-06-27",
+          "n_apontamentos": 15,
           "deptos": [
             "OFFSET"
           ],
-          "qtd": 108842
+          "qtd": 216203
         }
       }
     ],
@@ -2110,7 +2158,7 @@
         "previsto": null,
         "real": "2026-06-19",
         "por": null,
-        "fim": "2026-06-19"
+        "fim": "2026-06-27"
       },
       "data_vitrine": {
         "previsto": null,
@@ -2148,14 +2196,14 @@
       "codigos_encontrados": [
         "2100082270"
       ],
-      "total_apontamentos": 9,
+      "total_apontamentos": 15,
       "primeira_data": "2026-06-19",
-      "ultima_data": "2026-06-19",
+      "ultima_data": "2026-06-27",
       "deptos": [
         "OFFSET"
       ],
-      "qtd_total": 108842,
-      "dias_desde_ultima": 9
+      "qtd_total": 216203,
+      "dias_desde_ultima": 2
     }
   },
   {
@@ -2312,7 +2360,7 @@
         "OFFSET"
       ],
       "qtd_total": 52031,
-      "dias_desde_ultima": 17
+      "dias_desde_ultima": 18
     }
   },
   {
@@ -2550,7 +2598,7 @@
         "OFFSET"
       ],
       "qtd_total": 8415,
-      "dias_desde_ultima": 11
+      "dias_desde_ultima": 12
     }
   }
 ]
