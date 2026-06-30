@@ -1,7 +1,7 @@
 {
-  "gerado_em": "2026-06-29T14:33:34",
+  "gerado_em": "2026-06-30T10:01:18",
   "total_emails": 442,
-  "total_threads": 53,
+  "total_threads": 54,
   "marcos_rejeitados": [
     {
       "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAB7CVBTAzK9MoXUVcD9V_iw=",
@@ -468,6 +468,10 @@
   ],
   "remetentes_desconhecidos": [],
   "reedicoes_ignoradas": [
+    {
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAGZbW0QdtVhJowvz_kTE0PM=",
+      "subject": "BF_02402_REEDIÇÃO SACL G PEDIDO FECHADO VAREJO - EMPORIO NESTLE"
+    },
     {
       "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAF7LmPwgj5dKgzsyEtXKAVM=",
       "subject": "RES: BF_ 02393 REEDIÇÃO PEDIDO FECHADO VAREJO - TRACK FILD - INSTITUCIONAL - Retificado"
