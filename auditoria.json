@@ -1,7 +1,7 @@
 {
-  "gerado_em": "2026-06-30T12:28:36",
-  "total_emails": 442,
-  "total_threads": 54,
+  "gerado_em": "2026-07-01T10:02:15",
+  "total_emails": 717,
+  "total_threads": 55,
   "marcos_rejeitados": [
     {
       "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAB7CVBTAzK9MoXUVcD9V_iw=",
@@ -468,6 +468,10 @@
   ],
   "remetentes_desconhecidos": [],
   "reedicoes_ignoradas": [
+    {
+      "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAOnKodaqySlHvwTMS7E2BJI=",
+      "subject": "REEDIÇÃO - PEDIDO FECHADO VAREJO - La Guapa /Sacos e Sacolas"
+    },
     {
       "thread_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAGZbW0QdtVhJowvz_kTE0PM=",
       "subject": "BF_02402_REEDIÇÃO SACL G PEDIDO FECHADO VAREJO - EMPORIO NESTLE"
