@@ -213,12 +213,12 @@
         "descricao": "SACL PAP AUT FSC®FF MERCADO JAGUARE",
         "producao": {
           "inicio": "2026-06-25",
-          "fim": "2026-06-26",
-          "n_apontamentos": 2,
+          "fim": "2026-06-29",
+          "n_apontamentos": 3,
           "deptos": [
             "CAJAMAR"
           ],
-          "qtd": 30820
+          "qtd": 50822
         }
       }
     ],
@@ -244,7 +244,7 @@
         "previsto": "2026-06-30",
         "real": "2026-06-25",
         "por": null,
-        "fim": "2026-06-26"
+        "fim": "2026-06-29"
       },
       "data_vitrine": {
         "previsto": "2026-07-01",
@@ -282,14 +282,14 @@
       "codigos_encontrados": [
         "13021838-0001"
       ],
-      "total_apontamentos": 2,
+      "total_apontamentos": 3,
       "primeira_data": "2026-06-25",
-      "ultima_data": "2026-06-26",
+      "ultima_data": "2026-06-29",
       "deptos": [
         "CAJAMAR"
       ],
-      "qtd_total": 30820,
-      "dias_desde_ultima": 6
+      "qtd_total": 50822,
+      "dias_desde_ultima": 3
     }
   },
   {
@@ -419,7 +419,16 @@
       {
         "codigo": "2100082756",
         "tipo": "HALB",
-        "descricao": "REF FDO FSC®M INST26 FIT MRS ROUPAS"
+        "descricao": "REF FDO FSC®M INST26 FIT MRS ROUPAS",
+        "producao": {
+          "inicio": "2026-06-29",
+          "fim": "2026-06-30",
+          "n_apontamentos": 3,
+          "deptos": [
+            "OFFSET"
+          ],
+          "qtd": 7260
+        }
       }
     ],
     "marcos": {
@@ -442,8 +451,9 @@
       },
       "producao": {
         "previsto": "2026-07-24",
-        "real": null,
-        "por": null
+        "real": "2026-06-29",
+        "por": null,
+        "fim": "2026-06-30"
       },
       "data_vitrine": {
         "previsto": "2026-08-03",
@@ -464,8 +474,8 @@
       },
       "op_para_producao": {
         "previsto": 36,
-        "real": null,
-        "desvio": null
+        "real": 11,
+        "desvio": -25
       },
       "producao_para_vit": {
         "previsto": 10,
@@ -475,7 +485,21 @@
     },
     "status": "em_producao",
     "responsavel_atual": "PCP/Fábrica",
-    "tem_cronograma": true
+    "tem_cronograma": true,
+    "producao_detalhe": {
+      "busca_por": "halb",
+      "codigos_encontrados": [
+        "2100082756"
+      ],
+      "total_apontamentos": 3,
+      "primeira_data": "2026-06-29",
+      "ultima_data": "2026-06-30",
+      "deptos": [
+        "OFFSET"
+      ],
+      "qtd_total": 7260,
+      "dias_desde_ultima": 2
+    }
   },
   {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAOCHBQl7FtpIkonxADbSXLw=",
@@ -565,7 +589,16 @@
       {
         "codigo": "11055381-0001",
         "tipo": "FERT",
-        "descricao": "LUV MOUSSE26 KOP"
+        "descricao": "LUV MOUSSE26 KOP",
+        "producao": {
+          "inicio": "2026-06-30",
+          "fim": "2026-06-30",
+          "n_apontamentos": 3,
+          "deptos": [
+            "OFFSET"
+          ],
+          "qtd": 26101
+        }
       }
     ],
     "marcos": {
@@ -588,8 +621,9 @@
       },
       "producao": {
         "previsto": "2026-06-26",
-        "real": null,
-        "por": null
+        "real": "2026-06-30",
+        "por": null,
+        "fim": "2026-06-30"
       },
       "data_vitrine": {
         "previsto": "2026-06-29",
@@ -610,8 +644,8 @@
       },
       "op_para_producao": {
         "previsto": 18,
-        "real": null,
-        "desvio": null
+        "real": 25,
+        "desvio": 7
       },
       "producao_para_vit": {
         "previsto": 3,
@@ -621,7 +655,21 @@
     },
     "status": "em_producao",
     "responsavel_atual": "PCP/Fábrica",
-    "tem_cronograma": true
+    "tem_cronograma": true,
+    "producao_detalhe": {
+      "busca_por": "fert",
+      "codigos_encontrados": [
+        "11055381-0001"
+      ],
+      "total_apontamentos": 3,
+      "primeira_data": "2026-06-30",
+      "ultima_data": "2026-06-30",
+      "deptos": [
+        "OFFSET"
+      ],
+      "qtd_total": 26101,
+      "dias_desde_ultima": 2
+    }
   },
   {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAA7Wa8cMl8lCgxa3Z96wukU=",
@@ -638,7 +686,16 @@
       {
         "codigo": "2100082712",
         "tipo": "HALB",
-        "descricao": "SACL PAP MAN FSC®PP PRES INST26 MELINDA"
+        "descricao": "SACL PAP MAN FSC®PP PRES INST26 MELINDA",
+        "producao": {
+          "inicio": "2026-06-30",
+          "fim": "2026-06-30",
+          "n_apontamentos": 2,
+          "deptos": [
+            "OFFSET"
+          ],
+          "qtd": 6556
+        }
       },
       {
         "codigo": "2400010088",
@@ -653,7 +710,16 @@
       {
         "codigo": "2100082716",
         "tipo": "HALB",
-        "descricao": "SACL PAP MAN FSC®P PRES INST26 MELINDA"
+        "descricao": "SACL PAP MAN FSC®P PRES INST26 MELINDA",
+        "producao": {
+          "inicio": "2026-06-30",
+          "fim": "2026-06-30",
+          "n_apontamentos": 2,
+          "deptos": [
+            "OFFSET"
+          ],
+          "qtd": 12810
+        }
       },
       {
         "codigo": "2400010089",
@@ -668,7 +734,16 @@
       {
         "codigo": "2100082729",
         "tipo": "HALB",
-        "descricao": "SACL PAP MAN FSC®M PRES INST26 MELINDA"
+        "descricao": "SACL PAP MAN FSC®M PRES INST26 MELINDA",
+        "producao": {
+          "inicio": "2026-07-01",
+          "fim": "2026-07-01",
+          "n_apontamentos": 4,
+          "deptos": [
+            "OFFSET"
+          ],
+          "qtd": 22895
+        }
       },
       {
         "codigo": "2400010090",
@@ -686,18 +761,27 @@
         "descricao": "CX TPA FSC®M PRES INST26 MELINDA",
         "producao": {
           "inicio": "2026-06-26",
-          "fim": "2026-06-26",
-          "n_apontamentos": 1,
+          "fim": "2026-06-29",
+          "n_apontamentos": 4,
           "deptos": [
             "OFFSET"
           ],
-          "qtd": 95
+          "qtd": 11193
         }
       },
       {
         "codigo": "2100082739",
         "tipo": "HALB",
-        "descricao": "CX FDO FSC®M PRES INST26 MELINDA"
+        "descricao": "CX FDO FSC®M PRES INST26 MELINDA",
+        "producao": {
+          "inicio": "2026-06-29",
+          "fim": "2026-07-01",
+          "n_apontamentos": 6,
+          "deptos": [
+            "OFFSET"
+          ],
+          "qtd": 19333
+        }
       }
     ],
     "marcos": {
@@ -722,7 +806,7 @@
         "previsto": "2026-06-10",
         "real": "2026-06-26",
         "por": null,
-        "fim": "2026-06-26"
+        "fim": "2026-07-01"
       },
       "data_vitrine": {
         "previsto": "2026-07-21",
@@ -758,16 +842,20 @@
     "producao_detalhe": {
       "busca_por": "halb",
       "codigos_encontrados": [
-        "2100082738"
+        "2100082712",
+        "2100082716",
+        "2100082729",
+        "2100082738",
+        "2100082739"
       ],
-      "total_apontamentos": 1,
+      "total_apontamentos": 18,
       "primeira_data": "2026-06-26",
-      "ultima_data": "2026-06-26",
+      "ultima_data": "2026-07-01",
       "deptos": [
         "OFFSET"
       ],
-      "qtd_total": 95,
-      "dias_desde_ultima": 6
+      "qtd_total": 72787,
+      "dias_desde_ultima": 1
     }
   },
   {
@@ -797,12 +885,12 @@
         "descricao": "90822 REF FDO FSC®M PDVG INST25 BOT",
         "producao": {
           "inicio": "2026-06-02",
-          "fim": "2026-06-25",
-          "n_apontamentos": 22,
+          "fim": "2026-07-02",
+          "n_apontamentos": 27,
           "deptos": [
             "OFFSET"
           ],
-          "qtd": 1747584
+          "qtd": 2089445
         }
       },
       {
