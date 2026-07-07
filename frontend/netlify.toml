@@ -10,6 +10,24 @@
 [functions]
   node_bundler = "esbuild"
 
+# ============================================================
+# PROXY: serve os dados pelo próprio domínio do Netlify.
+# O navegador busca /dados.json (mesma origem) e o Netlify busca do
+# raw do GitHub do lado servidor. Assim a rede da Antilhas não precisa
+# alcançar raw.githubusercontent.com (que estava resetando a conexão).
+# ============================================================
+[[redirects]]
+  from = "/dados.json"
+  to = "https://raw.githubusercontent.com/mnluizasantos-spec/lead-timev2/main/dados.json"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/overrides.json"
+  to = "https://raw.githubusercontent.com/mnluizasantos-spec/lead-timev2/main/overrides.json"
+  status = 200
+  force = true
+
 # Cabeçalhos pra evitar cache do dados.json (queremos sempre fresh)
 [[headers]]
   for = "/*.json"
