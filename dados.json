@@ -127,7 +127,16 @@
       {
         "codigo": "2100082813",
         "tipo": "HALB",
-        "descricao": "SACL PAP SAUT FSC®P LIFE PAIS26 VIVARA"
+        "descricao": "SACL PAP SAUT FSC®P LIFE PAIS26 VIVARA",
+        "producao": {
+          "inicio": "2026-07-06",
+          "fim": "2026-07-06",
+          "n_apontamentos": 2,
+          "deptos": [
+            "OFFSET"
+          ],
+          "qtd": 16118
+        }
       },
       {
         "codigo": "2400002076",
@@ -142,7 +151,16 @@
       {
         "codigo": "2100082815",
         "tipo": "HALB",
-        "descricao": "SACL PAP SAUT FSC®M LIFE PAIS26 VIVARA"
+        "descricao": "SACL PAP SAUT FSC®M LIFE PAIS26 VIVARA",
+        "producao": {
+          "inicio": "2026-07-06",
+          "fim": "2026-07-06",
+          "n_apontamentos": 2,
+          "deptos": [
+            "OFFSET"
+          ],
+          "qtd": 23208
+        }
       }
     ],
     "marcos": {
@@ -165,8 +183,9 @@
       },
       "producao": {
         "previsto": "2026-06-23",
-        "real": null,
-        "por": null
+        "real": "2026-07-06",
+        "por": null,
+        "fim": "2026-07-06"
       },
       "data_vitrine": {
         "previsto": "2026-07-10",
@@ -187,8 +206,8 @@
       },
       "op_para_producao": {
         "previsto": 1,
-        "real": null,
-        "desvio": null
+        "real": 10,
+        "desvio": 9
       },
       "producao_para_vit": {
         "previsto": 17,
@@ -198,7 +217,22 @@
     },
     "status": "em_producao",
     "responsavel_atual": "PCP/Fábrica",
-    "tem_cronograma": true
+    "tem_cronograma": true,
+    "producao_detalhe": {
+      "busca_por": "halb",
+      "codigos_encontrados": [
+        "2100082813",
+        "2100082815"
+      ],
+      "total_apontamentos": 4,
+      "primeira_data": "2026-07-06",
+      "ultima_data": "2026-07-06",
+      "deptos": [
+        "OFFSET"
+      ],
+      "qtd_total": 39326,
+      "dias_desde_ultima": 1
+    }
   },
   {
     "pedido_id": "AAQkADkxZDUyYzQwLTViY2MtNDE3Ny1hY2U1LTRhZDAxZGE1ZWE0ZgAQAFJG3OVeQw9FmkGz9vjrjjg=",
@@ -289,7 +323,7 @@
         "CAJAMAR"
       ],
       "qtd_total": 50822,
-      "dias_desde_ultima": 7
+      "dias_desde_ultima": 8
     }
   },
   {
@@ -381,7 +415,7 @@
         "CAJAMAR"
       ],
       "qtd_total": 53422,
-      "dias_desde_ultima": 13
+      "dias_desde_ultima": 14
     }
   },
   {
@@ -414,7 +448,16 @@
       {
         "codigo": "2100082755",
         "tipo": "HALB",
-        "descricao": "SACL PAP MAN FSC®M INST26 FIT MRS ROUPAS"
+        "descricao": "SACL PAP MAN FSC®M INST26 FIT MRS ROUPAS",
+        "producao": {
+          "inicio": "2026-07-04",
+          "fim": "2026-07-06",
+          "n_apontamentos": 2,
+          "deptos": [
+            "OFFSET"
+          ],
+          "qtd": 9471
+        }
       },
       {
         "codigo": "2100082756",
@@ -453,7 +496,7 @@
         "previsto": "2026-07-24",
         "real": "2026-06-29",
         "por": null,
-        "fim": "2026-06-30"
+        "fim": "2026-07-06"
       },
       "data_vitrine": {
         "previsto": "2026-08-03",
@@ -489,16 +532,17 @@
     "producao_detalhe": {
       "busca_por": "halb",
       "codigos_encontrados": [
+        "2100082755",
         "2100082756"
       ],
-      "total_apontamentos": 3,
+      "total_apontamentos": 5,
       "primeira_data": "2026-06-29",
-      "ultima_data": "2026-06-30",
+      "ultima_data": "2026-07-06",
       "deptos": [
         "OFFSET"
       ],
-      "qtd_total": 7260,
-      "dias_desde_ultima": 6
+      "qtd_total": 16731,
+      "dias_desde_ultima": 1
     }
   },
   {
@@ -592,12 +636,12 @@
         "descricao": "LUV MOUSSE26 KOP",
         "producao": {
           "inicio": "2026-06-30",
-          "fim": "2026-06-30",
-          "n_apontamentos": 3,
+          "fim": "2026-07-06",
+          "n_apontamentos": 10,
           "deptos": [
             "OFFSET"
           ],
-          "qtd": 26101
+          "qtd": 81176
         }
       }
     ],
@@ -623,7 +667,7 @@
         "previsto": "2026-06-26",
         "real": "2026-06-30",
         "por": null,
-        "fim": "2026-06-30"
+        "fim": "2026-07-06"
       },
       "data_vitrine": {
         "previsto": "2026-06-29",
@@ -661,14 +705,14 @@
       "codigos_encontrados": [
         "11055381-0001"
       ],
-      "total_apontamentos": 3,
+      "total_apontamentos": 10,
       "primeira_data": "2026-06-30",
-      "ultima_data": "2026-06-30",
+      "ultima_data": "2026-07-06",
       "deptos": [
         "OFFSET"
       ],
-      "qtd_total": 26101,
-      "dias_desde_ultima": 6
+      "qtd_total": 81176,
+      "dias_desde_ultima": 1
     }
   },
   {
@@ -689,12 +733,12 @@
         "descricao": "SACL PAP MAN FSC®PP PRES INST26 MELINDA",
         "producao": {
           "inicio": "2026-06-30",
-          "fim": "2026-06-30",
-          "n_apontamentos": 2,
+          "fim": "2026-07-03",
+          "n_apontamentos": 3,
           "deptos": [
             "OFFSET"
           ],
-          "qtd": 6556
+          "qtd": 10733
         }
       },
       {
@@ -713,12 +757,12 @@
         "descricao": "SACL PAP MAN FSC®P PRES INST26 MELINDA",
         "producao": {
           "inicio": "2026-06-30",
-          "fim": "2026-06-30",
-          "n_apontamentos": 2,
+          "fim": "2026-07-02",
+          "n_apontamentos": 3,
           "deptos": [
             "OFFSET"
           ],
-          "qtd": 12810
+          "qtd": 18786
         }
       },
       {
@@ -737,12 +781,13 @@
         "descricao": "SACL PAP MAN FSC®M PRES INST26 MELINDA",
         "producao": {
           "inicio": "2026-07-01",
-          "fim": "2026-07-01",
-          "n_apontamentos": 4,
+          "fim": "2026-07-07",
+          "n_apontamentos": 7,
           "deptos": [
+            "FLEXOGRAFICA",
             "OFFSET"
           ],
-          "qtd": 22895
+          "qtd": 37358
         }
       },
       {
@@ -761,12 +806,12 @@
         "descricao": "CX TPA FSC®M PRES INST26 MELINDA",
         "producao": {
           "inicio": "2026-06-26",
-          "fim": "2026-06-29",
-          "n_apontamentos": 4,
+          "fim": "2026-07-03",
+          "n_apontamentos": 8,
           "deptos": [
             "OFFSET"
           ],
-          "qtd": 11193
+          "qtd": 23815
         }
       },
       {
@@ -775,12 +820,12 @@
         "descricao": "CX FDO FSC®M PRES INST26 MELINDA",
         "producao": {
           "inicio": "2026-06-29",
-          "fim": "2026-07-01",
-          "n_apontamentos": 6,
+          "fim": "2026-07-04",
+          "n_apontamentos": 7,
           "deptos": [
             "OFFSET"
           ],
-          "qtd": 19333
+          "qtd": 27535
         }
       }
     ],
@@ -806,7 +851,7 @@
         "previsto": "2026-06-10",
         "real": "2026-06-26",
         "por": null,
-        "fim": "2026-07-01"
+        "fim": "2026-07-07"
       },
       "data_vitrine": {
         "previsto": "2026-07-21",
@@ -848,14 +893,15 @@
         "2100082738",
         "2100082739"
       ],
-      "total_apontamentos": 18,
+      "total_apontamentos": 28,
       "primeira_data": "2026-06-26",
-      "ultima_data": "2026-07-01",
+      "ultima_data": "2026-07-07",
       "deptos": [
+        "FLEXOGRAFICA",
         "OFFSET"
       ],
-      "qtd_total": 72787,
-      "dias_desde_ultima": 5
+      "qtd_total": 118227,
+      "dias_desde_ultima": 0
     }
   },
   {
@@ -885,12 +931,12 @@
         "descricao": "90822 REF FDO FSC®M PDVG INST25 BOT",
         "producao": {
           "inicio": "2026-06-02",
-          "fim": "2026-07-02",
-          "n_apontamentos": 27,
+          "fim": "2026-07-06",
+          "n_apontamentos": 36,
           "deptos": [
             "OFFSET"
           ],
-          "qtd": 2089445
+          "qtd": 2853505
         }
       },
       {
@@ -966,7 +1012,7 @@
         "FLEXOGRAFICA"
       ],
       "qtd_total": 78320,
-      "dias_desde_ultima": 33
+      "dias_desde_ultima": 34
     }
   },
   {
@@ -1128,12 +1174,12 @@
         "descricao": "931610798 SACL PAP MAN FSC®P TED REN",
         "producao": {
           "inicio": "2026-06-01",
-          "fim": "2026-06-01",
-          "n_apontamentos": 1,
+          "fim": "2026-07-06",
+          "n_apontamentos": 5,
           "deptos": [
             "OFFSET"
           ],
-          "qtd": 7899
+          "qtd": 20737
         }
       },
       {
@@ -1169,7 +1215,7 @@
         "previsto": "2026-08-06",
         "real": "2026-06-01",
         "por": null,
-        "fim": "2026-06-01"
+        "fim": "2026-07-06"
       },
       "data_vitrine": {
         "previsto": "2026-08-10",
@@ -1199,22 +1245,22 @@
         "desvio": null
       }
     },
-    "status": "concluido",
-    "responsavel_atual": "-",
+    "status": "em_producao",
+    "responsavel_atual": "PCP/Fábrica",
     "tem_cronograma": true,
     "producao_detalhe": {
       "busca_por": "halb",
       "codigos_encontrados": [
         "2100082672"
       ],
-      "total_apontamentos": 1,
+      "total_apontamentos": 5,
       "primeira_data": "2026-06-01",
-      "ultima_data": "2026-06-01",
+      "ultima_data": "2026-07-06",
       "deptos": [
         "OFFSET"
       ],
-      "qtd_total": 7899,
-      "dias_desde_ultima": 35
+      "qtd_total": 20737,
+      "dias_desde_ultima": 1
     }
   },
   {
@@ -1531,7 +1577,7 @@
         "OFFSET"
       ],
       "qtd_total": 743654,
-      "dias_desde_ultima": 10
+      "dias_desde_ultima": 11
     }
   },
   {
@@ -1708,7 +1754,7 @@
         "OFFSET"
       ],
       "qtd_total": 73762,
-      "dias_desde_ultima": 11
+      "dias_desde_ultima": 12
     }
   },
   {
@@ -1815,7 +1861,7 @@
         "OFFSET"
       ],
       "qtd_total": 3725,
-      "dias_desde_ultima": 24
+      "dias_desde_ultima": 25
     }
   },
   {
@@ -2116,7 +2162,7 @@
         "CAJAMAR"
       ],
       "qtd_total": 10000,
-      "dias_desde_ultima": 41
+      "dias_desde_ultima": 42
     }
   },
   {
@@ -2291,7 +2337,7 @@
         "OFFSET"
       ],
       "qtd_total": 216203,
-      "dias_desde_ultima": 9
+      "dias_desde_ultima": 10
     }
   },
   {
@@ -2448,7 +2494,7 @@
         "OFFSET"
       ],
       "qtd_total": 52031,
-      "dias_desde_ultima": 25
+      "dias_desde_ultima": 26
     }
   },
   {
@@ -2686,7 +2732,7 @@
         "OFFSET"
       ],
       "qtd_total": 8415,
-      "dias_desde_ultima": 19
+      "dias_desde_ultima": 20
     }
   }
 ]
